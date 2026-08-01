@@ -18,7 +18,7 @@ Tudo em um único arquivo HTML autocontido, sem dependências de build.
 
 ## 🌐 Demonstração
 
-- 🌐 **Live Demo**: *em breve* — deploy pendente (Netlify / GitHub Pages)
+- 🌐 **Live Demo**: [edy075.github.io/WAR_ROOM](https://edy075.github.io/WAR_ROOM/)
 
 ---
 
@@ -102,9 +102,9 @@ WAR_ROOM/
 - Controle de volume e preferências persistentes
 - Design responsivo e acessível
 - Otimizações de performance (lazy loading, reduced-motion)
+- Publicação online no GitHub Pages ([edy075.github.io/WAR_ROOM](https://edy075.github.io/WAR_ROOM/))
 
 ### 🚧 Em desenvolvimento
-- Deploy da demo online (Netlify / GitHub Pages)
 - Links profissionais no rodapé (GitHub / LinkedIn)
 
 ### 🔮 Futuras melhorias
