@@ -18,7 +18,11 @@ Tudo em um único arquivo HTML autocontido, sem dependências de build.
 
 ## 🌐 Demonstração
 
-- 🌐 **Live Demo**: *em breve* — deploy pendente (Netlify / GitHub Pages)
+- 🌐 ## 🌐 Demonstração
+
+[![Acessar WAR ROOM](https://img.shields.io/badge/Acessar-WAR_ROOM-22c55e?style=for-the-badge&logo=githubpages&logoColor=white)](https://edy075.github.io/WAR_ROOM/)
+
+> Explore a linha do tempo interativa dos 12 grandes ciberataques apresentados no projeto.
 
 ---
 
