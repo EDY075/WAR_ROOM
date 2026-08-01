@@ -1,5 +1,20 @@
 ![WAR ROOM Banner](banner-github.png)
 
+<p align="center">
+
+<img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white">
+
+<img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white">
+
+<img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black">
+
+<img src="https://img.shields.io/badge/Responsive-22C55E?style=for-the-badge">
+
+<img src="https://img.shields.io/badge/GitHub_Pages-121013?style=for-the-badge&logo=github&logoColor=white">
+
+<img src="https://img.shields.io/badge/MIT-License-blue?style=for-the-badge">
+
+</p>
 # WAR ROOM
 
 **Interactive Cyber Attack Timeline**
@@ -18,7 +33,15 @@ Tudo em um único arquivo HTML autocontido, sem dependências de build.
 
 ## 🌐 Demonstração
 
-- 🌐 **Live Demo**: [edy075.github.io/WAR_ROOM](https://edy075.github.io/WAR_ROOM/)
+<p align="center">
+  <a href="https://edy075.github.io/WAR_ROOM/">
+    <img src="https://img.shields.io/badge/🚀-Acessar%20o%20Projeto-0ea5e9?style=for-the-badge&logo=githubpages&logoColor=white">
+  </a>
+</p>
+
+<p align="center">
+<img src="banner-github.png" width="100%">
+</p>
 
 ---
 
@@ -133,4 +156,4 @@ Música: "Forever (Single Version)" — The Little Dippers via SoundCloud.
 
 ---
 
-*Projeto acadêmico — TCC de Cibersegurança.*
+
