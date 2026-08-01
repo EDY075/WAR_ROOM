@@ -40,7 +40,7 @@ Tudo em um único arquivo HTML autocontido, sem dependências de build.
 </p>
 
 <p align="center">
-<img src="demo.gif" width="100%">
+<img src="demo-10s.gif" width="100%">
 </p>
 
 ---
