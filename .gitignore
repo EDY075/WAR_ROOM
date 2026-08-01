@@ -1,0 +1,32 @@
+# WAR ROOM — .gitignore
+# Projeto HTML/CSS/JS estático (portfólio)
+
+# Dependências e build
+node_modules/
+npm-debug.log*
+yarn-error.log*
+package-lock.json
+
+# Arquivos temporários e de backup
+*.bak
+*.bak2
+*.tmp
+*.temp
+*.swp
+*~
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Pasta de arquivos antigos (nunca versionar)
+_old/
+archive/
+backups/
+
+# Arquivos de ambiente/editor
+.vscode/
+.idea/
+*.code-workspace
+
+# Logs
+*.log

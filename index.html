@@ -1,0 +1,1482 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>WAR ROOM 3.0 — Os 12 Maiores Ciberataques da História</title>
+<meta name="description" content="Experiência cinematográfica interativa sobre os 12 maiores ataques cibernéticos da história. Documentário em código.">
+<meta name="theme-color" content="#0a0a0a">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=Source+Serif+4:opsz,wght@8..60,300;8..60,400;8..60,600;8..60,700&family=JetBrains+Mono:wght@300;400;500;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+/* WAR ROOM 3.0 — CINEMATIC DOCUMENTARY v3.0 */
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+:root{--bg-primary:#0a0a0a;--bg-secondary:#111;--bg-tertiary:#1a1a1a;--text-primary:#f0ece4;--text-secondary:#a09888;--text-dim:#94887a;--accent:#c9a84c;--accent-glow:rgba(201,168,76,0.25);--accent-secondary:#8b7355;--border-subtle:#2a2a2a;--font-display:"Playfair Display",Georgia,serif;--font-body:"Source Serif 4",Georgia,serif;--font-mono:"JetBrains Mono","Fira Code",monospace;--font-ui:Inter,"Segoe UI",system-ui,sans-serif;--transition-slow:1.2s cubic-bezier(0.16,1,0.3,1);--transition-med:0.6s cubic-bezier(0.16,1,0.3,1);--transition-fast:0.3s cubic-bezier(0.4,0,0.2,1);--ease-out-expo:cubic-bezier(0.16,1,0.3,1);--focus-ring:0 0 0 2px var(--accent);--selection-bg:rgba(201,168,76,0.3)}
+html{scroll-behavior:smooth;background:var(--bg-primary)}
+body{font-family:var(--font-body);background:var(--bg-primary);color:var(--text-primary);overflow-x:hidden;-webkit-font-smoothing:antialiased}
+/* ===== STORY MODAL ===== */
+.story-modal{position:fixed;top:0;left:0;width:100vw;height:100vh;z-index:200000;display:flex;align-items:center;justify-content:center;opacity:0;pointer-events:none;transition:opacity .35s cubic-bezier(0.16,1,0.3,1);will-change:opacity;contain:layout style}
+.story-modal.active{opacity:1;pointer-events:auto}
+.story-overlay{position:absolute;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.92);backdrop-filter:blur(30px)}
+.story-container{position:relative;width:90%;max-width:720px;max-height:85vh;background:var(--bg-secondary);border:1px solid var(--border-subtle);border-radius:8px;overflow:hidden;display:flex;flex-direction:column;transform:scale(0.95);transition:transform .4s cubic-bezier(0.22,1,0.36,1);will-change:transform;contain:layout paint style}
+.story-modal.active .story-container{transform:scale(1)}
+.story-header{display:flex;align-items:center;justify-content:space-between;padding:1.25rem 1.5rem;border-bottom:1px solid var(--border-subtle);flex-shrink:0}
+.story-header-title{font-family:var(--font-display);font-size:1.1rem;color:var(--accent);letter-spacing:.05rem}
+.story-header-meta{font-family:var(--font-ui);font-size:.55rem;color:var(--text-dim);letter-spacing:.1rem;text-transform:uppercase}
+.story-close{font-family:var(--font-ui);font-size:.7rem;color:var(--text-dim);background:none;border:1px solid var(--border-subtle);padding:6px 14px;border-radius:3px;cursor:pointer;transition:all var(--transition-fast)}
+.story-close:hover{color:var(--accent);border-color:var(--accent-secondary)}
+.story-body{padding:1.5rem;overflow-y:auto;flex:1;contain:paint style;will-change:scroll-position;-webkit-overflow-scrolling:touch;overscroll-behavior:contain}
+.story-body p{font-family:var(--font-body);font-size:.9rem;line-height:1.8;color:var(--text-secondary);margin-bottom:1rem;text-align:justify}
+.story-body .story-dropcap{font-family:var(--font-display);font-size:3.5rem;font-weight:700;float:left;line-height:1;margin-right:.5rem;color:var(--accent)}
+.story-body .story-context-label{font-family:var(--font-ui);font-size:.5rem;letter-spacing:.2rem;text-transform:uppercase;color:var(--accent);margin-top:1rem;margin-bottom:.5rem;opacity:.6}
+.story-body::-webkit-scrollbar{width:4px}
+.story-body::-webkit-scrollbar-track{background:transparent}
+.story-body::-webkit-scrollbar-thumb{background:var(--accent-secondary);border-radius:2px}
+.skip-link{position:absolute;top:-100%;left:0;z-index:100000;padding:12px 24px;background:var(--accent);color:#000;font-family:var(--font-ui);font-size:.85rem;font-weight:600;text-decoration:none;transition:top .3s}
+.skip-link:focus{top:0;outline:none;box-shadow:var(--focus-ring)}
+:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+button:focus-visible,[tabindex]:focus-visible{box-shadow:var(--focus-ring)}
+::selection{background:var(--selection-bg);color:var(--text-primary)}
+::-moz-selection{background:var(--selection-bg);color:var(--text-primary)}
+::-webkit-scrollbar{width:6px}
+::-webkit-scrollbar-track{background:var(--bg-primary)}
+::-webkit-scrollbar-thumb{background:var(--accent-secondary);border-radius:3px}
+::-webkit-scrollbar-thumb:hover{background:var(--accent)}
+#hero,#intro,#episodes,#footer{scroll-margin-top:80px}
+#loading-screen{position:fixed;top:0;left:0;width:100vw;height:100vh;background:#000;z-index:100000;display:flex;flex-direction:column;align-items:center;justify-content:center;transition:opacity var(--transition-slow)}
+#loading-screen.hidden{opacity:0;pointer-events:none}
+.loading-content{text-align:center;max-width:700px;padding:2rem}
+.loading-emblem{font-family:var(--font-display);font-size:clamp(3rem,8vw,6rem);font-weight:900;letter-spacing:.5rem;background:linear-gradient(135deg,var(--accent) 0%,#e8d5a0 50%,var(--accent) 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;margin-bottom:.5rem;opacity:0;animation:emblemReveal 2s cubic-bezier(0.16,1,0.3,1) forwards,emblemPulse 4s ease-in-out 2s infinite}
+@keyframes emblemReveal{0%{opacity:0;filter:blur(20px);letter-spacing:1.5rem}100%{opacity:1;filter:blur(0);letter-spacing:.5rem}}
+@keyframes emblemPulse{0%,100%{filter:brightness(1)}50%{filter:brightness(1.25)}}
+.loading-sub{font-family:var(--font-ui);color:var(--text-dim);font-size:.7rem;letter-spacing:.6rem;text-transform:uppercase;margin-bottom:2.5rem;opacity:0;animation:fadeIn 1s 1s forwards}
+.loading-bar-container{width:100%;max-width:360px;height:1px;background:rgba(201,168,76,0.08);margin:1.5rem auto;overflow:hidden;opacity:0;animation:fadeIn .5s 1.5s forwards}
+.loading-bar{height:100%;width:0%;background:linear-gradient(90deg,transparent,var(--accent),#e8d5a0,var(--accent),transparent);background-size:200% 100%;animation:loadProgress 4s cubic-bezier(0.16,1,0.3,1) forwards,shimmer 2s ease-in-out infinite}
+@keyframes loadProgress{0%{width:0%}25%{width:18%}50%{width:45%}75%{width:72%}90%{width:88%}100%{width:100%}}
+@keyframes shimmer{0%{background-position:200% 0}100%{background-position:-200% 0}}
+.loading-status{font-family:var(--font-mono);font-size:.6rem;color:var(--accent);opacity:.6;min-height:1.2rem;opacity:0;animation:fadeIn .5s 2s forwards}
+#load-enter{font-family:var(--font-ui);font-size:.75rem;color:var(--accent);margin-top:2.5rem;opacity:0;animation:fadeIn .5s 4.2s forwards;cursor:pointer;letter-spacing:.3rem;text-transform:uppercase;padding:14px 36px;border:1px solid rgba(201,168,76,0.25);display:inline-block;transition:all var(--transition-med);background:transparent;position:relative;overflow:hidden}
+#load-enter::before{content:"";position:absolute;top:0;left:-100%;width:100%;height:100%;background:linear-gradient(90deg,transparent,rgba(201,168,76,0.05),transparent);transition:left .6s}
+#load-enter:hover::before{left:100%}
+#load-enter:hover{background:rgba(201,168,76,0.06);border-color:var(--accent);box-shadow:0 0 30px rgba(201,168,76,0.08)}
+.site-header{position:fixed;top:0;left:0;right:0;z-index:10000;pointer-events:none}
+.nav-bar{padding:1rem 2rem;display:flex;align-items:center;justify-content:space-between;background:linear-gradient(180deg,rgba(10,10,10,0.97) 0%,transparent 100%);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);pointer-events:none;transition:transform var(--transition-med)}
+.nav-bar>*{pointer-events:auto}
+.nav-logo{font-family:var(--font-display);font-size:1.1rem;font-weight:700;letter-spacing:.3rem;color:var(--accent)}
+.nav-logo span{color:var(--text-primary)}
+.nav-links{display:flex;align-items:center;gap:1.5rem}
+.nav-link{font-family:var(--font-ui);font-size:.65rem;letter-spacing:.15rem;text-transform:uppercase;color:var(--text-dim);cursor:pointer;transition:color var(--transition-fast);background:none;border:none;padding:8px 4px;position:relative}
+.nav-link::after{content:"";position:absolute;bottom:0;left:50%;width:0;height:1px;background:var(--accent);transition:all var(--transition-fast);transform:translateX(-50%)}
+.nav-link:hover,.nav-link.active{color:var(--accent)}
+.nav-link:hover::after,.nav-link.active::after{width:100%}
+.nav-controls{display:flex;align-items:center;gap:.75rem}
+.nav-btn{font-family:var(--font-ui);font-size:.55rem;letter-spacing:.1rem;text-transform:uppercase;color:var(--text-secondary);background:rgba(255,255,255,0.02);border:1px solid var(--border-subtle);padding:6px 14px;border-radius:3px;cursor:pointer;transition:all var(--transition-fast)}
+.nav-btn:hover{color:var(--accent);border-color:var(--accent-secondary)}
+.nav-btn.audio-on{color:var(--accent);border-color:var(--accent)}
+.audio-selector,.audio-selector-mobile{display:flex;gap:4px}
+.audio-selector .nav-btn,.audio-selector-mobile .nav-btn{font-size:.5rem;padding:4px 8px;letter-spacing:.05rem}
+.audio-selector .nav-btn.active,.audio-selector-mobile .nav-btn.active{color:var(--accent);border-color:var(--accent);background:rgba(201,168,76,0.08)}
+.audio-selector .nav-btn.playing,.audio-selector-mobile .nav-btn.playing{box-shadow:0 0 8px rgba(201,168,76,0.15)}
+.audio-opt{transition:all var(--transition-fast)}
+.audio-volume-slider{-webkit-appearance:none;appearance:none;width:70px;height:2px;background:rgba(201,168,76,0.12);border-radius:1px;outline:none;cursor:pointer;margin-left:4px;flex-shrink:0}
+.audio-volume-slider::-webkit-slider-thumb{-webkit-appearance:none;appearance:none;width:10px;height:10px;border-radius:50%;background:var(--accent);cursor:pointer;border:none;transition:transform .15s}
+.audio-volume-slider::-webkit-slider-thumb:hover{transform:scale(1.3)}
+.audio-volume-slider::-moz-range-thumb{width:10px;height:10px;border-radius:50%;background:var(--accent);cursor:pointer;border:none}
+@media(max-width:768px){.audio-volume-slider{width:55px}}
+.hamburger{display:none;flex-direction:column;gap:4px;cursor:pointer;background:none;border:none;padding:8px}
+.hamburger span{display:block;width:20px;height:1.5px;background:var(--text-primary);transition:all var(--transition-fast);transform-origin:center}
+.hamburger.active span:nth-child(1){transform:rotate(45deg) translate(4px,4px)}
+.hamburger.active span:nth-child(2){opacity:0}
+.hamburger.active span:nth-child(3){transform:rotate(-45deg) translate(4px,-4px)}
+.nav-overlay{display:none;position:fixed;top:0;left:0;width:100vw;height:100vh;background:rgba(0,0,0,0.85);backdrop-filter:blur(20px);z-index:9999;flex-direction:column;align-items:center;justify-content:center;gap:2rem}
+.nav-overlay.open{display:flex}
+.nav-overlay .nav-link{font-size:1.2rem;color:var(--text-primary)}
+.hero-section{position:relative;width:100%;height:100vh;overflow:hidden;display:flex;align-items:center;justify-content:center;will-change:transform;transform:translateZ(0)}
+.hero-bg{position:absolute;top:0;left:0;width:100%;height:100%;z-index:0}
+.hero-depth-layer{position:absolute;top:0;left:0;width:100%;height:100%;background:radial-gradient(ellipse at 15% 60%,rgba(10,20,40,0.3) 0%,transparent 50%),radial-gradient(ellipse at 85% 40%,rgba(40,20,10,0.15) 0%,transparent 50%),radial-gradient(ellipse at 50% 100%,rgba(0,0,0,1) 0%,transparent 60%),radial-gradient(ellipse at 50% 0%,rgba(201,168,76,0.02) 0%,transparent 40%);will-change:transform}
+.hero-fog{position:absolute;top:0;left:0;width:200%;height:200%;background:radial-gradient(ellipse at 30% 50%,rgba(201,168,76,0.015) 0%,transparent 50%),radial-gradient(ellipse at 70% 50%,rgba(74,140,191,0.01) 0%,transparent 50%);animation:fogDrift 60s linear infinite;z-index:1;pointer-events:none;will-change:transform}
+@keyframes fogDrift{0%{transform:translate(-5%,-2%) scale(1)}25%{transform:translate(-2%,-5%) scale(1.02)}50%{transform:translate(3%,-1%) scale(1)}75%{transform:translate(1%,3%) scale(.98)}100%{transform:translate(-5%,-2%) scale(1)}}
+#wave-canvas{position:absolute;top:0;left:0;width:100%;height:100%;z-index:1;pointer-events:none;opacity:.35}
+.hero-particles{position:absolute;top:0;left:0;width:100%;height:100%;z-index:1;pointer-events:none;overflow:hidden}
+.particle{position:absolute;width:2px;height:2px;border-radius:50%;opacity:0;animation:particleFloat linear infinite}
+@keyframes particleFloat{0%{transform:translateY(100vh) scale(0);opacity:0}10%{opacity:.6}90%{opacity:.4}100%{transform:translateY(-10vh) scale(1);opacity:0}}
+.hero-glow{position:absolute;border-radius:50%;pointer-events:none;z-index:1;filter:blur(60px);opacity:0;will-change:transform}
+.hero-glow-1{width:400px;height:400px;background:radial-gradient(circle,rgba(201,168,76,0.08) 0%,transparent 70%);top:20%;left:15%;animation:glowPulse1 8s ease-in-out infinite}
+.hero-glow-2{width:300px;height:300px;background:radial-gradient(circle,rgba(74,140,191,0.05) 0%,transparent 70%);bottom:25%;right:20%;animation:glowPulse2 12s ease-in-out infinite}
+.hero-glow-3{width:500px;height:500px;background:radial-gradient(circle,rgba(201,168,76,0.04) 0%,transparent 60%);top:50%;left:50%;transform:translate(-50%,-50%);animation:glowPulse3 15s ease-in-out infinite}
+@keyframes glowPulse1{0%,100%{opacity:.3;transform:translate(0,0)}50%{opacity:.7;transform:translate(20px,-10px)}}
+@keyframes glowPulse2{0%,100%{opacity:.2;transform:translate(0,0)}50%{opacity:.5;transform:translate(-15px,15px)}}
+@keyframes glowPulse3{0%,100%{opacity:.1;transform:translate(-50%,-50%) scale(1)}50%{opacity:.25;transform:translate(-50%,-50%) scale(1.1)}}
+.hero-vignette{position:absolute;top:0;left:0;width:100%;height:100%;box-shadow:inset 0 0 200px 80px rgba(0,0,0,0.85);z-index:2;pointer-events:none}
+.hero-rupture{position:absolute;top:0;left:0;width:100%;height:100%;z-index:3;pointer-events:none;opacity:0;transition:opacity .1s}
+.hero-rupture.active{opacity:1}
+.hero-rupture::before{content:"";position:absolute;top:0;left:0;width:100%;height:100%;background:radial-gradient(ellipse at 50% 50%,rgba(201,168,76,0.15) 0%,transparent 40%),radial-gradient(ellipse at 30% 40%,rgba(255,255,255,0.05) 0%,transparent 30%)}
+#mouse-glow{position:fixed;width:500px;height:500px;border-radius:50%;background:radial-gradient(circle,rgba(201,168,76,0.04) 0%,transparent 60%);pointer-events:none;z-index:1;transform:translate(-50%,-50%);opacity:0;will-change:transform}
+.hero-content{position:relative;z-index:4;text-align:center;max-width:900px;padding:2rem}
+.hero-eyebrow{font-family:var(--font-ui);font-size:.65rem;letter-spacing:.6rem;text-transform:uppercase;color:var(--accent);margin-bottom:1.5rem;opacity:0;animation:fadeSlideUp var(--transition-slow) .5s forwards}
+.hero-title{font-family:var(--font-display);font-size:clamp(2.5rem,7vw,7rem);font-weight:900;letter-spacing:.15rem;line-height:1.05;color:var(--text-primary);margin-bottom:1rem;text-wrap:balance;opacity:0;animation:fadeSlideUp var(--transition-slow) .8s forwards;text-shadow:0 0 80px rgba(201,168,76,0.08)}
+.hero-title .accent{background:linear-gradient(135deg,var(--accent) 0%,#e8d5a0 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.hero-sub{font-family:var(--font-body);font-size:clamp(.9rem,1.8vw,1.3rem);color:var(--text-secondary);font-weight:300;font-style:italic;margin-bottom:2.5rem;opacity:0;animation:fadeSlideUp var(--transition-slow) 1.1s forwards;max-width:700px;margin-left:auto;margin-right:auto}
+#hero-cta{font-family:var(--font-ui);font-size:.7rem;letter-spacing:.3rem;text-transform:uppercase;color:var(--accent);border:1px solid rgba(201,168,76,0.25);padding:14px 36px;display:inline-block;cursor:pointer;transition:all var(--transition-med);opacity:0;animation:fadeSlideUp var(--transition-slow) 1.4s forwards;background:transparent;position:relative;overflow:hidden}
+#hero-cta::before{content:"";position:absolute;top:0;left:-100%;width:100%;height:100%;background:linear-gradient(90deg,transparent,rgba(201,168,76,0.06),transparent);transition:left .6s}
+#hero-cta:hover::before{left:100%}
+#hero-cta:hover{background:rgba(201,168,76,0.06);border-color:var(--accent);box-shadow:0 0 40px rgba(201,168,76,0.08)}
+.hero-scroll-indicator{position:absolute;bottom:2rem;left:50%;transform:translateX(-50%);z-index:4;display:flex;flex-direction:column;align-items:center;gap:.5rem;opacity:0;animation:fadeIn var(--transition-slow) 2.2s forwards}
+.hero-scroll-indicator span{font-family:var(--font-ui);font-size:.45rem;letter-spacing:.2rem;text-transform:uppercase;color:var(--text-dim)}
+.hero-scroll-line{width:1px;height:40px;background:linear-gradient(180deg,var(--accent) 0%,transparent 100%);animation:scrollPulse 2.5s ease-in-out infinite}
+@keyframes scrollPulse{0%,100%{opacity:.2;transform:scaleY(1)}50%{opacity:.8;transform:scaleY(1.3)}}
+@keyframes fadeSlideUp{from{opacity:0;transform:translateY(30px)}to{opacity:1;transform:translateY(0)}}
+@keyframes fadeIn{to{opacity:1}}
+.intro-section{position:relative;min-height:50vh;display:flex;align-items:center;justify-content:center;padding:8rem 2rem 6rem;background:var(--bg-primary);z-index:2}
+.intro-content{max-width:780px;text-align:center}
+.intro-content h2{font-family:var(--font-display);font-size:clamp(1.8rem,3.5vw,3rem);font-weight:700;margin-bottom:1.5rem;opacity:0;transform:translateY(20px);transition:opacity var(--transition-slow),transform var(--transition-slow)}
+.intro-content h2.visible{opacity:1;transform:translateY(0)}
+.intro-content p{font-family:var(--font-body);font-size:1.05rem;line-height:1.8;color:var(--text-secondary);margin-bottom:.8rem;opacity:0;transform:translateY(20px);transition:opacity var(--transition-slow) .15s,transform var(--transition-slow) .15s}
+.intro-content p.visible{opacity:1;transform:translateY(0)}
+.episodes-section{position:relative;padding:2rem 0;background:var(--bg-primary)}
+.section-header{text-align:center;padding:0 2rem 3rem}
+.section-header h2{font-family:var(--font-display);font-size:clamp(1.8rem,3.5vw,3rem);font-weight:700;margin-bottom:.5rem;text-wrap:balance}
+.section-header p{font-family:var(--font-ui);font-size:.65rem;letter-spacing:.4rem;text-transform:uppercase;color:var(--text-dim)}
+.episodes-list{width:100%}
+.episode-entry{position:relative;width:100%;overflow:hidden;contain:layout style paint;z-index:2}
+.episode-entry{padding:4rem 2rem;min-height:auto}
+.episode-entry .episode-grid{max-width:1000px;margin:0 auto;display:grid;grid-template-columns:1fr;gap:2rem}
+.episode-entry .episode-image-wrap{position:relative;overflow:hidden;border-radius:6px;aspect-ratio:21/9;max-height:50vh;background:var(--bg-secondary);border:1px solid var(--border-subtle);width:100%;will-change:transform,opacity}
+.episode-entry .episode-image{width:100%;height:100%;object-fit:cover;transition:transform 8s var(--ease-out-expo);will-change:transform}
+.episode-entry .episode-image-wrap:hover .episode-image{transform:scale(1.05)}
+.episode-entry .episode-image-blur{position:absolute;top:0;left:0;width:100%;height:100%;filter:blur(20px);transform:scale(1.1);opacity:.25;background-size:cover;background-position:center;transition:opacity .5s}
+.episode-entry .episode-image-loaded .episode-image-blur{opacity:0}
+.episode-entry .episode-info{max-width:800px;margin:0 auto;text-align:center;will-change:transform,opacity}
+.episode-image-placeholder{width:100%;height:100%;display:flex;flex-direction:column;align-items:center;justify-content:center;font-family:var(--font-display);font-size:1.3rem;color:var(--text-dim);background:radial-gradient(ellipse at 30% 40%,rgba(201,168,76,0.05) 0%,transparent 60%),radial-gradient(ellipse at 70% 60%,rgba(74,140,191,0.03) 0%,transparent 50%),linear-gradient(135deg,var(--bg-secondary) 0%,#141414 50%,var(--bg-tertiary) 100%);gap:.75rem;position:relative;overflow:hidden}
+.episode-image-placeholder::before{content:"";position:absolute;top:-50%;left:-50%;width:200%;height:200%;background:radial-gradient(circle,rgba(201,168,76,0.02) 0%,transparent 50%);animation:placeholderShift 20s ease-in-out infinite;pointer-events:none}
+@keyframes placeholderShift{0%,100%{transform:translate(0,0)}33%{transform:translate(5%,3%)}66%{transform:translate(-3%,-2%)}}
+.episode-image-placeholder .pl-year{font-family:var(--font-mono);font-size:2rem;color:rgba(201,168,76,0.15);letter-spacing:.3rem;position:relative;z-index:1}
+.episode-image-placeholder .pl-title{font-size:1.5rem;color:var(--text-dim);position:relative;z-index:1}
+.episode-image-placeholder .pl-ref{font-family:var(--font-ui);font-size:.45rem;letter-spacing:.1rem;text-transform:uppercase;color:rgba(255,255,255,0.08);position:relative;z-index:1}
+.episode-number{font-family:var(--font-display);font-size:clamp(3rem,8vw,6rem);font-weight:900;color:rgba(201,168,76,0.04);line-height:1;letter-spacing:-.05em;pointer-events:none;user-select:none}
+.episode-entry .episode-number{margin-bottom:1rem}
+.episode-year{font-family:var(--font-mono);font-size:.7rem;color:var(--accent);margin-bottom:.4rem;letter-spacing:.2rem}
+.episode-type-badge{display:inline-block;font-family:var(--font-ui);font-size:.5rem;letter-spacing:.15rem;text-transform:uppercase;padding:3px 10px;border:1px solid rgba(201,168,76,0.15);border-radius:2px;color:var(--accent);margin-bottom:.8rem}
+.episode-title{font-family:var(--font-display);font-size:clamp(1.6rem,2.8vw,2.5rem);font-weight:700;line-height:1.2;margin-bottom:.6rem;text-wrap:balance}
+.episode-subtitle{font-style:italic;color:var(--text-secondary);margin-bottom:0.5rem;font-size:0.85rem}.episode-summary{font-family:var(--font-body);font-size:.9rem;line-height:1.75;color:var(--text-secondary);margin-bottom:1.2rem}
+.episode-actions{display:flex;gap:.8rem;flex-wrap:wrap}
+.episode-entry .episode-actions{justify-content:center}
+.episode-btn{font-family:var(--font-ui);font-size:.6rem;letter-spacing:.15rem;text-transform:uppercase;padding:10px 22px;cursor:pointer;transition:all var(--transition-fast);border-radius:3px;background:transparent}
+.episode-btn-primary{border:1px solid var(--accent);color:var(--accent)}
+.episode-btn-primary:hover{background:rgba(201,168,76,0.08);box-shadow:0 0 20px rgba(201,168,76,0.06)}
+.episode-btn-secondary{border:1px solid var(--border-subtle);color:var(--text-secondary)}
+.episode-btn-secondary:hover{border-color:var(--text-primary);color:var(--text-primary)}
+.episode-timeline{display:flex;align-items:center;gap:.5rem;padding:1.5rem 2rem 0;max-width:1000px;margin:0 auto;opacity:0;transition:opacity .7s cubic-bezier(0.16,1,0.3,1) .6s;will-change:opacity}
+.episode-timeline.visible{opacity:1}
+
+.episode-timeline-dot{width:6px;height:6px;border-radius:50%;background:var(--accent);opacity:.25;flex-shrink:0}
+.episode-timeline-line{flex:1;height:1px;background:linear-gradient(90deg,var(--accent) 0%,transparent 100%);opacity:.2}
+.episode-timeline-label{font-family:var(--font-mono);font-size:.5rem;color:var(--text-dim);text-transform:uppercase;letter-spacing:.1rem}
+.episode-detail{display:grid;grid-template-rows:0fr;opacity:0;visibility:hidden;pointer-events:none;overflow:hidden;transition:grid-template-rows .6s cubic-bezier(0.22,1,0.36,1),opacity .5s cubic-bezier(0.22,1,0.36,1),visibility 0s .6s;max-width:1000px;margin:0 auto;will-change:grid-template-rows,opacity}
+.episode-detail.open{grid-template-rows:1fr;opacity:1;visibility:visible;pointer-events:all;transition:grid-template-rows .6s cubic-bezier(0.22,1,0.36,1),opacity .5s cubic-bezier(0.22,1,0.36,1),visibility 0s 0s}
+.episode-entry .episode-detail{padding-left:2rem;padding-right:2rem}
+.episode-detail-inner{display:grid;grid-template-columns:1fr 1fr;gap:2rem;padding:2rem;margin-top:1rem;min-height:0;overflow:hidden;background:rgba(17,17,17,0.5);border:1px solid var(--border-subtle);border-radius:6px;backdrop-filter:blur(12px)}
+.episode-detail h4{font-family:var(--font-ui);font-size:.55rem;letter-spacing:.2rem;text-transform:uppercase;color:var(--accent);margin-bottom:.8rem}
+.episode-detail p,.episode-detail li{font-family:var(--font-body);font-size:.8rem;line-height:1.6;color:var(--text-secondary)}
+.episode-detail ul{list-style:none;padding:0}
+.episode-detail li{padding:.35rem 0;border-bottom:1px solid rgba(255,255,255,0.02);display:flex;gap:.8rem}
+.episode-detail .tl-date{font-family:var(--font-mono);color:var(--accent);min-width:75px;flex-shrink:0}
+.episode-gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:.4rem;margin-top:1rem}
+.episode-gallery img{width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:3px;cursor:pointer;border:1px solid var(--border-subtle);transition:all var(--transition-fast)}
+.episode-gallery img:hover{border-color:var(--accent);transform:scale(1.03)}
+#lightbox{position:fixed;top:0;left:0;width:100vw;height:100vh;z-index:50000;background:rgba(0,0,0,0.95);display:flex;align-items:center;justify-content:center;backdrop-filter:blur(20px);opacity:0;pointer-events:none;transition:opacity .4s cubic-bezier(0.16,1,0.3,1);will-change:opacity;contain:layout style}
+#lightbox.active{opacity:1;pointer-events:all}
+.lightbox-content{position:relative;max-width:90vw;max-height:85vh;display:flex;flex-direction:column;align-items:center}
+.lb-image-stack{position:relative;width:100%;max-height:75vh;display:flex;align-items:center;justify-content:center;overflow:hidden}
+.lb-image-layer{position:absolute;max-width:100%;max-height:75vh;object-fit:contain;border-radius:4px;box-shadow:0 0 80px rgba(0,0,0,0.8);transition:opacity .5s cubic-bezier(0.22,1,0.36,1);will-change:opacity}
+#lb-image{opacity:1;z-index:2;position:relative}
+#lb-image-next{opacity:0;z-index:1}
+#lb-caption{font-family:var(--font-body);font-size:.8rem;color:var(--text-secondary);margin-top:1rem;text-align:center}
+#lb-close{position:fixed;top:1.5rem;right:1.5rem;width:44px;height:44px;display:flex;align-items:center;justify-content:center;font-size:1.2rem;color:var(--text-primary);cursor:pointer;border:1px solid rgba(255,255,255,0.1);border-radius:50%;background:rgba(0,0,0,0.5);transition:all var(--transition-fast);z-index:50001}
+#lb-close:hover{color:var(--accent);border-color:var(--accent)}
+.lightbox-nav{position:fixed;top:50%;transform:translateY(-50%);width:48px;height:48px;display:flex;align-items:center;justify-content:center;font-size:1.5rem;color:var(--text-secondary);cursor:pointer;border:1px solid rgba(255,255,255,0.05);border-radius:50%;background:rgba(0,0,0,0.3);transition:all var(--transition-fast);z-index:50001}
+.lightbox-nav:hover{color:var(--accent);border-color:var(--accent);background:rgba(201,168,76,0.08)}
+#lb-prev{left:1.5rem}#lb-next{right:1.5rem}
+#lb-counter{position:fixed;bottom:2rem;left:50%;transform:translateX(-50%);font-family:var(--font-mono);font-size:.65rem;color:var(--text-dim);letter-spacing:.1rem}
+.footer{padding:4rem 2rem;border-top:1px solid var(--border-subtle);text-align:center;margin-top:2rem;position:relative;z-index:2}
+.footer-logo{font-family:var(--font-display);font-size:1.3rem;font-weight:700;letter-spacing:.3rem;color:var(--text-dim);margin-bottom:1rem}
+.footer p{font-family:var(--font-body);font-size:.75rem;color:var(--text-dim);line-height:1.8;max-width:600px;margin:0 auto}
+.footer .footer-credit{font-size:.9rem;color:var(--accent);margin-bottom:.75rem;letter-spacing:.1rem}
+.footer .footer-credit strong{font-weight:700;color:var(--text-primary)}
+.footer-link{color:var(--accent);text-decoration:none;transition:color .3s,text-shadow .3s;border-bottom:1px solid transparent}
+.footer-link:hover{color:#fff;text-shadow:0 0 12px var(--accent);border-bottom-color:var(--accent)}
+.footer-sources{margin-top:2rem;display:flex;flex-wrap:wrap;justify-content:center;gap:.5rem 1.5rem}
+.footer-sources span{font-family:var(--font-ui);font-size:.5rem;letter-spacing:.1rem;text-transform:uppercase;color:rgba(255,255,255,0.12)}
+#grain-overlay{position:fixed;top:0;left:0;width:100vw;height:100vh;pointer-events:none;z-index:99998;opacity:.025;mix-blend-mode:overlay}
+#ambient-particles{position:fixed;top:0;left:0;width:100vw;height:100vh;pointer-events:none;z-index:1;opacity:.7;will-change:transform}
+@media(max-width:1024px){
+  .episode-detail-inner{grid-template-columns:1fr}
+  .lb-image-layer{max-height:60vh}
+  .story-container{width:95%;max-height:90vh}
+}
+@media(max-width:768px){
+  :root{--transition-slow:0.6s}
+  .site-header{padding:0}
+  .nav-bar{padding:.6rem .8rem;backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px)}
+  .nav-logo{font-size:.9rem;letter-spacing:.2rem}
+  .nav-links{display:none}
+  .hamburger{display:flex}
+  .audio-selector{display:none}
+  .audio-selector-mobile{flex-direction:column;gap:.6rem;margin-top:1.5rem}
+  .audio-selector-mobile .nav-btn{padding:10px 24px;font-size:.65rem;min-width:160px}
+  .hero-title{letter-spacing:.02rem;font-size:clamp(1.8rem,8vw,3.2rem)}
+  .hero-sub{font-style:normal;font-size:clamp(.8rem,2.5vw,1.1rem);margin-bottom:1.5rem}
+  .hero-eyebrow{font-size:.5rem;letter-spacing:.3rem;margin-bottom:1rem}
+  .hero-content{padding:1.5rem 1rem}
+  .hero-scroll-indicator{bottom:1.2rem}
+  .hero-scroll-line{height:25px}
+  #hero-cta{padding:12px 28px;font-size:.6rem}
+  .hero-glow-1,.hero-glow-2,.hero-glow-3{display:none}
+  .hero-fog{animation-duration:120s}
+  #wave-canvas{opacity:.2}
+  .particle{display:none}
+  .episode-gallery{grid-template-columns:repeat(2,1fr);gap:.3rem}
+.episode-entry{padding:2.5rem 1rem}
+.episode-entry .episode-grid{gap:1rem}
+.episode-entry .episode-image-wrap{aspect-ratio:16/9;max-height:35vh;border-radius:4px}
+.episode-title{font-size:clamp(1.1rem,4vw,1.6rem)}
+.episode-summary{font-size:.8rem;line-height:1.6}
+.episode-number{font-size:clamp(2rem,10vw,4rem)}
+.episode-year{font-size:.6rem}
+.episode-type-badge{font-size:.45rem;padding:2px 8px}
+.episode-btn{padding:10px 18px;font-size:.55rem;min-width:120px}
+.episode-actions{justify-content:center;gap:.5rem}
+.episode-timeline{padding:1rem 1rem 0}
+.episode-detail-inner{padding:1.2rem;gap:1rem}
+.episode-detail p,.episode-detail li{font-size:.75rem}
+.lightbox-nav{width:40px;height:40px;font-size:1.2rem}
+#lb-prev{left:.5rem}#lb-next{right:.5rem}
+.lightbox-content{max-width:98vw}
+.lb-image-layer{max-height:60vh;border-radius:3px}
+#lb-close{top:.8rem;right:.8rem;width:40px;height:40px}
+#lb-counter{font-size:.55rem;bottom:1rem}
+.story-container{width:96%;max-height:92vh;border-radius:6px}
+.story-header{padding:1rem 1.2rem}
+.story-header-title{font-size:.95rem}
+.story-body{padding:1.2rem;font-size:.85rem}
+  .story-body .story-dropcap{font-size:2.5rem}
+  .story-close{padding:5px 12px;font-size:.6rem}
+  .intro-section{padding:5rem 1.5rem 4rem}
+  .intro-content h2{font-size:clamp(1.3rem,5vw,1.8rem)}
+  .intro-content p{font-size:.85rem}
+  .section-header h2{font-size:clamp(1.3rem,5vw,1.8rem)}
+  .section-header p{font-size:.5rem}
+  .footer{padding:3rem 1.5rem}
+  .footer-logo{font-size:1rem}
+  .footer p{font-size:.65rem}
+  .footer .footer-credit{font-size:.75rem}
+  .nav-overlay .nav-link{font-size:1.1rem;padding:12px 0}
+  .nav-overlay{gap:1.5rem}
+  .skip-link{font-size:.7rem;padding:10px 18px}
+}
+@media(max-width:480px){
+  .episode-gallery{grid-template-columns:1fr;gap:.25rem}
+  .episode-actions{flex-direction:column;align-items:stretch}
+  .episode-btn{text-align:center;width:100%;padding:12px 16px;font-size:.5rem}
+  .nav-controls{gap:.4rem}
+  .nav-btn{padding:4px 8px;font-size:.4rem}
+  .episode-entry{padding:2rem .8rem}
+  .episode-title{font-size:clamp(1rem,5vw,1.3rem)}
+  .episode-subtitle{font-size:.75rem}
+  .episode-summary{font-size:.75rem}
+  .episode-number{font-size:clamp(1.5rem,12vw,3rem)}
+  .episode-entry .episode-image-wrap{aspect-ratio:4/3;max-height:30vh}
+  .episode-detail-inner{padding:1rem;gap:.8rem}
+  .episode-detail h4{font-size:.5rem}
+  .episode-timeline-label{font-size:.4rem}
+  .episode-timeline-dot{width:4px;height:4px}
+  .hero-title{font-size:clamp(1.5rem,9vw,2.5rem)}
+  .hero-sub{font-size:.85rem}
+  .hero-eyebrow{font-size:.45rem;letter-spacing:.2rem}
+  #hero-cta{padding:10px 24px;font-size:.55rem;width:100%;max-width:280px}
+  .lightbox-nav{width:34px;height:34px;font-size:1rem}
+  #lb-prev{left:.3rem}#lb-next{right:.3rem}
+  .lb-image-layer{max-height:50vh}
+  #lb-caption{font-size:.65rem;margin-top:.5rem}
+  .story-body{padding:1rem;font-size:.8rem}
+  .story-body .story-dropcap{font-size:2rem}
+  .story-header-title{font-size:.85rem}
+  .story-header-meta{font-size:.45rem}
+  .footer{padding:2rem 1rem}
+  .footer-sources{gap:.3rem 1rem}
+  .footer-sources span{font-size:.4rem}
+  .intro-section{padding:4rem 1rem 3rem}
+  .loading-emblem{font-size:clamp(2rem,10vw,4rem)}
+  .loading-sub{font-size:.5rem;letter-spacing:.3rem}
+  #load-enter{padding:12px 28px;font-size:.65rem;width:100%;max-width:250px}
+}
+
+/* Mobile touch optimizations */
+@media(hover:none) and (pointer:coarse){
+  .episode-btn::before{display:none}
+  #hero-cta::before{display:none}
+  .episode-image-wrap:hover .episode-image{transform:none}
+  .episode-btn:hover{border-color:inherit;background:transparent;box-shadow:none}
+  #hero-cta:hover{background:transparent;border-color:rgba(201,168,76,0.25);box-shadow:none}
+  .footer-link:hover{color:var(--accent);text-shadow:none;border-bottom-color:transparent}
+  .lightbox-nav:hover{border-color:rgba(255,255,255,0.05);background:rgba(0,0,0,0.3)}
+  #lb-close:hover{color:var(--text-primary);border-color:rgba(255,255,255,0.1)}
+  #mouse-glow{display:none!important}
+  .episode-gallery img:hover{border-color:var(--border-subtle);transform:none}
+  .nav-btn:hover{color:var(--text-secondary);border-color:var(--border-subtle)}
+  .nav-btn.audio-on:hover{color:var(--accent);border-color:var(--accent)}
+}
+
+/* Reduced motion for mobile battery saving */
+@media(max-width:768px) and (prefers-reduced-motion:no-preference){
+  #ambient-particles{opacity:.35}
+  .hero-fog{animation-duration:180s}
+}
+body.modal-open .hero-particles,
+body.modal-open .hero-glow,
+body.modal-open .particle,
+body.modal-open #ambient-particles{animation-play-state:paused!important;opacity:0!important}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}.episode-image{transition:none}.hero-bg-layer,.hero-fog,.hero-glow{animation:none!important}#mouse-glow,#grain-overlay,#wave-canvas,.hero-particles{display:none}}
+.img-failed .episode-image-wrap{background:var(--bg-secondary)}.img-failed .episode-image{display:none}
+</style>
+</head>
+<body>
+<a href="#main-content" class="skip-link">Pular para conteudo</a>
+<div id="loading-screen" role="status" aria-label="Carregando experiencia">
+<div class="loading-content">
+<div class="loading-emblem" aria-hidden="true">WAR ROOM</div>
+<div class="loading-sub">Cinematic Documentary</div>
+<div class="loading-bar-container" aria-hidden="true"><div class="loading-bar"></div></div>
+<div class="loading-status" id="load-status" aria-live="polite">Inicializando subsistemas...</div>
+<button id="load-enter" aria-label="Iniciar experiencia">▶ ACESSAR</button>
+</div></div>
+<canvas id="grain-overlay" aria-hidden="true"></canvas>
+<canvas id="ambient-particles" aria-hidden="true"></canvas>
+<div id="mouse-glow" aria-hidden="true"></div>
+<div class="nav-overlay" id="nav-overlay" role="dialog" aria-modal="true" aria-label="Navegacao movel">
+<button class="nav-link" data-target="hero">Prologo</button>
+<button class="nav-link" data-target="episodes">Episodios</button>
+<button class="nav-link" data-target="footer">Creditos</button>
+<div class="audio-selector-mobile">
+<button class="nav-btn audio-opt" data-mode="ambient">♫ Ambiente</button>
+<button class="nav-btn audio-opt" data-mode="soundtrack">♫ Forever</button>
+<input type="range" class="audio-volume-slider" id="audio-vol-mobile" min="0" max="100" step="1" value="5" aria-label="Volume da trilha">
+</div>
+</div>
+<div id="lightbox" role="dialog" aria-modal="true" aria-label="Visualizador de imagens">
+<button class="lightbox-nav lightbox-prev" id="lb-prev" aria-label="Imagem anterior">‹</button>
+<button class="lightbox-nav lightbox-next" id="lb-next" aria-label="Proxima imagem">›</button>
+<div class="lightbox-content">
+<div class="lb-image-stack">
+<img id="lb-image" class="lb-image-layer" src="" alt="Galeria de imagens do ataque">
+<img id="lb-image-next" class="lb-image-layer" src="" alt="" aria-hidden="true">
+</div>
+<div id="lb-caption" class="lightbox-caption"></div>
+</div>
+<button id="lb-close" aria-label="Fechar visualizador">✕</button>
+<div id="lb-counter" aria-live="polite"></div>
+</div>
+<div class="story-modal" id="story-modal" role="dialog" aria-modal="true" aria-label="Historia completa">
+<div class="story-overlay" id="story-overlay"></div>
+<div class="story-container">
+<div class="story-header">
+<div><div class="story-header-title" id="st-title"></div>
+<div class="story-header-meta" id="st-meta"></div></div>
+<button class="story-close" id="st-close">✕ Fechar</button>
+</div>
+<div class="story-body" id="st-body"></div>
+</div></div>
+<header class="site-header" id="site-header">
+<nav class="nav-bar" id="nav-bar" aria-label="Navegacao principal">
+<div class="nav-logo">WAR <span>ROOM</span></div>
+<div class="nav-links">
+<button class="nav-link" data-target="hero">Prologo</button>
+<button class="nav-link" data-target="episodes">Episodios</button>
+<button class="nav-link" data-target="footer">Creditos</button>
+</div>
+<div class="nav-controls">
+<div class="audio-selector">
+<button class="nav-btn audio-opt active" data-mode="ambient">♫ Ambiente</button>
+<button class="nav-btn audio-opt" data-mode="soundtrack">♫ Forever</button>
+<input type="range" class="audio-volume-slider" id="audio-vol-desktop" min="0" max="100" step="1" value="5" aria-label="Volume da trilha">
+</div>
+<button class="hamburger" id="hamburger" aria-label="Abrir menu" aria-expanded="false">
+<span></span><span></span><span></span>
+</button></div></nav></header>
+<main id="main-content">
+<section class="hero-section" id="hero" aria-label="Apresentacao do documentario">
+<div class="hero-bg">
+<div class="hero-depth-layer" id="hero-parallax-bg"></div>
+<div class="hero-fog"></div>
+<canvas id="wave-canvas" aria-hidden="true"></canvas>
+<div class="hero-particles" id="hero-particles" aria-hidden="true"></div>
+<div class="hero-glow hero-glow-1" aria-hidden="true"></div>
+<div class="hero-glow hero-glow-2" aria-hidden="true"></div>
+<div class="hero-glow hero-glow-3" aria-hidden="true"></div>
+<div class="hero-rupture" id="hero-rupture" aria-hidden="true"></div>
+<div class="hero-vignette" aria-hidden="true"></div></div>
+<div class="hero-content">
+<div class="hero-eyebrow" aria-hidden="true">War Room</div>
+<h1 class="hero-title">Os <span class="accent">12</span> Maiores<br><span class="accent">Ciberataques</span> da Historia</h1>
+<p class="hero-sub">Da ARPANET a era dos ransomwares — uma jornada cinematografica pelos incidentes que moldaram o mundo digital</p>
+<button id="hero-cta" aria-label="Comecar a jornada">Comecar a Jornada</button>
+</div>
+<div class="hero-scroll-indicator" aria-hidden="true">
+<span>Rolar para explorar</span>
+<div class="hero-scroll-line"></div></div></section>
+<section class="intro-section" id="intro" aria-label="Introducao">
+<div class="intro-content">
+<h2 id="intro-title">Existem duas historias em todo ciberataque</h2>
+<p id="intro-p1">A que os hackers contam para si mesmos, e a que as vitimas jamais esquecem. Este documentario e sobre a segunda.</p>
+<p id="intro-p2">Entre 1988 e 2023, cada um dos doze incidentes a seguir representa um ponto de inflexao na historia da seguranca cibernetica. Eles nos ensinam sobre vulnerabilidade, resiliencia e a constante evolucao das ameacas digitais.</p>
+<p id="intro-p3">Nao espere codigos binarios ou jargoes tecnicos. Esta e uma historia sobre pessoas — as que atacam, as que defendem e as que, sem saber, estao no meio do fogo cruzado. Bem-vindo ao War Room.</p>
+</div></section>
+<section class="episodes-section" id="episodes" aria-label="Cronologia dos ataques">
+<div class="section-header">
+<h2>Cronologia dos Ataques</h2>
+<p>1988 — 2023 • Doze Episodios</p>
+</div>
+<div class="episodes-list" id="episodes-list"></div></section>
+</main>
+<footer class="footer" id="footer" role="contentinfo">
+<div class="footer-logo">WAR ROOM</div>
+<p class="footer-credit"><strong>EDY</strong> — <a href="https://instagram.com/edmilson_zn_" target="_blank" rel="noopener" class="footer-link">@edmilson_zn_</a></p>
+<p>Uma producao independente dedicada a educacao em ciberseguranca. Todos os dados sao provenientes de fontes publicas: FBI, CISA, NIST, MITRE, Kaspersky, e relatorios jornalisticos.</p>
+<div class="footer-sources">
+<span>FBI Cyber Division</span><span>CISA</span><span>NIST NVD</span>
+<span>MITRE ATT&CK</span><span>Kaspersky SecureList</span>
+<span>Wired Threat Level</span><span>Wikimedia Commons</span>
+</div></footer>
+<div id="sc-player" style="position:fixed;top:0;left:0;width:1px;height:1px;opacity:0;overflow:hidden;pointer-events:none;z-index:-1" aria-hidden="true">
+<iframe id="sc-frame" src="about:blank" allow="autoplay" style="width:480px;height:360px;border:none" title="SoundCloud" sandbox="allow-scripts allow-same-origin allow-presentation allow-popups"></iframe>
+</div>
+<script src="https://w.soundcloud.com/player/api.js" async></script>
+<script>
+"use strict";
+var EPISODES=[
+{id:"morris-worm",num:"01",year:1988,type:"Worm",title:"Morris Worm",subtitle:"O Primeiro Ataque Global",
+summary:"O amigo dele no Harvard nao queria atender o telefone. Eram quase 3 da manha do dia 3 de novembro de 1988, e Robert Morris, 23 anos, estava em panico. O experimento que ele soltara algumas horas antes tinha saido do controle — o worm ignorava o proprio freio e reinfectava as mesmas maquinas centenas de vezes. Naquela noite, 6 mil computadores — 10%% de toda a internet — foram paralisados. O pai de Morris trabalhava na NSA. O filho mudaria a historia da seguranca digital.",
+attribution:"Robert Tappan Morris",target:"ARPANET",economic:"US$ 100M+",social:"6.000 hosts infectados",
+defense:"Criacao do CERT (Computer Emergency Response Team). Primeira condenacao sob o CFAA. Surgimento dos primeiros IDS.",
+legislation:"Primeira condenacao sob o Computer Fraud and Abuse Act (CFAA).",
+timeline:[{date:"02/11/1988",event:"Worm lancado do MIT"},{date:"03/11/1988",event:"Sistemas comecam a falhar nos EUA"},{date:"04/11/1988",event:"Cientistas trabalham em solucoes"},{date:"08/11/1988",event:"Criacao do CERT"},{date:"1990",event:"Morris e indiciado"},{date:"1991",event:"Condenacao: 3 anos de liberdade condicional"}],
+images:["https://upload.wikimedia.org/wikipedia/commons/8/86/Robert_Tappan_Morris.jpg","https://upload.wikimedia.org/wikipedia/commons/b/b6/Morris_Worm.jpg"],captions:["Robert Tappan Morris, criador do primeiro worm da internet (1988)","Display do Morris Worm no Museum of Science, Boston"],placeholder:false,curiosity:"Morris era filho do cientista-chefe da NSA. Hoje e professor no MIT."},
+{id:"melissa",num:"02",year:1999,type:"Macro Virus",title:"Melissa",subtitle:"A Primeira Epidemia Digital",
+summary:"Era uma sexta-feira a noite quando o administrador de rede de uma empresa de Nova York percebeu que algo estava errado. A caixa de emails recebia dezenas de milhares de mensagens por minuto. O documento list.doc se multiplicava sozinho. David L. Smith, programador de Nova Jersey, criara o primeiro macro virus de propagacao em massa — e em poucas horas, mais de 1 milhao de computadores estavam infectados. O FBI o prendeu em 72 horas. O nome do virus era o de uma dancarina que ele conhecera na Florida.",
+attribution:"David L. Smith",target:"Usuarios Windows/Outlook",economic:"US$ 80M",social:"Mais de 1 milhao de PCs",
+defense:"Empresas passaram a bloquear macros do Office. Filtros de email corporativos se tornaram padrao.",
+legislation:"Inspirou leis mais rigorosas contra malware nos EUA.",
+timeline:[{date:"26/03/1999",event:"Primeira deteccao do Melissa"},{date:"27/03/1999",event:"Propagacao global em massa"},{date:"28/03/1999",event:"FBI inicia investigacao"},{date:"01/04/1999",event:"FBI prende David L. Smith"},{date:"1999",event:"Condenado a 20 meses de prisao"}],
+images:["https://upload.wikimedia.org/wikipedia/commons/a/aa/Floppy_disk_2009_G1.jpg","https://upload.wikimedia.org/wikipedia/commons/0/07/RCoE_-_computer_-_Server_Room.jpg"],captions:["Disquete 3.5 polegadas — o armazenamento portatil da epoca em que o Melissa se espalhou (1999)","Servidores corporativos — o Melissa sobrecarregou servidores de email da Microsoft, Intel e Lucent Technologies (1999)"],placeholder:false,curiosity:"O nome Melissa veio de uma dancarina exotica que Smith conheceu na Florida."},
+{id:"iloveyou",num:"03",year:2000,type:"Worm",title:"ILOVEYOU",subtitle:"O Worm Que Parou o Mundo",
+summary:"No escritorio do Pentagono, um analista abriu um email com assunto ILOVEYOU. Era doce demais para ignorar. O anexo parecia inofensivo. Nao era. Em horas, o worm criado por Onel de Guzman, um estudante de 24 anos das Filipinas, forcou o Pentagono, a CIA e o Parlamento Britanico a desligarem seus sistemas de email. O script cabia numa unica tela. A devastacao: 55 milhoes de computadores, 10 bilhoes de dolares de prejuizo. E as Filipinas nao tinham lei para prender o criador.",
+attribution:"Onel de Guzman",target:"Usuarios Windows globais",economic:"US$ 10-15B",social:"55 milhoes de computadores",
+defense:"Filtros de email avancados. Conscientizacao sobre phishing. Bloqueio automatico de anexos VBS.",
+legislation:"Filipinas criou lei de crimes ciberneticos apos nao poder processar Guzman.",
+timeline:[{date:"04/05/2000",event:"Propagacao global do ILOVEYOU"},{date:"05/05/2000",event:"Pentagono e CIA desligam emails"},{date:"06/05/2000",event:"Prejuizo estimado em bilhoes"},{date:"2000",event:"Onel de Guzman identificado"},{date:"2000",event:"Caso arquivado — Filipinas sem lei cibernetica"}],
+images:["https://upload.wikimedia.org/wikipedia/commons/f/ff/Loveletter-wurm.png","https://upload.wikimedia.org/wikipedia/commons/b/be/Flag-map_of_Manila.svg"],captions:["Tela do worm ILOVEYOU — o script cabia em uma unica tela e causou US$ 10 bilhoes em danos globais (2000)","Manila, Filipinas — cidade onde Onel de Guzman criou o worm ILOVEYOU em um cybercafe da AMA Computer College (2000)"],placeholder:false,curiosity:"Guzman nao foi preso porque as Filipinas nao tinham leis de crimes ciberneticos em 2000."},
+{id:"estonia",num:"04",year:2007,type:"DDoS",title:"Ataques a Estonia",subtitle:"A Primeira Guerra Cibernetica",
+summary:"O operador de TI do Hansabank, o maior banco da Estonia, olhou para o monitor e viu algo que nao entendia. O painel de trafego mostrava numeros absurdos — milhoes de requisicoes por segundo vindas de servidores ao redor do mundo. Apos a remocao de uma estatua sovietica em Tallinn, a Estonia inteira foi paralisada digitalmente. Bancos, governo, midia, telecomunicacoes — tudo caiu. Pela primeira vez na historia, um pais inteiro era atacado nao com bombas, mas com dados.",
+attribution:"Grupos pro-Russia (suspeito)",target:"Estado da Estonia",economic:"US$ 40-100M",social:"Nacao inteira paralisada digitalmente",
+defense:"A OTAN criou o Cooperative Cyber Defence Centre of Excellence em Tallinn. Paises passaram a tratar ciberataques como questao de defesa nacional.",
+legislation:"A OTAN estabeleceu doutrina de defesa cibernetica coletiva.",
+timeline:[{date:"27/04/2007",event:"Inicio dos ataques DDoS"},{date:"28/04/2007",event:"Servidores governamentais caem"},{date:"29/04/2007",event:"Bancos estonianos offline"},{date:"04/05/2007",event:"Onda de ataques atinge pico"},{date:"18/05/2007",event:"Ataques comecam a diminuir"},{date:"2008",event:"OTAN cria centro de defesa cibernetica"}],
+images:["https://upload.wikimedia.org/wikipedia/commons/a/a3/Woodcock%2C_Aarelaid%2C_and_Lindqvist_in_the_EE-CERT%2C_2007.jpg","https://upload.wikimedia.org/wikipedia/commons/b/bc/Bronze_Soldier_of_Tallinn%2C_2007.jpg"],captions:["Equipe do EE-CERT — o time de resposta a incidentes que coordenou a defesa da Estonia durante os ataques DDoS de 2007","O Bronze Soldier de Tallinn — a remocao desta estatua sovietica foi o estopim dos ataques DDoS que paralisaram a Estonia (2007)"],placeholder:false,curiosity:"A Estonia e hoje o pais com a infraestrutura digital mais resiliente do mundo."},
+{id:"stuxnet",num:"05",year:2010,type:"APT",title:"Stuxnet",subtitle:"A Arma Cibernetica",
+summary:"O sabado amanheceu nublado em Minsk, mas Sergei Ulasen nao estava no escritorio. Estava num casamento, a 400 quilometros da capital, quando o celular vibrou. Um cliente do Ira estava desesperado — os computadores da usina de Natanz reiniciavam sozinhos. Sergei abriu o notebook entre tacas de champanhe e comecou a analisar logs remotamente. O que ele encontrou mudaria a face da guerra: o Stuxnet, o primeiro missil digital da Historia. Quatro vulnerabilidades zero-day. Mil centrifugas destruidas. Um pais inteiro sem saber o que o atingiu.",
+attribution:"EUA e Israel (atribuido)",target:"Centrifugas nucleares do Ira",economic:"US$ 100M+",social:"1.000 centrifugas nucleares destruidas",
+defense:"Seguranca OT e SCADA se tornou prioridade global. Segmentacao de redes industriais.",
+legislation:"Debate global sobre guerra cibernetica. Convencoes de Genebra digitais.",
+timeline:[{date:"2005-2008",event:"Desenvolvimento do Stuxnet (projeto Olympic Games)"},{date:"2009",event:"Primeira versao implantada em Natanz"},{date:"06/2010",event:"Descoberta do Stuxnet pela VirusBlokAda"},{date:"07/2010",event:"Relatorios indicam destruicao de centrifugas"},{date:"11/2010",event:"Stuxnet analisado globalmente"},{date:"2012",event:"EUA confirmam envolvimento (oficiosamente)"}],
+images:["https://upload.wikimedia.org/wikipedia/commons/3/3a/Natanz_nuclear.jpg","https://upload.wikimedia.org/wikipedia/commons/a/a9/Cyber_WMD_%285571923679%29.jpg"],captions:["Usina de enriquecimento nuclear de Natanz, Ira — o principal alvo do Stuxnet (2007)","Ilustracao conceitual do Stuxnet — o primeiro missil digital da historia"],placeholder:false,curiosity:"Stuxnet usava quatro vulnerabilidades zero-day — um recorde para a epoca."},
+{id:"sony",num:"06",year:2014,type:"APT",title:"Sony Pictures",subtitle:"O Ataque a Hollywood",
+summary:"O sysadmin da Sony Pictures chegou para mais um turno e seu monitor exibia uma caveira. Nao era um virus qualquer. Em novembro de 2014, hackers atribuidos a Coreia do Norte devastaram a Sony Pictures: discos rígidos apagados remotamente, 100 terabytes de dados roubados, emails executivos vomitados na internet. A motivacao? A iminente estreia de The Interview, uma comedia sobre o assassinato de Kim Jong-un. Hollywood nunca mais seria a mesma.",
+attribution:"Coreia do Norte (atribuido pelo FBI)",target:"Sony Pictures Entertainment",economic:"US$ 100M+",social:"Milhoes de dados de funcionarios vazados",
+defense:"Hollywood investiu bilhoes em ciberseguranca. Protecao de dados de alto valor.",
+legislation:"Debate sobre liberdade de expressao versus seguranca nacional.",
+timeline:[{date:"24/11/2014",event:"Sony Pictures hackeada"},{date:"28/11/2014",event:"Computadores destruidos remotamente"},{date:"01/12/2014",event:"Dados e emails vazados publicamente"},{date:"16/12/2014",event:"Sony cancela lancamento de The Interview"},{date:"2015",event:"EUA atribuem ataque a Coreia do Norte"},{date:"2015",event:"Sancoes contra a Coreia do Norte"}],
+images:["https://upload.wikimedia.org/wikipedia/commons/e/ea/Sonypicturesentertainmentoffices.jpg","https://upload.wikimedia.org/wikipedia/commons/3/32/KimjongunPhoto.jpg"],captions:["Sede da Sony Pictures em Culver City, California — alvo do maior ataque cibernetico a um estúdio de Hollywood (2014)","Kim Jong-un, lider da Coreia do Norte — ordenou o ataque a Sony Pictures em retalhacao ao filme The Interview (2014)"],placeholder:false,curiosity:"O ataque foi motivado pelo filme The Interview, uma comedia sobre o assassinato de Kim Jong-un."},
+{id:"wannacry",num:"07",year:2017,type:"Ransomware",title:"WannaCry",subtitle:"O Ransomware Global",
+summary:"Era uma manha de sexta-feira quando Marcus Hutchins, pesquisador britanico de 23 anos, sentou-se com seu cafe para mais um dia de trabalho. Em poucas horas, o WannaCry ja havia infectado 200.000 computadores em 150 paises. Hospitais no Reino Unido paralisados, a Telefonica na Espanha offline, a Deutsche Bahn na Alemanha travada. Hutchins percebeu algo estranho no codigo — um dominio nao registrado. Ele o registrou por alguns dolares. O worm parou instantaneamente. Um unico registro de dominio salvou a internet.",
+attribution:"Lazarus Group (Coreia do Norte)",target:"Sistemas Windows globais",economic:"US$ 4-8B",social:"200.000+ computadores em 150 paises",
+defense:"Patch management se tornou prioridade maxima. Descoberto kill switch por acidente.",
+legislation:"Pressao para divulgacao responsavel de vulnerabilidades por agencias de inteligencia.",
+timeline:[{date:"14/04/2017",event:"Shadow Brokers vazam EternalBlue"},{date:"12/05/2017",event:"Propagacao global do WannaCry"},{date:"13/05/2017",event:"NHS britanico paralisado"},{date:"13/05/2017",event:"Marcus Hutchins descobre kill switch"},{date:"15/05/2017",event:"Propagacao controlada"},{date:"2017",event:"Coreia do Norte acusada pelo ataque"}],
+images:["https://upload.wikimedia.org/wikipedia/en/1/18/Wana_Decrypt0r_screenshot.png","https://upload.wikimedia.org/wikipedia/commons/9/95/NHS_Nightingale_Hospital_North_West_-_geograph.org.uk_-_6519606.jpg"],captions:["Tela de resgate do WannaCry — exigindo US$ 300 em Bitcoin para liberar os arquivos criptografados (2017)","Hospital NHS na Inglaterra — o WannaCry paralisou o sistema de saude britanico, cancelando cirurgias e consultas (maio de 2017)"],placeholder:false,curiosity:"O kill switch era um dominio nao registrado — quando Hutchins o registrou, o worm parou de se espalhar em minutos."},
+{id:"notpetya",num:"08",year:2017,type:"Wiper",title:"NotPetya",subtitle:"A Destruicao Disfarcada",
+summary:"No terminal da Maersk em Roterda, o operador de sistemas viu as telas ficarem vermelhas uma a uma. Em 27 de junho de 2017, o NotPetya comecou na Ucrania via o sistema contabil M.E.Doc. Disfarcado de ransomware, era na verdade um wiper — sua missao era destruir. A Maersk, maior empresa de navegacao do mundo, perdeu US$ 300 milhoes em uma semana. O dano global: mais de US$ 10 bilhoes. Um poder de computacao de 22.000 horas por maquina para desencriptar — e nem assim seria possivel.",
+attribution:"GRU (Russia)",target:"Ucrania (global por contagio)",economic:"US$ 10B",social:"Maior ataque de wiper da historia",
+defense:"Segmentacao de redes. Backup offline obrigatorio. Monitoramento de supply chain de software.",
+legislation:"Sancoes contra hackers russos. Debates sobre atos de guerra cibernetica.",
+timeline:[{date:"27/06/2017",event:"Propagacao via M.E.Doc na Ucrania"},{date:"28/06/2017",event:"Empresas globais afetadas"},{date:"29/06/2017",event:"Maersk perde sistemas globalmente"},{date:"2018",event:"EUA e Reino Unido atribuem a Russia"},{date:"2018",event:"Prejuizo total estimado em US$ 10B"}],
+images:["https://upload.wikimedia.org/wikipedia/commons/6/65/2017_Petya_cyberattack_screenshot.png","https://upload.wikimedia.org/wikipedia/commons/c/c4/%D0%97%D0%B4%D0%B0%D0%BD%D0%B8%D1%8F_%D0%93%D0%A0%D0%A3.jpg"],captions:["Tela do NotPetya — o wiper que se passava por ransomware e causou US$ 10 bilhoes em danos globais (2017)","Quartel-general do GRU em Moscou — a inteligencia militar russa criou o NotPetya como arma cibernetica contra a Ucrania (2017)"],placeholder:false,curiosity:"A Maersk teve que reinstalar 4.000 servidores e 45.000 PCs do zero — o equivalente a um data center inteiro."},
+{id:"solarwinds",num:"09",year:2020,type:"Supply Chain",title:"SolarWinds",subtitle:"O Ataque a Cadeia de Suprimentos",
+summary:"O analista da FireEye olhou para o trafego de rede e algo nao se encaixava. Havia beaconings saindo de servidores internos que jamais deveriam se comunicar com o exterior. Era dezembro de 2020, e a FireEye — uma das maiores empresas de seguranca do mundo — havia sido comprometida. Mas a verdade era pior: o ataque SolarWinds havia injetado codigo malicioso na atualizacao legitima do software Orion. 18.000 organizacoes infectadas. O governo dos EUA, incluindo o Departamento de Defesa, estava na lista. A chain supply attack mais sofisticada da historia.",
+attribution:"APT29 / Cozy Bear (Russia)",target:"Cadeia de suprimentos de software",economic:"US$ 12B",social:"18.000+ organizacoes comprometidas",
+defense:"Supply chain security se tornou prioridade global. Executive Order 14028. SBOM obrigatorio.",
+legislation:"Executive Order 14028 — seguranca de software para fornecedores do governo dos EUA.",
+timeline:[{date:"2019",event:"Preparacao do ataque"},{date:"2020",event:"Codigo malicioso injetado no Orion"},{date:"12/12/2020",event:"FireEye descobre o ataque"},{date:"13/12/2020",event:"SolarWinds confirma incidente"},{date:"2021",event:"Sancoes contra Russia"},{date:"2021",event:"Executive Order 14028 assinado"}],
+images:["https://upload.wikimedia.org/wikipedia/commons/1/17/Solarwinds%27_Orion_Hack_Process.jpg","https://upload.wikimedia.org/wikipedia/commons/d/db/Exterior_of_the_United_States_Capitol_-_3.JPG"],captions:["Infografico do ataque SolarWinds — a cadeia de contaminacao do software Orion que comprometeu 18.000 organizacoes (2020)","Capitolio dos EUA — o ataque SolarWinds comprometeu agencias governamentais americanas, incluindo o Departamento de Defesa (2020)"],placeholder:false,curiosity:"Os hackers esperaram 12 dias antes de ativar o backdoor em cada alvo — paciencia cirurgica e planejamento milimetrico."},
+{id:"colonial",num:"10",year:2021,type:"Ransomware",title:"Colonial Pipeline",subtitle:"Infraestrutura Critica Refem",
+summary:"O relogio marcava 5h27 da manha de 7 de maio de 2021 quando o operador da sala de controle da Colonial Pipeline, na Georgia, sentou-se com seu cafe e deu de cara com uma tela que nao deveria estar ali. Nao era o painel do duto de 8.850 quilometros que carrega 45%% do combustivel da Costa Leste. Era um bilhete de resgate: 75 Bitcoins — 4,4 milhoes de dolares. Em horas, 17 estados declararam emergencia. Em dias, postos de gasolina nao tinham combustivel. Um oleoduto inteiro refem de uma conversa de 10 minutos no help desk.",
+attribution:"DarkSide (Russia)",target:"Colonial Pipeline (infraestrutura critica)",economic:"US$ 5M (resgate) + US$ 2.3B em impacto",social:"Panico de combustivel na costa leste dos EUA",
+defense:"Regulamentacao mais rigida para seguranca de infraestrutura critica. OT/ICS security federal.",
+legislation:"Regulamentacao obrigatoria de seguranca cibernetica para oleodutos (TSA).",
+timeline:[{date:"06/05/2021",event:"Colonial Pipeline atacado"},{date:"07/05/2021",event:"Oleoduto paralisado"},{date:"08/05/2021",event:"Estados de emergencia declarados"},{date:"09/05/2021",event:"Governo federal intervem"},{date:"12/05/2021",event:"Operacoes retomadas"},{date:"2021",event:"Departamento de Justica recupera parte do resgate"}],
+images:["https://upload.wikimedia.org/wikipedia/commons/6/6f/2021-05-14_20_59_41_An_out-of-service_gas_pump_due_to_panic_buying_after_the_Colonial_Pipeline_cyberattack_at_the_Sunoco_gas_station_in_the_Franklin_Farm_Village_Shopping_Center_in_the_Franklin_Farm_section_of_Oak_Hill%2C_Fairfax_County%2C_Virginia.jpg","https://upload.wikimedia.org/wikipedia/commons/7/77/Colonial_Pipeline_Disruption_U.S._East_Coast_%2829877529455%29.png"],captions:["Bomba de gasolina lacrada apos o ataque da Colonial Pipeline — panico de combustivel na Costa Leste dos EUA (maio de 2021)","Mapa da disrupcao causada pelo ataque a Colonial Pipeline — panico de combustivel em 17 estados da Costa Leste (maio de 2021)"],placeholder:false,curiosity:"O FBI conseguiu recuperar US$ 2,3 milhoes do resgate pago — a primeira recuperacao de ransomware em larga escala."},
+{id:"log4j",num:"11",year:2021,type:"Vulnerabilidade",title:"Log4j / Log4Shell",subtitle:"A Falha Que Abalou o Mundo",
+summary:"O engenheiro da Alibaba Cloud Security encontrou algo estranho numa biblioteca Java que todo mundo usava mas ninguem olhava. Uma unica linha num campo de formulario podia assumir o controle total de um servidor. Nao era um bug qualquer — era Log4Shell (CVE-2021-44228). Milhoes de servidores vulneraveis. Tudo que rodava Java estava exposto. O CVSS foi 10 — a pontuacao maxima. Log4j estava em tudo: de servidores corporativos a cameras IoT. A vulnerabilidade mais critica de uma decada.",
+attribution:"Descoberta por Alibaba Cloud Security",target:"Aplicacoes Java e Apache globais",economic:"US$ 10-30B",social:"Milhoes de servidores vulneraveis globalmente",
+defense:"SBOM (Software Bill of Materials) se tornou obrigatorio. WAFs e regras de prevencao emergenciais.",
+legislation:"Pressao global por SBOM e transparencia em dependencias de software.",
+timeline:[{date:"24/11/2021",event:"Vulnerabilidade reportada ao Apache"},{date:"09/12/2021",event:"Detalhes publicos do Log4Shell"},{date:"10/12/2021",event:"Exploracao em massa global"},{date:"11/12/2021",event:"Patch emergencial (Log4j 2.15.0)"},{date:"2022",event:"Varredura global e remediacao"}],
+images:["https://upload.wikimedia.org/wikipedia/commons/f/f9/Apache_Log4j_Logo.png","https://upload.wikimedia.org/wikipedia/commons/5/5d/BalticServers_data_center.jpg"],captions:["Logotipo do Apache Log4j — a biblioteca de logging que, em dezembro de 2021, revelou a vulnerabilidade mais critica da decada","Datacenter global — o Log4Shell (CVE-2021-44228) afetou milhoes de servidores Java em todo o mundo (dezembro de 2021)"],placeholder:false,curiosity:"Log4j esta presente em bilhoes de dispositivos — de servidores corporativos a cameras IoT e ate alguns modelos de geladeira."},
+{id:"mgm",num:"12",year:2023,type:"Ransomware",title:"MGM Resorts",subtitle:"O Cassino Que Parou",
+summary:"O telefone tocou no help desk da MGM Resorts em Las Vegas. Uma voz calma se identificou como funcionario de TI. Precisava de acesso. O atendente seguiu o protocolo e liberou. So que nao era um funcionario. Era o Scattered Spider — e uma empresa de US$ 33 bilhoes foi derrotada por uma conversa de 10 minutos no telefone. Em setembro de 2023, hoteis e cassinos da MGM pararam por dias. Portas nao abriam. Caça-niqueis nao funcionavam. O prejuizo: mais de US$ 100 milhoes. Tudo comecou com uma mentira.",
+attribution:"Scattered Spider / ALPHV (BlackCat)",target:"MGM Resorts International",economic:"US$ 100M+",social:"Hoteis e cassinos paralisados em Las Vegas",
+defense:"Autenticacao multifator reforcada. Treinamento antiphishing. Segmentacao de redes de cassino.",
+legislation:"Pressao por regulamentacao mais forte contra engenharia social.",
+timeline:[{date:"10/09/2023",event:"MGM sofre ataque ransomware"},{date:"11/09/2023",event:"Sistemas de cassino offline"},{date:"12/09/2023",event:"Hospedes sem acesso aos quartos"},{date:"14/09/2023",event:"MGM estima perda de US$ 100M"},{date:"15/09/2023",event:"Caesars confirma pagamento de resgate"},{date:"2023",event:"ALPHV/BlackCat assume ataque"}],
+images:["https://upload.wikimedia.org/wikipedia/commons/d/da/LasVegas-MGMgrand.jpg","https://upload.wikimedia.org/wikipedia/commons/f/fa/Alphv_Blackcat_takedown.png"],captions:["MGM Grand em Las Vegas — alvo do ataque de ransomware do grupo Scattered Spider/ALPHV (setembro de 2023)","Aviso de takedown do FBI contra o grupo ALPHV/BlackCat — responsavel pelo ataque de ransomware a MGM Resorts (setembro de 2023)"],placeholder:false,curiosity:"Os hackers ligaram para o help desk da MGM se passando por funcionarios — engenharia social classica, sem nenhum codigo malicioso envolvido."}
+];
+
+// ===== STORIES — Full narratives from the .md files =====
+var STORIES = {
+  "morris-worm": '<p><span class="story-dropcap">N</span>o dia 2 de novembro de 1988, a internet parou.</p><p>Não aos poucos. Não gradualmente. Parou como um coração que simplesmente decide que já bateu tempo demais. Seis mil máquinas — o equivalente a 10% de toda a internet existente — simplesmente deixaram de responder. Nos laboratórios da Universidade da Califórnia em Berkeley, técnicos olhavam para terminais piscando mensagens de erro sem saber o que fazer. No MIT, alunos tentavam enviar e-mails e viam as mensagens voltarem como pombos-correio feridos. Na NASA, no Pentágono, em centros de pesquisa espalhados por três continentes, a mesma pergunta se repetia: <em>o que está acontecendo?</em></p><p>A resposta estava em um quarto de dormitório em Cornell. Um rapaz de 24 anos, cabelos escuros e óculos de aro grosso, olhava para a mesma tela. E sabia exatamente o que tinha feito. Mas não fazia ideia do que havia causado.</p><p>Seu nome era Robert Tappan Morris. Filho do diretor de um dos laboratórios de criptografia mais importantes dos Estados Unidos. Aluno de pós-graduação em ciência da computação. E, sem querer, o primeiro grande criminoso digital do mundo.</p><div class="story-context-label">Contexto Historico</div><p>Estamos em 1988. A Guerra Fria ainda está terminando. O Windows existe há três anos e mal tem interface gráfica. A World Wide Web simplesmente não existe. Não há Google. Não há Amazon. Não há navegadores. Não há .com.</p><p>O que existe é a ARPANET — uma rede criada pelo Departamento de Defesa dos EUA em 1969. Cerca de 60 mil computadores estão conectados. As máquinas rodam Unix. A comunicação é por confiança. Não há firewalls comerciais. Não há sistemas de detecção de intrusão. A segurança digital é um conceito que mal existe.</p><p>Robert Morris estava prestes a mudar isso.</p>',
+  "melissa": '<p><span class="story-dropcap">E</span>la se chamava Melissa. Mas Melissa não existia. Melissa era um nome, um arquivo, uma assinatura no final de um e-mail. E Melissa era uma assassina.</p><p>No dia 26 de março de 1999, um arquivo do Word chamado <em>list.doc</em> apareceu no grupo de notícias <em>alt.sex</em>. Quem abrisse encontrava uma lista de 80 senhas de sites pornográficos. Parecia um presente. Era uma armadilha.</p><p>Em 72 horas, Melissa derrubou a Microsoft, a Intel, a Lucent Technologies e a rede de e-mail corporativo dos Estados Unidos. O FBI nunca tinha visto nada igual — e nunca mais seria o mesmo.</p><div class="story-context-label">Contexto</div><p>Março de 1999. O mundo estava saindo do pânico do Y2K. A AOL dominava a internet discada com 22 milhões de assinantes. O e-mail era a killer application — e o Outlook Express reinava absoluto. Ninguém desconfiava que um documento Word poderia matar um servidor.</p><p>Bill Clinton era presidente. O escândalo Lewinsky ainda ecoava. Kosovo estava em guerra. A internet era um território sem lei, onde qualquer pessoa com um modem e uma ideia podia paralisar o sistema nervoso digital do planeta.</p>',
+  "iloveyou": '<p><span class="story-dropcap">N</span>o dia 4 de maio de 2000, 55 milhões de pessoas abriram seus corações. E o mundo inteiro sangrou.</p><p>Chegou como uma carta de amor. Assunto: <em>"ILOVEYOU"</em>. Remetente: um amigo. Corpo da mensagem: <em>"Kindly check the attached LOVELETTER coming from me."</em> Quem clicasse no anexo <em>LOVE-LETTER-FOR-YOU.TXT.VBS</em> não via uma carta — via o apocalipse.</p><p>Em cinco dias, o worm que começou em um cybercafé em Manila devastou o Pentágono, a CIA, o Parlamento Britânico e dezenas de milhares de empresas. E quando o mundo quis prender o culpado, descobriu que a lei não alcançava o código.</p><div class="story-context-label">Contexto</div><p>Maio de 2000. A bolha pontocom estava no pico. O Windows 2000 havia sido lançado em fevereiro. 55 milhões de pessoas tinham acesso à internet nos Estados Unidos. No resto do mundo, a web ainda era uma novidade — e o e-mail, o principal motivo para entrar online.</p><p>Nas Filipinas, um estudante de 24 anos da AMA Computer College tentava pagar a conta de internet discada. Onel de Guzman não tinha dinheiro para o acesso que precisava para seu curso. Sua solução, rejeitada pelos professores, se tornaria a maior catástrofe digital até então.</p>',
+  "estonia": '<p><span class="story-dropcap">N</span>o dia 27 de abril de 2007, às 2h da manhã, Tallinn acordou sem país.</p><p>Nós, estonianos, éramos o povo mais digital do planeta. Nós votávamos online, pagávamos impostos online, assinávamos contratos digitais. Nosso governo funcionava em servidores, nossos bancos existiam em data centers, nossa identidade nacional estava em chips de cartão de cidadania. E então, em uma madrugada de abril, tudo parou.</p><p>Não foram bombas. Foram pacotes de dados. Milhões de pacotes de dados — um bombardeio digital que durou 22 dias e mudou para sempre a forma como o mundo pensa guerra.</p><div class="story-context-label">Contexto</div><p>A Estônia — 1,3 milhão de habitantes, ex-república soviética — havia feito uma aposta radical: abraçar o digital como infraestrutura nacional. Em 2000, o Parlamento declarou acesso à internet um direito humano. Em 2005, a Estônia se tornou o primeiro país do mundo a realizar eleições nacionais via internet.</p><p>A relação com a Rússia era tensa. A estátua do Bronze Soldier, um monumento soviético no centro de Tallinn, era o símbolo dessa tensão. Em 27 de abril de 2007, o governo estoniano removeu a estátua do centro da cidade. Horas depois, os servidores começaram a cair.</p>',
+  "stuxnet": '<p><span class="story-dropcap">N</span>atanz, Irã. Meados de 2009. 2h17 da madrugada.</p><p>Em uma sala subterrânea com paredes de concreto armado de dois metros de espessura, uma centrífuga IR-1 começou a tremer. Não era um defeito mecânico. Não era erro de operador. A máquina — um cilindro de alumínio de alta resistência girando a 63.000 rotações por minuto — simplesmente começou a se autodestruir.</p><p>O rotor se deformou. O gás hexafluoreto de urânio vazou. A máquina colapsou em si mesma. Os operadores iranianos olhavam para os painéis de controle e viam apenas números normais. Sensores de vibração? Desligados. Alarmes? Silenciosos.</p><p>Três anos depois, quando engenheiros do outro lado do mundo finalmente entenderam o que havia acontecido, eles descobriram algo perturbador: o código não apenas havia destruído as centrífugas — ele havia aprendido a enganar os operadores.</p><div class="story-context-label">Contexto</div><p>Stuxnet é o único malware conhecido que cruzou a linha entre o digital e o físico para causar destruição real, em larga escala. Quatro vulnerabilidades zero-day. Mil centrífugas destruídas. Um país inteiro sem saber o que o atingiu. E ele foi construído por um governo que jamais admitiu sua existência.</p>',
+  "sony": '<p><span class="story-dropcap">E</span>ra para ser uma comédia.</p><p>Em junho de 2014, a Sony Pictures Entertainment — um dos seis maiores estúdios de Hollywood — finalizava a pós-produção de um filme chamado <em>The Interview</em>. A premissa era simples: dois jornalistas americanos são recrutados pela CIA para assassinar Kim Jong-un. Seth Rogen e James Franco no elenco. Comédia pastelão. Nada que Hollywood já não tivesse feito antes.</p><p>Exceto que desta vez alguém levou a história a sério.</p><p>Em 24 de novembro de 2014, os funcionários da Sony chegaram ao escritório em Culver City e se depararam com uma tela vermelha. Uma caveira digital. Uma mensagem ameaçadora: <em>"Este é o fim do mundo para a Sony."</em></p><div class="story-context-label">Contexto</div><p>100 terabytes de dados roubados. Filmes inéditos. Contratos de atores. Salários de executivos. Negociações confidenciais. Tudo vazado. A motivação? A iminente estreia de The Interview, uma comédia sobre o assassinato de Kim Jong-un. Hollywood nunca mais seria a mesma.</p>',
+  "wannacry": '<p><span class="story-dropcap">1</span>2 de maio de 2017. 10h30. Horário de Londres.</p><p>Um hospital público na Inglaterra parou de funcionar. Não havia sinais de explosão. Nenhum alarme de incêndio. A recepção do National Health Service simplesmente congelou. As telas dos computadores mostraram uma mensagem vermelha em fundo preto: <em>"Ooops, seus arquivos foram criptografados!"</em></p><p>Os médicos não conseguiam acessar prontuários. As enfermeiras não sabiam quais medicamentos os pacientes tomavam. As ambulâncias foram redirecionadas. Cirurgias foram canceladas. Às 15h do mesmo dia, 74 países já estavam infectados. Às 18h, o número passava de 100.</p><p>O mundo estava assistindo, em tempo real, ao maior ataque de ransomware da história — e tudo começou porque uma agência de inteligência americana guardou um segredo.</p><div class="story-context-label">Contexto</div><p>Em abril de 2017, o grupo Shadow Brokers vazou o EternalBlue — um exploit da NSA que explorava uma vulnerabilidade no protocolo SMB do Windows. A Microsoft havia lançado um patch em março, mas milhões de computadores nunca o instalaram. O WannaCry usou o EternalBlue para se propagar como um worm — sem necessidade de cliques, sem necessidade de engenharia social. Apenas código.</p>',
+  "notpetya": '<p><span class="story-dropcap">E</span>m 27 de junho de 2017, a Ucrânia não foi invadida por tanques. Foi invadida por um software que se chamava de ransomware, mas era, na verdade, uma bomba.</p><p>Às 10h30, horário de Kiev, milhares de computadores em toda a Ucrânia começaram a exibir a mesma tela vermelha: um aviso de resgate de US$ 300 em Bitcoin, um endereço de carteira, um cronômetro. Parecia um ataque criminoso comum. Não era.</p><p>O resgate era uma farsa. O pagamento não devolvia os dados. O código foi escrito para destruir — e destruiu com uma precisão que só um exército consegue coordenar. Quando as 24 horas seguintes se encerraram, US$ 10 bilhões em danos estavam espalhados por 65 países. Nenhum centavo foi pago. Não era crime. Era guerra.</p><div class="story-context-label">Contexto</div><p>O NotPetya começou através do sistema contábil M.E.Doc, obrigatório para todas as empresas na Ucrânia. Uma atualização automática legítima do software foi sequestrada pelo GRU russo (Unidade Sandworm). A Maersk, maior empresa de navegação do mundo, perdeu US$ 300 milhões em uma semana. A Merck, a FedEx e a Saint-Gobain também foram devastadas. O dano colateral foi aceito — talvez desejado.</p>',
+  "solarwinds": '<p><span class="story-dropcap">N</span>o dia 12 de dezembro de 2020, a FireEye anunciou que havia sido hackeada. Mas eles não contaram o pior: todos os seus clientes também.</p><p>A maior empresa de segurança cibernética do mundo, aquela que o governo dos EUA contratava para investigar os maiores ataques da história, havia sido infiltrada tão profundamente que seus próprios sistemas de detecção não viram nada. Durante 8 meses, os atacantes operaram dentro da FireEye.</p><p>Dentro do Departamento do Tesouro. Dentro do Departamento de Estado. Dentro da Microsoft, Intel, Cisco. E ninguém — nem a FireEye, nem o FBI, nem a NSA — percebeu.</p><p>O ataque perfeito existe. Ele se chama SolarWinds.</p><div class="story-context-label">Contexto</div><p>A SolarWinds Orion era um software de monitoramento usado por 33 mil clientes, incluindo 425 das empresas da Fortune 500 e dezenas de agências governamentais. O ataque não explorou uma vulnerabilidade: injetou código malicioso na atualização legítima do software, assinada com certificado digital válido. O SVR russo esperou 12 dias antes de ativar o backdoor em cada alvo. Paciência cirúrgica.</p>',
+  "colonial": '<p><span class="story-dropcap">N</span>a sexta-feira, 7 de maio de 2021, às 5h10, um funcionário da Colonial Pipeline olhou para a tela e viu algo que não deveria existir. Uma janela vermelha com um aviso: seus arquivos foram criptografados.</p><p>Às 5h12, ele ligou para o supervisor. Às 5h55, começaram a desligar a tubulação. Às 6h10, 8.850 quilômetros de dutos estavam parados. Quarenta e cinco por cento do combustível da Costa Leste dos Estados Unidos simplesmente parou de fluir.</p><p>Em três dias, o pânico tomou 17 estados. Em uma semana, o CEO da empresa estava sentado em uma sala escura decidindo se pagava US$ 4,4 milhões em Bitcoin para criminosos que ele não conhecia, ou se deixava 75 milhões de americanos sem gasolina.</p><div class="story-context-label">Contexto</div><p>O acesso inicial foi obtido através de uma única senha — uma VPN legada sem autenticação multifator. A senha havia sido vazada na dark web, e o DarkSide a comprou. Um funcionário, uma senha, um pipeline inteiro. O governo Biden respondeu com sanções e uma das maiores recuperações de resgate da história: US$ 2,3 milhões dos US$ 4,4 milhões pagos foram rastreados e recuperados pelo DOJ.</p>',
+  "log4j": '<p><span class="story-dropcap">N</span>o dia 24 de novembro de 2021, um engenheiro chinês chamado Chen Zhaojun fez uma pergunta inocente: <em>"E se...?"</em></p><p>Ele estava analisando o Apache Log4j, uma biblioteca de logging usada por praticamente toda aplicação Java do planeta. Log4j fazia uma coisa simples: registrava eventos. Mensagens de erro, requisições de usuário, tentativas de login — tudo virava uma linha de texto em algum arquivo de log.</p><p>Chen Zhaojun olhou para o código e viu algo estranho. O Log4j tinha uma feature chamada "message lookup substitution" — quando uma mensagem continha <em>${...}</em>, o Log4j tentava resolver aquela expressão. E se ele conseguisse injetar um lookup JNDI apontando para um servidor remoto?</p><p>Ele testou. Funcionou. A vulnerabilidade mais grave da história da internet havia sido encontrada. E estava dormindo em cada servidor Java do mundo — há 8 anos.</p><div class="story-context-label">Contexto</div><p>Log4j está presente em bilhões de dispositivos — de servidores corporativos a câmeras IoT e até geladeiras. O CVSS foi 10 — a pontuação máxima. Milhões de servidores foram atingidos. Empresas como Cloudflare, Microsoft, Google e AWS formaram um grupo de resposta coordenada. O Log4Shell foi o wake-up call definitivo para a segurança de software de código aberto.</p>',
+  "mgm": '<p><span class="story-dropcap">E</span>les tinham entre 16 e 22 anos. Moravam com os pais. Um deles era filho de um oficial militar britânico de alto escalão. Outro ainda estava no ensino médio. E, em setembro de 2023, pararam Las Vegas.</p><p>Não usaram armas. Não invadiram cofres. Não precisaram. Eles ligaram para o Service Desk da MGM Resorts — maior operadora de cassinos e hotéis do mundo — e disseram: <em>"Oi, sou um funcionário, perdi minha senha."</em></p><p>Atenderam o telefone por 10 minutos. Foram educados. Convincentes. E, quando desligaram, tinham o controle de toda a rede da MGM: 30 mil quartos de hotel offline, caça-níqueis mudos, reservas manuais no papel, sites e apps no escuro por 10 dias.</p><p>O ataque mais caro da história do ransomware — US$ 100 milhões em perdas — começou com um telefonema.</p><div class="story-context-label">Contexto</div><p>O grupo Scattered Spider (UNC3944) era incomum: composto majoritariamente por falantes nativos de inglês, alguns adolescentes, operando de dentro dos EUA e do Reino Unido. Diferente dos grupos russos ou norte-coreanos, eles não se escondiam atrás de fronteiras geopolíticas. A falha não foi de tecnologia — foi de processo: qualquer funcionário com um telefonema convincente conseguia resetar a senha de outro.</p>'
+};
+
+// ===== DOM REFS =====
+var $ = function(s){return document.querySelector(s)};
+var $$ = function(s){return document.querySelectorAll(s)};
+var byId = function(id){return document.getElementById(id)};
+var ls = byId("loading-screen");
+var le = byId("load-enter");
+var lst = byId("load-status");
+var el = byId("episodes-list");
+var gc = byId("grain-overlay");
+var wc = byId("wave-canvas");
+var mg = byId("mouse-glow");
+var lb = byId("lightbox");
+var lbi = byId("lb-image");
+var lbc = byId("lb-caption");
+var lbct = byId("lb-counter");
+var lbcl = byId("lb-close");
+var lbp = byId("lb-prev");
+var lbn = byId("lb-next");
+var lbni = byId("lb-image-next");
+var at = $$(".audio-opt");
+var soundMode = "ambient";
+var hcta = byId("hero-cta");
+var nl = $$(".nav-link");
+var hb = byId("hamburger");
+var no = byId("nav-overlay");
+var loadMessages=["Inicializando subsistemas cinematograficos...","Carregando banco de dados de ameacas (1988-2023)...","Estabelecendo feed de inteligencia global...","Sincronizando linha do tempo de incidentes...","Ativando protocolos de visualizacao cinematografica...","WAR ROOM OPERACIONAL AGUARDANDO COMANDO"];
+var msgIdx=0;
+var msgInterval=setInterval(function(){msgIdx++;if(msgIdx<loadMessages.length){lst.textContent=loadMessages[msgIdx]}},700);
+function enterWarRoom(){clearInterval(msgInterval);ls.classList.add("hidden");document.body.style.overflow="visible";initApp()}
+le.addEventListener("click",enterWarRoom);
+document.addEventListener("keydown",function(e){if(e.key==="Enter"&&!ls.classList.contains("hidden")){enterWarRoom()}});
+function initApp(){renderEpisodes();initGrain();initWaveCanvas();initHeroParticles();initAmbientParticles();initMouseTracking();initIntersectionObserver();initLightbox();initAudio();initNav();initHeroParallax();initScrollNav();initHamburger();setTimeout(function(){var bar=document.querySelector(".loading-bar");if(bar)bar.style.width="100%"},100)}
+var act = null;
+var apl = false;
+var anodes = [];
+var ibi = [];
+var ibix = 0;
+var graf = null;
+var wraf = null;
+var mraf = null;
+
+// ===== RENDER EPISODES =====
+function renderEpisodes(){
+  el.innerHTML = EPISODES.map(function(ep, i){
+    var hi = (ep.images && ep.images.length > 0) ? ep.images[0] : "";
+    var gi = (ep.images && ep.images.length > 1) ? ep.images.slice(1) : [];
+    return '<article class="episode-entry" data-episode="' + ep.id + '">'
+      + '<div class="episode-grid">'
+      + '<div class="episode-image-wrap">'
+      + (hi ? '<div class="episode-image-blur" style="background-image:url(' + hi + ')"></div><img class="episode-image" src="' + hi + '" alt="' + ep.title + '" loading="lazy">'
+             : '<div class="episode-image-placeholder"><span class="pl-year">' + ep.year + '</span><span class="pl-title">' + ep.title + '</span><span class="pl-ref">Documento historico pendente</span></div>')
+      + '</div><div class="episode-info">'
+      + '<div class="episode-number">' + ep.num + '</div>'
+      + '<div class="episode-year">' + ep.year + '</div>'
+      + '<div class="episode-type-badge">' + ep.type + '</div>'
+      + '<h3 class="episode-title">' + ep.title + '</h3>'
+      + '<p class="episode-subtitle">' + ep.subtitle + '</p>'
+      + '<p class="episode-summary">' + ep.summary + '</p>'
+      + '<div class="episode-actions">'
+      + '<button class="episode-btn episode-btn-primary toggle-detail" aria-controls="episode-detail-' + ep.id + '" aria-expanded="false">Ver Detalhes</button>'
++ (ep.images && ep.images.length > 0 ? '<button class="episode-btn episode-btn-secondary view-gallery">Galeria</button>' : '')
++ '<button class="episode-btn episode-btn-secondary view-story">Historia</button>'
++ '</div></div></div>'
+      + '<div class="episode-timeline">'
+      + '<div class="episode-timeline-dot"></div>'
+      + '<div class="episode-timeline-line"></div>'
+      + '<span class="episode-timeline-label">' + ep.attribution + '</span></div>'
+      + '<div class="episode-detail" id="episode-detail-' + ep.id + '"><div class="episode-detail-inner"><div>'
+      + '<h4>Cronologia</h4><ul>'
+      + ep.timeline.map(function(t){return '<li><span class="tl-date">' + t.date + '</span><span>' + t.event + '</span></li>'}).join("")
+      + '</ul>' + (ep.curiosity ? '<br><h4>Curiosidade</h4><p>' + ep.curiosity + '</p>' : '')
+      + '</div><div><h4>Impacto</h4>'
+      + '<p><strong>Economico:</strong> ' + ep.economic + '</p>'
+      + '<p><strong>Social:</strong> ' + ep.social + '</p>'
+      + '<p><strong>Atribuicao:</strong> ' + ep.attribution + '</p>'
+      + '<p><strong>Alvo:</strong> ' + ep.target + '</p><br>'
+      + '<h4>Defesa</h4><p>' + ep.defense + '</p><br>'
+      + '<h4>Legislacao</h4><p>' + ep.legislation + '</p>'
+      + '</div></div></div></article>';
+  }).join("");
+
+  el.addEventListener("click", function(e){
+    var tb = e.target.closest(".toggle-detail");
+    var gb = e.target.closest(".view-gallery");
+    var en = e.target.closest(".episode-entry");
+    if(tb && en){
+      var dt = en.querySelector(".episode-detail");
+      var op = dt.classList.contains("open");
+      dt.classList.toggle("open");
+      tb.textContent = op ? "Ver Detalhes" : "Ocultar Detalhes";
+      tb.setAttribute("aria-expanded", op ? "false" : "true");
+    }
+    if(gb && en){
+      var id = en.dataset.episode;
+      var ep = EPISODES.find(function(e){return e.id === id});
+      if(ep && ep.images && ep.images.length > 0){ openLB(id, 0); }
+    }
+    var sb = e.target.closest(".view-story");
+    if(sb && en){
+      var sid = en.dataset.episode;
+      openStory(sid);
+    }
+  });
+
+  document.querySelectorAll(".episode-image").forEach(function(img){
+    img.addEventListener("error", function(){
+      var w = this.closest(".episode-image-wrap");
+      if(w){ w.classList.add("img-failed"); }
+    });
+    img.addEventListener("load", function(){
+      var w = this.closest(".episode-image-wrap");
+      if(w) w.classList.add("episode-image-loaded");
+    });
+  });
+}
+
+// ===== WAVE CANVAS =====
+function initWaveCanvas(){
+  if(!wc) return;
+  var ctx = wc.getContext("2d");
+  var wScale = isLowPerf ? 0.5 : 0.75;
+  var w = wc.width = Math.floor(window.innerWidth * wScale);
+  var h = wc.height = Math.floor(window.innerHeight * wScale);
+  var t = 0;
+
+  window.addEventListener("resize", function(){
+    w = wc.width = Math.floor(window.innerWidth * wScale);
+    h = wc.height = Math.floor(window.innerHeight * wScale);
+  });
+
+  function draw(){
+    if(!wc) return;
+    ctx.clearRect(0, 0, w, h);
+    t += 0.008;
+
+    // Skip wave drawing when modal open
+    if(!document.body.classList.contains("modal-open")){
+      // Upper wave group - 4 waves (was 6)
+      for(var wi = 0; wi < 4; wi++){
+        ctx.beginPath();
+        ctx.strokeStyle = wi < 2 ? "rgba(201,168,76,0.12)" : "rgba(74,140,191,0.05)";
+        ctx.lineWidth = 1;
+        var amp = 20 + wi * 8;
+        var freq = 0.005 + wi * 0.0015;
+        var spd = 0.3 + wi * 0.08;
+        var yOff = h * (0.2 + wi * 0.1);
+        for(var x = 0; x <= w; x += 3){
+          var y = yOff + Math.sin(x * freq + t * spd) * (amp * 0.5)
+            + Math.sin(x * freq * 2.3 + t * spd * 1.4) * (amp * 0.3);
+          if(x === 0){ ctx.moveTo(x, y); } else { ctx.lineTo(x, y); }
+        }
+        ctx.stroke();
+      }
+
+      // Lower wave group - 2 subtle waves (was 4)
+      for(wi = 0; wi < 2; wi++){
+        ctx.beginPath();
+        ctx.strokeStyle = "rgba(201,168,76," + (0.02 + wi * 0.015) + ")";
+        ctx.lineWidth = 0.5;
+        var amp2 = 10 + wi * 5;
+        var freq2 = 0.008 + wi * 0.002;
+        var spd2 = 0.5 + wi * 0.1;
+        var yOff2 = h * (0.7 + wi * 0.06);
+        for(var x2 = 0; x2 <= w; x2 += 3){
+          var y2 = yOff2 + Math.sin(x2 * freq2 + t * spd2 * 0.7) * (amp2 * 0.4);
+          if(x2 === 0){ ctx.moveTo(x2, y2); } else { ctx.lineTo(x2, y2); }
+        }
+        ctx.stroke();
+      }
+    }
+    wraf = requestAnimationFrame(draw);
+  }
+  wraf = requestAnimationFrame(draw);
+}
+
+// ===== HERO PARTICLES =====
+function initHeroParticles(){
+  var con = document.getElementById("hero-particles");
+  if(!con) return;
+  if(isLowPerf){ con.style.display = "none"; return; }
+  var count = Math.min(40, Math.floor(window.innerWidth / 20));
+  for(var i = 0; i < count; i++){
+    var p = document.createElement("div");
+    p.className = "particle";
+    p.style.left = Math.random() * 100 + "%";
+    var sz = (1 + Math.random() * 2) + "px";
+    p.style.width = sz; p.style.height = sz;
+    p.style.animationDuration = (25 + Math.random() * 45) + "s";
+    p.style.animationDelay = (Math.random() * 30) + "s";
+    p.style.background = Math.random() > 0.4 ? "rgba(201,168,76,0.5)" : "rgba(74,140,191,0.3)";
+    con.appendChild(p);
+  }
+}
+
+// ===== AMBIENT FLOATING PARTICLES =====
+function initAmbientParticles(){
+  var can = byId("ambient-particles");
+  if(!can) return;
+  var ctx = can.getContext("2d");
+  var w = can.width = isLowPerf ? Math.floor(window.innerWidth * 0.5) : window.innerWidth;
+  var h = can.height = isLowPerf ? Math.floor(window.innerHeight * 0.5) : window.innerHeight;
+  var pts = [];
+  var count = isLowPerf ? Math.min(15, Math.floor(window.innerWidth / 50)) : Math.min(45, Math.floor(window.innerWidth / 35));
+  var raf = null;
+
+  window.addEventListener("resize", function(){
+    w = can.width = window.innerWidth;
+    h = can.height = window.innerHeight;
+  });
+
+  for(var i = 0; i < count; i++){
+    pts.push({
+      x: Math.random() * w,
+      y: Math.random() * h,
+      size: 1.5 + Math.random() * 2.0,
+      speed: 0.18 + Math.random() * 0.35,
+      drift: 0.15 + Math.random() * 0.3,
+      phase: Math.random() * Math.PI * 2,
+      alpha: 0.25 + Math.random() * 0.4
+    });
+  }
+
+  function draw(){
+    ctx.clearRect(0, 0, w, h);
+    var paused = document.body.classList.contains("modal-open");
+    var t = Date.now() * 0.0006;
+
+    for(var i = 0; i < pts.length; i++){
+      var p = pts[i];
+      if(!paused){
+        p.y -= p.speed;
+        p.x += Math.sin(t + p.phase) * p.drift * 0.3;
+        if(p.y < -15){ p.y = h + 15; p.x = Math.random() * w; }
+      }
+      ctx.beginPath();
+      ctx.arc(p.x, p.y, p.size, 0, Math.PI * 2);
+      ctx.fillStyle = paused ? "rgba(0,0,0,0)" : "rgba(201,168,76," + p.alpha + ")";
+      ctx.fill();
+    }
+    raf = requestAnimationFrame(draw);
+  }
+  draw();
+}
+
+// ===== FILM GRAIN =====
+function initGrain(){
+  if(!gc) return;
+  var ctx = gc.getContext("2d");
+  var scale = isLowPerf ? 0.2 : 0.35;
+  var w = gc.width = Math.floor(window.innerWidth * scale);
+  var h = gc.height = Math.floor(window.innerHeight * scale);
+  var fc = 0;
+
+  window.addEventListener("resize", function(){
+    w = gc.width = Math.floor(window.innerWidth * scale);
+    h = gc.height = Math.floor(window.innerHeight * scale);
+  });
+
+  function draw(){
+    fc++;
+    var skip = document.body.classList.contains("modal-open") ? 8 : 3;
+    if(fc % skip !== 0){ graf = requestAnimationFrame(draw); return; }
+    var id = ctx.createImageData(w, h);
+    var d = id.data;
+    for(var i = 0; i < d.length; i += 4){
+      var v = Math.random() * 255;
+      d[i] = v; d[i+1] = v; d[i+2] = v; d[i+3] = 22;
+    }
+    ctx.putImageData(id, 0, 0);
+    graf = requestAnimationFrame(draw);
+  }
+  draw();
+}
+
+// ===== MOUSE TRACKING =====
+function initMouseTracking(){
+  if(isMobile){ mg.style.display = "none"; return; }
+  var mx = -999, my = -999;
+  var tx = -999, ty = -999;
+  var mfc = 0;
+
+  document.addEventListener("mousemove", function(e){
+    tx = e.clientX; ty = e.clientY;
+    mg.style.opacity = "1";
+    if(!mraf){
+      mraf = requestAnimationFrame(function anim(){
+        mfc++;
+        var skip = document.body.classList.contains("modal-open") ? 3 : 1;
+        if(mfc % skip === 0){
+          mx += (tx - mx) * 0.15;
+          my += (ty - my) * 0.15;
+          mg.style.transform = "translate(" + (mx - 250) + "px," + (my - 250) + "px)";
+        }
+        mraf = requestAnimationFrame(anim);
+      });
+    }
+  });
+
+  document.addEventListener("mouseleave", function(){
+    mg.style.opacity = "0";
+    if(mraf){ cancelAnimationFrame(mraf); mraf = null; }
+  });
+}
+
+// ===== INTERSECTION OBSERVER =====
+function initIntersectionObserver(){
+  var obs = new IntersectionObserver(function(entries){
+    entries.forEach(function(e){
+      if(e.isIntersecting){
+        e.target.style.opacity = "1";
+        e.target.style.transform = "translateY(0)";
+        var iw = e.target.querySelector(".episode-image-wrap");
+        var inf = e.target.querySelector(".episode-info");
+        var tl = e.target.querySelector(".episode-timeline");
+        var idx = Array.prototype.indexOf.call(e.target.parentNode.children, e.target);
+        var baseDelay = 100 + Math.min(idx, 11) * 40;
+        if(iw){ setTimeout(function(){ iw.classList.add("visible"); }, baseDelay); }
+        if(inf){ setTimeout(function(){ inf.classList.add("visible"); }, baseDelay + 150); }
+        if(tl){ setTimeout(function(){ tl.classList.add("visible"); }, baseDelay + 300); }
+        obs.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.12, rootMargin: "0px 0px -40px 0px" });
+
+  $$(".episode-entry").forEach(function(el){
+    el.style.opacity = "0";
+    el.style.transform = "translateY(25px)";
+    el.style.transition = "opacity 0.9s cubic-bezier(0.16,1,0.3,1), transform 0.9s cubic-bezier(0.16,1,0.3,1)";
+    obs.observe(el);
+  });
+
+  // Intro
+  var it = byId("intro-title");
+  var ip1 = byId("intro-p1");
+  var ip2 = byId("intro-p2");
+  var ip3 = byId("intro-p3");
+  var iobs = new IntersectionObserver(function(entries){
+    entries.forEach(function(e){
+      if(e.isIntersecting){ e.target.classList.add("visible"); iobs.unobserve(e.target); }
+    });
+  }, { threshold: 0.3 });
+
+  [it, ip1, ip2, ip3].forEach(function(e){ if(e) iobs.observe(e); });
+}
+
+// ===== LIGHTBOX =====
+function initLightbox(){
+  lbcl.addEventListener("click", closeLB);
+  lbp.addEventListener("click", prevLB);
+  lbn.addEventListener("click", nextLB);
+
+  document.addEventListener("keydown", function(e){
+    if(!lb.classList.contains("active")) return;
+    if(e.key === "Escape") closeLB();
+    if(e.key === "ArrowLeft") prevLB();
+    if(e.key === "ArrowRight") nextLB();
+    // Focus trap
+    if(e.key === "Tab"){
+      var f = lb.querySelectorAll("button, [tabindex]:not([tabindex='-1'])");
+      if(f.length === 0) return;
+      var first = f[0], last = f[f.length - 1];
+      if(e.shiftKey && document.activeElement === first){ e.preventDefault(); last.focus(); }
+      else if(!e.shiftKey && document.activeElement === last){ e.preventDefault(); first.focus(); }
+    }
+  });
+
+  lb.addEventListener("click", function(e){ if(e.target === lb) closeLB(); });
+  
+  // Touch swipe for lightbox
+  var lbStartX = 0;
+  lb.addEventListener("touchstart", function(e){
+    lbStartX = e.changedTouches[0].screenX;
+  }, {passive: true});
+  lb.addEventListener("touchend", function(e){
+    if(!lb.classList.contains("active")) return;
+    var dx = e.changedTouches[0].screenX - lbStartX;
+    if(Math.abs(dx) > 50){
+      if(dx < 0) nextLB();
+      else prevLB();
+    }
+  }, {passive: true});
+}
+
+// Mobile detection for performance tuning
+var isMobile = ('ontouchstart' in window) || (navigator.maxTouchPoints > 0);
+var isLowPerf = isMobile || window.innerWidth < 768;
+
+function openLB(epId, idx){
+  var ep = EPISODES.find(function(e){ return e.id === epId; });
+  if(!ep || !ep.images || ep.images.length === 0) return;
+  ibi = ep.images;
+  ibix = idx;
+  showLB();
+  lb.classList.add("active");
+  document.body.classList.add("modal-open");
+  document.body.style.overflow = "hidden";
+  setTimeout(function(){ lbcl.focus(); }, 100);
+}
+
+function showLB(){
+  if(ibi.length === 0) return;
+  var img = ibi[ibix];
+  var ep = EPISODES.find(function(e){ return e.images && e.images.indexOf(img) >= 0; });
+  var cap = (ep && ep.captions && ep.captions[ibix]) ? ep.captions[ibix] : "";
+  lbc.textContent = cap;
+  lbct.textContent = (ibix + 1) + " / " + ibi.length;
+
+  // Crossfade: preload next image, then fade current out and next in
+  var preloader = new Image();
+  preloader.onload = function(){
+    lbni.src = img;
+    lbni.alt = cap || "Imagem do ataque";
+    // Fade current out / next in
+    lbi.style.opacity = "0";
+    lbni.style.opacity = "1";
+    // After transition, swap layers
+    clearTimeout(lbi._xf);
+    lbi._xf = setTimeout(function(){
+      lbi.src = lbni.src;
+      lbi.alt = lbni.alt;
+      lbi.style.opacity = "1";
+      lbni.style.opacity = "0";
+      lbni.src = "";
+    }, 520);
+  };
+  preloader.src = img;
+}
+
+function closeLB(){
+  lb.classList.remove("active");
+  document.body.classList.remove("modal-open");
+  document.body.style.overflow = "";
+  clearTimeout(lbi._xf);
+  lbi.style.opacity = "1";
+  lbi.src = "";
+  lbi.alt = "";
+  lbni.style.opacity = "0";
+  lbni.src = "";
+  lbc.textContent = "";
+  lbct.textContent = "";
+}
+
+function prevLB(){ if(ibi.length === 0) return; ibix = (ibix - 1 + ibi.length) % ibi.length; showLB(); }
+function nextLB(){ if(ibi.length === 0) return; ibix = (ibix + 1) % ibi.length; showLB(); }
+
+// ===== STORY MODAL =====
+var stMod = byId("story-modal");
+var stOver = byId("story-overlay");
+var stClose = byId("st-close");
+var stTitle = byId("st-title");
+var stMeta = byId("st-meta");
+var stBody = byId("st-body");
+
+function openStory(id){
+  var ep = EPISODES.find(function(e){return e.id === id});
+  if(!ep) return;
+  var txt = STORIES[id] || "<p>Historia completa em desenvolvimento para este episodio.</p>";
+  stTitle.textContent = ep.num + ". " + ep.title;
+  stMeta.textContent = ep.year + " — " + ep.type + " — " + ep.attribution;
+  stBody.innerHTML = txt;
+  stMod.classList.add("active");
+  document.body.classList.add("modal-open");
+  document.body.style.overflow = "hidden";
+}
+
+function closeStory(){
+  stMod.classList.remove("active");
+  document.body.classList.remove("modal-open");
+  document.body.style.overflow = "";
+}
+
+stOver.addEventListener("click", closeStory);
+stClose.addEventListener("click", closeStory);
+document.addEventListener("keydown", function(e){
+  if(e.key === "Escape" && stMod.classList.contains("active")){ closeStory(); }
+});
+
+// ===== AUDIO =====
+// YouTube player vars
+var ytPlayerReady = false;
+var ytPlayerDiv = null;
+
+function initAudio(){
+  // First-interaction unlock (once)
+  function firstInteraction(){
+    document.removeEventListener("pointerdown", firstInteraction);
+    document.removeEventListener("keydown", firstInteraction);
+    document.removeEventListener("touchend", firstInteraction);
+    // Create audio context if not exists
+    if(!act){ act = new (window.AudioContext || window.webkitAudioContext)(); }
+    if(act.state === "suspended"){ act.resume(); }
+    // Restore mode from localStorage
+    soundMode = loadAudioMode();
+    updateAudioUI();
+    // Restore volume UI
+    updateVolumeUI();
+    // Auto-start if was playing before
+    if(loadAudioPlaying()){
+      apl = true;
+      if(soundMode === "soundtrack"){
+        startSoundtrack();
+      } else {
+        startAmbient();
+      }
+      updateAudioUI();
+    }
+  }
+  document.addEventListener("pointerdown", firstInteraction, { once: true });
+  document.addEventListener("keydown", firstInteraction, { once: true });
+  document.addEventListener("touchend", firstInteraction, { once: true });
+
+  // Button click handlers
+  at.forEach(function(btn){
+    btn.addEventListener("click", function(){
+      // Ensure audio context is active (mobile safety — gesture chain)
+      try {
+        if(!act){ act = new (window.AudioContext || window.webkitAudioContext)(); }
+        if(act.state === "suspended"){ act.resume(); }
+      } catch(e){}
+      
+      var mode = this.dataset.mode;
+      if(apl){
+        stopAudio();
+        if(soundMode === mode) return;
+      }
+      soundMode = mode;
+      saveAudioMode(mode);
+      startAudio();
+    });
+  });
+
+  // Volume slider binding (shared handler)
+  function onVolumeInput(){
+    var val = parseInt(this.value, 10);
+    if(isNaN(val) || val < 0) val = 5;
+    if(val > 100) val = 100;
+    if(scWidget && scFrameLoaded){
+      scWidget.setVolume(val);
+    }
+    // Sync both sliders
+    document.querySelectorAll(".audio-volume-slider").forEach(function(slider){
+      slider.value = val;
+    });
+    saveAudioVolume(val);
+  }
+  document.querySelectorAll(".audio-volume-slider").forEach(function(slider){
+    slider.addEventListener("input", onVolumeInput);
+  });
+}
+
+function startAudio(){
+  try {
+    if(!act){ act = new (window.AudioContext || window.webkitAudioContext)(); }
+    if(act.state === "suspended"){ act.resume(); }
+    
+    apl = true;
+    saveAudioPlaying(true);
+    
+    if(soundMode === "ambient"){
+      startAmbient();
+    } else {
+      startSoundtrack();
+    }
+    
+    updateAudioUI();
+  } catch(e){ console.warn("[Audio] Error:", e); }
+}
+
+function stopAudio(){
+  if(soundMode === "ambient"){
+    stopAmbient();
+  } else {
+    stopSoundtrack();
+  }
+  apl = false;
+  saveAudioPlaying(false);
+  updateAudioUI();
+}
+
+function updateAudioUI(){
+  at.forEach(function(btn){
+    var mode = btn.dataset.mode;
+    btn.classList.toggle("active", mode === soundMode);
+    btn.classList.toggle("playing", apl && mode === soundMode);
+    btn.textContent = (mode === "ambient" ? "♫ Ambiente" : "♫ Forever")
+      + (apl && mode === soundMode ? " ▶" : "");
+  });
+  document.querySelectorAll(".audio-selector, .audio-selector-mobile").forEach(function(g){
+    g.classList.toggle("audio-on", apl);
+  });
+}
+
+// ===== LOCALSTORAGE — Áudio Persistente =====
+function saveAudioVolume(val){
+  try{ localStorage.setItem("warroom.audio.volume", String(val)); }catch(e){}
+}
+function loadAudioVolume(){
+  try{
+    var v = localStorage.getItem("warroom.audio.volume");
+    return v !== null ? parseInt(v,10) : 5;
+  }catch(e){ return 5; }
+}
+function saveAudioMode(mode){
+  try{ localStorage.setItem("warroom.audio.mode", mode); }catch(e){}
+}
+function loadAudioMode(){
+  try{
+    var m = localStorage.getItem("warroom.audio.mode");
+    return m === "ambient" || m === "soundtrack" ? m : "ambient";
+  }catch(e){ return "ambient"; }
+}
+function saveAudioPlaying(val){
+  try{ localStorage.setItem("warroom.audio.playing", val ? "true" : "false"); }catch(e){}
+}
+function loadAudioPlaying(){
+  try{ return localStorage.getItem("warroom.audio.playing") === "true"; }catch(e){ return false; }
+}
+function updateVolumeUI(){
+  var vol = loadAudioVolume();
+  document.querySelectorAll(".audio-volume-slider").forEach(function(slider){
+    slider.value = vol;
+  });
+}
+
+// ===== SOUNDCLOUD — FOREVER (The Little Dippers) =====
+var SC_TRACK_URL = "https://soundcloud.com/thelittledippers/forever-single-version";
+var SC_EMBED = "https://w.soundcloud.com/player/?url=" + encodeURIComponent(SC_TRACK_URL) + "&auto_play=true&hide_related=true&show_comments=false&show_user=false&show_reposts=false&visual=false&start_track=0&color=%23c9a84c";
+var scWidget = null;
+var scFrameLoaded = false;
+var scPoller = null;
+var scHealth = null;
+
+function initSCWidget(){
+  var frame = byId("sc-frame");
+  if(!frame) return;
+  if(!window.SC || !window.SC.Widget){
+    setTimeout(initSCWidget, 500);
+    return;
+  }
+  if(scWidget) return;
+  scWidget = SC.Widget(frame);
+  scWidget.bind(SC.Widget.Events.READY, function(){
+    // Restore volume from localStorage
+    var savedVol = loadAudioVolume();
+    scWidget.setVolume(savedVol);
+    scFrameLoaded = true;
+    scWidget._fading = false;
+    updateVolumeUI();
+    // Resume if apl is true and mode is soundtrack
+    if(apl && soundMode === "soundtrack"){
+      scWidget.play();
+    }
+    // ===== CROSSFADE HELPERS =====
+    var FADE_STEPS = 2;        // 1s ÷ 500ms
+    var FADE_MS = 500;         // interval per step
+    function fadeOut(cb){
+      scWidget._fading = true;
+      var startVol = loadAudioVolume();
+      var step = 0;
+      scWidget._fadeTimer = setInterval(function(){
+        step++;
+        var pct = 1 - (step / FADE_STEPS);
+        var v = Math.max(0, Math.round(startVol * pct));
+        scWidget.setVolume(v);
+        if(step >= FADE_STEPS){
+          clearInterval(scWidget._fadeTimer);
+          scWidget.setVolume(0);
+          if(cb) cb();
+        }
+      }, FADE_MS);
+    }
+    function fadeIn(cb){
+      var targetVol = loadAudioVolume();
+      var step = 0;
+      scWidget._fadeTimer = setInterval(function(){
+        step++;
+        var pct = step / FADE_STEPS;
+        var v = Math.min(targetVol, Math.round(targetVol * pct));
+        scWidget.setVolume(v);
+        if(step >= FADE_STEPS){
+          clearInterval(scWidget._fadeTimer);
+          scWidget.setVolume(targetVol);
+          scWidget._fading = false;
+          if(cb) cb();
+        }
+      }, FADE_MS);
+    }
+    function cancelFade(){
+      if(scWidget._fadeTimer){
+        clearInterval(scWidget._fadeTimer);
+        scWidget._fadeTimer = null;
+      }
+      scWidget._fading = false;
+      var v = loadAudioVolume();
+      document.querySelectorAll(".audio-volume-slider").forEach(function(sl){ sl.value = v; });
+    }
+    // ===== CROSSFADE LOOP =====
+    // Primary: watchdog detects end-of-track ~2s before finish
+    // Backup: FINISH event fires when track naturally ends
+    scWidget.bind(SC.Widget.Events.FINISH, function(){
+      if(scWidget._fading) return; // watchdog already handling it
+      // Backup: track ended without watchdog — fade in from 0
+      scWidget._fading = true;
+      scWidget.seekTo(0);
+      scWidget.setVolume(0);
+      scWidget.play();
+      fadeIn();
+    });
+    // WATCHDOG: poll position vs duration + stuck detection
+    if(scPoller) clearInterval(scPoller);
+    scPoller = setInterval(function(){
+      if(!apl || soundMode !== "soundtrack"){ clearInterval(scPoller); scPoller = null; return; }
+      if(scWidget._fading) return; // crossfade in progress
+      scWidget.getPosition(function(pos){
+        scWidget.getDuration(function(dur){
+          // End-of-track: pos within 2s of end → seamless restart (1s crossfade)
+          if(pos > 0 && dur > 0 && dur - pos <= 2000){
+            fadeOut(function(){
+              scWidget.seekTo(0);
+              scWidget.setVolume(0);
+              scWidget.play();
+              fadeIn();
+            });
+            return;
+          }
+          // Stuck detection: position unchanged for 3 consecutive polls (mid-track only)
+          if(typeof scWidget._stuckCount === "undefined") scWidget._stuckCount = 0;
+          if(pos === scWidget._lastPos && scFrameLoaded && pos > 2000 && pos < dur - 2000){
+            scWidget._stuckCount++;
+            if(scWidget._stuckCount >= 3){
+              cancelFade();
+              scWidget.seekTo(0);
+              scWidget.play();
+              scWidget._stuckCount = 0;
+            }
+          } else {
+            scWidget._stuckCount = 0;
+          }
+          scWidget._lastPos = pos;
+        });
+      });
+    }, 2500);
+  });
+  // Failsafe 3: health check with reload limit
+  if(scHealth) clearInterval(scHealth);
+  scHealth = setInterval(function(){
+    if(!apl || soundMode !== "soundtrack"){ clearInterval(scHealth); scHealth = null; return; }
+    scWidget.getDuration(function(d){
+      if(typeof d !== "number" || d <= 0){
+        var f = byId("sc-frame");
+        if(f && (scWidget._reloadCount || 0) < 2){
+          scWidget._reloadCount = (scWidget._reloadCount || 0) + 1;
+          scWidget = null;
+          scFrameLoaded = false;
+          f.src = SC_EMBED;
+          setTimeout(initSCWidget, 1000);
+        }
+      }
+    });
+  }, 15000);
+}
+
+function startSoundtrack(){
+  var frame = byId("sc-frame");
+  if(!frame) return;
+  if(scFrameLoaded && scWidget){
+    scWidget.play();
+    return;
+  }
+  scWidget = null;
+  scFrameLoaded = false;
+  frame.src = SC_EMBED;
+  setTimeout(initSCWidget, 500);
+}
+
+function stopSoundtrack(){
+  // Cancel any crossfade in progress
+  if(scWidget && scWidget._fadeTimer){
+    clearInterval(scWidget._fadeTimer);
+    scWidget._fadeTimer = null;
+    scWidget._fading = false;
+    var v = loadAudioVolume();
+    scWidget.setVolume(v);
+    document.querySelectorAll(".audio-volume-slider").forEach(function(sl){ sl.value = v; });
+  }
+  if(scPoller){ clearInterval(scPoller); scPoller = null; }
+  if(scHealth){ clearInterval(scHealth); scHealth = null; }
+  if(scWidget && scFrameLoaded){
+    scWidget.pause();
+  }
+}
+
+// ===== MODE: AMBIENT (original) =====
+var ambNodes = [];
+function startAmbient(){
+  var mg = act.createGain(); mg.gain.value = 0.06; mg.connect(act.destination);
+  var hg = act.createGain(); hg.gain.value = 0.25; hg.connect(mg);
+  var o1 = act.createOscillator(); o1.type = "sine"; o1.frequency.value = 60; o1.connect(hg);
+  var o2 = act.createOscillator(); o2.type = "sine"; o2.frequency.value = 120;
+  var g2 = act.createGain(); g2.gain.value = 0.12; o2.connect(g2); g2.connect(hg);
+  var o3 = act.createOscillator(); o3.type = "sine"; o3.frequency.value = 180;
+  var g3 = act.createGain(); g3.gain.value = 0.05; o3.connect(g3); g3.connect(hg);
+  var buf = act.createBuffer(1, act.sampleRate * 2, act.sampleRate);
+  var d = buf.getChannelData(0);
+  for(var i = 0; i < d.length; i++){ d[i] = (Math.random() * 2 - 1) * 0.015; }
+  var ns = act.createBufferSource(); ns.buffer = buf; ns.loop = true;
+  var ng = act.createGain(); ng.gain.value = 0.12; ns.connect(ng); ng.connect(mg);
+  var pg = act.createGain(); pg.gain.value = 0.15; pg.connect(mg);
+  
+  ambNodes = [o1, o2, o3, ns, mg, hg, pg];
+  o1.start(); o2.start(); o3.start(); ns.start();
+  
+  // Radar pulse
+  (function pulse(){
+    if(!apl || soundMode !== "ambient") return;
+    var now = act.currentTime;
+    var o = act.createOscillator(); o.type = "sine"; o.frequency.value = 440;
+    var pg2 = act.createGain();
+    pg2.gain.setValueAtTime(0, now);
+    pg2.gain.linearRampToValueAtTime(0.25, now + 0.05);
+    pg2.gain.exponentialRampToValueAtTime(0.001, now + 0.3);
+    o.connect(pg2); pg2.connect(pg);
+    o.start(now); o.stop(now + 0.3);
+    setTimeout(pulse, 3000 + Math.random() * 2000);
+  })();
+}
+
+function stopAmbient(){
+  ambNodes.forEach(function(n){
+    try { if(n.stop) n.stop(); if(n.disconnect) n.disconnect(); } catch(e){}
+  });
+  ambNodes = [];
+}
+
+// ===== NAVIGATION =====
+function initNav(){
+  nl.forEach(function(link){
+    link.addEventListener("click", function(){
+      var t = this.dataset.target;
+      var e = document.getElementById(t);
+      if(e) e.scrollIntoView({ behavior: "smooth", block: "start" });
+    });
+  });
+  hcta.addEventListener("click", function(){
+    var intro = document.getElementById("intro");
+    if(intro) intro.scrollIntoView({ behavior: "smooth", block: "start" });
+  });
+}
+
+function initScrollNav(){
+  var sections = ["hero", "intro", "episodes", "footer"];
+  var obs = new IntersectionObserver(function(entries){
+    entries.forEach(function(e){
+      if(e.isIntersecting){
+        nl.forEach(function(link){
+          link.classList.toggle("active", link.dataset.target === e.target.id);
+        });
+      }
+    });
+  }, { threshold: 0.3 });
+  sections.forEach(function(id){
+    var e = document.getElementById(id);
+    if(e) obs.observe(e);
+  });
+
+  var lastScroll = 0;
+  var nb = byId("nav-bar");
+  window.addEventListener("scroll", function(){
+    var cs = window.pageYOffset;
+    nb.style.transform = cs > lastScroll && cs > 200 ? "translateY(-100%)" : "translateY(0)";
+    lastScroll = cs;
+  }, { passive: true });
+}
+
+function initHeroParallax(){
+  var hbg = byId("hero-parallax-bg");
+  var hs = byId("hero");
+  var hc = hs ? hs.querySelector(".hero-content") : null;
+  window.addEventListener("scroll", function(){
+    var sy = window.pageYOffset;
+    var hh = hs ? hs.offsetHeight : window.innerHeight;
+    if(sy <= hh){
+      var p = sy / hh;
+      if(hbg) hbg.style.transform = "translateY(" + (p * 40) + "px)";
+      if(hc){ hc.style.opacity = 1 - p * 1.5; hc.style.transform = "translateY(" + (p * 60) + "px)"; hc.style.transition = "opacity 0.6s cubic-bezier(0.16,1,0.3,1), transform 0.6s cubic-bezier(0.16,1,0.3,1)"; }
+    }
+  }, { passive: true });
+}
+
+// ===== HAMBURGER =====
+function initHamburger(){
+  if(!hb) return;
+  hb.addEventListener("click", function(){
+    var open = no.classList.toggle("open");
+    hb.classList.toggle("active");
+    hb.setAttribute("aria-expanded", open);
+  });
+  no.querySelectorAll(".nav-link").forEach(function(link){
+    link.addEventListener("click", function(){
+      no.classList.remove("open");
+      hb.classList.remove("active");
+      hb.setAttribute("aria-expanded", "false");
+      var t = this.dataset.target;
+      var e = document.getElementById(t);
+      if(e) e.scrollIntoView({ behavior: "smooth", block: "start" });
+    });
+  });
+}
+
+// ===== PRELOAD =====
+EPISODES.slice(0, 4).forEach(function(ep){
+  if(ep.images && ep.images[0]){
+    var l = document.createElement("link");
+    l.rel = "preload"; l.as = "image"; l.href = ep.images[0];
+    document.head.appendChild(l);
+  }
+});
+
+console.log("[WAR ROOM 3.0] Engine initialized. " + EPISODES.length + " episodes.");
+
+</script>
+</body>
+</html>
