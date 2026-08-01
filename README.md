@@ -19,15 +19,14 @@ Tudo em um único arquivo HTML autocontido, sem dependências de build.
 ## 🌐 Demonstração
 
 <p align="center">
-<a href="https://edy075.github.io/WAR_ROOM/">
-<img src="https://img.shields.io/badge/LIVE%20DEMO-WAR%20ROOM-16a34a?style=for-the-badge&logo=githubpages&logoColor=white">
-</a>
+  <a href="https://edy075.github.io/WAR_ROOM/">
+    <img src="https://img.shields.io/badge/🚀-Acessar%20o%20Projeto-0ea5e9?style=for-the-badge&logo=githubpages&logoColor=white">
+  </a>
 </p>
 
 <p align="center">
-<b>Clique no botão acima para abrir a versão online do projeto.</b>
+<img src="demo.gif" width="100%">
 </p>
-
 
 
 ---
