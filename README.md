@@ -40,7 +40,7 @@ Tudo em um único arquivo HTML autocontido, sem dependências de build.
 </p>
 
 <p align="center">
-<img src="banner-github.png" width="100%">
+<img src="demo.gif" width="100%">
 </p>
 
 ---
