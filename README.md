@@ -16,11 +16,17 @@ Tudo em um único arquivo HTML autocontido, sem dependências de build.
 
 ---
 
-## 
+## 🌐 Demonstração
 
+<p align="center">
+<a href="https://edy075.github.io/WAR_ROOM/">
+<img src="https://img.shields.io/badge/LIVE%20DEMO-WAR%20ROOM-16a34a?style=for-the-badge&logo=githubpages&logoColor=white">
+</a>
+</p>
 
-
-[![Acessar WAR ROOM](https://img.shields.io/badge/Acessar-WAR_ROOM-22c55e?style=for-the-badge&logo=githubpages&logoColor=white)](https://edy075.github.io/WAR_ROOM/)
+<p align="center">
+<b>Clique no botão acima para abrir a versão online do projeto.</b>
+</p>
 
 > Explore a linha do tempo interativa dos 12 grandes ciberataques apresentados no projeto.
 
