@@ -28,7 +28,7 @@ Tudo em um único arquivo HTML autocontido, sem dependências de build.
 <b>Clique no botão acima para abrir a versão online do projeto.</b>
 </p>
 
-> Explore a linha do tempo interativa dos 12 grandes ciberataques apresentados no projeto.
+
 
 ---
 
