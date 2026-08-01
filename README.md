@@ -16,7 +16,7 @@ Tudo em um único arquivo HTML autocontido, sem dependências de build.
 
 ---
 
-## 🌐 Demonstração
+## 
 
 - 🌐 ## 🌐 Demonstração
 
