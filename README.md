@@ -18,7 +18,7 @@ Tudo em um único arquivo HTML autocontido, sem dependências de build.
 
 ## 
 
-- 🌐 ## 🌐 Demonstração
+
 
 [![Acessar WAR ROOM](https://img.shields.io/badge/Acessar-WAR_ROOM-22c55e?style=for-the-badge&logo=githubpages&logoColor=white)](https://edy075.github.io/WAR_ROOM/)
 
