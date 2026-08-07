@@ -206,6 +206,7 @@ body.intro-skipped .site-header,body.intro-skipped .hero-eyebrow,body.intro-skip
 .episode-detail ul{list-style:none;padding:0}
 .episode-detail li{padding:.35rem 0;border-bottom:1px solid rgba(255,255,255,0.02);display:flex;gap:.8rem}
 .episode-detail .tl-date{font-family:var(--font-mono);color:var(--accent);min-width:75px;flex-shrink:0}
+.episode-kicker{display:flex;align-items:center;gap:.55rem;flex-wrap:wrap;margin-bottom:1rem}.episode-kicker .episode-number,.episode-kicker .episode-year,.episode-kicker .episode-type-badge{margin:0}.episode-facts{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:.65rem;margin:1.1rem 0 1.35rem;padding-top:1rem;border-top:1px solid rgba(201,168,76,.15)}.episode-facts div{min-width:0}.episode-facts dt{font:500 .48rem var(--font-mono);letter-spacing:.14rem;text-transform:uppercase;color:var(--accent);margin-bottom:.28rem}.episode-facts dd{margin:0;font:400 .7rem/1.45 var(--font-body);color:var(--text-secondary)}.dossier-banner-classic{background:linear-gradient(135deg,rgba(8,8,8,.98),rgba(34,28,13,.9) 55%,rgba(11,11,11,.98))}.detail-column{display:flex;flex-direction:column;gap:1.35rem;min-width:0}.detail-section{min-width:0}.detail-section h4{margin-bottom:.62rem}.detail-section p{margin:0 0 .5rem}.detail-section .intel-list li{display:block;padding:.42rem 0}.detail-section .intel-list a{display:inline;color:var(--accent);line-height:1.45}.reference-kind{display:block;margin-bottom:.18rem;font:500 .46rem var(--font-mono);letter-spacing:.12rem;text-transform:uppercase;color:rgba(240,236,228,.48)}.dossier-detail-banner{grid-column:1/-1}.episode-entry[data-modern="true"] .episode-image-wrap::after{content:"DOSSIER MODERNO";position:absolute;left:.9rem;top:.8rem;z-index:2;padding:.3rem .42rem;border:1px solid rgba(201,168,76,.35);background:rgba(5,5,5,.72);font:500 .43rem var(--font-mono);letter-spacing:.13rem;color:var(--accent)}
 .episode-gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:.4rem;margin-top:1rem}
 .episode-gallery img{width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:3px;cursor:pointer;border:1px solid var(--border-subtle);transition:all var(--transition-fast)}
 .episode-gallery img:hover{border-color:var(--accent);transform:scale(1.03)}
@@ -388,6 +389,7 @@ body.modal-open #ambient-particles{animation-play-state:paused!important;opacity
 @media(max-width:768px){.journey-progress{right:.55rem}.journey-progress-track{height:68px}.journey-progress-copy{min-width:auto}.journey-progress-copy span:first-child{display:none}.journey-progress-copy strong{font-size:.38rem;writing-mode:vertical-rl;text-orientation:mixed}.continue-exploring{right:1rem;bottom:1.25rem;padding:.55rem .65rem;font-size:.42rem}.continue-exploring span{font-size:.75rem}}
 @media(prefers-reduced-motion:reduce){.journey-progress-fill{transition:none}.continue-exploring,.episode-entry .episode-grid,.episode-entry .episode-image-wrap{transition:none}.journey-progress{display:none}}
 .intel-timeline-card{margin-top:1.25rem;border:1px solid var(--border-subtle);border-radius:5px;background:rgba(255,255,255,.012);overflow:hidden}.intel-global-timeline{display:flex;align-items:flex-end;gap:.3rem;min-height:118px;padding:1rem 1.2rem;overflow-x:auto}.intel-year-node{position:relative;flex:1 0 44px;min-height:74px;border:0;border-left:1px solid rgba(201,168,76,.13);background:linear-gradient(180deg,transparent,var(--intel-year-color,rgba(201,168,76,.16)));color:var(--text-secondary);cursor:pointer;text-align:left;padding:.35rem .3rem;transition:transform var(--transition-fast),background var(--transition-fast)}.intel-year-node::before{content:"";position:absolute;top:calc(100% - var(--intel-year-height,18px));left:50%;width:7px;height:7px;border-radius:50%;background:var(--accent);box-shadow:0 0 12px var(--accent);transform:translate(-50%,-50%)}.intel-year-node:hover,.intel-year-node:focus-visible{transform:translateY(-5px);background:linear-gradient(180deg,rgba(201,168,76,.12),rgba(201,168,76,.25));outline:none}.intel-year-node span{display:block;font:500 .47rem var(--font-mono);letter-spacing:.06rem}.intel-year-node strong{display:block;margin-top:.25rem;font:700 .48rem var(--font-mono);color:var(--accent)}@media(max-width:768px){.intel-global-timeline{padding:.8rem;min-height:104px}.intel-year-node{flex-basis:40px;min-height:66px}}
+.episode-story-hero{background:linear-gradient(90deg,rgba(5,5,5,.94),rgba(5,5,5,.42)),var(--story-image),linear-gradient(135deg,#090909,#211a09);background-size:cover;background-position:center}.episode-story-hero::after{content:"CLASSIFIED / DOSSIER";position:absolute;top:1.25rem;left:1.5rem;font:500 .48rem var(--font-mono);letter-spacing:.19rem;color:var(--accent);z-index:1}.episode-story-hero::before{content:none}.episode-facts{grid-template-columns:repeat(2,minmax(0,1fr))}@media(max-width:520px){.episode-facts{grid-template-columns:1fr}.episode-entry[data-modern="true"] .episode-image-wrap::after{left:.65rem;top:.6rem}.detail-section .intel-list li{padding:.5rem 0}}
 </style>
 </head>
 <body>
@@ -902,6 +904,39 @@ function renderEpisodes(){
   });
 }
 
+// Standardized renderer: cards, details and references share one editorial frame.
+function renderEpisodes(){
+  el.innerHTML = EPISODES.map(function(ep){
+    var hi = ep.previewImage || ((ep.images && ep.images.length) ? ep.images[0] : "");
+    var isModern = !!ep.cover;
+    var bannerClass = isModern ? " dossier-banner-" + ep.cover : " dossier-banner-classic";
+    var bannerCode = isModern ? ep.coverCode : "HISTORICAL DOSSIER";
+    var intelligence = '<section class="detail-section"><h4>Inteligência pública</h4><p><strong>MITRE ATT&CK:</strong> ' + (ep.mitre || "Não confirmado publicamente para este capítulo.") + '</p><p><strong>Grupos envolvidos:</strong> ' + (ep.groups || ep.attribution || "Não divulgado publicamente.") + '</p><p><strong>IOCs públicos:</strong> ' + (ep.iocs || "Não divulgado publicamente.") + '</p></section><section class="detail-section"><h4>Lições aprendidas</h4><p>' + (ep.lessons || ep.defense || "Não divulgado publicamente.") + '</p></section>';
+    var references = ep.references && ep.references.length ? '<section class="detail-section"><h4>Referências</h4><ul class="intel-list">' + ep.references.map(function(ref){return '<li><span class="reference-kind">' + (ref.kind || "Fonte oficial / pública") + '</span><a href="' + ref.href + '" target="_blank" rel="noopener noreferrer">' + ref.title + ' ↗</a></li>';}).join("") + '</ul></section>' : '<section class="detail-section"><h4>Referências</h4><p>Não divulgado publicamente no material de origem deste capítulo.</p></section>';
+    var credits = ep.mediaCredits && ep.mediaCredits.length ? '<section class="detail-section"><h4>Créditos visuais</h4><ul class="intel-list">' + ep.mediaCredits.map(function(item){return '<li><a href="' + item.href + '" target="_blank" rel="noopener noreferrer">' + item.title + ' ↗</a></li>';}).join("") + '</ul></section>' : '';
+    return '<article class="episode-entry" data-episode="' + ep.id + '" data-modern="' + isModern + '"><div class="episode-grid"><div class="episode-image-wrap">'
+      + (hi ? '<div class="episode-image-blur" style="background-image:url(' + hi + ')"></div><img class="episode-image" src="' + hi + '" alt="Imagem de contexto: ' + ep.title + '" loading="lazy">' : '<div class="episode-image-placeholder"><span class="pl-year">' + ep.year + '</span><span class="pl-title">' + ep.title + '</span><span class="pl-ref">Imagem histórica não divulgada</span></div>')
+      + '</div><div class="episode-info"><div class="episode-kicker"><span class="episode-number">' + ep.num + '</span><span class="episode-year">' + ep.year + '</span><span class="episode-type-badge">' + ep.category + '</span></div><h3 class="episode-title">' + ep.title + '</h3><p class="episode-subtitle">' + ep.subtitle + '</p><p class="episode-summary">' + ep.summary + '</p><dl class="episode-facts"><div><dt>Região</dt><dd>' + ep.region + '</dd></div><div><dt>Ator / grupo</dt><dd>' + ep.attribution + '</dd></div></dl><div class="episode-actions"><button type="button" class="episode-btn episode-btn-primary toggle-detail" aria-controls="episode-detail-' + ep.id + '" aria-expanded="false">Ver detalhes</button>'
+      + (ep.images && ep.images.length ? '<button type="button" class="episode-btn episode-btn-secondary view-gallery">Galeria</button>' : '') + '<button type="button" class="episode-btn episode-btn-secondary view-story">História</button></div></div></div><div class="episode-timeline"><div class="episode-timeline-dot"></div><div class="episode-timeline-line"></div><span class="episode-timeline-label">' + ep.attribution + '</span></div><div class="episode-detail" id="episode-detail-' + ep.id + '"><div class="episode-detail-inner"><div class="dossier-detail-banner' + bannerClass + '"><span>' + ep.region + ' · ' + ep.confidence + '</span><strong>' + bannerCode + '</strong></div><div class="detail-column"><section class="detail-section"><h4>Cronologia</h4><ul>'
+      + ep.timeline.map(function(t){return '<li><span class="tl-date">' + t.date + '</span><span>' + t.event + '</span></li>';}).join("") + '</ul></section>' + (ep.curiosity ? '<section class="detail-section"><h4>Contexto</h4><p>' + ep.curiosity + '</p></section>' : '') + '</div><div class="detail-column"><section class="detail-section"><h4>Impacto</h4><p><strong>Econômico:</strong> ' + ep.economic + '</p><p><strong>Social:</strong> ' + ep.social + '</p><p><strong>Atribuição:</strong> ' + ep.attribution + '</p><p><strong>Alvo:</strong> ' + ep.target + '</p></section><section class="detail-section"><h4>Defesa</h4><p>' + ep.defense + '</p></section><section class="detail-section"><h4>Resposta institucional</h4><p>' + ep.legislation + '</p></section>' + intelligence + references + credits + '</div></div></div></article>';
+  }).join("");
+
+  el.addEventListener("click", function(e){
+    var en = e.target.closest(".episode-entry");
+    if(!en) return;
+    var tb = e.target.closest(".toggle-detail");
+    if(tb){ var dt = en.querySelector(".episode-detail"), op = dt.classList.contains("open"); dt.classList.toggle("open"); tb.textContent = op ? "Ver detalhes" : "Ocultar detalhes"; tb.setAttribute("aria-expanded", op ? "false" : "true"); }
+    var gb = e.target.closest(".view-gallery");
+    if(gb){ openLB(en.dataset.episode, 0); }
+    var sb = e.target.closest(".view-story");
+    if(sb){ openStory(en.dataset.episode); }
+  });
+  document.querySelectorAll(".episode-image").forEach(function(img){
+    img.addEventListener("error", function(){var wrap=this.closest(".episode-image-wrap");if(wrap)wrap.classList.add("img-failed");});
+    img.addEventListener("load", function(){var wrap=this.closest(".episode-image-wrap");if(wrap)wrap.classList.add("episode-image-loaded");});
+  });
+}
+
 // ===== TACTICAL MAP CANVAS (reuses the original hero canvas) =====
 function initWaveCanvas(){
   if(!wc || prefersReducedMotion) return;
@@ -1270,6 +1305,20 @@ stClose.addEventListener("click", closeStory);
 document.addEventListener("keydown", function(e){
   if(e.key === "Escape" && stMod.classList.contains("active")){ closeStory(); }
 });
+
+// Standardized story header for all 17 dossiers; existing narrative HTML remains unchanged.
+function openStory(id){
+  var ep = EPISODES.find(function(e){return e.id === id});
+  if(!ep) return;
+  var txt = STORIES[id] || "<p>História completa não divulgada no material de origem.</p>";
+  stTitle.textContent = ep.num + ". " + ep.title;
+  stMeta.textContent = ep.year + " · " + ep.category + " · " + ep.attribution;
+  stBody.innerHTML = '<div class="dossier-story-hero episode-story-hero' + (ep.cover ? ' dossier-story-hero-' + ep.cover : '') + '"' + (ep.previewImage ? ' style="--story-image:url(' + ep.previewImage + ')"' : '') + '><span>' + ep.region + '</span><strong>' + (ep.cover ? ep.coverCode : "HISTORICAL DOSSIER") + '</strong></div>' + txt;
+  stMod.classList.add("active");
+  document.body.classList.add("modal-open");
+  document.body.style.overflow = "hidden";
+  stClose.focus();
+}
 
 // ===== AUDIO =====
 // YouTube player vars
