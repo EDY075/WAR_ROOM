@@ -103,9 +103,9 @@ http://127.0.0.1:8000
 
 **GitHub Pages**
 
-A versão online está disponível em:
+## 🌐 Acessar online
 
-👉 https://edy075.github.io/WAR_ROOM/
+https://edy075.github.io/WAR_ROOM/
 
 ## Licença
 
