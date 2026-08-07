@@ -71,7 +71,6 @@ As referências são apresentadas como inteligência pública, com atribuições
 
 ## Como executar
 
-# Como executar
 
 O WAR ROOM é uma aplicação estática e não requer instalação de dependências.
 
