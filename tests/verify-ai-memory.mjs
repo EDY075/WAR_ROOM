@@ -26,7 +26,7 @@ for (const file of aiFiles) {
 }
 
 const rootReadme = readFileSync(join(root, "README.md"), "utf8");
-assert(rootReadme.includes("## Continuidade por IA"), "README não possui a seção Continuidade por IA");
-assert(rootReadme.includes("[`.ai/`](.ai/)"), "README não referencia a fonte oficial .ai/");
+assert(!rootReadme.includes("## Continuidade por IA"), "README ainda destaca a continuidade por IA");
+assert(!rootReadme.includes("[`.ai/`](.ai/)"), "README ainda destaca a pasta .ai/");
 
 console.log(`AI memory: ${required.length} documentos obrigatórios e links internos validados.`);

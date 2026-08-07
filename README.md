@@ -9,104 +9,76 @@
 
 # WAR ROOM
 
-**A cinematic, interactive library of cyber conflicts.**
+## Biblioteca cinematográfica de conflitos cibernéticos
 
-WAR ROOM presents 17 researched cyber-conflict dossiers, from Morris Worm to modern campaigns involving Russia x Ukraine, Volt Typhoon, Salt Typhoon, Lazarus Group, and Israel x Iran. The experience combines historical narrative, public threat intelligence, MITRE ATT&CK context, impact analysis, and a browser-native Intelligence Center.
+WAR ROOM é uma experiência interativa sobre conflitos cibernéticos que combina narrativa histórica, inteligência de ameaças pública, investigação visual e contexto operacional. O projeto apresenta 17 dossiês — do Morris Worm às campanhas modernas envolvendo Rússia × Ucrânia, Volt Typhoon, Salt Typhoon, Lazarus Group e Israel × Irã.
 
-## Demonstration
+Criado por [Edmilson Gomes](https://github.com/EDY075) · [LinkedIn](https://linkedin.com/in/edmilson-gomes) para portfólio e pesquisa acadêmica em **Cybersecurity**, **Blue Team**, **Threat Intelligence** e **Incident Response**.
+
+## Demonstração
 
 <p align="center">
-  <a href="https://edy075.github.io/WAR_ROOM/"><img src="demo-10s.gif" alt="WAR ROOM final product tour" width="100%"></a>
+  <a href="https://edy075.github.io/WAR_ROOM/"><img src="demo-10s.gif" alt="Tour final do produto WAR ROOM" width="100%"></a>
 </p>
 
-The current tour introduces the Hero, the Intelligence Center, the modern Russia x Ukraine dossier, the narrative modal, and the investigation timeline. Open the [live experience](https://edy075.github.io/WAR_ROOM/) for the complete interactive flow.
+Explore a experiência completa em [edy075.github.io/WAR_ROOM](https://edy075.github.io/WAR_ROOM/).
 
-## Captures from the final version
-
-<p align="center">
-  <img src="assets/screenshots/release-hero.jpg" alt="WAR ROOM final Hero" width="49%">
-  <img src="assets/screenshots/final-consistency-intelligence.jpg" alt="WAR ROOM Intelligence Center and global timeline" width="49%">
-</p>
+## Screenshots
 
 <p align="center">
-  <img src="assets/screenshots/modern-dossier.jpg" alt="Russia x Ukraine modern dossier with investigation actions" width="74%">
+  <img src="assets/screenshots/release-hero.jpg" alt="Hero final do WAR ROOM" width="49%">
+  <img src="assets/screenshots/final-consistency-intelligence.jpg" alt="Intelligence Center e linha do tempo global" width="49%">
 </p>
 
 <p align="center">
-  <img src="assets/screenshots/russia-ukraine-timeline-final.jpg" alt="Russia x Ukraine dossier detail and timeline" width="49%">
-  <img src="assets/screenshots/russia-ukraine-modal-final.jpg" alt="Russia x Ukraine narrative modal" width="49%">
+  <img src="assets/screenshots/modern-dossier.jpg" alt="Dossiê moderno Rússia x Ucrânia" width="74%">
 </p>
 
-All portfolio visuals above are approved release assets from the published final version. The live dossier exposes the detail timeline and narrative modal without using mock data.
+<p align="center">
+  <img src="assets/screenshots/russia-ukraine-timeline-final.jpg" alt="Cronologia detalhada de Rússia x Ucrânia" width="49%">
+  <img src="assets/screenshots/russia-ukraine-modal-final.jpg" alt="Modal narrativo de Rússia x Ucrânia" width="49%">
+</p>
 
-## What the experience includes
+## Principais Recursos
 
-- 17 interactive cyber-conflict dossiers from 1988 to 2025.
-- A tactical Intelligence Center with global map, 1988-2026 timeline, filters, MITRE, APT group, and public IOC explorers.
-- Cinematic loader, navigation, atmospheric Canvas, subtle motion, keyboard support, and `prefers-reduced-motion` support.
-- Dossier cards, details, galleries, illustrated chronology, contextual maps, references, and credited visuals.
-- Local modern visual assets with credits in [assets/images/CREDITS.md](assets/images/CREDITS.md).
+- 17 casos históricos e modernos de conflitos cibernéticos.
+- Intelligence Center com visão transversal dos dossiês.
+- Linha do tempo global de 1988 a 2025.
+- Mapa mundial interativo com hotspots de campanhas.
+- Contexto MITRE ATT&CK, grupos APT e indicadores públicos.
+- IOC Explorer e filtros por país, ano, categoria, impacto, grupo e malware.
+- Galeria multimídia, mapas regionais, referências e créditos visuais.
+- Storytelling cinematográfico com cronologias e modal narrativo.
+- Interface responsiva, navegação por teclado e suporte a `prefers-reduced-motion`.
+- Funciona sem build, backend ou instalação de dependências.
 
-## Run locally
+## Intelligence Center
 
-The project is a static website; no build, backend, or package installation is required.
+Uma central de análise client-side que conecta os 17 dossiês por geografia, período, impacto, grupos, técnicas MITRE e indicadores públicos. O mapa, a linha do tempo e os explorers permitem navegar do panorama global ao capítulo correspondente sem sair da experiência.
+
+## 17 casos históricos e modernos
+
+Os dossiês cobrem incidentes como Morris Worm, Melissa, ILOVEYOU, Estônia 2007, Stuxnet, Sony Pictures, WannaCry, NotPetya, SolarWinds, Colonial Pipeline, Log4Shell e MGM Resorts, além de cinco conflitos modernos: Rússia × Ucrânia, Volt Typhoon, Salt Typhoon, Lazarus Group e Israel × Irã.
+
+As referências são apresentadas como inteligência pública, com atribuições e indicadores tratados com contexto e créditos em [assets/images/CREDITS.md](assets/images/CREDITS.md).
+
+## Tecnologias
+
+- HTML5, CSS3 e JavaScript nativo.
+- Canvas API, Web Audio API e IntersectionObserver.
+- GitHub Pages para publicação.
+- [Wikimedia Commons](https://commons.wikimedia.org/) e fontes públicas de threat intelligence, incluindo [MITRE ATT&CK](https://attack.mitre.org/), [CISA](https://www.cisa.gov/), [NSA](https://www.nsa.gov/), [CERT-UA](https://cert.gov.ua/), [FBI](https://www.fbi.gov/), [NIST](https://www.nist.gov/) e [Kaspersky](https://www.kaspersky.com/resource-center).
+
+## Como executar
+
+O projeto é estático: abra `index.html` em um navegador moderno ou use um servidor local simples.
 
 ```powershell
 python -m http.server 4173
 ```
 
-Open `http://127.0.0.1:4173/`, or open `index.html` directly in a modern browser.
+Depois, acesse `http://127.0.0.1:4173/`.
 
-## Project structure
+## Licença
 
-```text
-WAR_ROOM/
-├── index.html                # Browser-native experience
-├── assets/screenshots/       # Final release captures
-├── assets/images/            # Local modern dossier media and credits
-├── episodes/                 # Source research for classic dossiers
-├── tests/                    # Static release and AI-memory checks
-└── .ai/                      # Official context and handoff for any AI
-```
-
-## Continuidade por IA
-
-Any agent can assume the project by reading [`.ai/`](.ai/). It is the official source for current state, architecture, decisions, workflow, design constraints, validation, technical memory, and roadmap.
-
-## Credits
-
-**Project developed by Edmilson Gomes** for academic cybersecurity research.
-
-Focus areas: **Cybersecurity · Blue Team · Threat Intelligence · Incident Response**.
-
-### Technologies
-
-HTML5, CSS3, JavaScript, Canvas API, Web Audio API, IntersectionObserver, SoundCloud, GitHub Pages, and public reference material with local visual credits where applicable.
-
-### Public research and visual sources
-
-Thank you to the public sources that make this educational project possible:
-
-- [MITRE ATT&CK](https://attack.mitre.org/)
-- [CISA](https://www.cisa.gov/)
-- [NSA](https://www.nsa.gov/)
-- [CERT-UA](https://cert.gov.ua/)
-- [FBI](https://www.fbi.gov/)
-- [NIST](https://www.nist.gov/)
-- [Kaspersky](https://www.kaspersky.com/resource-center)
-- [Wikimedia Commons](https://commons.wikimedia.org/)
-
-### Author
-
-[![GitHub](https://img.shields.io/badge/GitHub-EDY075-171717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/EDY075)
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-Edmilson%20Gomes-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/edmilson-gomes)
-
-Edmilson Gomes · Cybersecurity · Blue Team · Threat Intelligence · Incident Response
-
-## Release
-
-The current published release is [WAR ROOM v1.0.3](https://github.com/EDY075/WAR_ROOM/releases/tag/v1.0.3). It includes the final banner, product tour GIF, and approved portfolio screenshots.
-
-## License
-
-Released under the [MIT License](LICENSE).
+Distribuído sob a [MIT License](LICENSE).
