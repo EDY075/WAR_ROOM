@@ -777,6 +777,51 @@ Object.keys(DOSSIER_MEDIA).forEach(function(id){
   if(dossier) Object.assign(dossier, DOSSIER_MEDIA[id]);
 });
 
+// Editorial metadata is intentionally kept separate from the historical narratives.
+// It gives every dossier the same reading frame without rewriting the source chapters.
+var EPISODE_META = {
+  "morris-worm": {region:"Estados Unidos", category:"Worm", confidence:"Registro histórico consolidado"},
+  "melissa": {region:"Estados Unidos", category:"Macro vírus", confidence:"Registro histórico consolidado"},
+  "iloveyou": {region:"Filipinas / global", category:"Worm", confidence:"Registro histórico consolidado"},
+  "estonia": {region:"Estônia", category:"DDoS", confidence:"Atribuição debatida publicamente"},
+  "stuxnet": {region:"Irã", category:"APT / ICS", confidence:"Atribuição debatida publicamente"},
+  "sony": {region:"Estados Unidos", category:"APT", confidence:"Atribuição pública"},
+  "wannacry": {region:"Global", category:"Ransomware", confidence:"Atribuição pública"},
+  "notpetya": {region:"Ucrânia / global", category:"Wiper", confidence:"Atribuição pública"},
+  "solarwinds": {region:"Estados Unidos / global", category:"Supply chain", confidence:"Atribuição pública"},
+  "colonial": {region:"Estados Unidos", category:"Ransomware", confidence:"Atribuição pública"},
+  "log4j": {region:"Global", category:"Vulnerabilidade", confidence:"Registro técnico consolidado"},
+  "mgm": {region:"Estados Unidos", category:"Ransomware", confidence:"Atribuição pública"},
+  "ukraine-war": {region:"Europa Oriental", category:"Guerra híbrida", confidence:"Atribuições públicas"},
+  "volt-typhoon": {region:"Estados Unidos / Guam", category:"Pré-posicionamento", confidence:"Atribuição pública"},
+  "salt-typhoon": {region:"China / telecom global", category:"Espionagem", confidence:"Atribuição pública"},
+  "lazarus-modern": {region:"Coreia do Norte / global", category:"Financiamento estatal", confidence:"Atribuição pública"},
+  "israel-iran": {region:"Oriente Médio", category:"ICS / sabotagem", confidence:"Atribuições públicas"}
+};
+
+var LOCAL_DOSSIER_MEDIA = {
+  "ukraine-war": ["assets/images/ep13-russia-ukraine/preview.jpg", "assets/images/ep13-russia-ukraine/region-map.png"],
+  "volt-typhoon": ["assets/images/ep14-volt-typhoon/preview.jpg", "assets/images/ep14-volt-typhoon/region-map.png"],
+  "salt-typhoon": ["assets/images/ep15-salt-typhoon/preview.jpg", "assets/images/ep15-salt-typhoon/region-map.svg"],
+  "lazarus-modern": ["assets/images/ep16-lazarus-group/preview.jpg", "assets/images/ep16-lazarus-group/region-map.png"],
+  "israel-iran": ["assets/images/ep17-israel-iran/preview.jpg", "assets/images/ep17-israel-iran/region-map.png"]
+};
+
+EPISODES.forEach(function(ep){
+  var meta = EPISODE_META[ep.id] || {};
+  ep.region = meta.region || "Não divulgado publicamente";
+  ep.category = meta.category || ep.type;
+  ep.confidence = meta.confidence || "Não divulgado publicamente";
+  ep.previewImage = (LOCAL_DOSSIER_MEDIA[ep.id] || ep.images || [])[0] || "";
+  if(LOCAL_DOSSIER_MEDIA[ep.id]) ep.images = LOCAL_DOSSIER_MEDIA[ep.id];
+  if(!ep.mediaCredits && ep.images && ep.images.length){
+    ep.mediaCredits = ep.images.map(function(image, index){return {title:"Arquivo visual " + (index + 1) + " — Wikimedia Commons", href:image};});
+  }
+  if(!ep.references || !ep.references.length){
+    ep.references = ep.images && ep.images.length ? [{title:"Arquivo visual histórico — Wikimedia Commons", href:ep.images[0], kind:"Fonte visual"}] : [];
+  }
+});
+
 // ===== RENDER EPISODES =====
 function renderEpisodes(){
   el.innerHTML = EPISODES.map(function(ep, i){
