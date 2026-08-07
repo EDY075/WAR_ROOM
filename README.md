@@ -15,7 +15,8 @@
 <img src="https://img.shields.io/badge/MIT-License-blue?style=for-the-badge">
 
 </p>
-# WAR ROOM
+
+# WAR ROOM v1.0
 
 **Interactive Cyber Attack Timeline**
 
@@ -68,6 +69,19 @@ Tudo em um único arquivo HTML autocontido, sem dependências de build.
 
 <p align="center">
 <img src="demo-10s.gif" width="100%">
+</p>
+
+---
+
+## Screenshots da Release
+
+<p align="center">
+  <img src="assets/screenshots/release-hero.jpg" alt="Entrada cinematográfica do WAR ROOM" width="49%">
+  <img src="assets/screenshots/intelligence-center.jpg" alt="Mapa tático do Intelligence Center" width="49%">
+</p>
+
+<p align="center">
+  <img src="assets/screenshots/modern-dossier.jpg" alt="Dossiê moderno Rússia x Ucrânia" width="74%">
 </p>
 
 ---
