@@ -30,6 +30,10 @@ Sprint 4 introduces the **Intelligence Center**: a cinematic, client-side analys
 
 Sprint 5.1 standardizes the portfolio reading experience across all 17 chapters. “Começar a Jornada” now lands directly in the Intelligence Center, every dossier uses the same card and detail frame, and the five modern dossiers use local, credited visual assets. See [visual credits](assets/images/CREDITS.md) and run `node tests/verify-final-consistency.mjs` for the static release check.
 
+## Continuidade por IA
+
+Qualquer agente pode assumir o projeto lendo apenas a pasta [`.ai/`](.ai/). Ela é a fonte oficial de contexto, arquitetura, estado atual, decisões, fluxo de validação, memória técnica e roadmap do WAR ROOM.
+
 ## Intelligence Center
 
 - Interactive world map with 17 attack hotspots and impact signal levels
