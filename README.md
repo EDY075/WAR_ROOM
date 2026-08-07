@@ -25,6 +25,17 @@ Sprint 3 expands WAR ROOM into a 17-chapter cyber-conflict library. Five modern 
 
 Sprint 3.5 gives those five dossiers a visual treatment at the same level as the classic chapters: distinct tactical covers, internal dossier banners, illustrated timeline markers, contextual media, and regional maps. Every gallery item shows a Wikimedia Commons credit, with source and license links in the detail panel.
 
+Sprint 4 introduces the **Intelligence Center**: a cinematic, client-side analysis layer over the same 17 dossiers. It adds an interactive world map, a 1988–2026 global timeline, MITRE/APT/IOC explorers, cross-campaign links, and combinable filters without changing episode content.
+
+## Intelligence Center
+
+- Interactive world map with 17 attack hotspots and impact signal levels
+- Global timeline (1988–2026) that filters the dossier index
+- Filters for country, year, category, impact, group, and malware
+- MITRE ATT&CK, APT Group, and safe public-IOC explorers
+- Premium hover states and keyboard-accessible cards that open the corresponding episode
+- Mobile-responsive layout and `prefers-reduced-motion` support
+
 ## Modern Conflict Dossiers
 
 | Chapter | Focus | Visual dossier | Primary sources |
