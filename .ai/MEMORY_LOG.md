@@ -36,3 +36,9 @@ This is the chronological project memory. `CURRENT_STATE.md` is the fast snapsho
 - Standardized card/detail/story presentation across the 17 dossiers and made the primary CTA focus `#intelligence`.
 - Added local credited modern previews/maps, regression coverage, screenshot evidence, tag `v1.0.2`, GitHub Release assets, and Pages validation.
 - Established `.ai/` as the official WAR ROOM continuity source; no runtime behavior was changed by the memory-integration work.
+
+## Sprint Final - v1.0.3 portfolio polish
+
+- Replaced the public README with release-only portfolio documentation and verified author, research-source, LinkedIn, GitHub, Pages, and release links.
+- Added final Russia x Ukraine chronology and narrative-modal captures and regenerated the product tour GIF from five real release views.
+- No runtime, episode, layout, animation, or historical-content change was made.

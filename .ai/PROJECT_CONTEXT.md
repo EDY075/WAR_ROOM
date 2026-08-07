@@ -10,7 +10,7 @@ Preserve a cinematic, accessible, and performant investigation experience while 
 
 ## Current release
 
-`v1.0.2` is public on GitHub Pages and GitHub Releases. It standardized cards, dossier details, visual credits, and the journey CTA without rewriting historical narrative content.
+`v1.0.3` is public on GitHub Pages and GitHub Releases. It presents final portfolio documentation, screenshots, product tour, credits, and links without rewriting historical narrative content.
 
 ## Content model
 

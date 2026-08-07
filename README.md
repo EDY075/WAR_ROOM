@@ -1,210 +1,112 @@
-![WAR ROOM Banner](banner-github.png)
+![WAR ROOM banner](banner-github.png)
 
 <p align="center">
-
-<img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white">
-
-<img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white">
-
-<img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black">
-
-<img src="https://img.shields.io/badge/Responsive-22C55E?style=for-the-badge">
-
-<img src="https://img.shields.io/badge/GitHub_Pages-121013?style=for-the-badge&logo=github&logoColor=white">
-
-<img src="https://img.shields.io/badge/MIT-License-blue?style=for-the-badge">
-
+  <a href="https://edy075.github.io/WAR_ROOM/"><img src="https://img.shields.io/badge/Live%20Experience-GitHub%20Pages-c9a84c?style=for-the-badge&logo=githubpages&logoColor=white" alt="Live experience"></a>
+  <a href="https://github.com/EDY075/WAR_ROOM/releases/tag/v1.0.3"><img src="https://img.shields.io/badge/Release-v1.0.3-171717?style=for-the-badge&logo=github&logoColor=white" alt="Release v1.0.3"></a>
+  <img src="https://img.shields.io/badge/17-Cyber%20Conflict%20Dossiers-c9a84c?style=for-the-badge" alt="17 dossiers">
+  <img src="https://img.shields.io/badge/Static-HTML%20%2B%20CSS%20%2B%20JavaScript-171717?style=for-the-badge" alt="Static web stack">
 </p>
 
-# WAR ROOM v1.0
+# WAR ROOM
 
-**Interactive Cyber Attack Timeline**
+**A cinematic, interactive library of cyber conflicts.**
 
-Sprint 2 adds a low-overhead cinematic navigation layer: tactical map pulses, chapter progress, refined hover states, natural ambient depth, and `prefers-reduced-motion` support.
+WAR ROOM presents 17 researched cyber-conflict dossiers, from Morris Worm to modern campaigns involving Russia x Ukraine, Volt Typhoon, Salt Typhoon, Lazarus Group, and Israel x Iran. The experience combines historical narrative, public threat intelligence, MITRE ATT&CK context, impact analysis, and a browser-native Intelligence Center.
 
-Sprint 3 expands WAR ROOM into a 17-chapter cyber-conflict library. Five modern dossiers cover Russia x Ukraine, Volt Typhoon, Salt Typhoon, Lazarus Group, and Israel x Iran with timelines, MITRE ATT&CK, public IOCs, lessons learned, and links to primary sources.
+## Demonstration
 
-Sprint 3.5 gives those five dossiers a visual treatment at the same level as the classic chapters: distinct tactical covers, internal dossier banners, illustrated timeline markers, contextual media, and regional maps. Every gallery item shows a Wikimedia Commons credit, with source and license links in the detail panel.
+<p align="center">
+  <a href="https://edy075.github.io/WAR_ROOM/"><img src="demo-10s.gif" alt="WAR ROOM final product tour" width="100%"></a>
+</p>
 
-Sprint 4 introduces the **Intelligence Center**: a cinematic, client-side analysis layer over the same 17 dossiers. It adds an interactive world map, a 1988–2026 global timeline, MITRE/APT/IOC explorers, cross-campaign links, and combinable filters without changing episode content.
+The current tour introduces the Hero, the Intelligence Center, the modern Russia x Ukraine dossier, the narrative modal, and the investigation timeline. Open the [live experience](https://edy075.github.io/WAR_ROOM/) for the complete interactive flow.
 
-Sprint 5.1 standardizes the portfolio reading experience across all 17 chapters. “Começar a Jornada” now lands directly in the Intelligence Center, every dossier uses the same card and detail frame, and the five modern dossiers use local, credited visual assets. See [visual credits](assets/images/CREDITS.md) and run `node tests/verify-final-consistency.mjs` for the static release check.
+## Captures from the final version
+
+<p align="center">
+  <img src="assets/screenshots/release-hero.jpg" alt="WAR ROOM final Hero" width="49%">
+  <img src="assets/screenshots/final-consistency-intelligence.jpg" alt="WAR ROOM Intelligence Center and global timeline" width="49%">
+</p>
+
+<p align="center">
+  <img src="assets/screenshots/modern-dossier.jpg" alt="Russia x Ukraine modern dossier with investigation actions" width="74%">
+</p>
+
+<p align="center">
+  <img src="assets/screenshots/russia-ukraine-timeline-final.jpg" alt="Russia x Ukraine dossier detail and timeline" width="49%">
+  <img src="assets/screenshots/russia-ukraine-modal-final.jpg" alt="Russia x Ukraine narrative modal" width="49%">
+</p>
+
+All portfolio visuals above are approved release assets from the published final version. The live dossier exposes the detail timeline and narrative modal without using mock data.
+
+## What the experience includes
+
+- 17 interactive cyber-conflict dossiers from 1988 to 2025.
+- A tactical Intelligence Center with global map, 1988-2026 timeline, filters, MITRE, APT group, and public IOC explorers.
+- Cinematic loader, navigation, atmospheric Canvas, subtle motion, keyboard support, and `prefers-reduced-motion` support.
+- Dossier cards, details, galleries, illustrated chronology, contextual maps, references, and credited visuals.
+- Local modern visual assets with credits in [assets/images/CREDITS.md](assets/images/CREDITS.md).
+
+## Run locally
+
+The project is a static website; no build, backend, or package installation is required.
+
+```powershell
+python -m http.server 4173
+```
+
+Open `http://127.0.0.1:4173/`, or open `index.html` directly in a modern browser.
+
+## Project structure
+
+```text
+WAR_ROOM/
+├── index.html                # Browser-native experience
+├── assets/screenshots/       # Final release captures
+├── assets/images/            # Local modern dossier media and credits
+├── episodes/                 # Source research for classic dossiers
+├── tests/                    # Static release and AI-memory checks
+└── .ai/                      # Official context and handoff for any AI
+```
 
 ## Continuidade por IA
 
-Qualquer agente pode assumir o projeto lendo apenas a pasta [`.ai/`](.ai/). Ela é a fonte oficial de contexto, arquitetura, estado atual, decisões, fluxo de validação, memória técnica e roadmap do WAR ROOM.
+Any agent can assume the project by reading [`.ai/`](.ai/). It is the official source for current state, architecture, decisions, workflow, design constraints, validation, technical memory, and roadmap.
 
-## Intelligence Center
+## Credits
 
-- Interactive world map with 17 attack hotspots and impact signal levels
-- Global timeline (1988–2026) that filters the dossier index
-- Filters for country, year, category, impact, group, and malware
-- MITRE ATT&CK, APT Group, and safe public-IOC explorers
-- Premium hover states and keyboard-accessible cards that open the corresponding episode
-- Mobile-responsive layout and `prefers-reduced-motion` support
+**Project developed by Edmilson Gomes** for academic cybersecurity research.
 
-## Modern Conflict Dossiers
+Focus areas: **Cybersecurity · Blue Team · Threat Intelligence · Incident Response**.
 
-| Chapter | Focus | Visual dossier | Primary sources |
-| --- | --- | --- | --- |
-| Russia x Ukraine | Hybrid warfare, Sandworm, critical infrastructure | Infrastructure image + Ukraine power-grid map | CERT-UA, MITRE |
-| Volt Typhoon | Critical infrastructure, stealth, living off the land | Telecom image + Guam locator map | CISA, NSA, FBI, MITRE |
-| Salt Typhoon | Telecommunications and global espionage | Cell-tower image + China map | CISA, FBI, MITRE |
-| Lazarus Group | Cryptocurrency, supply chain, state financing | Crypto-mining image + DPRK map | CISA, FBI, Treasury, MITRE |
-| Israel x Iran | ICS, PLCs, public attribution and resilience | PLC image + Israel/Iran locator map | CISA, INCD, MITRE |
+### Technologies
 
----
+HTML5, CSS3, JavaScript, Canvas API, Web Audio API, IntersectionObserver, SoundCloud, GitHub Pages, and public reference material with local visual credits where applicable.
 
-## 📖 Descrição
+### Public research and visual sources
 
-O WAR ROOM é uma biblioteca cinematográfica interativa de 17 incidentes e conflitos cibernéticos, de 1988 a 2025 — do Morris Worm aos dossiês de conflitos modernos.
+Thank you to the public sources that make this educational project possible:
 
-O projeto foi desenvolvido como trabalho acadêmico de cibersegurança e combina storytelling imersivo com uma experiência visual de alto nível: cada episódio traz cronologia, impacto econômico e social, atribuição, defesa, legislação, galeria de imagens e uma narrativa completa em modal.
+- [MITRE ATT&CK](https://attack.mitre.org/)
+- [CISA](https://www.cisa.gov/)
+- [NSA](https://www.nsa.gov/)
+- [CERT-UA](https://cert.gov.ua/)
+- [FBI](https://www.fbi.gov/)
+- [NIST](https://www.nist.gov/)
+- [Kaspersky](https://www.kaspersky.com/resource-center)
+- [Wikimedia Commons](https://commons.wikimedia.org/)
 
-Tudo em um único arquivo HTML autocontido, sem dependências de build.
+### Author
 
----
+[![GitHub](https://img.shields.io/badge/GitHub-EDY075-171717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/EDY075)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Edmilson%20Gomes-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/edmilson-gomes)
 
-## 🌐 Demonstração
+Edmilson Gomes · Cybersecurity · Blue Team · Threat Intelligence · Incident Response
 
-<p align="center">
-  <a href="https://edy075.github.io/WAR_ROOM/">
-    <img src="https://img.shields.io/badge/🚀-Acessar%20o%20Projeto-0ea5e9?style=for-the-badge&logo=githubpages&logoColor=white">
-  </a>
-</p>
+## Release
 
-<p align="center">
-<img src="demo-10s.gif" width="100%">
-</p>
+The current published release is [WAR ROOM v1.0.3](https://github.com/EDY075/WAR_ROOM/releases/tag/v1.0.3). It includes the final banner, product tour GIF, and approved portfolio screenshots.
 
----
+## License
 
-## Screenshots da Release
-
-<p align="center">
-  <img src="assets/screenshots/final-consistency-intelligence.jpg" alt="Intelligence Center validated in the final consistency pass" width="74%">
-</p>
-
-<p align="center">
-  <img src="assets/screenshots/release-hero.jpg" alt="Entrada cinematográfica do WAR ROOM" width="49%">
-  <img src="assets/screenshots/intelligence-center.jpg" alt="Mapa tático do Intelligence Center" width="49%">
-</p>
-
-<p align="center">
-  <img src="assets/screenshots/modern-dossier.jpg" alt="Dossiê moderno Rússia x Ucrânia" width="74%">
-</p>
-
----
-
-## ✨ Funcionalidades
-
-- 🎬 **17 episódios interativos** — linha do tempo de ataques e conflitos cibernéticos (1988–2025)
-- 📜 **Narrativa completa** — história detalhada de cada ataque em modal cinematográfico
-- 🗓️ **Cronologia interativa** — datas-chave de cada incidente
-- 📊 **Impacto detalhado** — econômico, social, atribuição, alvo, defesa e legislação
-- 🖼️ **Galeria com lightbox** — visualizador de imagens com crossfade, navegação por teclado e swipe no mobile
-- 🎵 **Trilha sonora** — música "Forever" via SoundCloud e áudio ambiente procedural (Web Audio API)
-- 🔊 **Controle de volume** — slider de volume para a trilha
-- 🔗 **Compartilhamento** — botão para compartilhar a experiência
-- 💾 **Preferências salvas** — volume e configurações persistidas via localStorage
-- 📱 **Totalmente responsivo** — desktop, notebook, tablet e mobile
-- ♿ **Acessibilidade** — skip-link, navegação por teclado, focus trap, suporte a `prefers-reduced-motion`
-- 🎥 **Efeitos visuais** — partículas, waves canvas, film grain, parallax e loading screen cinematográfico
-
----
-
-## 🛠️ Tecnologias
-
-- **HTML5** — estrutura semântica e acessível
-- **CSS3** — design tokens, variáveis, grid, media queries e animações
-- **JavaScript (ES5/ES6)** — lógica da aplicação
-- **Canvas API** — partículas, ondas e film grain em tempo real
-- **Web Audio API** — áudio ambiente procedural
-- **IntersectionObserver** — animações de scroll e scroll-spy
-- **SoundCloud API** — player da trilha sonora
-- **Google Fonts** — Playfair Display, Source Serif 4, JetBrains Mono e Inter
-- **Wikimedia Commons** — imagens históricas licenciadas
-
----
-
-## 📂 Estrutura do Projeto
-
-```
-WAR_ROOM/
-├── index.html              ← Aplicação principal (autocontida)
-├── banner-github.png       ← Banner do repositório
-├── README.md               ← Este arquivo
-├── LICENSE                 ← Licença MIT
-├── .gitignore              ← Arquivos ignorados pelo Git
-├── assets/
-│   ├── audio/              ← (estrutura)
-│   ├── data/               ← (estrutura)
-│   ├── images/             ← Imagens locais (ep01_morris)
-│   └── video/              ← (estrutura)
-├── episodes/               ← Textos-fonte dos 12 episódios clássicos (EP01–EP12)
-└── archive/                ← Versões antigas e arquivos preservados
-```
-
----
-
-## 🚀 Como Executar
-
-### Local (sem instalação)
-
-1. **Windows**: dê dois cliques em `index.html`
-2. **Mac/Linux**: abra o `index.html` em qualquer navegador moderno
-3. **Celular/Tablet**: transfira a pasta e abra o `index.html` no Chrome/Safari
-
-> Funciona em qualquer navegador moderno (Chrome, Firefox, Edge, Safari).
-> O conteúdo principal é local — apenas imagens e fontes carregam da web.
-
-### Deploy (Netlify / GitHub Pages)
-
-1. Suba o repositório para o GitHub
-2. No Netlify: arraste a pasta `WAR_ROOM` para o deploy (ou conecte o repositório)
-3. No GitHub Pages: aponte para `main` / raiz — o `index.html` será servido automaticamente
-
----
-
-## 🗺️ Roadmap
-
-### ✅ Concluído
-- 17 episódios, incluindo cinco dossiês modernos (1988–2025), com fontes primárias vinculadas
-- Narrativas imersivas para todos os episódios
-- Galeria de imagens com lightbox e crossfade
-- Áudio ambiente procedural + trilha via SoundCloud
-- Controle de volume e preferências persistentes
-- Design responsivo e acessível
-- Otimizações de performance (lazy loading, reduced-motion)
-- Publicação online no GitHub Pages ([edy075.github.io/WAR_ROOM](https://edy075.github.io/WAR_ROOM/))
-
-### 🚧 Em desenvolvimento
-- Links profissionais no rodapé (GitHub / LinkedIn)
-
-### 🔮 Futuras melhorias
-- Expandir dossiês modernos com novas fontes primárias verificadas
-- Versão em inglês (i18n)
-- Modo claro/escuro
-- PWA (instalação como app)
-- Auditoria Lighthouse e otimização de Core Web Vitals
-
----
-
-## 📜 Licença
-
-Distribuído sob a licença **MIT**. Veja o arquivo [LICENSE](LICENSE) para mais detalhes.
-
-Imagens via Wikimedia Commons (domínio público / licenciadas).
-Música: "Forever (Single Version)" — The Little Dippers via SoundCloud.
-
----
-
-## 👤 Autor
-
-**Edmilson Gomes** — Estudante de Cibersegurança
-
-[![GitHub](https://img.shields.io/badge/GitHub-000000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/EDY075) [![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/edmilsongomes21/) [![Instagram](https://img.shields.io/badge/Instagram-E4405F?style=for-the-badge&logo=instagram&logoColor=white)](https://www.instagram.com/edmilson_zn_/)
-
----
-
-
+Released under the [MIT License](LICENSE).

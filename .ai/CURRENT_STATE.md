@@ -2,11 +2,11 @@
 
 | Field | State |
 | --- | --- |
-| Version | `v1.0.2` |
+| Version | `v1.0.3` |
 | Status | Published and portfolio-ready |
-| Last sprint | Final AI Memory Integration |
+| Last sprint | Final Portfolio Polish |
 | Last product sprint | v1.0.2 final consistency pass |
-| Last release | [WAR ROOM v1.0.2](https://github.com/EDY075/WAR_ROOM/releases/tag/v1.0.2) |
+| Last release | [WAR ROOM v1.0.3](https://github.com/EDY075/WAR_ROOM/releases/tag/v1.0.3) |
 | Last commit | Current `.ai` integration commit; resolve with `git log -1 --oneline` |
 | Pages | https://edy075.github.io/WAR_ROOM/ |
 
