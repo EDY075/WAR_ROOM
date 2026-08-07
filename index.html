@@ -354,6 +354,27 @@ body.modal-open .particle,
 body.modal-open #ambient-particles{animation-play-state:paused!important;opacity:0!important}
 @media(prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}.episode-image{transition:none}.hero-bg-layer,.hero-fog,.hero-glow{animation:none!important}#mouse-glow,#grain-overlay,#wave-canvas,.hero-particles{display:none}}
 .img-failed .episode-image-wrap{background:var(--bg-secondary)}.img-failed .episode-image{display:none}
+/* ===== SPRINT 2 — CINEMATIC EXPERIENCE LAYER ===== */
+.journey-progress{position:fixed;top:50%;right:1.35rem;z-index:9998;display:flex;align-items:center;gap:.65rem;transform:translateY(-50%);pointer-events:none;mix-blend-mode:screen}
+.journey-progress-track{width:1px;height:118px;background:rgba(201,168,76,.18);overflow:hidden;position:relative}
+.journey-progress-fill{position:absolute;inset:0 0 auto;width:100%;height:100%;background:linear-gradient(180deg,#f0df9f 0%,var(--accent) 38%,rgba(201,168,76,.1) 100%);transform:scaleY(0);transform-origin:top;box-shadow:0 0 12px rgba(201,168,76,.65);transition:transform .18s linear}
+.journey-progress-copy{display:grid;gap:.2rem;min-width:7.2rem;font-family:var(--font-ui);line-height:1;text-transform:uppercase;text-shadow:0 1px 10px rgba(0,0,0,.8)}
+.journey-progress-copy span:first-child{font-family:var(--font-mono);font-size:.42rem;letter-spacing:.16rem;color:var(--text-dim)}
+.journey-progress-copy strong{font-size:.48rem;letter-spacing:.12rem;color:var(--accent);font-weight:600;transition:color var(--transition-fast)}
+.continue-exploring{position:absolute;bottom:2rem;right:2rem;z-index:5;display:inline-flex;align-items:center;gap:.55rem;padding:.7rem .85rem;background:rgba(10,10,10,.28);border:1px solid rgba(201,168,76,.24);border-radius:3px;color:var(--text-secondary);font-family:var(--font-ui);font-size:.5rem;letter-spacing:.14rem;text-transform:uppercase;cursor:pointer;backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);transition:transform var(--transition-fast),border-color var(--transition-fast),background var(--transition-fast),box-shadow var(--transition-fast)}
+.continue-exploring span{color:var(--accent);font-size:.9rem;line-height:.5rem;transition:transform var(--transition-fast)}
+.continue-exploring:hover,.continue-exploring:focus-visible{transform:translateY(-3px);border-color:rgba(232,213,160,.82);background:rgba(201,168,76,.09);box-shadow:0 10px 28px rgba(0,0,0,.28),0 0 20px rgba(201,168,76,.1)}
+.continue-exploring:hover span,.continue-exploring:focus-visible span{transform:translateY(3px)}
+.section-header,.intro-content{position:relative}.section-header::before,.intro-content::before{content:"";position:absolute;left:50%;top:-1.5rem;width:46px;height:1px;background:linear-gradient(90deg,transparent,var(--accent),transparent);transform:translateX(-50%);opacity:.5}
+.episodes-section::before{content:"";position:absolute;inset:0;pointer-events:none;background:linear-gradient(180deg,rgba(201,168,76,.025),transparent 14%,transparent 86%,rgba(74,140,191,.025));opacity:.7}
+.episode-entry::before{content:"";position:absolute;inset:0;pointer-events:none;background:radial-gradient(ellipse at 50% 50%,rgba(201,168,76,.035),transparent 60%);opacity:0;transition:opacity var(--transition-med)}
+.episode-entry .episode-grid{position:relative;transition:transform .5s var(--ease-out-expo),filter .5s var(--ease-out-expo)}
+.episode-entry .episode-image-wrap{transition:transform .6s var(--ease-out-expo),box-shadow .6s var(--ease-out-expo),border-color .6s var(--ease-out-expo)}
+.episode-btn{position:relative;overflow:hidden;isolation:isolate}.episode-btn::before{content:"";position:absolute;inset:0;background:linear-gradient(110deg,transparent 20%,rgba(232,213,160,.16) 50%,transparent 80%);transform:translateX(-120%);transition:transform .65s var(--ease-out-expo);z-index:-1}.episode-btn:hover::before,.episode-btn:focus-visible::before{transform:translateX(120%)}
+.footer-link,.nav-link{transition:color var(--transition-fast),text-shadow var(--transition-fast),transform var(--transition-fast)}.footer-link:hover,.footer-link:focus-visible,.nav-link:hover,.nav-link:focus-visible{text-shadow:0 0 14px rgba(201,168,76,.35)}
+@media(hover:hover) and (pointer:fine){.episode-entry:hover::before{opacity:1}.episode-entry:hover .episode-grid{transform:translateY(-4px);filter:brightness(1.035)}.episode-entry:hover .episode-image-wrap{transform:translateY(-3px) scale(1.008);border-color:rgba(201,168,76,.34);box-shadow:0 18px 42px rgba(0,0,0,.26),0 0 0 1px rgba(201,168,76,.05)}}
+@media(max-width:768px){.journey-progress{right:.55rem}.journey-progress-track{height:68px}.journey-progress-copy{min-width:auto}.journey-progress-copy span:first-child{display:none}.journey-progress-copy strong{font-size:.38rem;writing-mode:vertical-rl;text-orientation:mixed}.continue-exploring{right:1rem;bottom:1.25rem;padding:.55rem .65rem;font-size:.42rem}.continue-exploring span{font-size:.75rem}}
+@media(prefers-reduced-motion:reduce){.journey-progress-fill{transition:none}.continue-exploring,.episode-entry .episode-grid,.episode-entry .episode-image-wrap{transition:none}.journey-progress{display:none}}
 </style>
 </head>
 <body>
@@ -421,6 +442,10 @@ body.modal-open #ambient-particles{animation-play-state:paused!important;opacity
 <span></span><span></span><span></span>
 </button></div></nav></header>
 <main id="main-content">
+<aside class="journey-progress" aria-label="Progresso da jornada">
+<div class="journey-progress-track" aria-hidden="true"><div class="journey-progress-fill" id="journey-progress-fill"></div></div>
+<div class="journey-progress-copy"><span>Capitulo atual</span><strong id="journey-chapter">Prologo</strong></div>
+</aside>
 <section class="hero-section" id="hero" aria-label="Apresentacao do documentario">
 <div class="hero-bg">
 <div class="hero-depth-layer" id="hero-parallax-bg"></div>
@@ -438,6 +463,7 @@ body.modal-open #ambient-particles{animation-play-state:paused!important;opacity
 <p class="hero-sub">Da ARPANET a era dos ransomwares — uma jornada cinematografica pelos incidentes que moldaram o mundo digital</p>
 <button id="hero-cta" aria-label="Comecar a jornada">Comecar a Jornada</button>
 </div>
+<button class="continue-exploring" id="continue-exploring" aria-label="Continuar explorando a cronologia">Continuar Explorando <span aria-hidden="true">↓</span></button>
 <div class="hero-scroll-indicator" aria-hidden="true">
 <span>Rolar para explorar</span>
 <div class="hero-scroll-line"></div></div></section>
@@ -596,6 +622,7 @@ var lbni = byId("lb-image-next");
 var at = $$(".audio-opt");
 var soundMode = "ambient";
 var hcta = byId("hero-cta");
+var continueExploring = byId("continue-exploring");
 var nl = $$(".nav-link");
 var hb = byId("hamburger");
 var no = byId("nav-overlay");
@@ -625,7 +652,7 @@ function initApp(){
   appInitialized=true;
   renderEpisodes();
   if(!prefersReducedMotion){initGrain();initWaveCanvas();initHeroParticles();initAmbientParticles();initMouseTracking();}
-  initIntersectionObserver();initLightbox();initAudio();initNav();initHeroParallax();initScrollNav();initHamburger();
+  initIntersectionObserver();initLightbox();initAudio();initNav();initHeroParallax();initScrollNav();initJourneyProgress();initHamburger();
   setTimeout(function(){var bar=document.querySelector(".loading-bar");if(bar)bar.style.width="100%"},100);
 }
 var act = null;
@@ -717,7 +744,7 @@ function initWaveCanvas(){
   if(!wc || prefersReducedMotion) return;
   var ctx = wc.getContext("2d");
   var wScale = isLowPerf ? 0.5 : 0.75;
-  var w = 0, h = 0, t = 0;
+  var w = 0, h = 0, t = 0, lastFrame = 0, active = true;
   var nodes = [[.17,.42],[.27,.31],[.39,.48],[.49,.32],[.58,.46],[.68,.28],[.77,.43],[.86,.58],[.62,.66],[.43,.67]];
   var routes = [[0,1],[1,3],[1,2],[2,4],[3,5],[4,5],[4,6],[5,6],[6,7],[4,8],[8,9],[9,2]];
 
@@ -748,7 +775,11 @@ function initWaveCanvas(){
     ctx.save();ctx.setLineDash([3,8]);ctx.lineDashOffset=-(t*20+index*7);ctx.strokeStyle="rgba(201,168,76,.22)";ctx.lineWidth=.75;
     ctx.beginPath();ctx.moveTo(from.x,from.y);ctx.quadraticCurveTo(midX,midY,to.x,to.y);ctx.stroke();ctx.restore();
   }
-  function draw(){
+  function draw(now){
+    if(!active || document.hidden){wraf=null;return;}
+    wraf=requestAnimationFrame(draw);
+    if(now-lastFrame<(isLowPerf?66:32)) return;
+    lastFrame=now;
     ctx.clearRect(0,0,w,h);t+=.012;
     if(!document.body.classList.contains("modal-open")){
       var cx=w*.5,cy=h*.5,rx=w*.39,ry=h*.255;
@@ -757,12 +788,14 @@ function initWaveCanvas(){
       nodes.forEach(function(_,index){
         var p=point(index),pulse=(Math.sin(t*2.2+index*1.6)+1)/2;
         ctx.beginPath();ctx.arc(p.x,p.y,2.1+pulse*1.8,0,Math.PI*2);ctx.fillStyle=index===4?"rgba(232,213,160,.92)":"rgba(201,168,76,.66)";ctx.fill();
-        if(index===4 || index===6){ctx.beginPath();ctx.arc(p.x,p.y,7+pulse*9,0,Math.PI*2);ctx.strokeStyle="rgba(201,168,76,"+(.12-pulse*.06)+")";ctx.stroke();}
-      });
-      ctx.font="10px " + getComputedStyle(document.documentElement).getPropertyValue("--font-mono");ctx.fillStyle="rgba(201,168,76,.38)";ctx.fillText("GLOBAL THREAT NETWORK / LIVE",w*.5-78,h*.82);
-    }
-    wraf=requestAnimationFrame(draw);
+         if(index===4 || index===6){ctx.beginPath();ctx.arc(p.x,p.y,7+pulse*9,0,Math.PI*2);ctx.strokeStyle="rgba(201,168,76,"+(.12-pulse*.06)+")";ctx.stroke();}
+       });
+       var radar=point(4),sweep=t*1.45;ctx.save();ctx.translate(radar.x,radar.y);ctx.beginPath();ctx.moveTo(0,0);ctx.arc(0,0,Math.min(w,h)*.105,sweep,sweep+.32);ctx.closePath();ctx.fillStyle="rgba(201,168,76,.045)";ctx.fill();ctx.beginPath();ctx.moveTo(0,0);ctx.lineTo(Math.cos(sweep)*Math.min(w,h)*.105,Math.sin(sweep)*Math.min(w,h)*.105);ctx.strokeStyle="rgba(232,213,160,.3)";ctx.stroke();ctx.restore();
+       ctx.font="10px " + getComputedStyle(document.documentElement).getPropertyValue("--font-mono");ctx.fillStyle="rgba(201,168,76,.38)";ctx.fillText("GLOBAL THREAT NETWORK / LIVE",w*.5-78,h*.82);
+     }
   }
+  var heroObserver=new IntersectionObserver(function(entries){active=entries[0].isIntersecting;if(active && !wraf)wraf=requestAnimationFrame(draw);},{threshold:0});heroObserver.observe(document.getElementById("hero"));
+  document.addEventListener("visibilitychange",function(){if(!document.hidden && active && !wraf)wraf=requestAnimationFrame(draw);});
   wraf=requestAnimationFrame(draw);
 }
 
@@ -1445,6 +1478,10 @@ function initNav(){
     var episodes = document.getElementById("episodes");
     if(episodes) episodes.scrollIntoView({ behavior: "smooth", block: "start" });
   });
+  if(continueExploring) continueExploring.addEventListener("click", function(){
+    var episodes = document.getElementById("episodes");
+    if(episodes) episodes.scrollIntoView({ behavior: "smooth", block: "start" });
+  });
 }
 
 function initScrollNav(){
@@ -1470,6 +1507,28 @@ function initScrollNav(){
     nb.style.transform = cs > lastScroll && cs > 200 ? "translateY(-100%)" : "translateY(0)";
     lastScroll = cs;
   }, { passive: true });
+}
+
+function initJourneyProgress(){
+  var fill=byId("journey-progress-fill"),chapter=byId("journey-chapter");
+  if(!fill || !chapter) return;
+  var sections=[{id:"hero",label:"Prologo"},{id:"intro",label:"Contexto"},{id:"episodes",label:"Cronologia"},{id:"footer",label:"Creditos"}];
+  var ticking=false;
+  function update(){
+    ticking=false;
+    var doc=document.documentElement;
+    var max=Math.max(1,doc.scrollHeight-window.innerHeight);
+    var progress=Math.min(1,Math.max(0,window.scrollY/max));
+    fill.style.transform="scaleY("+progress+")";
+    var pivot=window.scrollY+window.innerHeight*.38,current=sections[0];
+    sections.forEach(function(section){var element=byId(section.id);if(element && element.offsetTop<=pivot)current=section;});
+    chapter.textContent=current.label;
+    var navTarget=current.id==="intro"?"hero":current.id;
+    nl.forEach(function(link){link.classList.toggle("active",link.dataset.target===navTarget);});
+  }
+  window.addEventListener("scroll",function(){if(!ticking){ticking=true;requestAnimationFrame(update);}}, {passive:true});
+  window.addEventListener("resize",update,{passive:true});
+  update();
 }
 
 function initHeroParallax(){

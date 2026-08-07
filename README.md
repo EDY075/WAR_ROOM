@@ -19,6 +19,8 @@
 
 **Interactive Cyber Attack Timeline**
 
+Sprint 2 adds a low-overhead cinematic navigation layer: tactical map pulses, chapter progress, refined hover states, natural ambient depth, and `prefers-reduced-motion` support.
+
 ---
 
 ## 📖 Descrição
