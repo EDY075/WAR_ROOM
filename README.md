@@ -28,6 +28,8 @@ Sprint 3.5 gives those five dossiers a visual treatment at the same level as the
 
 Sprint 4 introduces the **Intelligence Center**: a cinematic, client-side analysis layer over the same 17 dossiers. It adds an interactive world map, a 1988–2026 global timeline, MITRE/APT/IOC explorers, cross-campaign links, and combinable filters without changing episode content.
 
+Sprint 5.1 standardizes the portfolio reading experience across all 17 chapters. “Começar a Jornada” now lands directly in the Intelligence Center, every dossier uses the same card and detail frame, and the five modern dossiers use local, credited visual assets. See [visual credits](assets/images/CREDITS.md) and run `node tests/verify-final-consistency.mjs` for the static release check.
+
 ## Intelligence Center
 
 - Interactive world map with 17 attack hotspots and impact signal levels
@@ -74,6 +76,10 @@ Tudo em um único arquivo HTML autocontido, sem dependências de build.
 ---
 
 ## Screenshots da Release
+
+<p align="center">
+  <img src="assets/screenshots/final-consistency-intelligence.jpg" alt="Intelligence Center validated in the final consistency pass" width="74%">
+</p>
 
 <p align="center">
   <img src="assets/screenshots/release-hero.jpg" alt="Entrada cinematográfica do WAR ROOM" width="49%">
