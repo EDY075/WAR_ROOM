@@ -23,15 +23,17 @@ Sprint 2 adds a low-overhead cinematic navigation layer: tactical map pulses, ch
 
 Sprint 3 expands WAR ROOM into a 17-chapter cyber-conflict library. Five modern dossiers cover Russia x Ukraine, Volt Typhoon, Salt Typhoon, Lazarus Group, and Israel x Iran with timelines, MITRE ATT&CK, public IOCs, lessons learned, and links to primary sources.
 
+Sprint 3.5 gives those five dossiers a visual treatment at the same level as the classic chapters: distinct tactical covers, internal dossier banners, illustrated timeline markers, contextual media, and regional maps. Every gallery item shows a Wikimedia Commons credit, with source and license links in the detail panel.
+
 ## Modern Conflict Dossiers
 
-| Chapter | Focus | Primary sources |
-| --- | --- | --- |
-| Russia x Ukraine | Hybrid warfare, Sandworm, critical infrastructure | CERT-UA, MITRE |
-| Volt Typhoon | Critical infrastructure, stealth, living off the land | CISA, NSA, FBI, MITRE |
-| Salt Typhoon | Telecommunications and global espionage | CISA, FBI, MITRE |
-| Lazarus Group | Cryptocurrency, supply chain, state financing | CISA, FBI, Treasury, MITRE |
-| Israel x Iran | ICS, PLCs, public attribution and resilience | CISA, INCD, MITRE |
+| Chapter | Focus | Visual dossier | Primary sources |
+| --- | --- | --- | --- |
+| Russia x Ukraine | Hybrid warfare, Sandworm, critical infrastructure | Infrastructure image + Ukraine power-grid map | CERT-UA, MITRE |
+| Volt Typhoon | Critical infrastructure, stealth, living off the land | Telecom image + Guam locator map | CISA, NSA, FBI, MITRE |
+| Salt Typhoon | Telecommunications and global espionage | Cell-tower image + China map | CISA, FBI, MITRE |
+| Lazarus Group | Cryptocurrency, supply chain, state financing | Crypto-mining image + DPRK map | CISA, FBI, Treasury, MITRE |
+| Israel x Iran | ICS, PLCs, public attribution and resilience | PLC image + Israel/Iran locator map | CISA, INCD, MITRE |
 
 ---
 
