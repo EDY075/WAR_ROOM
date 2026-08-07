@@ -56,7 +56,7 @@ Explore a experiência completa em [edy075.github.io/WAR_ROOM](https://edy075.gi
 
 Uma central de análise client-side que conecta os 17 dossiês por geografia, período, impacto, grupos, técnicas MITRE e indicadores públicos. O mapa, a linha do tempo e os explorers permitem navegar do panorama global ao capítulo correspondente sem sair da experiência.
 
-## 17 casos históricos e modernos
+## Biblioteca de Casos
 
 Os dossiês cobrem incidentes como Morris Worm, Melissa, ILOVEYOU, Estônia 2007, Stuxnet, Sony Pictures, WannaCry, NotPetya, SolarWinds, Colonial Pipeline, Log4Shell e MGM Resorts, além de cinco conflitos modernos: Rússia × Ucrânia, Volt Typhoon, Salt Typhoon, Lazarus Group e Israel × Irã.
 
@@ -71,13 +71,41 @@ As referências são apresentadas como inteligência pública, com atribuições
 
 ## Como executar
 
-O projeto é estático: abra `index.html` em um navegador moderno ou use um servidor local simples.
+# Como executar
 
-```powershell
-python -m http.server 4173
+O WAR ROOM é uma aplicação estática e não requer instalação de dependências.
+
+### Opção 1 — Abrir diretamente (recomendado)
+
+Basta abrir o arquivo `index.html` em qualquer navegador moderno.
+
+- ✅ Google Chrome
+- ✅ Microsoft Edge
+- ✅ Mozilla Firefox
+- ✅ Brave
+- ✅ Opera
+
+### Opção 2 — Servidor local (opcional)
+
+Caso prefira executar através de um servidor HTTP local:
+
+```bash
+python -m http.server
 ```
 
-Depois, acesse `http://127.0.0.1:4173/`.
+Depois acesse:
+
+```
+http://127.0.0.1:8000
+```
+
+---
+
+**GitHub Pages**
+
+A versão online está disponível em:
+
+👉 https://edy075.github.io/WAR_ROOM/
 
 ## Licença
 
