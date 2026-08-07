@@ -21,11 +21,23 @@
 
 Sprint 2 adds a low-overhead cinematic navigation layer: tactical map pulses, chapter progress, refined hover states, natural ambient depth, and `prefers-reduced-motion` support.
 
+Sprint 3 expands WAR ROOM into a 17-chapter cyber-conflict library. Five modern dossiers cover Russia x Ukraine, Volt Typhoon, Salt Typhoon, Lazarus Group, and Israel x Iran with timelines, MITRE ATT&CK, public IOCs, lessons learned, and links to primary sources.
+
+## Modern Conflict Dossiers
+
+| Chapter | Focus | Primary sources |
+| --- | --- | --- |
+| Russia x Ukraine | Hybrid warfare, Sandworm, critical infrastructure | CERT-UA, MITRE |
+| Volt Typhoon | Critical infrastructure, stealth, living off the land | CISA, NSA, FBI, MITRE |
+| Salt Typhoon | Telecommunications and global espionage | CISA, FBI, MITRE |
+| Lazarus Group | Cryptocurrency, supply chain, state financing | CISA, FBI, Treasury, MITRE |
+| Israel x Iran | ICS, PLCs, public attribution and resilience | CISA, INCD, MITRE |
+
 ---
 
 ## 📖 Descrição
 
-O WAR ROOM é um documentário cinematográfico interativo que conta a história dos 12 maiores ciberataques do mundo, de 1988 a 2023 — do Morris Worm ao ataque à MGM Resorts.
+O WAR ROOM é uma biblioteca cinematográfica interativa de 17 incidentes e conflitos cibernéticos, de 1988 a 2025 — do Morris Worm aos dossiês de conflitos modernos.
 
 O projeto foi desenvolvido como trabalho acadêmico de cibersegurança e combina storytelling imersivo com uma experiência visual de alto nível: cada episódio traz cronologia, impacto econômico e social, atribuição, defesa, legislação, galeria de imagens e uma narrativa completa em modal.
 
@@ -49,7 +61,7 @@ Tudo em um único arquivo HTML autocontido, sem dependências de build.
 
 ## ✨ Funcionalidades
 
-- 🎬 **12 episódios interativos** — linha do tempo dos maiores ciberataques (1988–2023)
+- 🎬 **17 episódios interativos** — linha do tempo de ataques e conflitos cibernéticos (1988–2025)
 - 📜 **Narrativa completa** — história detalhada de cada ataque em modal cinematográfico
 - 🗓️ **Cronologia interativa** — datas-chave de cada incidente
 - 📊 **Impacto detalhado** — econômico, social, atribuição, alvo, defesa e legislação
@@ -92,7 +104,7 @@ WAR_ROOM/
 │   ├── data/               ← (estrutura)
 │   ├── images/             ← Imagens locais (ep01_morris)
 │   └── video/              ← (estrutura)
-├── episodes/               ← Textos-fonte dos 12 episódios (EP01–EP12)
+├── episodes/               ← Textos-fonte dos 12 episódios clássicos (EP01–EP12)
 └── archive/                ← Versões antigas e arquivos preservados
 ```
 
@@ -120,7 +132,7 @@ WAR_ROOM/
 ## 🗺️ Roadmap
 
 ### ✅ Concluído
-- 12 episódios completos (1988–2023) com dados históricos verificados
+- 17 episódios, incluindo cinco dossiês modernos (1988–2025), com fontes primárias vinculadas
 - Narrativas imersivas para todos os episódios
 - Galeria de imagens com lightbox e crossfade
 - Áudio ambiente procedural + trilha via SoundCloud
@@ -133,7 +145,7 @@ WAR_ROOM/
 - Links profissionais no rodapé (GitHub / LinkedIn)
 
 ### 🔮 Futuras melhorias
-- Adicionar novos episódios pós-2023
+- Expandir dossiês modernos com novas fontes primárias verificadas
 - Versão em inglês (i18n)
 - Modo claro/escuro
 - PWA (instalação como app)
