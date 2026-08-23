@@ -14,7 +14,7 @@ const expectedLocalMedia = [
   "assets/images/ep14-volt-typhoon/preview.jpg",
   "assets/images/ep14-volt-typhoon/region-map.png",
   "assets/images/ep15-salt-typhoon/preview.jpg",
-  "assets/images/ep15-salt-typhoon/region-map.svg",
+  "assets/images/ep15-salt-typhoon/region-map.png",
   "assets/images/ep16-lazarus-group/preview.jpg",
   "assets/images/ep16-lazarus-group/region-map.png",
   "assets/images/ep17-israel-iran/preview.jpg",

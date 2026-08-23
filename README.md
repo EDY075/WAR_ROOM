@@ -1,60 +1,63 @@
 ![WAR ROOM banner](banner-github.png)
 
 <p align="center">
-  <a href="https://edy075.github.io/WAR_ROOM/"><img src="https://img.shields.io/badge/Live%20Experience-GitHub%20Pages-c9a84c?style=for-the-badge&logo=githubpages&logoColor=white" alt="Live experience"></a>
-  <a href="https://github.com/EDY075/WAR_ROOM/releases/tag/v1.0.3"><img src="https://img.shields.io/badge/Release-v1.0.3-171717?style=for-the-badge&logo=github&logoColor=white" alt="Release v1.0.3"></a>
-  <img src="https://img.shields.io/badge/17-Cyber%20Conflict%20Dossiers-c9a84c?style=for-the-badge" alt="17 dossiers">
+  <a href="https://edy075.github.io/WAR_ROOM/"><img src="https://img.shields.io/badge/Open%20on-GitHub%20Pages-c9a84c?style=for-the-badge&logo=githubpages&logoColor=white" alt="Abrir site no GitHub Pages"></a>
+  <img src="https://img.shields.io/badge/Release%20candidate-v1.1.0-171717?style=for-the-badge&logo=github&logoColor=white" alt="Release candidate v1.1.0">
+  <img src="https://img.shields.io/badge/17-CTI%20Dossiers-c9a84c?style=for-the-badge" alt="17 CTI dossiers">
   <img src="https://img.shields.io/badge/Static-HTML%20%2B%20CSS%20%2B%20JavaScript-171717?style=for-the-badge" alt="Static web stack">
 </p>
 
 # WAR ROOM
 
-## Biblioteca cinematográfica de conflitos cibernéticos
+## Centro de Cyber Threat Intelligence
 
-WAR ROOM é uma experiência interativa sobre conflitos cibernéticos que combina narrativa histórica, inteligência de ameaças pública, investigação visual e contexto operacional. O projeto apresenta 17 dossiês — do Morris Worm às campanhas modernas envolvendo Rússia × Ucrânia, Volt Typhoon, Salt Typhoon, Lazarus Group e Israel × Irã.
+WAR ROOM é um centro interativo de Cyber Threat Intelligence que combina narrativa histórica, inteligência de ameaças pública, investigação visual e contexto operacional. A **base histórica 1988–2025, edição 2026**, reúne 17 dossiês — do Morris Worm às campanhas modernas envolvendo Rússia × Ucrânia, Volt Typhoon, Salt Typhoon, Lazarus Group e Israel × Irã.
 
 Criado por [Edmilson Gomes](https://github.com/EDY075) · [LinkedIn](https://linkedin.com/in/edmilson-gomes) para portfólio e pesquisa acadêmica em **Cybersecurity**, **Blue Team**, **Threat Intelligence** e **Incident Response**.
-
-## Demonstração
-
-<p align="center">
-  <a href="https://edy075.github.io/WAR_ROOM/"><img src="demo-10s.gif" alt="Tour final do produto WAR ROOM" width="100%"></a>
-</p>
 
 Explore a experiência completa em [edy075.github.io/WAR_ROOM](https://edy075.github.io/WAR_ROOM/).
 
 ## Screenshots
 
 <p align="center">
-  <img src="assets/screenshots/release-hero.jpg" alt="Hero final do WAR ROOM" width="49%">
-  <img src="assets/screenshots/final-consistency-intelligence.jpg" alt="Intelligence Center e linha do tempo global" width="49%">
+  <img src="assets/screenshots/cti-hero.png" alt="Hero final do WAR ROOM v1.1.0" width="100%">
 </p>
 
 <p align="center">
-  <img src="assets/screenshots/modern-dossier.jpg" alt="Dossiê moderno Rússia x Ucrânia" width="74%">
+  <img src="assets/screenshots/cti-header-experience.png" alt="Cabeçalho do WAR ROOM e controles de experiência" width="69%">
+  <img src="assets/screenshots/cti-mobile.png" alt="Hero responsivo do WAR ROOM em viewport mobile" width="27%">
 </p>
 
 <p align="center">
-  <img src="assets/screenshots/russia-ukraine-timeline-final.jpg" alt="Cronologia detalhada de Rússia x Ucrânia" width="49%">
-  <img src="assets/screenshots/russia-ukraine-modal-final.jpg" alt="Modal narrativo de Rússia x Ucrânia" width="49%">
+  <img src="assets/screenshots/cti-explorers-relations.png" alt="Exploradores MITRE, APT e IOC com relações documentadas" width="100%">
+</p>
+
+<p align="center">
+  <img src="assets/screenshots/cti-prologue.png" alt="Prólogo narrativo e painel técnico da base CTI" width="49%">
+  <img src="assets/screenshots/cti-chronology.png" alt="Cronologia operacional do dossiê NotPetya" width="49%">
 </p>
 
 ## Principais Recursos
 
-- 17 casos históricos e modernos de conflitos cibernéticos.
-- Intelligence Center com visão transversal dos dossiês.
-- Linha do tempo global de 1988 a 2025.
-- Mapa mundial interativo com hotspots de campanhas.
-- Contexto MITRE ATT&CK, grupos APT e indicadores públicos.
-- IOC Explorer e filtros por país, ano, categoria, impacto, grupo e malware.
+- 17 dossiês históricos e modernos em uma base curada de 1988–2025, edição 2026.
+- Intelligence Center com visão transversal dos incidentes, atores, técnicas e indicadores.
+- Busca global por título, ator, malware, país e ano, com atalhos `Ctrl/Cmd+K` e `/`.
+- Mapa mundial, linha do tempo e cards sincronizados por um estado de seleção comum.
+- Filtros combináveis por país, ano, categoria, impacto, grupo e malware.
+- Exploradores selecionáveis de técnicas MITRE ATT&CK, grupos APT e IOCs, com contador de correspondências.
+- Relações entre campanhas derivadas exclusivamente de metadados documentados, sem inferir causalidade.
+- Drawer de dossiê com anterior/próximo e deep links por hash.
+- Cronologia aprimorada com progresso, contexto operacional, técnicas MITRE e navegação entre incidentes.
 - Galeria multimídia, mapas regionais, referências e créditos visuais.
-- Storytelling cinematográfico com cronologias e modal narrativo.
-- Interface responsiva, navegação por teclado e suporte a `prefers-reduced-motion`.
+- Narrativa cinematográfica preservada em uma interface mais compacta e investigativa.
+- Acessibilidade por teclado, foco gerenciado, ARIA, alvos táteis, `prefers-reduced-motion` e controle persistente de efeitos.
 - Funciona sem build, backend ou instalação de dependências.
 
 ## Intelligence Center
 
-Uma central de análise client-side que conecta os 17 dossiês por geografia, período, impacto, grupos, técnicas MITRE e indicadores públicos. O mapa, a linha do tempo e os explorers permitem navegar do panorama global ao capítulo correspondente sem sair da experiência.
+Uma central de análise client-side que conecta os 17 dossiês por geografia, período, impacto, grupos, técnicas MITRE e indicadores públicos. Mapa, timeline, filtros, cards, exploradores e deep links compartilham o mesmo estado de seleção, permitindo navegar do panorama global ao dossiê correspondente sem sair da experiência.
+
+O projeto é uma base histórica e educacional. Ele não declara monitoramento, telemetria ou inteligência ao vivo.
 
 ## Biblioteca de Casos
 
@@ -69,8 +72,18 @@ As referências são apresentadas como inteligência pública, com atribuições
 - GitHub Pages para publicação.
 - [Wikimedia Commons](https://commons.wikimedia.org/) e fontes públicas de threat intelligence, incluindo [MITRE ATT&CK](https://attack.mitre.org/), [CISA](https://www.cisa.gov/), [NSA](https://www.nsa.gov/), [CERT-UA](https://cert.gov.ua/), [FBI](https://www.fbi.gov/), [NIST](https://www.nist.gov/) e [Kaspersky](https://www.kaspersky.com/resource-center).
 
-## Como executar
+## Qualidade da v1.1.0
 
+Auditoria local final com Lighthouse:
+
+| Perfil | Performance | Acessibilidade | Boas práticas | SEO | CLS | Speed Index |
+| --- | ---: | ---: | ---: | ---: | ---: | ---: |
+| Desktop | 100 | 100 | 100 | 100 | 0,001 | 0,7 s |
+| Mobile | 96 | 100 | 100 | 100 | 0,028 | 2,2 s |
+
+Os quatro verificadores do projeto validam os 17 dossiês, assets locais, memória técnica, README e contratos da experiência CTI. O resumo público da auditoria está em [docs/RELEASE_AUDIT_v1.1.0.md](docs/RELEASE_AUDIT_v1.1.0.md).
+
+## Como executar
 
 O WAR ROOM é uma aplicação estática e não requer instalação de dependências.
 
@@ -86,25 +99,26 @@ Basta abrir o arquivo `index.html` em qualquer navegador moderno.
 
 ### Opção 2 — Servidor local (opcional)
 
-Caso prefira executar através de um servidor HTTP local:
+Caso prefira executar através de um servidor HTTP local, use:
 
-```bash
-python -m http.server
+```powershell
+python -m http.server 4173 --bind 127.0.0.1
 ```
 
-Depois acesse:
+Depois acesse `http://127.0.0.1:4173/`.
 
+## Acessar online
+
+A versão publicada está disponível em [edy075.github.io/WAR_ROOM](https://edy075.github.io/WAR_ROOM/).
+
+Verificação local:
+
+```powershell
+node tests/verify-ai-memory.mjs
+node tests/verify-final-consistency.mjs
+node tests/verify-portfolio-readme.mjs
+node tests/verify-cti-evolution.mjs
 ```
-http://127.0.0.1:8000
-```
-
----
-
-**GitHub Pages**
-
-## 🌐 Acessar online
-
-https://edy075.github.io/WAR_ROOM/
 
 ## Licença
 

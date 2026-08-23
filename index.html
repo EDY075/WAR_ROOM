@@ -3,16 +3,15 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>WAR ROOM 3.0 — Biblioteca de Conflitos Cibernéticos</title>
-<meta name="description" content="Experiência cinematográfica interativa sobre 17 incidentes e conflitos cibernéticos. Documentário em código.">
+<title>WAR ROOM — Centro de Cyber Threat Intelligence</title>
+<meta name="description" content="Centro interativo de inteligência com 17 dossiês históricos sobre incidentes, atores, técnicas e impactos cibernéticos.">
 <meta name="theme-color" content="#0a0a0a">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=Source+Serif+4:opsz,wght@8..60,300;8..60,400;8..60,600;8..60,700&family=JetBrains+Mono:wght@300;400;500;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<meta name="color-scheme" content="dark">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='10' fill='%23071012'/%3E%3Cpath d='M13 18h7l5 27h-7zm15 0h8l-4 27h-8zm12 0h8l4 27h-7z' fill='%23c9a84c'/%3E%3C/svg%3E">
 <style>
 /* WAR ROOM 3.0 — CINEMATIC DOCUMENTARY v3.0 */
 *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
-:root{--bg-primary:#0a0a0a;--bg-secondary:#111;--bg-tertiary:#1a1a1a;--text-primary:#f0ece4;--text-secondary:#a09888;--text-dim:#94887a;--accent:#c9a84c;--accent-glow:rgba(201,168,76,0.25);--accent-secondary:#8b7355;--border-subtle:#2a2a2a;--font-display:"Playfair Display",Georgia,serif;--font-body:"Source Serif 4",Georgia,serif;--font-mono:"JetBrains Mono","Fira Code",monospace;--font-ui:Inter,"Segoe UI",system-ui,sans-serif;--transition-slow:1.2s cubic-bezier(0.16,1,0.3,1);--transition-med:0.6s cubic-bezier(0.16,1,0.3,1);--transition-fast:0.3s cubic-bezier(0.4,0,0.2,1);--ease-out-expo:cubic-bezier(0.16,1,0.3,1);--focus-ring:0 0 0 2px var(--accent);--selection-bg:rgba(201,168,76,0.3)}
+:root{--bg-primary:#0a0a0a;--bg-secondary:#111;--bg-tertiary:#1a1a1a;--text-primary:#f0ece4;--text-secondary:#a09888;--text-dim:#94887a;--accent:#c9a84c;--accent-glow:rgba(201,168,76,0.25);--accent-secondary:#8b7355;--border-subtle:#2a2a2a;--font-display:"Playfair Display",Georgia,serif;--font-body:Georgia,"Times New Roman",serif;--font-mono:"Cascadia Mono","SFMono-Regular",Consolas,monospace;--font-ui:"Segoe UI",Inter,system-ui,sans-serif;--transition-slow:1.2s cubic-bezier(0.16,1,0.3,1);--transition-med:0.6s cubic-bezier(0.16,1,0.3,1);--transition-fast:0.3s cubic-bezier(0.4,0,0.2,1);--ease-out-expo:cubic-bezier(0.16,1,0.3,1);--focus-ring:0 0 0 2px var(--accent);--selection-bg:rgba(201,168,76,0.3)}
 html{scroll-behavior:smooth;background:var(--bg-primary)}
 body{font-family:var(--font-body);background:var(--bg-primary);color:var(--text-primary);overflow-x:hidden;-webkit-font-smoothing:antialiased}
 /* ===== STORY MODAL ===== */
@@ -390,47 +389,120 @@ body.modal-open #ambient-particles{animation-play-state:paused!important;opacity
 @media(prefers-reduced-motion:reduce){.journey-progress-fill{transition:none}.continue-exploring,.episode-entry .episode-grid,.episode-entry .episode-image-wrap{transition:none}.journey-progress{display:none}}
 .intel-timeline-card{margin-top:1.25rem;border:1px solid var(--border-subtle);border-radius:5px;background:rgba(255,255,255,.012);overflow:hidden}.intel-global-timeline{display:flex;align-items:flex-end;gap:.3rem;min-height:118px;padding:1rem 1.2rem;overflow-x:auto}.intel-year-node{position:relative;flex:1 0 44px;min-height:74px;border:0;border-left:1px solid rgba(201,168,76,.13);background:linear-gradient(180deg,transparent,var(--intel-year-color,rgba(201,168,76,.16)));color:var(--text-secondary);cursor:pointer;text-align:left;padding:.35rem .3rem;transition:transform var(--transition-fast),background var(--transition-fast)}.intel-year-node::before{content:"";position:absolute;top:calc(100% - var(--intel-year-height,18px));left:50%;width:7px;height:7px;border-radius:50%;background:var(--accent);box-shadow:0 0 12px var(--accent);transform:translate(-50%,-50%)}.intel-year-node:hover,.intel-year-node:focus-visible{transform:translateY(-5px);background:linear-gradient(180deg,rgba(201,168,76,.12),rgba(201,168,76,.25));outline:none}.intel-year-node span{display:block;font:500 .47rem var(--font-mono);letter-spacing:.06rem}.intel-year-node strong{display:block;margin-top:.25rem;font:700 .48rem var(--font-mono);color:var(--accent)}@media(max-width:768px){.intel-global-timeline{padding:.8rem;min-height:104px}.intel-year-node{flex-basis:40px;min-height:66px}}
 .episode-story-hero{background:linear-gradient(90deg,rgba(5,5,5,.94),rgba(5,5,5,.42)),var(--story-image),linear-gradient(135deg,#090909,#211a09);background-size:cover;background-position:center}.episode-story-hero::after{content:"CLASSIFIED / DOSSIER";position:absolute;top:1.25rem;left:1.5rem;font:500 .48rem var(--font-mono);letter-spacing:.19rem;color:var(--accent);z-index:1}.episode-story-hero::before{content:none}.episode-facts{grid-template-columns:repeat(2,minmax(0,1fr))}@media(max-width:520px){.episode-facts{grid-template-columns:1fr}.episode-entry[data-modern="true"] .episode-image-wrap::after{left:.65rem;top:.6rem}.detail-section .intel-list li{padding:.5rem 0}}
+
+/* ===== CTI EVOLUTION — OPERATIONAL APPLICATION LAYER ===== */
+:root{--telemetry:#58c7d8;--telemetry-soft:rgba(88,199,216,.13);--critical:#e06161;--critical-soft:rgba(224,97,97,.12);--safe:#66b88a;--safe-soft:rgba(102,184,138,.12);--panel:#0b1114;--panel-raised:#10181c}
+body{font-family:var(--font-ui);background:linear-gradient(180deg,#080a0c 0%,var(--bg-primary) 22%,#080a0c 100%)}
+#hero,#intro,#intelligence,#episodes,#footer{scroll-margin-top:76px}
+.loader-telemetry{display:flex;justify-content:center;flex-wrap:wrap;gap:.55rem;margin:0 auto 1rem;font:500 .62rem var(--font-mono);letter-spacing:.1rem;color:var(--telemetry)}
+.loader-telemetry span{padding:.45rem .65rem;border:1px solid rgba(88,199,216,.25);background:rgba(88,199,216,.045)}
+.loading-bar{animation:shimmer 2s ease-in-out infinite;transition:width .35s var(--ease-out-expo)}
+.loading-sub{letter-spacing:.38rem;color:#aaa395}
+#load-enter{text-transform:uppercase;min-height:44px}
+.nav-bar{min-height:58px;padding:.65rem 1.25rem;background:rgba(7,10,12,.91);border-bottom:1px solid rgba(88,199,216,.08);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px)}
+.nav-logo{font-family:var(--font-ui);font-size:.92rem;font-weight:700;letter-spacing:.24rem}
+.nav-link{font-size:.7rem;min-height:40px}
+.nav-utility-btn{min-height:36px;color:#b9b4aa;border-color:rgba(88,199,216,.18)}
+.nav-utility-btn kbd{margin-left:.35rem;color:var(--telemetry);font:500 .5rem var(--font-mono)}
+#effects-toggle[aria-pressed="true"]{color:var(--safe);border-color:rgba(102,184,138,.48);background:var(--safe-soft)}
+.hero-section{min-height:720px;background:radial-gradient(circle at 50% 42%,rgba(88,199,216,.04),transparent 34%)}
+.hero-content{width:min(1120px,100%);max-width:1120px;padding:5rem 2rem 3rem}
+.hero-eyebrow{font-family:var(--font-mono);font-size:.68rem;color:var(--telemetry);letter-spacing:.24rem}
+.hero-title{font-size:clamp(4rem,11vw,9rem);letter-spacing:.35rem;line-height:.88}
+.hero-sub{max-width:760px;font-family:var(--font-ui);font-style:normal;font-size:clamp(.98rem,1.6vw,1.18rem);line-height:1.65;color:#bbb5aa}
+.hero-status-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));max-width:820px;margin:0 auto 2rem;border:1px solid rgba(88,199,216,.14);background:rgba(5,11,14,.58)}
+.hero-status-grid>div{display:grid;gap:.38rem;padding:.85rem 1rem;border-right:1px solid rgba(88,199,216,.1);text-align:left}
+.hero-status-grid>div:nth-child(3n){border-right:0}.hero-status-grid>div:nth-child(-n+3){border-bottom:1px solid rgba(88,199,216,.1)}.hero-status-grid span{font:500 .54rem var(--font-mono);letter-spacing:.11rem;color:#9a968d}.hero-status-grid strong{font:700 .78rem var(--font-mono);letter-spacing:.07rem;color:var(--telemetry)}.hero-status-grid .status-safe{color:var(--safe)}
+.hero-actions{display:flex;justify-content:center;align-items:center;gap:.7rem;flex-wrap:wrap}
+#hero-cta,.continue-exploring{position:relative;inset:auto;min-height:46px;margin:0;opacity:1;padding:13px 23px;border-radius:3px;font-family:var(--font-ui);font-size:.68rem;letter-spacing:.14rem;text-transform:uppercase;backdrop-filter:none;-webkit-backdrop-filter:none}
+#hero-cta{background:linear-gradient(135deg,rgba(201,168,76,.18),rgba(201,168,76,.06));border-color:rgba(201,168,76,.65)}
+.continue-exploring{background:rgba(88,199,216,.035);border-color:rgba(88,199,216,.26);color:#c1c8c8}
+.intelligence-section{background:linear-gradient(180deg,#080b0d,#0b1114 48%,#080a0c)}
+.intel-section-heading h2,.intel-explorer h3,.intel-relations h3,.intel-card h3{font-family:var(--font-ui)}
+.intel-section-heading h2{font-weight:600;letter-spacing:-.035em}.intel-section-heading>p:last-child,.intel-explorer>p{font-family:var(--font-ui)}
+.intel-stats strong{font-family:var(--font-mono);color:var(--telemetry)}
+.intel-map-card{border-color:rgba(88,199,216,.24);background:rgba(4,12,15,.88)}
+.intel-map-status{color:var(--safe);display:flex;align-items:center;gap:.45rem}.intel-map-status i{width:6px;height:6px;border-radius:1px;background:var(--safe);box-shadow:0 0 10px rgba(102,184,138,.55)}
+.intel-map-live i{animation:none}.intel-map svg path{fill:#102428;stroke:rgba(88,199,216,.28)}
+.intel-map-grid{background:repeating-linear-gradient(90deg,transparent 0 8.2%,rgba(88,199,216,.055) 8.25% 8.32%),repeating-linear-gradient(0deg,transparent 0 14%,rgba(88,199,216,.04) 14.1% 14.25%)}
+.intel-hotspot{width:28px;height:28px;border:0;background:transparent;box-shadow:none}.intel-hotspot::before{content:"";position:absolute;inset:8px;border-radius:50%;background:var(--critical);box-shadow:0 0 0 4px rgba(224,97,97,.1),0 0 18px rgba(224,97,97,.75)}.intel-hotspot::after{inset:3px;border-color:rgba(224,97,97,.35)}
+.intel-hotspot.high{background:transparent;box-shadow:none}.intel-hotspot.high::before{background:var(--telemetry);box-shadow:0 0 0 4px rgba(88,199,216,.1),0 0 18px rgba(88,199,216,.7)}.intel-hotspot.high::after{border-color:rgba(88,199,216,.35)}
+.intel-hotspot.selected{transform:translate(-50%,-50%) scale(1.22)}.intel-hotspot.selected::after{border-width:2px;opacity:1}.intel-hotspot.hidden{opacity:.12;pointer-events:none}
+.intel-tooltip{position:absolute;z-index:8;width:min(260px,calc(100% - 24px));padding:.75rem .85rem;border:1px solid rgba(88,199,216,.3);background:rgba(6,12,15,.96);box-shadow:0 16px 42px rgba(0,0,0,.45);font:.68rem/1.45 var(--font-ui);pointer-events:none;transform:translate(12px,-50%)}
+.intel-tooltip strong{display:block;color:var(--text-primary);font-size:.78rem}.intel-tooltip span{display:block;margin-top:.22rem;color:#a9b1b1}.intel-tooltip b{color:var(--telemetry);font-family:var(--font-mono);font-weight:500}
+.intel-filters label{font-size:.58rem}.intel-filters select,.intel-reset{min-height:44px;font-size:.72rem}.intel-results-header span:last-child{font-size:.56rem}
+.intel-results{grid-template-columns:repeat(3,minmax(0,1fr))}.intel-card{min-height:0;padding:1rem;display:grid;gap:.68rem;align-content:start;background:linear-gradient(145deg,rgba(88,199,216,.035),rgba(255,255,255,.008));color:var(--text-primary);text-align:left;font:inherit;content-visibility:auto;contain-intrinsic-size:220px}
+.intel-card:hover,.intel-card:focus-visible{transform:translateY(-3px);border-color:rgba(88,199,216,.5);box-shadow:0 16px 38px rgba(0,0,0,.28)}.intel-card.selected{border-color:var(--telemetry);box-shadow:0 0 0 1px rgba(88,199,216,.18),0 18px 40px rgba(0,0,0,.32)}
+.intel-card-top{font-size:.58rem}.intel-card h3{font-size:1.08rem;margin:0}.intel-card p{font-size:.7rem;margin:0}.intel-card-meta{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:.42rem}.intel-card-meta span{padding:.42rem .5rem;border:1px solid rgba(255,255,255,.055);background:rgba(255,255,255,.012);font:.58rem/1.35 var(--font-ui);color:#aaa}.intel-card-meta b{display:block;margin-bottom:.15rem;color:#7d8585;font:500 .47rem var(--font-mono);letter-spacing:.06rem;text-transform:uppercase}
+.intel-card-footer{position:static;align-items:center;margin-top:.15rem;font-size:.53rem}.intel-card-action{color:var(--telemetry);font-weight:700}.impact-critico{color:var(--critical)!important}.impact-alto{color:var(--telemetry)!important}
+.intel-year-node{min-height:82px}.intel-year-node.selected{color:var(--text-primary);background:linear-gradient(180deg,rgba(88,199,216,.15),rgba(88,199,216,.28));box-shadow:inset 0 0 0 1px rgba(88,199,216,.35)}
+.search-dialog{position:fixed;inset:0;z-index:250000;display:grid;place-items:start center;padding:10vh 1rem 1rem}.search-dialog[hidden]{display:none}.search-backdrop{position:absolute;inset:0;background:rgba(0,0,0,.84);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px)}.search-panel{position:relative;width:min(760px,100%);max-height:78vh;overflow:auto;padding:1.2rem;border:1px solid rgba(88,199,216,.28);background:#091014;box-shadow:0 28px 90px rgba(0,0,0,.58)}.search-heading{display:flex;align-items:start;justify-content:space-between;gap:1rem}.search-heading h2{font:600 1.45rem var(--font-ui)}.search-close,.drawer-close{width:42px;height:42px;border:1px solid var(--border-subtle);background:transparent;color:var(--text-primary);cursor:pointer}.search-field{display:grid;gap:.45rem;margin-top:1rem}.search-field span{font:500 .57rem var(--font-mono);letter-spacing:.1rem;color:#969f9f}.search-field input{width:100%;min-height:52px;padding:.8rem 1rem;border:1px solid rgba(88,199,216,.28);background:rgba(255,255,255,.025);color:var(--text-primary);font:1rem var(--font-ui);outline:none}.search-field input:focus{border-color:var(--telemetry);box-shadow:0 0 0 2px rgba(88,199,216,.16)}.search-hint{margin:.65rem 0 1rem;color:#8d9494;font:.62rem var(--font-ui)}kbd{padding:.12rem .3rem;border:1px solid rgba(255,255,255,.16);border-radius:3px;background:rgba(255,255,255,.04);font:.58rem var(--font-mono)}.search-results{display:grid;gap:.45rem}.search-result{width:100%;display:grid;grid-template-columns:auto 1fr auto;gap:.75rem;align-items:center;padding:.8rem;border:1px solid rgba(255,255,255,.065);background:rgba(255,255,255,.018);color:var(--text-primary);text-align:left;cursor:pointer}.search-result:hover,.search-result:focus-visible{border-color:var(--telemetry);background:rgba(88,199,216,.06)}.search-result-num{font:700 .65rem var(--font-mono);color:var(--accent)}.search-result strong{display:block;font:.85rem var(--font-ui)}.search-result small{display:block;margin-top:.22rem;color:#9ca2a2;font:.63rem var(--font-ui)}.search-result-year{font:.62rem var(--font-mono);color:var(--telemetry)}.search-empty{padding:1.2rem;border:1px dashed rgba(255,255,255,.1);color:#999;text-align:center;font:.78rem var(--font-ui)}
+.intel-drawer{position:fixed;top:0;right:0;z-index:220000;width:min(430px,100vw);height:100dvh;display:flex;flex-direction:column;background:#091014;border-left:1px solid rgba(88,199,216,.28);box-shadow:-26px 0 70px rgba(0,0,0,.48);transform:translateX(102%);visibility:hidden;transition:transform .38s var(--ease-out-expo),visibility 0s .38s}.intel-drawer.open{transform:translateX(0);visibility:visible;transition:transform .38s var(--ease-out-expo),visibility 0s}.drawer-header{display:flex;justify-content:space-between;gap:1rem;padding:1.1rem;border-bottom:1px solid rgba(255,255,255,.07)}.drawer-header h2{font:600 1.18rem var(--font-ui)}.drawer-body{overflow:auto;padding:1.1rem;display:grid;gap:.8rem}.drawer-classification{display:flex;justify-content:space-between;gap:.7rem;font:.62rem var(--font-mono);color:var(--telemetry)}.drawer-summary{color:#b7b4ac;font:.82rem/1.6 var(--font-ui)}.drawer-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:.5rem}.drawer-grid div{padding:.7rem;border:1px solid rgba(255,255,255,.065);background:rgba(255,255,255,.018)}.drawer-grid dt{font:.49rem var(--font-mono);letter-spacing:.08rem;color:#858d8d;text-transform:uppercase}.drawer-grid dd{margin-top:.28rem;font:.7rem/1.4 var(--font-ui);color:#d0ccc3}.drawer-techniques{display:flex;flex-wrap:wrap;gap:.35rem}.drawer-techniques span{padding:.35rem .45rem;border:1px solid rgba(88,199,216,.2);color:var(--telemetry);font:.58rem var(--font-mono)}.drawer-action{min-height:44px;border:1px solid var(--accent);background:rgba(201,168,76,.08);color:var(--accent);font:600 .65rem var(--font-ui);letter-spacing:.08rem;text-transform:uppercase;cursor:pointer}
+.drawer-nav{display:grid;grid-template-columns:1fr 1fr;gap:.5rem}.drawer-nav button{min-height:44px;padding:.55rem;border:1px solid rgba(88,199,216,.2);background:rgba(88,199,216,.035);color:#b9c1c1;font:.62rem/1.35 var(--font-ui);cursor:pointer}.drawer-nav button:hover,.drawer-nav button:focus-visible{border-color:var(--telemetry);color:var(--telemetry)}
+.back-to-top{position:fixed;right:1rem;bottom:1rem;z-index:9000;display:flex;align-items:center;gap:.4rem;min-width:44px;min-height:44px;padding:.65rem .75rem;border:1px solid rgba(88,199,216,.28);background:rgba(7,13,16,.9);color:var(--telemetry);font:600 .62rem var(--font-ui);text-transform:uppercase;cursor:pointer;opacity:0;transform:translateY(12px);pointer-events:none;transition:opacity .25s,transform .25s}.back-to-top.visible{opacity:1;transform:none;pointer-events:auto}
+.episode-entry{content-visibility:auto;contain-intrinsic-size:760px}.episode-entry .episode-image{will-change:auto}.episode-entry .episode-image-blur{background-image:var(--episode-image,none)}.img-failed{background:var(--bg-secondary)}.img-failed .episode-image{display:none}.footer-sources span{font-size:.68rem;color:#918c83}.intel-kicker{font-size:.66rem}.intel-stats span{font-size:.65rem}.intel-map-header,.intel-map-legend,.intel-results-header{font-size:.66rem;line-height:1.45}.intel-filters label{font-size:.66rem}.intel-filters select,.intel-reset{font-size:.8rem}.intel-card-top{font-size:.74rem}.intel-card-meta span{font-size:.76rem}.intel-card-meta b{font-size:.66rem}.intel-card-footer{font-size:.75rem}.intel-chip{min-height:36px;font-size:.68rem}.intel-year-node span,.intel-year-node strong{font-size:.64rem}.drawer-grid dt{font-size:.62rem}.drawer-grid dd{font-size:.78rem}
+.experience-menu{position:relative}.experience-toggle{display:flex;align-items:center;gap:.45rem;min-height:38px;padding:.45rem .7rem;border:0;background:transparent;color:#b9b4aa;font:600 .64rem var(--font-ui);cursor:pointer}.experience-toggle::before{content:"";width:7px;height:7px;border-radius:50%;background:var(--text-dim);box-shadow:0 0 0 3px rgba(255,255,255,.035)}.experience-toggle[data-active="true"]::before{background:var(--safe);box-shadow:0 0 12px rgba(102,184,138,.55)}.experience-toggle:hover,.experience-toggle:focus-visible{color:var(--text-primary);background:rgba(88,199,216,.05);outline:none;box-shadow:var(--focus-ring)}.experience-popover{position:absolute;top:calc(100% + .65rem);right:0;width:min(320px,calc(100vw - 1rem));padding:1rem;border:1px solid rgba(88,199,216,.25);background:#091014;box-shadow:0 22px 60px rgba(0,0,0,.5);z-index:12000}.experience-popover[hidden]{display:none}.experience-popover-head{display:flex;justify-content:space-between;gap:1rem;padding-bottom:.75rem;border-bottom:1px solid rgba(255,255,255,.07)}.experience-popover-head strong{font:600 .86rem var(--font-ui)}.experience-state{display:block;margin-top:.2rem;color:#9da4a4;font:.6rem var(--font-ui)}.experience-close{width:36px;height:36px;border:0;background:transparent;color:#aaa;cursor:pointer}.experience-section{display:grid;gap:.55rem;padding-top:.8rem}.experience-label{font:600 .57rem var(--font-mono);letter-spacing:.1rem;color:#929b9b;text-transform:uppercase}.experience-section .nav-btn{min-height:42px;text-align:left;font-size:.65rem}.experience-audio-options{display:grid;grid-template-columns:1fr 1fr;gap:.45rem}.experience-volume{display:grid;grid-template-columns:auto 1fr;align-items:center;gap:.75rem;color:#aeb4b4;font:.65rem var(--font-ui)}.experience-volume .audio-volume-slider{width:100%;margin:0}.nav-utility-btn{display:flex;align-items:center;gap:.4rem;border:0;background:transparent;padding:.45rem .6rem}.search-icon{font-size:1rem;color:var(--telemetry)}
+.visually-hidden{position:absolute!important;width:1px!important;height:1px!important;padding:0!important;margin:-1px!important;overflow:hidden!important;clip:rect(0,0,0,0)!important;white-space:nowrap!important;border:0!important}.loading-content{width:min(700px,100%);min-height:350px;display:flex;flex-direction:column;align-items:center;justify-content:center}.loading-status{min-height:2.4em;opacity:.75;animation:none}.episode-entry{scroll-margin-top:70px}
+body.intro-skipped #loading-screen{transition:opacity .15s linear,visibility 0s .15s}
+.intro-section{min-height:0;padding:4.5rem 2rem;background:linear-gradient(180deg,#090909,#0a0d0f)}.intro-content{width:min(1120px,100%);max-width:1120px;display:grid;grid-template-columns:minmax(0,1.45fr) minmax(300px,.65fr);gap:clamp(2rem,6vw,5rem);align-items:center;text-align:left}.intro-narrative h2{max-width:680px;margin:0 0 1.25rem;font-size:clamp(2rem,4vw,3.6rem);line-height:1.02}.intro-narrative p{max-width:720px;margin:.75rem 0;color:#b7b1a7;font-size:.92rem;line-height:1.72}.intro-brief{position:relative;padding:1.1rem;border:1px solid rgba(88,199,216,.18);background:linear-gradient(145deg,rgba(88,199,216,.04),rgba(255,255,255,.008))}.intro-brief::before{content:"BASE / CONTEXTO";display:block;margin-bottom:.8rem;color:var(--telemetry);font:600 .57rem var(--font-mono);letter-spacing:.14rem}.intro-brief dl{display:grid;grid-template-columns:1fr 1fr;gap:.55rem;margin:0}.intro-brief div{padding:.7rem;border:1px solid rgba(255,255,255,.06);background:rgba(255,255,255,.012)}.intro-brief dt{font:500 .52rem var(--font-mono);letter-spacing:.09rem;color:#8f9797;text-transform:uppercase}.intro-brief dd{margin:.35rem 0 0;color:#d8d4cc;font:650 .75rem/1.4 var(--font-ui)}.intro-brief .intro-objective{grid-column:1/-1}.intro-brief .intro-objective dd{color:var(--accent)}
+.intel-explorers{align-items:start}.intel-explorer{display:grid;gap:.8rem;min-height:320px;padding:1.1rem}.intel-explorer-title{justify-content:space-between}.intel-explorer-title>div{display:flex;align-items:center;gap:.65rem}.explorer-count{min-width:38px;padding:.28rem .4rem;border:1px solid rgba(88,199,216,.2);color:var(--telemetry);font:600 .6rem var(--font-mono);text-align:center}.explorer-search{width:100%;min-height:42px;padding:.65rem .75rem;border:1px solid rgba(255,255,255,.08);background:rgba(255,255,255,.018);color:var(--text-primary);font:.72rem var(--font-ui);outline:none}.explorer-search:focus{border-color:var(--telemetry);box-shadow:var(--focus-ring)}.intel-chip-list{align-content:start;max-height:220px;overflow:auto;padding-right:.25rem}.intel-chip{display:flex;align-items:center;justify-content:space-between;gap:.45rem;min-height:40px;color:#b8bfc0;text-align:left}.intel-chip b{color:#7f898a;font:600 .56rem var(--font-mono)}.intel-chip[aria-pressed="true"]{color:#071012;border-color:var(--telemetry);background:var(--telemetry)}.intel-chip[aria-pressed="true"] b{color:#071012}.explorer-empty{color:#929999;font:.7rem var(--font-ui)}
+.intel-relations{display:block;margin-top:2rem;padding:1.2rem 0;border-color:rgba(88,199,216,.16)}.relations-heading{display:flex;align-items:end;justify-content:space-between;gap:1rem;padding:0 .2rem 1rem}.relations-heading p{max-width:560px;color:#aeb3b3;font:.72rem/1.5 var(--font-ui)}.relation-viewport{overflow-x:auto;overscroll-behavior-inline:contain;scroll-snap-type:x proximity;padding:.2rem .2rem .8rem}.relation-flow{display:flex;flex-wrap:nowrap;gap:.55rem;min-width:max-content}.relation-node{position:relative;display:grid;gap:.28rem;width:155px;min-height:82px;padding:.7rem;border:1px solid rgba(88,199,216,.15);background:rgba(255,255,255,.012);color:#c0c5c5;text-align:left;scroll-snap-align:start;cursor:pointer}.relation-node strong{font:650 .73rem/1.3 var(--font-ui)}.relation-node span{font:500 .55rem var(--font-mono);color:#858e8e}.relation-node.related{border-color:rgba(88,199,216,.48);background:rgba(88,199,216,.055)}.relation-node.selected{border-color:var(--accent);box-shadow:0 0 0 1px rgba(201,168,76,.18);background:rgba(201,168,76,.06)}.relation-node.unrelated{opacity:.42}.relation-node:focus-visible{outline:none;box-shadow:var(--focus-ring)}.relation-context{min-height:42px;margin:.35rem .2rem 0;padding:.7rem .8rem;border-left:2px solid var(--telemetry);background:rgba(88,199,216,.035);color:#aeb5b5;font:.68rem/1.5 var(--font-ui)}.relation-context strong{color:var(--text-primary)}
+.episode-entry{padding:3.2rem 2rem;transition:background-color .28s ease}.episode-entry:target{background:linear-gradient(90deg,rgba(88,199,216,.035),transparent 70%)}.episode-entry .episode-grid{max-width:1120px;grid-template-columns:minmax(0,1.15fr) minmax(330px,.85fr);gap:2rem;align-items:center}.episode-entry .episode-image-wrap{aspect-ratio:16/10;max-height:440px}.episode-entry .episode-info{max-width:none;margin:0;text-align:left}.episode-kicker{margin-bottom:.65rem}.episode-progress{display:grid;gap:.45rem;margin-bottom:1rem}.episode-progress-copy{display:flex;justify-content:space-between;gap:1rem;color:#909999;font:600 .58rem var(--font-mono);letter-spacing:.08rem;text-transform:uppercase}.episode-progress-track{height:2px;background:rgba(255,255,255,.07);overflow:hidden}.episode-progress-track span{display:block;height:100%;background:linear-gradient(90deg,var(--accent),var(--telemetry));transform-origin:left}.episode-ops{display:grid;gap:.65rem;margin:1rem 0}.episode-ops-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:.45rem}.episode-ops-grid div{padding:.55rem .6rem;border:1px solid rgba(255,255,255,.06);background:rgba(255,255,255,.012)}.episode-ops-grid dt{font:500 .5rem var(--font-mono);letter-spacing:.08rem;color:#858e8e;text-transform:uppercase}.episode-ops-grid dd{margin:.25rem 0 0;color:#cbc8c0;font:.68rem/1.35 var(--font-ui)}.episode-techniques{display:flex;flex-wrap:wrap;gap:.35rem}.episode-techniques span{padding:.3rem .4rem;border:1px solid rgba(88,199,216,.2);color:var(--telemetry);font:.57rem var(--font-mono)}.episode-actions{justify-content:flex-start}.episode-nav{display:grid;grid-template-columns:1fr 1fr;gap:.45rem;margin-top:.7rem}.episode-nav button{min-height:42px;padding:.5rem .6rem;border:0;border-top:1px solid rgba(88,199,216,.18);background:transparent;color:#a9b0b0;font:.62rem/1.35 var(--font-ui);text-align:left;cursor:pointer}.episode-nav button:last-child{text-align:right}.episode-nav button:hover,.episode-nav button:focus-visible{color:var(--telemetry);background:rgba(88,199,216,.035);outline:none}.episode-nav button:disabled{opacity:.25;cursor:default}.episode-summary{font-size:.83rem;line-height:1.62}.lb-image-stack{width:min(90vw,1280px);aspect-ratio:16/9;max-height:75vh}.lb-image-layer{width:100%;height:100%;max-width:none;max-height:none}
+.intel-hotspots-mobile{display:none}
+body.effects-reduced #grain-overlay,body.effects-reduced #ambient-particles,body.effects-reduced #wave-canvas,body.effects-reduced .hero-particles,body.effects-reduced .hero-fog,body.effects-reduced .hero-glow,body.effects-reduced #mouse-glow{display:none!important}body.effects-reduced *,body.effects-reduced *::before,body.effects-reduced *::after{animation-duration:.01ms!important;animation-iteration-count:1!important;scroll-behavior:auto!important;transition-duration:.01ms!important}
+@media(max-width:1100px){.intel-results{grid-template-columns:repeat(2,minmax(0,1fr))}.intro-content{grid-template-columns:1fr}.intro-brief{max-width:680px}.episode-entry .episode-grid{grid-template-columns:1fr}.episode-entry .episode-image-wrap{max-height:480px}.episode-entry .episode-info{max-width:820px}.nav-links{gap:1rem}}
+@media(max-width:768px){.nav-bar{padding:.55rem .7rem}.nav-controls{gap:.2rem}.nav-utility-btn,.experience-toggle{padding:6px 7px;font-size:.62rem}.experience-popover{position:fixed;top:58px;right:.5rem}.hero-section{min-height:680px}.hero-content{padding:5rem 1rem 2rem}.hero-title{font-size:clamp(3.1rem,19vw,5.4rem);letter-spacing:.12rem}.hero-status-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.hero-status-grid>div:nth-child(3n){border-right:1px solid rgba(88,199,216,.1)}.hero-status-grid>div:nth-child(2n){border-right:0}.hero-status-grid>div:nth-child(-n+4){border-bottom:1px solid rgba(88,199,216,.1)}.intro-section{padding:3.25rem 1rem}.intro-brief dl{grid-template-columns:1fr 1fr}.intel-map{width:100%;min-height:0;aspect-ratio:4/3}.intel-map-status{font-size:.58rem}.intel-hotspots{display:none}.intel-hotspots-mobile{display:flex;gap:.5rem;overflow-x:auto;padding:.75rem;border-top:1px solid rgba(88,199,216,.12);scroll-snap-type:x proximity}.mobile-hotspot{flex:0 0 auto;min-width:132px;min-height:48px;padding:.55rem .65rem;border:1px solid rgba(88,199,216,.2);background:rgba(88,199,216,.035);color:#c1c7c7;text-align:left;font:.62rem/1.35 var(--font-ui);scroll-snap-align:start}.mobile-hotspot b{display:block;color:var(--telemetry);font:.55rem var(--font-mono)}.mobile-hotspot[aria-pressed="true"]{border-color:var(--accent);background:rgba(201,168,76,.08)}.intel-filters select{font-size:1rem}.intel-results{grid-template-columns:1fr}.intel-card{content-visibility:visible}.intel-card-meta{grid-template-columns:1fr 1fr}.journey-progress{display:none}.search-dialog{padding-top:5vh}.search-panel{max-height:88vh}.search-shortcut{display:none}.intel-explorers{grid-template-columns:1fr}.intel-explorer{min-height:0}.relations-heading{display:block}.relations-heading p{margin-top:.6rem}.back-to-top span{display:none}.episode-entry{padding:2.5rem 1rem;contain-intrinsic-size:760px}.episode-entry .episode-image-wrap{aspect-ratio:16/10}.episode-ops-grid{grid-template-columns:1fr 1fr}}
+@media(max-width:480px){.hero-actions{display:grid}.hero-actions button{width:100%;max-width:310px}.hero-status-grid{margin-bottom:1.25rem}.intel-card-meta{grid-template-columns:1fr}.drawer-grid{grid-template-columns:1fr}.search-result{grid-template-columns:auto 1fr}.search-result-year{display:none}}
+@media(prefers-reduced-motion:reduce){.intel-drawer,.search-dialog,.back-to-top{transition:none}.intel-hotspot::after{animation:none}}
+:root{--font-display:Georgia,"Times New Roman",serif}
+.search-close,.drawer-close,.experience-close{width:44px;height:44px}
+.intel-chip{min-height:44px}
+.loading-content{height:456px;min-height:456px}
 </style>
 </head>
 <body>
-<a href="#main-content" class="skip-link">Pular para conteudo</a>
-<div id="loading-screen" role="status" aria-label="Carregando experiencia">
+<a href="#main-content" class="skip-link">Pular para conteúdo</a>
+<div id="loading-screen" role="dialog" aria-modal="true" aria-labelledby="loader-title" aria-describedby="load-status">
 <div class="loading-content">
-<div class="loading-emblem" aria-hidden="true">WAR ROOM</div>
-<div class="loading-sub">Cinematic Documentary</div>
-<div class="loading-bar-container" aria-hidden="true"><div class="loading-bar"></div></div>
-<div class="loading-status" id="load-status" aria-live="polite">Inicializando subsistemas...</div>
-<button id="load-enter" aria-label="Iniciar experiência cinematográfica">▶ ENTRAR NA SALA</button>
-<button class="load-skip" id="load-skip" aria-label="Pular a introdução cinematográfica">Pular introdução <span aria-hidden="true">→</span></button>
+<div class="loading-emblem" id="loader-title">WAR ROOM</div>
+<div class="loading-sub">Cyber Threat Intelligence Archive</div>
+<div class="loader-telemetry" aria-label="Status da base"><span>17 DOSSIÊS</span><span>1988—2025 · EDIÇÃO 2026</span><span>BASE CURADA</span></div>
+<div class="loading-bar-container" id="load-progress" role="progressbar" aria-label="Progresso de inicialização" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"><div class="loading-bar"></div></div>
+<div class="loading-status" id="load-status" aria-live="polite">Verificando a base local...</div>
+<button id="load-enter">Acessar centro de inteligência</button>
+<button class="load-skip" id="load-skip">Pular inicialização <span aria-hidden="true">→</span></button>
 </div></div>
 <canvas id="grain-overlay" aria-hidden="true"></canvas>
 <canvas id="ambient-particles" aria-hidden="true"></canvas>
 <div id="mouse-glow" aria-hidden="true"></div>
-<div class="nav-overlay" id="nav-overlay" role="dialog" aria-modal="true" aria-label="Navegacao movel">
-<button class="nav-link" data-target="hero">Prologo</button>
-<button class="nav-link" data-target="intelligence">Inteligencia</button>
-<button class="nav-link" data-target="episodes">Episodios</button>
-<button class="nav-link" data-target="footer">Creditos</button>
-<div class="audio-selector-mobile">
-<button class="nav-btn audio-opt" data-mode="ambient">♫ Ambiente</button>
-<button class="nav-btn audio-opt" data-mode="soundtrack">♫ Forever</button>
-<input type="range" class="audio-volume-slider" id="audio-vol-mobile" min="0" max="100" step="1" value="5" aria-label="Volume da trilha">
+<div class="nav-overlay" id="nav-overlay" role="dialog" aria-modal="true" aria-label="Navegação móvel">
+<button class="nav-link" data-target="hero">Prólogo</button>
+<button class="nav-link" data-target="intelligence">Inteligência</button>
+<button class="nav-link" data-target="episodes">Episódios</button>
+<button class="nav-link" data-target="footer">Créditos</button>
 </div>
-</div>
+<div class="search-dialog" id="global-search" role="dialog" aria-modal="true" aria-labelledby="search-title" hidden>
+<div class="search-backdrop" data-search-close></div>
+<div class="search-panel">
+<div class="search-heading"><div><span class="intel-kicker">Busca global</span><h2 id="search-title">Localizar inteligência</h2></div><button type="button" class="search-close" data-search-close aria-label="Fechar busca">✕</button></div>
+<label class="search-field" for="search-input"><span>BUSCAR DOSSIÊ, ATOR, MALWARE, PAÍS OU ANO</span><input id="search-input" type="search" autocomplete="off" spellcheck="false" placeholder="Ex.: Sandworm, 2017, Ucrânia..." aria-describedby="search-hint"></label>
+<div class="search-results" id="search-results" role="listbox" aria-live="polite"></div>
+<div class="search-hint" id="search-hint"><span class="search-shortcut"><kbd id="search-shortcut-key">Ctrl+K</kbd> ou <kbd>/</kbd> para abrir · </span><kbd>Esc</kbd> para fechar</div>
+</div></div>
 <div id="lightbox" role="dialog" aria-modal="true" aria-label="Visualizador de imagens">
 <button class="lightbox-nav lightbox-prev" id="lb-prev" aria-label="Imagem anterior">‹</button>
-<button class="lightbox-nav lightbox-next" id="lb-next" aria-label="Proxima imagem">›</button>
+<button class="lightbox-nav lightbox-next" id="lb-next" aria-label="Próxima imagem">›</button>
 <div class="lightbox-content">
 <div class="lb-image-stack">
-<img id="lb-image" class="lb-image-layer" src="" alt="Galeria de imagens do ataque">
-<img id="lb-image-next" class="lb-image-layer" src="" alt="" aria-hidden="true">
+<img id="lb-image" class="lb-image-layer" src="" alt="Galeria de imagens do ataque" width="1280" height="720">
+<img id="lb-image-next" class="lb-image-layer" src="" alt="" width="1280" height="720" aria-hidden="true">
 </div>
 <div id="lb-caption" class="lightbox-caption"></div>
 </div>
 <button id="lb-close" aria-label="Fechar visualizador">✕</button>
 <div id="lb-counter" aria-live="polite"></div>
 </div>
-<div class="story-modal" id="story-modal" role="dialog" aria-modal="true" aria-label="Historia completa">
+<div class="story-modal" id="story-modal" role="dialog" aria-modal="true" aria-label="História completa">
 <div class="story-overlay" id="story-overlay"></div>
 <div class="story-container">
 <div class="story-header">
@@ -441,19 +513,23 @@ body.modal-open #ambient-particles{animation-play-state:paused!important;opacity
 <div class="story-body" id="st-body"></div>
 </div></div>
 <header class="site-header" id="site-header">
-<nav class="nav-bar" id="nav-bar" aria-label="Navegacao principal">
+<nav class="nav-bar" id="nav-bar" aria-label="Navegação principal">
 <div class="nav-logo">WAR <span>ROOM</span></div>
 <div class="nav-links">
-<button class="nav-link" data-target="hero">Prologo</button>
-<button class="nav-link" data-target="intelligence">Inteligencia</button>
-<button class="nav-link" data-target="episodes">Episodios</button>
-<button class="nav-link" data-target="footer">Creditos</button>
+<button class="nav-link" data-target="hero">Prólogo</button>
+<button class="nav-link" data-target="intelligence">Inteligência</button>
+<button class="nav-link" data-target="episodes">Episódios</button>
+<button class="nav-link" data-target="footer">Créditos</button>
 </div>
 <div class="nav-controls">
-<div class="audio-selector">
-<button class="nav-btn audio-opt active" data-mode="ambient">♫ Ambiente</button>
-<button class="nav-btn audio-opt" data-mode="soundtrack">♫ Forever</button>
-<input type="range" class="audio-volume-slider" id="audio-vol-desktop" min="0" max="100" step="1" value="5" aria-label="Volume da trilha">
+<button class="nav-btn nav-utility-btn" id="search-open" type="button"><span class="search-icon" aria-hidden="true">⌕</span><span>Buscar</span></button>
+<div class="experience-menu">
+<button class="experience-toggle" id="experience-toggle" type="button" aria-haspopup="dialog" aria-expanded="false" aria-controls="experience-popover">Experiência</button>
+<div class="experience-popover" id="experience-popover" role="dialog" aria-modal="false" aria-labelledby="experience-title" hidden>
+<div class="experience-popover-head"><div><strong id="experience-title">Experiência e áudio</strong><span class="experience-state" id="experience-state">Áudio desligado · efeitos padrão</span></div><button type="button" class="experience-close" id="experience-close" aria-label="Fechar controles de experiência">✕</button></div>
+<div class="experience-section"><span class="experience-label">Intensidade visual</span><button class="nav-btn" id="effects-toggle" type="button" aria-pressed="false">Efeitos: padrão</button></div>
+<div class="experience-section"><span class="experience-label">Áudio</span><div class="experience-audio-options"><button class="nav-btn audio-opt active" data-mode="ambient">♫ Ambiente</button><button class="nav-btn audio-opt" data-mode="soundtrack">♫ Forever</button></div><label class="experience-volume" for="audio-vol-desktop"><span>Volume</span><input type="range" class="audio-volume-slider" id="audio-vol-desktop" min="0" max="100" step="1" value="5" aria-label="Volume da experiência"></label></div>
+</div>
 </div>
 <button class="hamburger" id="hamburger" aria-label="Abrir menu" aria-expanded="false">
 <span></span><span></span><span></span>
@@ -461,9 +537,9 @@ body.modal-open #ambient-particles{animation-play-state:paused!important;opacity
 <main id="main-content">
 <aside class="journey-progress" aria-label="Progresso da jornada">
 <div class="journey-progress-track" aria-hidden="true"><div class="journey-progress-fill" id="journey-progress-fill"></div></div>
-<div class="journey-progress-copy"><span>Capitulo atual</span><strong id="journey-chapter">Prologo</strong></div>
+<div class="journey-progress-copy"><span>Capítulo atual</span><strong id="journey-chapter">Prólogo</strong></div>
 </aside>
-<section class="hero-section" id="hero" aria-label="Apresentacao do documentario">
+<section class="hero-section" id="hero" aria-label="Apresentação do centro de inteligência">
 <div class="hero-bg">
 <div class="hero-depth-layer" id="hero-parallax-bg"></div>
 <div class="hero-fog"></div>
@@ -475,44 +551,49 @@ body.modal-open #ambient-particles{animation-play-state:paused!important;opacity
 <div class="hero-rupture" id="hero-rupture" aria-hidden="true"></div>
 <div class="hero-vignette" aria-hidden="true"></div></div>
 <div class="hero-content">
-<div class="hero-eyebrow" aria-hidden="true">War Room</div>
-<h1 class="hero-title">Os <span class="accent">17</span> Grandes<br><span class="accent">Conflitos Ciberneticos</span></h1>
-<p class="hero-sub">Da ARPANET aos conflitos modernos — uma jornada cinematografica pelos incidentes que moldaram o mundo digital</p>
-<button id="hero-cta" aria-label="Comecar a jornada">Comecar a Jornada</button>
+<div class="hero-eyebrow">Cyber Threat Intelligence / Arquivo histórico</div>
+<h1 class="hero-title">WAR <span class="accent">ROOM</span></h1>
+<p class="hero-sub">Centro de inteligência com 17 dossiês históricos sobre incidentes, atores, técnicas e impactos que moldaram a segurança digital.</p>
+<div class="hero-status-grid" aria-label="Status da base de inteligência">
+<div><span>BASE HISTÓRICA</span><strong>1988—2025</strong></div><div><span>DOSSIÊS</span><strong>17</strong></div><div><span>ATORES / GRUPOS</span><strong id="hero-groups">14</strong></div><div><span>CATEGORIAS</span><strong id="hero-categories">12</strong></div><div><span>EDIÇÃO</span><strong>2026</strong></div><div><span>ESTADO</span><strong class="status-safe">VERIFICADA</strong></div>
 </div>
-<button class="continue-exploring" id="continue-exploring" aria-label="Continuar explorando a cronologia">Continuar Explorando <span aria-hidden="true">↓</span></button>
+<div class="hero-actions"><button id="hero-cta">Acessar centro de inteligência</button><button class="continue-exploring" id="continue-exploring">Explorar dossiês <span aria-hidden="true">↓</span></button></div>
+</div>
 <div class="hero-scroll-indicator" aria-hidden="true">
 <span>Rolar para explorar</span>
 <div class="hero-scroll-line"></div></div></section>
-<section class="intro-section" id="intro" aria-label="Introducao">
+<section class="intro-section" id="intro" aria-label="Introdução">
 <div class="intro-content">
-<h2 id="intro-title">Existem duas historias em todo ciberataque</h2>
-<p id="intro-p1">A que os hackers contam para si mesmos, e a que as vitimas jamais esquecem. Este documentario e sobre a segunda.</p>
-<p id="intro-p2">Entre 1988 e 2025, cada um dos dezessete incidentes a seguir representa um ponto de inflexao na historia da seguranca cibernetica. Eles nos ensinam sobre vulnerabilidade, resiliencia e a constante evolucao das ameacas digitais.</p>
-<p id="intro-p3">Nao espere codigos binarios ou jargoes tecnicos. Esta e uma historia sobre pessoas — as que atacam, as que defendem e as que, sem saber, estao no meio do fogo cruzado. Bem-vindo ao War Room.</p>
+<div class="intro-narrative"><h2 id="intro-title">Existem duas histórias em todo ciberataque</h2>
+<p id="intro-p1">A que os hackers contam para si mesmos, e a que as vítimas jamais esquecem. Este documentário é sobre a segunda.</p>
+<p id="intro-p2">Entre 1988 e 2025, cada um dos dezessete incidentes a seguir representa um ponto de inflexão na história da segurança cibernética. Eles nos ensinam sobre vulnerabilidade, resiliência e a constante evolução das ameaças digitais.</p>
+<p id="intro-p3">Não espere códigos binários ou jargões técnicos. Esta é uma história sobre pessoas — as que atacam, as que defendem e as que, sem saber, estão no meio do fogo cruzado. Bem-vindo ao War Room.</p></div>
+<aside class="intro-brief" aria-label="Contexto técnico da base"><dl><div><dt>Período</dt><dd>1988—2025</dd></div><div><dt>Dossiês</dt><dd>17 casos</dd></div><div><dt>Atores</dt><dd id="intro-groups">14 grupos</dd></div><div><dt>Fontes</dt><dd>Públicas e curadas</dd></div><div class="intro-objective"><dt>Objetivo da base</dt><dd>Contextualizar impacto, atribuição e resposta defensiva.</dd></div></dl></aside>
 </div></section>
 <section class="intelligence-section" id="intelligence" aria-labelledby="intelligence-title">
   <div class="intelligence-shell">
     <div class="intel-section-heading">
-      <p class="intel-kicker">Intelligence Center / 1988—2026</p>
+      <p class="intel-kicker">Intelligence Center / base 1988—2025 · edição 2026</p>
       <h2 id="intelligence-title">A geografia das campanhas</h2>
       <p>Uma leitura transversal dos 17 dossiês: atores, técnicas, indicadores públicos e impacto estratégico.</p>
     </div>
     <div class="intel-stats" aria-label="Resumo da inteligência">
       <div><strong id="intel-total">17</strong><span>Dossiês indexados</span></div>
       <div><strong id="intel-groups-total">—</strong><span>Grupos e atores</span></div>
-      <div><strong id="intel-years-total">1988—2026</strong><span>Linha temporal</span></div>
+      <div><strong id="intel-years-total">1988—2025</strong><span>Linha temporal</span></div>
     </div>
     <div class="intel-map-card">
-      <div class="intel-map-header"><span>Mapa mundial de atividade</span><span class="intel-map-live"><i></i> HOTSPOTS PUBLICOS</span></div>
-      <div class="intel-map" id="intel-map" aria-label="Mapa mundial interativo dos ataques">
+      <div class="intel-map-header"><span>Mapa mundial de campanhas documentadas</span><span class="intel-map-status"><i></i> BASE ESTÁTICA CURADA</span></div>
+      <div class="intel-map" id="intel-map" role="region" aria-label="Mapa mundial interativo dos ataques">
         <svg viewBox="0 0 1000 430" aria-hidden="true" focusable="false"><path d="M78 109l93-52 104 23 13 61-63 48-94-11-54-69zm170 115l77 21 28 70-37 82-58-51-9-122zm112-118l67-47 139 14 59 54-27 68-125 21-81-44zm185 122l81 15 40 72-24 75-69-6-31-78zm128-112l78-42 116 29 68 66-47 57-116-4-78-62zm-5 150l89 5 63 56-11 77-88 8-54-70zm181 13l65 16 39 42-29 45-64-17-26-47z"/></svg>
         <div class="intel-map-grid" aria-hidden="true"></div>
         <div id="intel-hotspots" class="intel-hotspots"></div>
+        <div class="intel-tooltip" id="intel-tooltip" role="status" aria-live="polite" hidden></div>
       </div>
+      <div class="intel-hotspots-mobile" id="intel-hotspots-mobile" aria-label="Campanhas no mapa"></div>
       <div class="intel-map-legend"><span><b class="legend-dot critical"></b>Impacto crítico</span><span><b class="legend-dot high"></b>Impacto alto</span><span>Clique em um sinal para filtrar o dossiê</span></div>
     </div>
-    <div class="intel-timeline-card"><div class="intel-map-header"><span>Linha do tempo global</span><span>1988 → 2026</span></div><div class="intel-global-timeline" id="intel-global-timeline" aria-label="Linha do tempo global interativa"></div></div>
+    <div class="intel-timeline-card"><div class="intel-map-header"><span>Linha do tempo dos dossiês</span><span>1988 → 2025</span></div><div class="intel-global-timeline" id="intel-global-timeline" aria-label="Linha do tempo global interativa"></div></div>
     <div class="intel-filters" aria-label="Filtros da central de inteligência">
       <label>País<select id="intel-country"><option value="">Todos</option></select></label>
       <label>Ano<select id="intel-year"><option value="">Todos</option></select></label>
@@ -522,27 +603,32 @@ body.modal-open #ambient-particles{animation-play-state:paused!important;opacity
       <label>Malware<select id="intel-malware"><option value="">Todos</option></select></label>
       <button class="intel-reset" id="intel-reset" type="button">Limpar filtros</button>
     </div>
-    <div class="intel-results-header"><span id="intel-result-count" aria-live="polite">17 dossiês</span><span>CLIQUE PARA ABRIR A CRONOLOGIA</span></div>
+    <div class="intel-results-header"><span id="intel-result-count" aria-live="polite">17 dossiês</span><span>SELECIONE PARA INVESTIGAR</span></div>
     <div class="intel-results" id="intel-results"></div>
     <div class="intel-explorers">
-      <article class="intel-explorer"><div class="intel-explorer-title"><span>01</span><h3>MITRE ATT&amp;CK Explorer</h3></div><p>Técnicas públicas associadas aos dossiês modernos e às campanhas indexadas.</p><div class="intel-chip-list" id="mitre-explorer"></div></article>
-      <article class="intel-explorer"><div class="intel-explorer-title"><span>02</span><h3>APT Groups Explorer</h3></div><p>Atores e grupos citados nos dossiês; atribuição segue o contexto de cada capítulo.</p><div class="intel-chip-list" id="group-explorer"></div></article>
-      <article class="intel-explorer"><div class="intel-explorer-title"><span>03</span><h3>IOC Explorer</h3></div><p>Artefatos públicos de referência, sem reprodução de infraestrutura ativa.</p><div class="intel-chip-list" id="ioc-explorer"></div></article>
+      <article class="intel-explorer"><div class="intel-explorer-title"><div><span>01</span><h3>MITRE ATT&amp;CK Explorer</h3></div><output class="explorer-count" id="mitre-count">0</output></div><p>Técnicas públicas associadas aos dossiês modernos e às campanhas indexadas.</p><label class="visually-hidden" for="mitre-search">Buscar técnica MITRE</label><input class="explorer-search" id="mitre-search" type="search" placeholder="Buscar técnica…" autocomplete="off"><div class="intel-chip-list" id="mitre-explorer"></div></article>
+      <article class="intel-explorer"><div class="intel-explorer-title"><div><span>02</span><h3>APT Groups Explorer</h3></div><output class="explorer-count" id="group-count">0</output></div><p>Atores e grupos citados nos dossiês; atribuição segue o contexto de cada capítulo.</p><label class="visually-hidden" for="group-search">Buscar ator ou grupo</label><input class="explorer-search" id="group-search" type="search" placeholder="Buscar ator ou grupo…" autocomplete="off"><div class="intel-chip-list" id="group-explorer"></div></article>
+      <article class="intel-explorer"><div class="intel-explorer-title"><div><span>03</span><h3>IOC Explorer</h3></div><output class="explorer-count" id="ioc-count">0</output></div><p>Artefatos públicos de referência, sem reprodução de infraestrutura ativa.</p><label class="visually-hidden" for="ioc-search">Buscar indicador público</label><input class="explorer-search" id="ioc-search" type="search" placeholder="Buscar indicador…" autocomplete="off"><div class="intel-chip-list" id="ioc-explorer"></div></article>
     </div>
-    <div class="intel-relations" aria-label="Relações entre campanhas"><div><span class="intel-kicker">Campaign links</span><h3>Relações visuais entre campanhas</h3></div><div class="relation-flow" id="relation-flow"></div></div>
+    <div class="intel-relations" aria-label="Relações entre campanhas"><div class="relations-heading"><div><span class="intel-kicker">Correlação de metadados</span><h3>Relações documentadas entre campanhas</h3></div><p>Selecione uma campanha para ver sinais estruturados compartilhados. A visualização indica correlação, não causalidade.</p></div><div class="relation-viewport" tabindex="0" aria-label="Campanhas relacionadas, role horizontal"><div class="relation-flow" id="relation-flow"></div></div><div class="relation-context" id="relation-context" aria-live="polite">Selecione uma campanha para comparar grupo, categoria, região e técnicas MITRE.</div></div>
   </div>
 </section>
+<aside class="intel-drawer" id="intel-drawer" aria-labelledby="drawer-title" aria-hidden="true" inert>
+<div class="drawer-header"><div><span class="intel-kicker">Dossiê selecionado</span><h2 id="drawer-title">Detalhes da inteligência</h2></div><button type="button" class="drawer-close" id="drawer-close" aria-label="Fechar painel de detalhes">✕</button></div>
+<div class="drawer-body" id="drawer-body"></div>
+</aside>
 <section class="episodes-section" id="episodes" aria-label="Cronologia dos ataques">
 <div class="section-header">
-<h2>Cronologia dos Ataques</h2>
-<p>1988 — 2025 • Dezessete Episodios</p>
+<h2>Cronologia dos ataques</h2>
+<p>1988 — 2025 • Dezessete episódios</p>
 </div>
 <div class="episodes-list" id="episodes-list"></div></section>
 </main>
+<button class="back-to-top" id="back-to-top" type="button" aria-label="Voltar ao topo">↑ <span>Topo</span></button>
 <footer class="footer" id="footer" role="contentinfo">
 <div class="footer-logo">WAR ROOM</div>
 <p class="footer-credit"><strong>EDY</strong> — <a href="https://instagram.com/edmilson_zn_" target="_blank" rel="noopener" class="footer-link">@edmilson_zn_</a></p>
-<p>Uma producao independente dedicada a educacao em ciberseguranca. Todos os dados sao provenientes de fontes publicas: FBI, CISA, NIST, MITRE, Kaspersky, e relatorios jornalisticos.</p>
+<p>Uma produção independente dedicada à educação em cibersegurança. Todos os dados são provenientes de fontes públicas: FBI, CISA, NIST, MITRE, Kaspersky e relatórios jornalísticos.</p>
 <div class="footer-sources">
 <span>FBI Cyber Division</span><span>CISA</span><span>NIST NVD</span>
 <span>MITRE ATT&CK</span><span>Kaspersky SecureList</span>
@@ -551,7 +637,6 @@ body.modal-open #ambient-particles{animation-play-state:paused!important;opacity
 <div id="sc-player" style="position:fixed;top:0;left:0;width:1px;height:1px;opacity:0;overflow:hidden;pointer-events:none;z-index:-1" aria-hidden="true">
 <iframe id="sc-frame" src="about:blank" allow="autoplay" style="width:480px;height:360px;border:none" title="SoundCloud" sandbox="allow-scripts allow-same-origin allow-presentation allow-popups"></iframe>
 </div>
-<script src="https://w.soundcloud.com/player/api.js" async></script>
 <script>
 "use strict";
 var EPISODES=[
@@ -669,37 +754,41 @@ var STORIES = {
 
 // ===== INTELLIGENCE CENTER (metadata layer; episode narratives remain untouched) =====
 var INTEL_INDEX=[
-{id:"morris-worm",country:"Estados Unidos",year:"1988",category:"Malware",impact:"Alto",group:"Robert Tappan Morris",malware:"Morris Worm",mitre:["T1204"],iocs:["finger daemon"],x:22,y:29},
-{id:"melissa",country:"Estados Unidos",year:"1999",category:"Malware",impact:"Alto",group:"David L. Smith",malware:"Melissa",mitre:["T1204","T1566"],iocs:["list.doc"],x:24,y:31},
+{id:"morris-worm",country:"Estados Unidos",year:"1988",category:"Malware",impact:"Alto",group:"Robert Tappan Morris",malware:"Morris Worm",mitre:["T1204"],iocs:["finger daemon"],x:18,y:25},
+{id:"melissa",country:"Estados Unidos",year:"1999",category:"Malware",impact:"Alto",group:"David L. Smith",malware:"Melissa",mitre:["T1204","T1566"],iocs:["list.doc"],x:24,y:26},
 {id:"iloveyou",country:"Filipinas",year:"2000",category:"Malware",impact:"Critico",group:"Onel de Guzman",malware:"ILOVEYOU",mitre:["T1566","T1204"],iocs:["LOVE-LETTER-FOR-YOU"],x:78,y:54},
 {id:"estonia",country:"Estonia",year:"2007",category:"DDoS",impact:"Alto",group:"Grupos pro-Russia",malware:"Botnets",mitre:["T1498"],iocs:["trafego DDoS"],x:53,y:22},
-{id:"stuxnet",country:"Ira",year:"2010",category:"ICS / OT",impact:"Critico",group:"Atribuicao publica contestada",malware:"Stuxnet",mitre:["T1190","T1489"],iocs:["Stuxnet .LNK"],x:60,y:39},
-{id:"sony",country:"Estados Unidos",year:"2014",category:"APT",impact:"Alto",group:"Lazarus Group",malware:"Destover",mitre:["T1485","T1566"],iocs:["Destover"],x:22,y:34},
+{id:"stuxnet",country:"Ira",year:"2010",category:"ICS / OT",impact:"Critico",group:"Atribuicao publica contestada",malware:"Stuxnet",mitre:["T1190","T1489"],iocs:["Stuxnet .LNK"],x:59,y:39},
+{id:"sony",country:"Estados Unidos",year:"2014",category:"APT",impact:"Alto",group:"Lazarus Group",malware:"Destover",mitre:["T1485","T1566"],iocs:["Destover"],x:17,y:33},
 {id:"wannacry",country:"Global",year:"2017",category:"Ransomware",impact:"Critico",group:"Lazarus Group",malware:"WannaCry",mitre:["T1486","T1210"],iocs:["Wana Decrypt0r"],x:48,y:27},
-{id:"notpetya",country:"Ucrania",year:"2017",category:"Wiper",impact:"Critico",group:"Sandworm",malware:"NotPetya",mitre:["T1485","T1561"],iocs:["M.E.Doc"],x:55,y:29},
-{id:"solarwinds",country:"Estados Unidos",year:"2020",category:"Supply Chain",impact:"Critico",group:"APT29",malware:"SUNBURST",mitre:["T1195","T1078"],iocs:["SolarWinds Orion"],x:22,y:36},
-{id:"colonial",country:"Estados Unidos",year:"2021",category:"Ransomware",impact:"Critico",group:"DarkSide",malware:"DarkSide",mitre:["T1486","T1078"],iocs:["DarkSide leak site"],x:24,y:38},
+{id:"notpetya",country:"Ucrania",year:"2017",category:"Wiper",impact:"Critico",group:"Sandworm",malware:"NotPetya",mitre:["T1485","T1561"],iocs:["M.E.Doc"],x:54,y:29},
+{id:"solarwinds",country:"Estados Unidos",year:"2020",category:"Supply Chain",impact:"Critico",group:"APT29",malware:"SUNBURST",mitre:["T1195","T1078"],iocs:["SolarWinds Orion"],x:24,y:34},
+{id:"colonial",country:"Estados Unidos",year:"2021",category:"Ransomware",impact:"Critico",group:"DarkSide",malware:"DarkSide",mitre:["T1486","T1078"],iocs:["DarkSide leak site"],x:20,y:41},
 {id:"log4j",country:"Global",year:"2021",category:"Vulnerabilidade",impact:"Critico",group:"Exploracao oportunista",malware:"Log4Shell",mitre:["T1190"],iocs:["JNDI lookup"],x:45,y:36},
-{id:"mgm",country:"Estados Unidos",year:"2023",category:"Ransomware",impact:"Alto",group:"Scattered Spider / ALPHV",malware:"BlackCat",mitre:["T1566","T1078"],iocs:["ALPHV"],x:20,y:39},
-{id:"ukraine-war",country:"Ucrania",year:"2022",category:"Guerra Hibrida",impact:"Critico",group:"Sandworm",malware:"Industroyer2 / CaddyWiper",mitre:["T1561","T1489","T1078"],iocs:["Industroyer2"],x:56,y:31},
+{id:"mgm",country:"Estados Unidos",year:"2023",category:"Ransomware",impact:"Alto",group:"Scattered Spider / ALPHV",malware:"BlackCat",mitre:["T1566","T1078"],iocs:["ALPHV"],x:27,y:42},
+{id:"ukraine-war",country:"Ucrania",year:"2022",category:"Guerra Hibrida",impact:"Critico",group:"Sandworm",malware:"Industroyer2 / CaddyWiper",mitre:["T1561","T1489","T1078"],iocs:["Industroyer2"],x:58,y:34},
 {id:"volt-typhoon",country:"Guam",year:"2023",category:"Pre-posicionamento",impact:"Critico",group:"Volt Typhoon",malware:"Living off the land",mitre:["T1190","T1078","T1059"],iocs:["FRP / ScanLine"],x:84,y:48},
 {id:"salt-typhoon",country:"China",year:"2024",category:"Espionagem",impact:"Critico",group:"Salt Typhoon",malware:"JumbledPath",mitre:["T1190","T1040","T1098"],iocs:["JumbledPath"],x:74,y:38},
 {id:"lazarus-modern",country:"Coreia do Norte",year:"2024",category:"Financiamento Estatal",impact:"Alto",group:"Lazarus Group",malware:"TraderTraitor",mitre:["T1566","T1195","T1071"],iocs:["TraderTraitor"],x:76,y:30},
-{id:"israel-iran",country:"Ira",year:"2025",category:"ICS / OT",impact:"Critico",group:"CyberAv3ngers",malware:"Unitronics exposure",mitre:["T1190","T1078","T1489"],iocs:["Unitronics PLC"],x:60,y:42}
+{id:"israel-iran",country:"Ira",year:"2025",category:"ICS / OT",impact:"Critico",group:"CyberAv3ngers",malware:"Unitronics exposure",mitre:["T1190","T1078","T1489"],iocs:["Unitronics PLC"],x:63,y:46}
 ];
 var intelTechnique="";
+var intelExplorerState={type:"",value:""};
+var intelExplorerQueries={mitre:"",group:"",ioc:""};
 function intelUnique(key){return INTEL_INDEX.map(function(item){return item[key];}).filter(function(value,index,list){return list.indexOf(value)===index;}).sort();}
-function intelFillSelect(id,key){var select=byId(id);if(!select)return;intelUnique(key).forEach(function(value){var option=document.createElement("option");option.value=value;option.textContent=value;select.appendChild(option);});}
+function intelFillSelect(id,key){var select=byId(id);if(!select)return;intelUnique(key).forEach(function(value){var option=document.createElement("option");option.value=value;option.textContent=intelLabel(value);select.appendChild(option);});}
 function intelProfile(id){return INTEL_INDEX.find(function(item){return item.id===id;});}
 function intelValues(key){return INTEL_INDEX.reduce(function(out,item){return out.concat(item[key]||[]);},[]).filter(function(value,index,list){return list.indexOf(value)===index;}).sort();}
 function intelEscape(value){return String(value).replace(/[&<>"']/g,function(char){return {"&":"&amp;","<":"&lt;",">":"&gt;","\"":"&quot;","'":"&#039;"}[char];});}
-function intelFiltered(){var fields=[{id:"intel-country",key:"country"},{id:"intel-year",key:"year"},{id:"intel-category",key:"category"},{id:"intel-impact",key:"impact"},{id:"intel-group",key:"group"},{id:"intel-malware",key:"malware"}];return INTEL_INDEX.filter(function(item){return fields.every(function(field){var control=byId(field.id);return !control||!control.value||item[field.key]===control.value;})&&(!intelTechnique||item.mitre.indexOf(intelTechnique)>=0);});}
+function intelMatchesExplorer(item){if(!intelExplorerState.value)return true;if(intelExplorerState.type==="mitre")return item.mitre.indexOf(intelExplorerState.value)>=0;if(intelExplorerState.type==="group")return item.group===intelExplorerState.value;if(intelExplorerState.type==="ioc")return item.iocs.indexOf(intelExplorerState.value)>=0;return true;}
+function intelFiltered(){var fields=[{id:"intel-country",key:"country"},{id:"intel-year",key:"year"},{id:"intel-category",key:"category"},{id:"intel-impact",key:"impact"},{id:"intel-group",key:"group"},{id:"intel-malware",key:"malware"}];return INTEL_INDEX.filter(function(item){return fields.every(function(field){var control=byId(field.id);return !control||!control.value||item[field.key]===control.value;})&&intelMatchesExplorer(item);});}
 function intelSetCardPointer(card,event){var rect=card.getBoundingClientRect();card.style.setProperty("--ix",(event.clientX-rect.left)+"px");card.style.setProperty("--iy",(event.clientY-rect.top)+"px");}
-function renderIntelligence(){var results=intelFiltered(),container=byId("intel-results"),hotspots=byId("intel-hotspots");if(!container||!hotspots)return;byId("intel-result-count").textContent=results.length+" "+(results.length===1?"dossiê":"dossiês")+(intelTechnique?" • "+intelTechnique:"");container.innerHTML=results.length?results.map(function(item){var episode=EPISODES.find(function(ep){return ep.id===item.id;});return '<article class="intel-card" tabindex="0" role="button" data-intel-episode="'+item.id+'" aria-label="Abrir dossiê '+intelEscape(episode.title)+'"><div class="intel-card-top"><span>'+intelEscape(item.year)+' • '+intelEscape(item.country)+'</span><span class="impact-'+item.impact.toLowerCase()+'">'+intelEscape(item.impact)+'</span></div><h3>'+intelEscape(episode.title)+'</h3><p>'+intelEscape(item.category)+' · '+intelEscape(item.group)+'</p><div class="intel-card-footer"><span>'+intelEscape(item.malware)+'</span><span>'+item.mitre.slice(0,2).join(" · ")+'</span></div></article>';}).join(""):'<div class="intel-empty">Nenhum dossiê corresponde aos filtros atuais.</div>';hotspots.innerHTML=INTEL_INDEX.map(function(item){var episode=EPISODES.find(function(ep){return ep.id===item.id;}),hidden=results.indexOf(item)<0;return '<button class="intel-hotspot '+(item.impact==="Critico"?"":"high")+(hidden?" hidden":"")+'" style="left:'+item.x+'%;top:'+item.y+'%" data-intel-hotspot="'+item.id+'" aria-label="Filtrar por '+intelEscape(episode.title)+'"></button>';}).join("");container.querySelectorAll(".intel-card").forEach(function(card){card.addEventListener("mousemove",function(event){intelSetCardPointer(card,event);});card.addEventListener("click",function(){openIntelEpisode(card.dataset.intelEpisode);});card.addEventListener("keydown",function(event){if(event.key==="Enter"||event.key===" "){event.preventDefault();openIntelEpisode(card.dataset.intelEpisode);}});});hotspots.querySelectorAll(".intel-hotspot").forEach(function(hotspot){hotspot.addEventListener("click",function(){var profile=intelProfile(hotspot.dataset.intelHotspot);var country=byId("intel-country");if(profile&&country){country.value=profile.country;intelTechnique="";renderIntelligence();}});});}
-function openIntelEpisode(id){var entry=document.querySelector('[data-episode="'+id+'"]');if(!entry)return;entry.scrollIntoView({behavior:"smooth",block:"start"});setTimeout(function(){var detail=entry.querySelector(".episode-detail"),toggle=entry.querySelector(".toggle-detail");if(detail&&toggle&&!detail.classList.contains("open")){toggle.click();}},550);}
-function renderIntelExplorers(){var mitre=byId("mitre-explorer"),groups=byId("group-explorer"),iocs=byId("ioc-explorer"),relations=byId("relation-flow");if(mitre)mitre.innerHTML=intelValues("mitre").map(function(value){return '<button class="intel-chip" type="button" data-intel-tech="'+value+'">'+value+'</button>';}).join("");if(groups)groups.innerHTML=intelUnique("group").map(function(value){return '<button class="intel-chip" type="button" data-intel-group="'+intelEscape(value)+'">'+intelEscape(value)+'</button>';}).join("");if(iocs)iocs.innerHTML=intelValues("iocs").map(function(value){return '<button class="intel-chip" type="button" data-intel-malware="'+intelEscape(value)+'">'+intelEscape(value)+'</button>';}).join("");if(relations){var links=["Morris Worm","ILOVEYOU","WannaCry","NotPetya","SolarWinds","Volt Typhoon","Salt Typhoon"];relations.innerHTML=links.map(function(label,index){return '<span class="relation-node">'+label+'</span>'+(index<links.length-1?'<span class="relation-arrow" aria-hidden="true">→</span>':'');}).join("");}document.querySelectorAll("[data-intel-tech]").forEach(function(chip){chip.addEventListener("click",function(){intelTechnique=chip.dataset.intelTech;renderIntelligence();byId("intelligence").scrollIntoView({behavior:"smooth",block:"start"});});});document.querySelectorAll("[data-intel-group]").forEach(function(chip){chip.addEventListener("click",function(){byId("intel-group").value=chip.dataset.intelGroup;intelTechnique="";renderIntelligence();});});document.querySelectorAll("[data-intel-malware]").forEach(function(chip){chip.addEventListener("click",function(){var matching=INTEL_INDEX.find(function(item){return item.iocs.indexOf(chip.dataset.intelMalware)>=0;});if(matching)byId("intel-malware").value=matching.malware;intelTechnique="";renderIntelligence();});});}
-function renderIntelTimeline(){var timeline=byId("intel-global-timeline");if(!timeline)return;var years=["1988","1999","2000","2007","2010","2014","2017","2020","2021","2022","2023","2024","2025","2026"];timeline.innerHTML=years.map(function(year){var count=INTEL_INDEX.filter(function(item){return item.year===year;}).length;var label=year==="2026"?"AGORA":count;return '<button class="intel-year-node" type="button" data-intel-year="'+(count?year:"")+'" style="--intel-year-height:'+(18+count*12)+'px"><span>'+year+'</span><strong>'+label+'</strong></button>';}).join("");timeline.querySelectorAll(".intel-year-node").forEach(function(node){node.addEventListener("click",function(){var year=node.dataset.intelYear;if(year){byId("intel-year").value=year;intelTechnique="";renderIntelligence();}});});}
-function initIntelligenceCenter(){if(!byId("intelligence"))return;["intel-country","intel-year","intel-category","intel-impact","intel-group","intel-malware"].forEach(function(id){intelFillSelect(id,id.replace("intel-",""));byId(id).addEventListener("change",function(){intelTechnique="";renderIntelligence();});});byId("intel-total").textContent=INTEL_INDEX.length;byId("intel-groups-total").textContent=intelUnique("group").length;byId("intel-reset").addEventListener("click",function(){["intel-country","intel-year","intel-category","intel-impact","intel-group","intel-malware"].forEach(function(id){byId(id).value="";});intelTechnique="";renderIntelligence();});renderIntelTimeline();renderIntelExplorers();renderIntelligence();}
+function explorerMatchCount(type,value){return INTEL_INDEX.filter(function(item){return type==="mitre"?item.mitre.indexOf(value)>=0:type==="group"?item.group===value:item.iocs.indexOf(value)>=0;}).length;}
+function renderExplorerList(type,values,containerId,countId){var container=byId(containerId),query=normalizedSearch(intelExplorerQueries[type]);if(!container)return;var filtered=values.filter(function(value){return normalizedSearch(value).indexOf(query)>=0;});byId(countId).textContent=intelExplorerState.type===type&&intelExplorerState.value?explorerMatchCount(type,intelExplorerState.value)+"×":filtered.length;container.innerHTML=filtered.length?filtered.map(function(value){var active=intelExplorerState.type===type&&intelExplorerState.value===value;return '<button class="intel-chip" type="button" data-explorer-type="'+type+'" data-explorer-value="'+intelEscape(value)+'" aria-pressed="'+active+'"><span>'+intelEscape(intelLabel(value))+'</span><b>'+explorerMatchCount(type,value)+'</b></button>';}).join(""):'<span class="explorer-empty">Nenhum item encontrado.</span>';}
+function renderIntelExplorers(){renderExplorerList("mitre",intelValues("mitre"),"mitre-explorer","mitre-count");renderExplorerList("group",intelUnique("group"),"group-explorer","group-count");renderExplorerList("ioc",intelValues("iocs"),"ioc-explorer","ioc-count");}
+function sharedSignals(a,b){var signals=[];if(a.group===b.group)signals.push("grupo: "+intelLabel(a.group));if(a.category===b.category)signals.push("categoria: "+intelLabel(a.category));if(a.country===b.country)signals.push("região: "+intelLabel(a.country));a.mitre.filter(function(value){return b.mitre.indexOf(value)>=0;}).forEach(function(value){signals.push("MITRE "+value);});return signals;}
+function renderCampaignRelations(){var flow=byId("relation-flow"),context=byId("relation-context"),active=selectedProfile();if(!flow)return;flow.innerHTML=INTEL_INDEX.map(function(item){var ep=EPISODES.find(function(entry){return entry.id===item.id;}),signals=active&&active.id!==item.id?sharedSignals(active,item):[],state=item.id===selectedIntelId?" selected":active?(signals.length?" related":" unrelated"):"";return '<button type="button" class="relation-node'+state+'" data-relation-id="'+item.id+'" aria-pressed="'+(item.id===selectedIntelId)+'"><strong>'+intelEscape(ep.title)+'</strong><span>'+item.year+' · '+intelEscape(intelLabel(item.group))+'</span></button>';}).join("");flow.querySelectorAll("[data-relation-id]").forEach(function(button){button.addEventListener("click",function(){["intel-country","intel-year","intel-category","intel-impact","intel-group","intel-malware"].forEach(function(id){byId(id).value="";});intelExplorerState={type:"",value:""};intelTechnique="";selectedIntelId=button.dataset.relationId;setHashForDossier(selectedIntelId);renderIntelExplorers();renderIntelligence();renderIntelTimeline();renderCampaignRelations();});});if(!context)return;if(!active){context.textContent="Selecione uma campanha para comparar grupo, categoria, região e técnicas MITRE.";return;}var related=INTEL_INDEX.filter(function(item){return item.id!==active.id&&sharedSignals(active,item).length;});context.innerHTML='<strong>'+intelEscape(EPISODES.find(function(ep){return ep.id===active.id;}).title)+'</strong> · '+related.length+' campanhas com metadados compartilhados. Selecione uma conexão para investigar os sinais em comum.';}
+function initIntelligenceCenter(){if(!byId("intelligence"))return;["intel-country","intel-year","intel-category","intel-impact","intel-group","intel-malware"].forEach(function(id){intelFillSelect(id,id.replace("intel-",""));byId(id).addEventListener("change",function(){renderIntelligence();renderIntelTimeline();});});[["mitre-search","mitre"],["group-search","group"],["ioc-search","ioc"]].forEach(function(pair){byId(pair[0]).addEventListener("input",function(){intelExplorerQueries[pair[1]]=this.value;renderIntelExplorers();});});byId("intelligence").addEventListener("click",function(event){var chip=event.target.closest("[data-explorer-type]");if(!chip)return;var type=chip.dataset.explorerType,value=chip.dataset.explorerValue,active=intelExplorerState.type===type&&intelExplorerState.value===value;intelExplorerState=active?{type:"",value:""}:{type:type,value:value};intelTechnique=intelExplorerState.type==="mitre"?intelExplorerState.value:"";renderIntelExplorers();renderIntelligence();renderIntelTimeline();});byId("intel-total").textContent=INTEL_INDEX.length;byId("intel-groups-total").textContent=intelUnique("group").length;byId("intel-reset").addEventListener("click",function(){["intel-country","intel-year","intel-category","intel-impact","intel-group","intel-malware"].forEach(function(id){byId(id).value="";});intelTechnique="";intelExplorerState={type:"",value:""};renderIntelExplorers();renderIntelligence();renderIntelTimeline();renderCampaignRelations();});renderIntelTimeline();renderIntelExplorers();renderIntelligence();renderCampaignRelations();}
 
 // ===== DOM REFS =====
 var $ = function(s){return document.querySelector(s)};
@@ -728,7 +817,7 @@ var continueExploring = byId("continue-exploring");
 var nl = $$(".nav-link");
 var hb = byId("hamburger");
 var no = byId("nav-overlay");
-var loadMessages=["Inicializando subsistemas cinematograficos...","Carregando banco de dados de ameacas (1988-2025)...","Estabelecendo feed de inteligencia global...","Sincronizando linha do tempo de incidentes...","Ativando protocolos de visualizacao cinematografica...","WAR ROOM OPERACIONAL AGUARDANDO COMANDO"];
+var loadMessages=["Verificando estrutura da aplicação...","Indexando 17 dossiês históricos...","Sincronizando mapa, filtros e cronologia...","Aplicando preferências de acessibilidade...","Base local verificada. Interface pronta."];
 var msgIdx=0;
 var msgInterval=setInterval(function(){msgIdx++;if(msgIdx<loadMessages.length){lst.textContent=loadMessages[msgIdx]}},700);
 var appInitialized=false;
@@ -739,8 +828,9 @@ function enterWarRoom(skip){
   if(introTimer){clearTimeout(introTimer);introTimer=null;}
   if(skip) document.body.classList.add("intro-skipped");
   document.body.classList.add("intro-revealing","intro-ready");
+  [document.querySelector("header"),document.querySelector("main"),document.querySelector("footer"),byId("back-to-top")].forEach(function(element){if(element)element.inert=false;});
   ls.setAttribute("aria-hidden","true");
-  setTimeout(function(){ls.classList.add("hidden");document.body.classList.remove("intro-revealing");},650);
+  setTimeout(function(){ls.classList.add("hidden");ls.inert=true;document.body.classList.remove("intro-revealing");},skip?120:650);
 }
 le.addEventListener("click",enterWarRoom);
 if(lskip) lskip.addEventListener("click",function(){enterWarRoom(true);});
@@ -753,9 +843,9 @@ function initApp(){
   if(appInitialized) return;
   appInitialized=true;
   renderEpisodes();initIntelligenceCenter();
-  if(!prefersReducedMotion){initGrain();initWaveCanvas();initHeroParticles();initAmbientParticles();initMouseTracking();}
-  initIntersectionObserver();initLightbox();initAudio();initNav();initHeroParallax();initScrollNav();initJourneyProgress();initHamburger();
-  setTimeout(function(){var bar=document.querySelector(".loading-bar");if(bar)bar.style.width="100%"},100);
+  if(!prefersReducedMotion){initWaveCanvas();if(!isLowPerf){initGrain();initHeroParticles();initAmbientParticles();initMouseTracking();}}
+  initIntersectionObserver();initLightbox();initAudio();initNav();initHeroParallax();initScrollNav();initJourneyProgress();initHamburger();initOperationalLayer();
+  updateLoaderProgress();
 }
 var act = null;
 var apl = false;
@@ -804,7 +894,7 @@ var EPISODE_META = {
 var LOCAL_DOSSIER_MEDIA = {
   "ukraine-war": ["assets/images/ep13-russia-ukraine/preview.jpg", "assets/images/ep13-russia-ukraine/region-map.png"],
   "volt-typhoon": ["assets/images/ep14-volt-typhoon/preview.jpg", "assets/images/ep14-volt-typhoon/region-map.png"],
-  "salt-typhoon": ["assets/images/ep15-salt-typhoon/preview.jpg", "assets/images/ep15-salt-typhoon/region-map.svg"],
+  "salt-typhoon": ["assets/images/ep15-salt-typhoon/preview.jpg", "assets/images/ep15-salt-typhoon/region-map.png"],
   "lazarus-modern": ["assets/images/ep16-lazarus-group/preview.jpg", "assets/images/ep16-lazarus-group/region-map.png"],
   "israel-iran": ["assets/images/ep17-israel-iran/preview.jpg", "assets/images/ep17-israel-iran/region-map.png"]
 };
@@ -824,100 +914,21 @@ EPISODES.forEach(function(ep){
   }
 });
 
-// ===== RENDER EPISODES =====
-function renderEpisodes(){
-  el.innerHTML = EPISODES.map(function(ep, i){
-    var hi = (ep.images && ep.images.length > 0) ? ep.images[0] : "";
-    var gi = (ep.images && ep.images.length > 1) ? ep.images.slice(1) : [];
-    var cover = ep.cover ? '<div class="modern-cover modern-cover-' + ep.cover + '"><span class="cover-region">' + ep.coverRegion + '</span><strong class="cover-code">' + ep.coverCode + '</strong></div>' : '';
-    var banner = ep.cover ? '<div class="dossier-detail-banner dossier-banner-' + ep.cover + '"><span>' + ep.coverRegion + '</span><strong>' + ep.coverCode + '</strong></div>' : '';
-    var media = ep.mediaCredits ? '<br><h4>Mapas e creditos visuais</h4><ul class="intel-list">' + ep.mediaCredits.map(function(item){return '<li><a href="' + item.href + '" target="_blank" rel="noopener noreferrer">' + item.title + ' ↗</a></li>';}).join("") + '</ul>' : '';
-    var intel = ep.mitre ? '<br><h4>Inteligencia publica</h4><p><strong>MITRE ATT&CK:</strong> ' + ep.mitre + '</p><p><strong>Grupos:</strong> ' + ep.groups + '</p><p><strong>IOCs publicos:</strong> ' + ep.iocs + '</p><br><h4>Licoes aprendidas</h4><p>' + ep.lessons + '</p><br><h4>Referencias oficiais</h4><ul class="intel-list">' + ep.references.map(function(ref){return '<li><a href="' + ref.href + '" target="_blank" rel="noopener noreferrer">' + ref.title + ' ↗</a></li>';}).join("") + '</ul>' + media : '';
-    return '<article class="episode-entry" data-episode="' + ep.id + '" data-modern="' + (ep.cover ? 'true' : 'false') + '">'
-      + '<div class="episode-grid">'
-      + '<div class="episode-image-wrap">'
-       + (cover ? cover
-               : hi ? '<div class="episode-image-blur" style="background-image:url(' + hi + ')"></div><img class="episode-image" src="' + hi + '" alt="' + ep.title + '" loading="lazy">'
-              : '<div class="episode-image-placeholder"><span class="pl-year">' + ep.year + '</span><span class="pl-title">' + ep.title + '</span><span class="pl-ref">Documento historico pendente</span></div>')
-      + '</div><div class="episode-info">'
-      + '<div class="episode-number">' + ep.num + '</div>'
-      + '<div class="episode-year">' + ep.year + '</div>'
-      + '<div class="episode-type-badge">' + ep.type + '</div>'
-      + '<h3 class="episode-title">' + ep.title + '</h3>'
-      + '<p class="episode-subtitle">' + ep.subtitle + '</p>'
-      + '<p class="episode-summary">' + ep.summary + '</p>'
-      + '<div class="episode-actions">'
-      + '<button class="episode-btn episode-btn-primary toggle-detail" aria-controls="episode-detail-' + ep.id + '" aria-expanded="false">Ver Detalhes</button>'
-+ (ep.images && ep.images.length > 0 ? '<button class="episode-btn episode-btn-secondary view-gallery">Galeria</button>' : '')
-+ '<button class="episode-btn episode-btn-secondary view-story">Historia</button>'
-+ '</div></div></div>'
-      + '<div class="episode-timeline">'
-      + '<div class="episode-timeline-dot"></div>'
-      + '<div class="episode-timeline-line"></div>'
-      + '<span class="episode-timeline-label">' + ep.attribution + '</span></div>'
-       + '<div class="episode-detail" id="episode-detail-' + ep.id + '"><div class="episode-detail-inner">' + banner + '<div>'
-      + '<h4>Cronologia</h4><ul>'
-      + ep.timeline.map(function(t){return '<li><span class="tl-date">' + t.date + '</span><span>' + t.event + '</span></li>'}).join("")
-      + '</ul>' + (ep.curiosity ? '<br><h4>Curiosidade</h4><p>' + ep.curiosity + '</p>' : '')
-      + '</div><div><h4>Impacto</h4>'
-      + '<p><strong>Economico:</strong> ' + ep.economic + '</p>'
-      + '<p><strong>Social:</strong> ' + ep.social + '</p>'
-      + '<p><strong>Atribuicao:</strong> ' + ep.attribution + '</p>'
-      + '<p><strong>Alvo:</strong> ' + ep.target + '</p><br>'
-      + '<h4>Defesa</h4><p>' + ep.defense + '</p><br>'
-      + '<h4>Legislacao</h4><p>' + ep.legislation + '</p>' + intel
-      + '</div></div></div></article>';
-  }).join("");
-
-  el.addEventListener("click", function(e){
-    var tb = e.target.closest(".toggle-detail");
-    var gb = e.target.closest(".view-gallery");
-    var en = e.target.closest(".episode-entry");
-    if(tb && en){
-      var dt = en.querySelector(".episode-detail");
-      var op = dt.classList.contains("open");
-      dt.classList.toggle("open");
-      tb.textContent = op ? "Ver Detalhes" : "Ocultar Detalhes";
-      tb.setAttribute("aria-expanded", op ? "false" : "true");
-    }
-    if(gb && en){
-      var id = en.dataset.episode;
-      var ep = EPISODES.find(function(e){return e.id === id});
-      if(ep && ep.images && ep.images.length > 0){ openLB(id, 0); }
-    }
-    var sb = e.target.closest(".view-story");
-    if(sb && en){
-      var sid = en.dataset.episode;
-      openStory(sid);
-    }
-  });
-
-  document.querySelectorAll(".episode-image").forEach(function(img){
-    img.addEventListener("error", function(){
-      var w = this.closest(".episode-image-wrap");
-      if(w){ w.classList.add("img-failed"); }
-    });
-    img.addEventListener("load", function(){
-      var w = this.closest(".episode-image-wrap");
-      if(w) w.classList.add("episode-image-loaded");
-    });
-  });
-}
-
 // Standardized renderer: cards, details and references share one editorial frame.
 function renderEpisodes(){
-  el.innerHTML = EPISODES.map(function(ep){
+  el.innerHTML = EPISODES.map(function(ep,index){
     var hi = ep.previewImage || ((ep.images && ep.images.length) ? ep.images[0] : "");
     var isModern = !!ep.cover;
+    var profile=intelProfile(ep.id),previous=index>0?EPISODES[index-1]:null,next=index<EPISODES.length-1?EPISODES[index+1]:null;
     var bannerClass = isModern ? " dossier-banner-" + ep.cover : " dossier-banner-classic";
     var bannerCode = isModern ? ep.coverCode : "HISTORICAL DOSSIER";
     var intelligence = '<section class="detail-section"><h4>Inteligência pública</h4><p><strong>MITRE ATT&CK:</strong> ' + (ep.mitre || "Não confirmado publicamente para este capítulo.") + '</p><p><strong>Grupos envolvidos:</strong> ' + (ep.groups || ep.attribution || "Não divulgado publicamente.") + '</p><p><strong>IOCs públicos:</strong> ' + (ep.iocs || "Não divulgado publicamente.") + '</p></section><section class="detail-section"><h4>Lições aprendidas</h4><p>' + (ep.lessons || ep.defense || "Não divulgado publicamente.") + '</p></section>';
     var references = ep.references && ep.references.length ? '<section class="detail-section"><h4>Referências</h4><ul class="intel-list">' + ep.references.map(function(ref){return '<li><span class="reference-kind">' + (ref.kind || "Fonte oficial / pública") + '</span><a href="' + ref.href + '" target="_blank" rel="noopener noreferrer">' + ref.title + ' ↗</a></li>';}).join("") + '</ul></section>' : '<section class="detail-section"><h4>Referências</h4><p>Não divulgado publicamente no material de origem deste capítulo.</p></section>';
     var credits = ep.mediaCredits && ep.mediaCredits.length ? '<section class="detail-section"><h4>Créditos visuais</h4><ul class="intel-list">' + ep.mediaCredits.map(function(item){return '<li><a href="' + item.href + '" target="_blank" rel="noopener noreferrer">' + item.title + ' ↗</a></li>';}).join("") + '</ul></section>' : '';
-    return '<article class="episode-entry" data-episode="' + ep.id + '" data-modern="' + isModern + '"><div class="episode-grid"><div class="episode-image-wrap">'
-      + (hi ? '<div class="episode-image-blur" style="background-image:url(' + hi + ')"></div><img class="episode-image" src="' + hi + '" alt="Imagem de contexto: ' + ep.title + '" loading="lazy">' : '<div class="episode-image-placeholder"><span class="pl-year">' + ep.year + '</span><span class="pl-title">' + ep.title + '</span><span class="pl-ref">Imagem histórica não divulgada</span></div>')
-      + '</div><div class="episode-info"><div class="episode-kicker"><span class="episode-number">' + ep.num + '</span><span class="episode-year">' + ep.year + '</span><span class="episode-type-badge">' + ep.category + '</span></div><h3 class="episode-title">' + ep.title + '</h3><p class="episode-subtitle">' + ep.subtitle + '</p><p class="episode-summary">' + ep.summary + '</p><dl class="episode-facts"><div><dt>Região</dt><dd>' + ep.region + '</dd></div><div><dt>Ator / grupo</dt><dd>' + ep.attribution + '</dd></div></dl><div class="episode-actions"><button type="button" class="episode-btn episode-btn-primary toggle-detail" aria-controls="episode-detail-' + ep.id + '" aria-expanded="false">Ver detalhes</button>'
-      + (ep.images && ep.images.length ? '<button type="button" class="episode-btn episode-btn-secondary view-gallery">Galeria</button>' : '') + '<button type="button" class="episode-btn episode-btn-secondary view-story">História</button></div></div></div><div class="episode-timeline"><div class="episode-timeline-dot"></div><div class="episode-timeline-line"></div><span class="episode-timeline-label">' + ep.attribution + '</span></div><div class="episode-detail" id="episode-detail-' + ep.id + '"><div class="episode-detail-inner"><div class="dossier-detail-banner' + bannerClass + '"><span>' + ep.region + ' · ' + ep.confidence + '</span><strong>' + bannerCode + '</strong></div><div class="detail-column"><section class="detail-section"><h4>Cronologia</h4><ul>'
+    return '<article class="episode-entry" id="dossier-' + ep.id + '" data-episode="' + ep.id + '" data-modern="' + isModern + '"><div class="episode-grid"><div class="episode-image-wrap">'
+      + (hi ? '<div class="episode-image-blur"></div><img class="episode-image" src="' + hi + '" alt="Imagem de contexto: ' + ep.title + '" width="1600" height="900" loading="lazy" decoding="async" fetchpriority="low">' : '<div class="episode-image-placeholder"><span class="pl-year">' + ep.year + '</span><span class="pl-title">' + ep.title + '</span><span class="pl-ref">Imagem histórica não divulgada</span></div>')
+      + '</div><div class="episode-info"><div class="episode-progress"><div class="episode-progress-copy"><span>Episódio ' + ep.num + ' de ' + EPISODES.length + '</span><span>' + Math.round((index+1)/EPISODES.length*100) + '%</span></div><div class="episode-progress-track" role="progressbar" aria-label="Progresso da cronologia" aria-valuemin="1" aria-valuemax="' + EPISODES.length + '" aria-valuenow="' + (index+1) + '"><span style="transform:scaleX(' + ((index+1)/EPISODES.length) + ')"></span></div></div><div class="episode-kicker"><span class="episode-number">' + ep.num + '</span><span class="episode-year">' + ep.year + '</span><span class="episode-type-badge">' + ep.category + '</span></div><h3 class="episode-title">' + ep.title + '</h3><p class="episode-subtitle">' + ep.subtitle + '</p><p class="episode-summary">' + ep.summary + '</p><div class="episode-ops"><dl class="episode-ops-grid"><div><dt>Ano / região</dt><dd>' + ep.year + ' · ' + ep.region + '</dd></div><div><dt>Categoria</dt><dd>' + ep.category + '</dd></div><div><dt>Ator / grupo</dt><dd>' + ep.attribution + '</dd></div><div><dt>Severidade</dt><dd class="' + intelSeverityClass(profile.impact) + '">' + intelLabel(profile.impact) + '</dd></div></dl><div class="episode-techniques">' + profile.mitre.map(function(value){return '<span>' + value + '</span>';}).join("") + '</div></div><div class="episode-actions"><button type="button" class="episode-btn episode-btn-primary toggle-detail" aria-controls="episode-detail-' + ep.id + '" aria-expanded="false">Abrir dossiê</button>'
+      + (ep.images && ep.images.length ? '<button type="button" class="episode-btn episode-btn-secondary view-gallery">Galeria</button>' : '') + '<button type="button" class="episode-btn episode-btn-secondary view-story">História</button></div><nav class="episode-nav" aria-label="Incidentes adjacentes">' + (previous?'<button type="button" data-episode-nav="' + previous.id + '">← ' + previous.title + '</button>':'<button type="button" disabled>← Início</button>') + (next?'<button type="button" data-episode-nav="' + next.id + '">' + next.title + ' →</button>':'<button type="button" disabled>Fim →</button>') + '</nav></div></div><div class="episode-timeline"><div class="episode-timeline-dot"></div><div class="episode-timeline-line"></div><span class="episode-timeline-label">' + ep.attribution + '</span></div><div class="episode-detail" id="episode-detail-' + ep.id + '"><div class="episode-detail-inner"><div class="dossier-detail-banner' + bannerClass + '"><span>' + ep.region + ' · ' + ep.confidence + '</span><strong>' + bannerCode + '</strong></div><div class="detail-column"><section class="detail-section"><h4>Cronologia</h4><ul>'
       + ep.timeline.map(function(t){return '<li><span class="tl-date">' + t.date + '</span><span>' + t.event + '</span></li>';}).join("") + '</ul></section>' + (ep.curiosity ? '<section class="detail-section"><h4>Contexto</h4><p>' + ep.curiosity + '</p></section>' : '') + '</div><div class="detail-column"><section class="detail-section"><h4>Impacto</h4><p><strong>Econômico:</strong> ' + ep.economic + '</p><p><strong>Social:</strong> ' + ep.social + '</p><p><strong>Atribuição:</strong> ' + ep.attribution + '</p><p><strong>Alvo:</strong> ' + ep.target + '</p></section><section class="detail-section"><h4>Defesa</h4><p>' + ep.defense + '</p></section><section class="detail-section"><h4>Resposta institucional</h4><p>' + ep.legislation + '</p></section>' + intelligence + references + credits + '</div></div></div></article>';
   }).join("");
 
@@ -930,10 +941,12 @@ function renderEpisodes(){
     if(gb){ openLB(en.dataset.episode, 0); }
     var sb = e.target.closest(".view-story");
     if(sb){ openStory(en.dataset.episode); }
+    var nb = e.target.closest("[data-episode-nav]");
+    if(nb){ openIntelEpisode(nb.dataset.episodeNav); }
   });
   document.querySelectorAll(".episode-image").forEach(function(img){
     img.addEventListener("error", function(){var wrap=this.closest(".episode-image-wrap");if(wrap)wrap.classList.add("img-failed");});
-    img.addEventListener("load", function(){var wrap=this.closest(".episode-image-wrap");if(wrap)wrap.classList.add("episode-image-loaded");});
+    img.addEventListener("load", function(){var wrap=this.closest(".episode-image-wrap");if(wrap){wrap.style.setProperty("--episode-image",'url("'+String(this.currentSrc||this.src).replace(/"/g,"%22")+'")');wrap.classList.add("episode-image-loaded");}});
   });
 }
 
@@ -989,7 +1002,7 @@ function initWaveCanvas(){
          if(index===4 || index===6){ctx.beginPath();ctx.arc(p.x,p.y,7+pulse*9,0,Math.PI*2);ctx.strokeStyle="rgba(201,168,76,"+(.12-pulse*.06)+")";ctx.stroke();}
        });
        var radar=point(4),sweep=t*1.45;ctx.save();ctx.translate(radar.x,radar.y);ctx.beginPath();ctx.moveTo(0,0);ctx.arc(0,0,Math.min(w,h)*.105,sweep,sweep+.32);ctx.closePath();ctx.fillStyle="rgba(201,168,76,.045)";ctx.fill();ctx.beginPath();ctx.moveTo(0,0);ctx.lineTo(Math.cos(sweep)*Math.min(w,h)*.105,Math.sin(sweep)*Math.min(w,h)*.105);ctx.strokeStyle="rgba(232,213,160,.3)";ctx.stroke();ctx.restore();
-       ctx.font="10px " + getComputedStyle(document.documentElement).getPropertyValue("--font-mono");ctx.fillStyle="rgba(201,168,76,.38)";ctx.fillText("GLOBAL THREAT NETWORK / LIVE",w*.5-78,h*.82);
+       ctx.font="10px JetBrains Mono, monospace";ctx.fillStyle="rgba(88,199,216,.44)";ctx.fillText("GLOBAL THREAT ARCHIVE / 17 DOSSIERS",w*.5-96,h*.82);
      }
   }
   var heroObserver=new IntersectionObserver(function(entries){active=entries[0].isIntersecting;if(active && !wraf)wraf=requestAnimationFrame(draw);},{threshold:0});heroObserver.observe(document.getElementById("hero"));
@@ -1028,9 +1041,10 @@ function initAmbientParticles(){
   var raf = null;
 
   window.addEventListener("resize", function(){
-    w = can.width = window.innerWidth;
-    h = can.height = window.innerHeight;
-  });
+    var scale=isLowPerf ? 0.5 : 1;
+    w = can.width = Math.floor(window.innerWidth*scale);
+    h = can.height = Math.floor(window.innerHeight*scale);
+  },{passive:true});
 
   for(var i = 0; i < count; i++){
     pts.push({
@@ -1045,6 +1059,7 @@ function initAmbientParticles(){
   }
 
   function draw(){
+    if(document.hidden){raf=null;return;}
     ctx.clearRect(0, 0, w, h);
     var paused = document.body.classList.contains("modal-open");
     var t = Date.now() * 0.0006;
@@ -1064,6 +1079,7 @@ function initAmbientParticles(){
     raf = requestAnimationFrame(draw);
   }
   draw();
+  document.addEventListener("visibilitychange",function(){if(!document.hidden&&!raf)draw();});
 }
 
 // ===== FILM GRAIN =====
@@ -1081,6 +1097,7 @@ function initGrain(){
   });
 
   function draw(){
+    if(document.hidden){graf=null;return;}
     fc++;
     var skip = document.body.classList.contains("modal-open") ? 8 : 3;
     if(fc % skip !== 0){ graf = requestAnimationFrame(draw); return; }
@@ -1094,6 +1111,7 @@ function initGrain(){
     graf = requestAnimationFrame(draw);
   }
   draw();
+  document.addEventListener("visibilitychange",function(){if(!document.hidden&&!graf)draw();});
 }
 
 // ===== MOUSE TRACKING =====
@@ -1104,6 +1122,7 @@ function initMouseTracking(){
   var mx = -999, my = -999;
   var tx = -999, ty = -999;
   var mfc = 0;
+  var settledFrames = 0;
 
   document.addEventListener("mousemove", function(e){
     tx = e.clientX; ty = e.clientY;
@@ -1120,7 +1139,9 @@ function initMouseTracking(){
           var py = (my / window.innerHeight - .5);
           if(heroDepth){heroDepth.style.setProperty("--hero-pointer-x",(px * 14) + "px");heroDepth.style.setProperty("--hero-pointer-y",(py * 10) + "px");}
           if(heroContent){heroContent.style.setProperty("--hero-content-pointer-x",(px * -8) + "px");heroContent.style.setProperty("--hero-content-pointer-y",(py * -6) + "px");}
+          if(Math.abs(tx-mx)<.15&&Math.abs(ty-my)<.15){settledFrames++;}else{settledFrames=0;}
         }
+        if(settledFrames>8){mraf=null;return;}
         mraf = requestAnimationFrame(anim);
       });
     }
@@ -1221,6 +1242,9 @@ function openLB(epId, idx){
   if(!ep || !ep.images || ep.images.length === 0) return;
   ibi = ep.images;
   ibix = idx;
+  lb._returnFocus=document.activeElement;
+  lb.inert=false;
+  lb.setAttribute("aria-hidden","false");
   showLB();
   lb.classList.add("active");
   document.body.classList.add("modal-open");
@@ -1269,6 +1293,9 @@ function closeLB(){
   lbni.src = "";
   lbc.textContent = "";
   lbct.textContent = "";
+  lb.setAttribute("aria-hidden","true");
+  lb.inert=true;
+  if(lb._returnFocus&&lb._returnFocus.focus)lb._returnFocus.focus();
 }
 
 function prevLB(){ if(ibi.length === 0) return; ibix = (ibix - 1 + ibi.length) % ibi.length; showLB(); }
@@ -1282,28 +1309,23 @@ var stTitle = byId("st-title");
 var stMeta = byId("st-meta");
 var stBody = byId("st-body");
 
-function openStory(id){
-  var ep = EPISODES.find(function(e){return e.id === id});
-  if(!ep) return;
-  var txt = STORIES[id] || "<p>Historia completa em desenvolvimento para este episodio.</p>";
-  stTitle.textContent = ep.num + ". " + ep.title;
-  stMeta.textContent = ep.year + " — " + ep.type + " — " + ep.attribution;
-  stBody.innerHTML = ep.cover ? '<div class="dossier-story-hero dossier-story-hero-' + ep.cover + '"><span>' + ep.coverRegion + '</span><strong>' + ep.coverCode + '</strong></div>' + txt : txt;
-  stMod.classList.add("active");
-  document.body.classList.add("modal-open");
-  document.body.style.overflow = "hidden";
-}
-
 function closeStory(){
   stMod.classList.remove("active");
   document.body.classList.remove("modal-open");
   document.body.style.overflow = "";
+  stMod.setAttribute("aria-hidden","true");
+  stMod.inert=true;
+  if(stMod._returnFocus&&stMod._returnFocus.focus)stMod._returnFocus.focus();
 }
 
 stOver.addEventListener("click", closeStory);
 stClose.addEventListener("click", closeStory);
 document.addEventListener("keydown", function(e){
   if(e.key === "Escape" && stMod.classList.contains("active")){ closeStory(); }
+  if(e.key === "Tab" && stMod.classList.contains("active")){
+    var focusable=stMod.querySelectorAll('button,a[href],[tabindex]:not([tabindex="-1"])');
+    if(focusable.length){var first=focusable[0],last=focusable[focusable.length-1];if(e.shiftKey&&document.activeElement===first){e.preventDefault();last.focus();}else if(!e.shiftKey&&document.activeElement===last){e.preventDefault();first.focus();}}
+  }
 });
 
 // Standardized story header for all 17 dossiers; existing narrative HTML remains unchanged.
@@ -1314,6 +1336,9 @@ function openStory(id){
   stTitle.textContent = ep.num + ". " + ep.title;
   stMeta.textContent = ep.year + " · " + ep.category + " · " + ep.attribution;
   stBody.innerHTML = '<div class="dossier-story-hero episode-story-hero' + (ep.cover ? ' dossier-story-hero-' + ep.cover : '') + '"' + (ep.previewImage ? ' style="--story-image:url(' + ep.previewImage + ')"' : '') + '><span>' + ep.region + '</span><strong>' + (ep.cover ? ep.coverCode : "HISTORICAL DOSSIER") + '</strong></div>' + txt;
+  stMod._returnFocus=document.activeElement;
+  stMod.inert=false;
+  stMod.setAttribute("aria-hidden","false");
   stMod.classList.add("active");
   document.body.classList.add("modal-open");
   document.body.style.overflow = "hidden";
@@ -1422,17 +1447,17 @@ function stopAudio(){
   updateAudioUI();
 }
 
+function updateExperienceState(){var state=byId("experience-state"),toggle=byId("experience-toggle"),reduced=document.body.classList.contains("effects-reduced"),audio=apl?(soundMode==="ambient"?"Ambiente ligado":"Forever ligada"):"Áudio desligado";if(state)state.textContent=audio+" · efeitos "+(reduced?"reduzidos":"padrão");if(toggle)toggle.dataset.active=String(apl||reduced);}
 function updateAudioUI(){
   at.forEach(function(btn){
     var mode = btn.dataset.mode;
     btn.classList.toggle("active", mode === soundMode);
     btn.classList.toggle("playing", apl && mode === soundMode);
+    btn.setAttribute("aria-pressed",String(apl&&mode===soundMode));
     btn.textContent = (mode === "ambient" ? "♫ Ambiente" : "♫ Forever")
       + (apl && mode === soundMode ? " ▶" : "");
   });
-  document.querySelectorAll(".audio-selector, .audio-selector-mobile").forEach(function(g){
-    g.classList.toggle("audio-on", apl);
-  });
+  updateExperienceState();
 }
 
 // ===== LOCALSTORAGE — Áudio Persistente =====
@@ -1474,6 +1499,21 @@ var scWidget = null;
 var scFrameLoaded = false;
 var scPoller = null;
 var scHealth = null;
+var scApiPromise = null;
+
+function ensureSoundCloudApi(){
+  if(window.SC && window.SC.Widget) return Promise.resolve();
+  if(scApiPromise) return scApiPromise;
+  scApiPromise = new Promise(function(resolve,reject){
+    var script=document.createElement("script");
+    script.src="https://w.soundcloud.com/player/api.js";
+    script.async=true;
+    script.onload=resolve;
+    script.onerror=function(){scApiPromise=null;reject(new Error("SoundCloud API indisponível"));};
+    document.head.appendChild(script);
+  });
+  return scApiPromise;
+}
 
 function initSCWidget(){
   var frame = byId("sc-frame");
@@ -1615,7 +1655,7 @@ function startSoundtrack(){
   scWidget = null;
   scFrameLoaded = false;
   frame.src = SC_EMBED;
-  setTimeout(initSCWidget, 500);
+  ensureSoundCloudApi().then(function(){setTimeout(initSCWidget,100);}).catch(function(error){console.warn("[Audio]",error.message);});
 }
 
 function stopSoundtrack(){
@@ -1678,24 +1718,6 @@ function stopAmbient(){
 }
 
 // ===== NAVIGATION =====
-function initNav(){
-  nl.forEach(function(link){
-    link.addEventListener("click", function(){
-      var t = this.dataset.target;
-      var e = document.getElementById(t);
-      if(e) e.scrollIntoView({ behavior: "smooth", block: "start" });
-    });
-  });
-  hcta.addEventListener("click", function(){
-    var episodes = document.getElementById("episodes");
-    if(episodes) episodes.scrollIntoView({ behavior: "smooth", block: "start" });
-  });
-  if(continueExploring) continueExploring.addEventListener("click", function(){
-    var episodes = document.getElementById("episodes");
-    if(episodes) episodes.scrollIntoView({ behavior: "smooth", block: "start" });
-  });
-}
-
 function focusIntelligenceCenter(){
   var intelligence = document.getElementById("intelligence");
   if(!intelligence) return;
@@ -1704,10 +1726,6 @@ function focusIntelligenceCenter(){
   if(window.history && window.history.replaceState){ window.history.replaceState(null, "", "#intelligence"); }
   intelligence.scrollIntoView({behavior: prefersReducedMotion ? "auto" : "smooth", block:"start"});
 }
-
-// initNav is invoked during the startup sequence above this declaration.
-// Bind the corrected CTA explicitly so the existing startup order remains intact.
-hcta.addEventListener("click", focusIntelligenceCenter);
 
 function initNav(){
   nl.forEach(function(link){
@@ -1751,7 +1769,7 @@ function initScrollNav(){
 function initJourneyProgress(){
   var fill=byId("journey-progress-fill"),chapter=byId("journey-chapter");
   if(!fill || !chapter) return;
-  var sections=[{id:"hero",label:"Prologo"},{id:"intro",label:"Contexto"},{id:"intelligence",label:"Inteligencia"},{id:"episodes",label:"Cronologia"},{id:"footer",label:"Creditos"}];
+  var sections=[{id:"hero",label:"Prólogo"},{id:"intro",label:"Contexto"},{id:"intelligence",label:"Inteligência"},{id:"episodes",label:"Cronologia"},{id:"footer",label:"Créditos"}];
   var ticking=false;
   function update(){
     ticking=false;
@@ -1805,17 +1823,134 @@ function initHamburger(){
   });
 }
 
-// ===== PRELOAD =====
-EPISODES.slice(0, 4).forEach(function(ep){
-  if(ep.images && ep.images[0]){
-    var l = document.createElement("link");
-    l.rel = "preload"; l.as = "image"; l.href = ep.images[0];
-    document.head.appendChild(l);
-  }
-});
+// ===== OPERATIONAL APPLICATION LAYER =====
+var selectedIntelId="";
+var operationalFocus=null;
+
+function updateLoaderProgress(){
+  var progress=byId("load-progress"),bar=progress&&progress.querySelector(".loading-bar");
+  function setProgress(value,message){if(progress)progress.setAttribute("aria-valuenow",String(value));if(bar)bar.style.width=value+"%";if(lst&&message)lst.textContent=message;}
+  setProgress(35,"Estrutura da aplicação verificada.");
+  requestAnimationFrame(function(){setProgress(72,EPISODES.length+" dossiês indexados. Sincronizando interface...");});
+  var fonts=document.fonts&&document.fonts.ready?document.fonts.ready:Promise.resolve();
+  fonts.catch(function(){}).then(function(){setProgress(100,"Base local verificada. Interface pronta.");});
+}
+
+function intelSeverityClass(value){return value==="Critico"?"impact-critico":"impact-alto";}
+function intelLabel(value){var labels={"Critico":"Crítico","Ira":"Irã","Ucrania":"Ucrânia","Estonia":"Estônia","Grupos pro-Russia":"Grupos pró-Rússia","Atribuicao publica contestada":"Atribuição pública contestada","Exploracao oportunista":"Exploração oportunista","Guerra Hibrida":"Guerra híbrida","Pre-posicionamento":"Pré-posicionamento","Financiamento Estatal":"Financiamento estatal"};return labels[value]||value;}
+function selectedProfile(){return selectedIntelId?intelProfile(selectedIntelId):null;}
+function setHashForDossier(id){if(window.history&&window.history.replaceState)window.history.replaceState(null,"","#dossier-"+id);}
+
+function renderIntelligence(){
+  var results=intelFiltered(),container=byId("intel-results"),hotspots=byId("intel-hotspots"),mobileHotspots=byId("intel-hotspots-mobile");
+  if(!container||!hotspots)return;
+  var explorerLabel=intelExplorerState.value?" • "+intelLabel(intelExplorerState.value):"";
+  byId("intel-result-count").textContent=results.length+" "+(results.length===1?"dossiê":"dossiês")+explorerLabel;
+  container.innerHTML=results.length?results.map(function(item){
+    var episode=EPISODES.find(function(ep){return ep.id===item.id;}),selected=item.id===selectedIntelId;
+    return '<button type="button" class="intel-card'+(selected?' selected':'')+'" data-intel-episode="'+item.id+'" aria-pressed="'+selected+'"><div class="intel-card-top"><span>'+intelEscape(item.year)+' • '+intelEscape(intelLabel(item.country))+'</span><span class="'+intelSeverityClass(item.impact)+'">'+intelEscape(intelLabel(item.impact))+'</span></div><h3>'+intelEscape(episode.title)+'</h3><div class="intel-card-meta"><span><b>Categoria</b>'+intelEscape(intelLabel(item.category))+'</span><span><b>Ator / grupo</b>'+intelEscape(intelLabel(item.group))+'</span><span><b>Malware</b>'+intelEscape(item.malware)+'</span><span><b>MITRE ATT&CK</b>'+item.mitre.join(" · ")+'</span></div><div class="intel-card-footer"><span>Dossiê completo</span><span class="intel-card-action">Investigar →</span></div></button>';
+  }).join(""):'<div class="intel-empty">Nenhum dossiê corresponde aos filtros atuais.</div>';
+  hotspots.innerHTML=INTEL_INDEX.map(function(item){
+    var episode=EPISODES.find(function(ep){return ep.id===item.id;}),hidden=results.indexOf(item)<0,selected=item.id===selectedIntelId;
+    return '<button type="button" class="intel-hotspot '+(item.impact==="Critico"?"":"high")+(hidden?' hidden':'')+(selected?' selected':'')+'" style="left:'+item.x+'%;top:'+item.y+'%" data-intel-hotspot="'+item.id+'" aria-label="Selecionar '+intelEscape(episode.title)+'" aria-pressed="'+selected+'"'+(hidden?' disabled aria-hidden="true"':'')+'></button>';
+  }).join("");
+  if(mobileHotspots)mobileHotspots.innerHTML=INTEL_INDEX.map(function(item){var episode=EPISODES.find(function(ep){return ep.id===item.id;}),hidden=results.indexOf(item)<0,selected=item.id===selectedIntelId;return hidden?"":'<button type="button" class="mobile-hotspot" data-intel-hotspot-mobile="'+item.id+'" aria-pressed="'+selected+'"><b>'+item.year+' · '+intelEscape(intelLabel(item.country))+'</b>'+intelEscape(episode.title)+'</button>';}).join("");
+  container.querySelectorAll(".intel-card").forEach(function(card){
+    var pointerFrame=null,lastEvent=null;
+    card.addEventListener("pointermove",function(event){lastEvent=event;if(pointerFrame)return;pointerFrame=requestAnimationFrame(function(){intelSetCardPointer(card,lastEvent);pointerFrame=null;});});
+    card.addEventListener("click",function(){selectIntelDossier(card.dataset.intelEpisode,true);});
+  });
+  hotspots.querySelectorAll(".intel-hotspot:not(:disabled)").forEach(function(hotspot){
+    hotspot.addEventListener("mouseenter",function(){showIntelTooltip(hotspot.dataset.intelHotspot);});
+    hotspot.addEventListener("focus",function(){showIntelTooltip(hotspot.dataset.intelHotspot);});
+    hotspot.addEventListener("mouseleave",hideIntelTooltip);
+    hotspot.addEventListener("blur",hideIntelTooltip);
+    hotspot.addEventListener("click",function(){selectIntelDossier(hotspot.dataset.intelHotspot,true);});
+  });
+  if(mobileHotspots)mobileHotspots.querySelectorAll("[data-intel-hotspot-mobile]").forEach(function(button){button.addEventListener("click",function(){selectIntelDossier(button.dataset.intelHotspotMobile,true);});});
+}
+
+function renderIntelTimeline(){
+  var timeline=byId("intel-global-timeline");if(!timeline)return;
+  var years=intelUnique("year").sort(function(a,b){return Number(a)-Number(b);});
+  timeline.innerHTML=years.map(function(year){var items=INTEL_INDEX.filter(function(item){return item.year===year;}),selected=items.some(function(item){return item.id===selectedIntelId;});return '<button class="intel-year-node'+(selected?' selected':'')+'" type="button" data-intel-year="'+year+'" aria-pressed="'+selected+'" style="--intel-year-height:'+(18+items.length*12)+'px"><span>'+year+'</span><strong>'+items.length+'</strong></button>';}).join("");
+  timeline.querySelectorAll(".intel-year-node").forEach(function(node){node.addEventListener("click",function(){byId("intel-year").value=node.dataset.intelYear;intelTechnique="";var matches=INTEL_INDEX.filter(function(item){return item.year===node.dataset.intelYear;});if(matches.length===1)selectedIntelId=matches[0].id;renderIntelligence();renderIntelTimeline();});});
+}
+
+function showIntelTooltip(id){
+  var item=intelProfile(id),episode=EPISODES.find(function(ep){return ep.id===id;}),tip=byId("intel-tooltip");if(!item||!episode||!tip)return;
+  tip.innerHTML='<strong>'+intelEscape(episode.title)+'</strong><span><b>'+intelEscape(intelLabel(item.country))+' · '+item.year+'</b></span><span>'+intelEscape(intelLabel(item.group))+' · '+intelEscape(intelLabel(item.category))+' · '+intelEscape(intelLabel(item.impact))+'</span>';
+  tip.style.left=Math.min(74,Math.max(4,item.x))+"%";tip.style.top=Math.min(82,Math.max(12,item.y))+"%";tip.hidden=false;
+}
+function hideIntelTooltip(){var tip=byId("intel-tooltip");if(tip)tip.hidden=true;}
+
+function drawerMarkup(id){
+  var item=intelProfile(id),ep=EPISODES.find(function(entry){return entry.id===id;}),index=EPISODES.indexOf(ep),previous=EPISODES[(index-1+EPISODES.length)%EPISODES.length],next=EPISODES[(index+1)%EPISODES.length];
+  if(!item||!ep)return "";
+  return '<div class="drawer-classification"><span>DOSSIÊ '+intelEscape(ep.num)+'</span><span class="'+intelSeverityClass(item.impact)+'">'+intelEscape(intelLabel(item.impact))+'</span></div><p class="drawer-summary">'+intelEscape(ep.summary)+'</p><dl class="drawer-grid"><div><dt>Ano / região</dt><dd>'+item.year+' · '+intelEscape(intelLabel(item.country))+'</dd></div><div><dt>Categoria</dt><dd>'+intelEscape(intelLabel(item.category))+'</dd></div><div><dt>Ator / grupo</dt><dd>'+intelEscape(intelLabel(item.group))+'</dd></div><div><dt>Malware</dt><dd>'+intelEscape(item.malware)+'</dd></div></dl><div class="drawer-techniques">'+item.mitre.map(function(value){return '<span>'+value+'</span>';}).join("")+'</div><button type="button" class="drawer-action" data-open-dossier="'+id+'">Abrir cronologia completa</button><div class="drawer-nav"><button type="button" data-select-dossier="'+previous.id+'">← '+intelEscape(previous.title)+'</button><button type="button" data-select-dossier="'+next.id+'">'+intelEscape(next.title)+' →</button></div>';
+}
+
+function openIntelDrawer(id){
+  var drawer=byId("intel-drawer"),body=byId("drawer-body"),ep=EPISODES.find(function(entry){return entry.id===id;});if(!drawer||!body||!ep)return;
+  operationalFocus=document.activeElement;byId("drawer-title").textContent=ep.title;body.innerHTML=drawerMarkup(id);drawer.inert=false;drawer.setAttribute("aria-hidden","false");drawer.classList.add("open");
+  body.querySelector("[data-open-dossier]").addEventListener("click",function(){openIntelEpisode(id);});
+  body.querySelectorAll("[data-select-dossier]").forEach(function(button){button.addEventListener("click",function(){selectIntelDossier(button.dataset.selectDossier,true);});});
+  byId("drawer-close").focus();
+}
+function closeIntelDrawer(restore){var drawer=byId("intel-drawer");if(!drawer)return;drawer.classList.remove("open");drawer.setAttribute("aria-hidden","true");drawer.inert=true;if(restore&&operationalFocus&&operationalFocus.focus)operationalFocus.focus();}
+
+function selectIntelDossier(id,openPanel){
+  if(!intelProfile(id))return;selectedIntelId=id;setHashForDossier(id);renderIntelligence();renderIntelTimeline();renderCampaignRelations();if(openPanel)openIntelDrawer(id);
+}
+
+function openIntelEpisode(id,instant){
+  var entry=byId("dossier-"+id);if(!entry)return;selectedIntelId=id;setHashForDossier(id);renderIntelligence();renderIntelTimeline();renderCampaignRelations();closeIntelDrawer(false);document.querySelectorAll(".episode-entry").forEach(function(item){item.style.contentVisibility="visible";});
+  requestAnimationFrame(function(){entry.scrollIntoView({behavior:(instant||prefersReducedMotion||document.body.classList.contains("effects-reduced"))?"auto":"smooth",block:"start"});setTimeout(function(){var detail=entry.querySelector(".episode-detail"),toggle=entry.querySelector(".toggle-detail");if(detail&&toggle&&!detail.classList.contains("open"))toggle.click();if(toggle)toggle.focus({preventScroll:true});},prefersReducedMotion?0:320);});
+}
+
+function normalizedSearch(value){return String(value||"").normalize("NFD").replace(/[\u0300-\u036f]/g,"").toLowerCase().trim();}
+function searchMatches(query){var needle=normalizedSearch(query);if(!needle)return INTEL_INDEX.slice(0,8);return INTEL_INDEX.filter(function(item){var ep=EPISODES.find(function(entry){return entry.id===item.id;}),hay=[ep.title,ep.subtitle,ep.summary,ep.attribution,item.country,item.year,item.category,item.group,item.malware,item.mitre.join(" "),item.iocs.join(" ")].join(" ");return normalizedSearch(hay).indexOf(needle)>=0;}).slice(0,10);}
+function renderSearchResults(query){var results=byId("search-results");if(!results)return;var matches=searchMatches(query);results.innerHTML=matches.length?matches.map(function(item){var ep=EPISODES.find(function(entry){return entry.id===item.id;});return '<button type="button" class="search-result" role="option" data-search-dossier="'+item.id+'"><span class="search-result-num">'+ep.num+'</span><span><strong>'+intelEscape(ep.title)+'</strong><small>'+intelEscape(intelLabel(item.country))+' · '+intelEscape(intelLabel(item.group))+' · '+intelEscape(item.malware)+'</small></span><span class="search-result-year">'+item.year+'</span></button>';}).join(""):'<div class="search-empty">Nenhum dossiê encontrado.</div>';results.querySelectorAll("[data-search-dossier]").forEach(function(button){button.addEventListener("click",function(){closeGlobalSearch(false);selectIntelDossier(button.dataset.searchDossier,true);});});}
+function setSearchBackgroundInert(value){[document.querySelector("header"),document.querySelector("main"),document.querySelector("footer"),byId("back-to-top")].forEach(function(element){if(element)element.inert=value;});}
+function openGlobalSearch(){var dialog=byId("global-search"),input=byId("search-input");if(!dialog||!input)return;operationalFocus=document.activeElement;dialog.hidden=false;setSearchBackgroundInert(true);document.body.classList.add("modal-open");input.value="";renderSearchResults("");requestAnimationFrame(function(){input.focus();});}
+function closeGlobalSearch(restore){var dialog=byId("global-search");if(!dialog||dialog.hidden)return;dialog.hidden=true;setSearchBackgroundInert(false);document.body.classList.remove("modal-open");if(restore!==false&&operationalFocus&&operationalFocus.focus)operationalFocus.focus();}
+
+function initOperationalLayer(){
+  var searchOpen=byId("search-open"),searchInput=byId("search-input"),effects=byId("effects-toggle"),drawer=byId("intel-drawer"),topButton=byId("back-to-top"),experienceToggle=byId("experience-toggle"),experiencePopover=byId("experience-popover"),experienceClose=byId("experience-close");
+  [lb,stMod,no,drawer].forEach(function(element){if(element){element.inert=true;element.setAttribute("aria-hidden","true");}});
+  [document.querySelector("header"),document.querySelector("main"),document.querySelector("footer"),topButton].forEach(function(element){if(element)element.inert=true;});
+  requestAnimationFrame(function(){if(le)le.focus();});
+  var isMac=/Mac|iPhone|iPad|iPod/i.test((navigator.userAgentData&&navigator.userAgentData.platform)||navigator.platform||navigator.userAgent);byId("search-shortcut-key").textContent=isMac?"⌘K":"Ctrl+K";
+  if(searchOpen)searchOpen.addEventListener("click",openGlobalSearch);document.querySelectorAll("[data-search-close]").forEach(function(button){button.addEventListener("click",function(){closeGlobalSearch(true);});});if(searchInput)searchInput.addEventListener("input",function(){renderSearchResults(searchInput.value);});
+  byId("global-search").addEventListener("keydown",function(event){
+    if(event.key!=="Tab")return;
+    var focusable=Array.from(this.querySelectorAll('button:not([disabled]),input:not([disabled]),[href],[tabindex]:not([tabindex="-1"])')).filter(function(element){return element.getClientRects().length>0;});
+    if(!focusable.length)return;
+    var first=focusable[0],last=focusable[focusable.length-1];
+    if(event.shiftKey&&document.activeElement===first){event.preventDefault();last.focus();}
+    else if(!event.shiftKey&&document.activeElement===last){event.preventDefault();first.focus();}
+  });
+  byId("drawer-close").addEventListener("click",function(){closeIntelDrawer(true);});
+  var savedEffects="";try{savedEffects=localStorage.getItem("warroom.effects");}catch(error){}
+  var reduced=savedEffects==="reduced"||prefersReducedMotion;document.body.classList.toggle("effects-reduced",reduced);effects.setAttribute("aria-pressed",String(reduced));effects.textContent=reduced?"Efeitos: reduzidos":"Efeitos: padrão";updateExperienceState();
+  effects.addEventListener("click",function(){var active=!document.body.classList.contains("effects-reduced");document.body.classList.toggle("effects-reduced",active);effects.setAttribute("aria-pressed",String(active));effects.textContent=active?"Efeitos: reduzidos":"Efeitos: padrão";try{localStorage.setItem("warroom.effects",active?"reduced":"standard");}catch(error){}updateExperienceState();});
+  function closeExperience(restore){if(experiencePopover.hidden)return;experiencePopover.hidden=true;experienceToggle.setAttribute("aria-expanded","false");if(restore)experienceToggle.focus();}
+  function openExperience(){experiencePopover.hidden=false;experienceToggle.setAttribute("aria-expanded","true");requestAnimationFrame(function(){effects.focus();});}
+  experienceToggle.addEventListener("click",function(){if(experiencePopover.hidden)openExperience();else closeExperience(true);});experienceClose.addEventListener("click",function(){closeExperience(true);});document.addEventListener("pointerdown",function(event){if(!experiencePopover.hidden&&!event.target.closest(".experience-menu"))closeExperience(false);});
+  document.addEventListener("keydown",function(event){
+    var activeElement=document.activeElement,typing=/^(INPUT|TEXTAREA|SELECT)$/.test(activeElement&&activeElement.tagName)||(activeElement&&activeElement.isContentEditable);if(((event.ctrlKey||event.metaKey)&&event.key.toLowerCase()==="k")||(event.key==="/"&&!typing)){event.preventDefault();openGlobalSearch();return;}
+    if(event.key==="Escape"){if(!byId("global-search").hidden){closeGlobalSearch(true);return;}if(drawer.classList.contains("open")){closeIntelDrawer(true);return;}if(!experiencePopover.hidden){closeExperience(true);return;}if(no.classList.contains("open")){no.classList.remove("open");no.inert=true;no.setAttribute("aria-hidden","true");hb.classList.remove("active");hb.setAttribute("aria-expanded","false");hb.focus();}}
+  });
+  hb.addEventListener("click",function(){var open=no.classList.contains("open");no.inert=!open;no.setAttribute("aria-hidden",String(!open));document.body.classList.toggle("modal-open",open);if(open){var first=no.querySelector(".nav-link");if(first)first.focus();}});
+  no.querySelectorAll(".nav-link").forEach(function(link){link.addEventListener("click",function(){no.inert=true;no.setAttribute("aria-hidden","true");document.body.classList.remove("modal-open");});});
+  var scrollTick=false;window.addEventListener("scroll",function(){if(scrollTick)return;scrollTick=true;requestAnimationFrame(function(){topButton.classList.toggle("visible",window.scrollY>900);scrollTick=false;});},{passive:true});topButton.addEventListener("click",function(){window.scrollTo({top:0,behavior:(prefersReducedMotion||document.body.classList.contains("effects-reduced"))?"auto":"smooth"});});
+  var sectionObserver=new IntersectionObserver(function(entries){entries.forEach(function(entry){if(entry.isIntersecting)nl.forEach(function(link){if(link.dataset.target===entry.target.id)link.setAttribute("aria-current","location");else link.removeAttribute("aria-current");});});},{rootMargin:"-35% 0px -55%",threshold:0});["hero","intelligence","episodes","footer"].forEach(function(id){var section=byId(id);if(section)sectionObserver.observe(section);});
+  var heroGroups=byId("hero-groups"),heroCategories=byId("hero-categories"),introGroups=byId("intro-groups");if(heroGroups)heroGroups.textContent=intelUnique("group").length;if(heroCategories)heroCategories.textContent=intelUnique("category").length;if(introGroups)introGroups.textContent=intelUnique("group").length+" grupos";
+}
 
 initApp();
-introTimer=setTimeout(function(){enterWarRoom(prefersReducedMotion);},prefersReducedMotion ? 120 : 3600);
+introTimer=setTimeout(function(){enterWarRoom(prefersReducedMotion||isLowPerf);},prefersReducedMotion ? 120 : isLowPerf ? 650 : 1800);
+var initialDossierHash=window.location.hash;if(initialDossierHash.indexOf("#dossier-")===0){var initialDossierId=initialDossierHash.slice(9);if(intelProfile(initialDossierId)){enterWarRoom(true);setTimeout(function(){openIntelEpisode(initialDossierId,true);},220);}}
 console.log("[WAR ROOM 3.0] Cinematic intro initialized. " + EPISODES.length + " episodes.");
 
 </script>

@@ -42,3 +42,27 @@ This is the chronological project memory. `CURRENT_STATE.md` is the fast snapsho
 - Replaced the public README with release-only portfolio documentation and verified author, research-source, LinkedIn, GitHub, Pages, and release links.
 - Added final Russia x Ukraine chronology and narrative-modal captures and regenerated the product tour GIF from five real release views.
 - No runtime, episode, layout, animation, or historical-content change was made.
+
+## Sprint - Conservative CTI evolution
+
+- Located the official local repository, verified remote/history/refs and a clean `main`, then copied all 302 files (20,924,937 bytes) to the release workspace with zero SHA-256 differences. The original source remains preserved outside this release.
+- Created `codex/war-room-cti-evolution` and evolved the static experience without a framework: operational hero, real loader progress, global search, shared dossier selection, synchronized map/timeline/cards, drawer navigation, hash deep links, effects preference, accessibility fixes, and truthful 1988–2025 coverage with a 2026 edition label.
+- Removed remote image preloads, deferred SoundCloud, reduced blocking fonts, paused decorative loops when hidden, and preserved every dossier narrative.
+- Four automated verification scripts pass. Final Lighthouse: desktop 98/100/100/100, mobile 80/96/100/100; initial payload is 266 KiB in three requests, down from roughly 10.5 MiB and 25 requests at baseline.
+- No commit, push, tag, Pages change, public URL change, or source-folder deletion was performed.
+
+## Sprint - CTI refinement after partial visual approval
+
+- Simplified the header: search now shows only icon/text, the platform-aware shortcut lives inside the modal, and effects/ambient/Forever are grouped in one keyboard-accessible experience popover.
+- Compressed the prologue into a narrative/technical hybrid; made MITRE, group, IOC, and campaign-correlation controls selectable using only existing corpus fields; and added operational context/navigation to all 17 chronology entries.
+- Replaced overlapping mobile map targets with a 48px horizontal rail, declared lightbox dimensions, removed regression-covered duplicate functions, improved contrast/touch sizing, and removed the blocking remote-font dependency.
+- Four verification scripts pass. Lighthouse refinement: desktop 100/100/100/100; mobile 96/100/100/100; mobile CLS 0.028, Speed Index 2.2 s, one initial request, and zero console errors.
+- The refinement was approved for the v1.1.0 release; the original migration source was not removed.
+
+## Release candidate - v1.1.0 CTI Evolution
+
+- Prepared the approved CTI application layer while preserving the 17-dossier historical corpus and static GitHub Pages architecture.
+- Updated public screenshots, README, changelog, release audit, release notes, credits, regression coverage, and AI continuity documents.
+- Publication security excludes raw browser/Lighthouse artifacts, local paths, temporary profiles, logs, credentials, and environment files.
+- Final validation: four project tests, diff check, desktop/mobile Chrome, zero project console errors, and Lighthouse 100/100/100/100 desktop plus 96/100/100/100 mobile.
+- Publication paused after `origin/main` revealed three later README commits; no commit, push, tag, release, or Pages change was performed.

@@ -14,7 +14,7 @@ This directory is the official continuity source for the WAR ROOM. Any AI can sa
 
 ## Governance
 
-- `.ai/` is the canonical AI context. Root documentation links here rather than duplicating operational state.
+- `.ai/` is the canonical AI context. Public documentation may remain focused on the product while this directory owns operational continuity.
 - `README.md` remains the public portfolio guide; `.ai/` is the internal handoff and decision layer.
 - Update `CURRENT_STATE.md` and `MEMORY_LOG.md` after every completed sprint. Add reusable lessons to `KNOWLEDGE_BASE.md`.
 - Do not change episodes, visual identity, layout, animations, or release assets during a documentation-only task.

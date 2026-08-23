@@ -27,6 +27,18 @@ backups/
 .vscode/
 .idea/
 *.code-workspace
+.env
+.env.*
+!.env.example
+
+# Evidências locais de auditoria e navegador
+audit/
+.lighthouseci/
+playwright-report/
+test-results/
+*.har
+*.trace
+*chrome-user-data*/
 
 # Logs
 *.log
