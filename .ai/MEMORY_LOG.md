@@ -59,10 +59,10 @@ This is the chronological project memory. `CURRENT_STATE.md` is the fast snapsho
 - Four verification scripts pass. Lighthouse refinement: desktop 100/100/100/100; mobile 96/100/100/100; mobile CLS 0.028, Speed Index 2.2 s, one initial request, and zero console errors.
 - The refinement was approved for the v1.1.0 release; the original migration source was not removed.
 
-## Release candidate - v1.1.0 CTI Evolution
+## Release - v1.1.0 CTI Evolution
 
-- Prepared the approved CTI application layer while preserving the 17-dossier historical corpus and static GitHub Pages architecture.
+- Published the approved CTI application layer while preserving the 17-dossier historical corpus and static GitHub Pages architecture.
 - Updated public screenshots, README, changelog, release audit, release notes, credits, regression coverage, and AI continuity documents.
-- Publication security excludes raw browser/Lighthouse artifacts, local paths, temporary profiles, logs, credentials, and environment files.
+- Publication security excluded raw browser/Lighthouse artifacts, local paths, temporary profiles, logs, credentials, and environment files.
 - Final validation: four project tests, diff check, desktop/mobile Chrome, zero project console errors, and Lighthouse 100/100/100/100 desktop plus 96/100/100/100 mobile.
-- Publication paused after `origin/main` revealed three later README commits; no commit, push, tag, release, or Pages change was performed.
+- Three later README commits from `origin/main` were reviewed, explicitly confirmed, preserved during a manual README integration, and retained in the published history.

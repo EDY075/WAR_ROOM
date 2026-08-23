@@ -3,11 +3,11 @@
 | Field | State |
 | --- | --- |
 | Version | `v1.1.0` |
-| Status | Release candidate ready; publication paused for remote-main confirmation |
-| Last sprint | CTI Evolution release preparation |
+| Status | Published — CTI Evolution |
+| Last sprint | CTI Evolution release |
 | Last product sprint | v1.0.2 final consistency pass |
-| Last release | [WAR ROOM v1.0.3](https://github.com/EDY075/WAR_ROOM/releases/tag/v1.0.3) |
-| Last commit | Local base `1fb3277`; remote `main` currently ends at `e33235b` |
+| Last release | [WAR ROOM v1.1.0](https://github.com/EDY075/WAR_ROOM/releases/tag/v1.1.0) |
+| Last commit | v1.1.0 publication record on `main`; resolve with `git log -1 --oneline` |
 | Pages | https://edy075.github.io/WAR_ROOM/ |
 
 ## Current product state
@@ -30,4 +30,4 @@
 
 ## Frozen scope
 
-The historical corpus and deployment model remain frozen. Do not publish until the later remote README commits are confirmed and integrated without conflict.
+The historical corpus and deployment model remain frozen until a new explicitly approved scope.

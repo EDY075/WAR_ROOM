@@ -2,7 +2,7 @@
 
 <p align="center">
   <a href="https://edy075.github.io/WAR_ROOM/"><img src="https://img.shields.io/badge/Open%20on-GitHub%20Pages-c9a84c?style=for-the-badge&logo=githubpages&logoColor=white" alt="Abrir site no GitHub Pages"></a>
-  <img src="https://img.shields.io/badge/Release%20candidate-v1.1.0-171717?style=for-the-badge&logo=github&logoColor=white" alt="Release candidate v1.1.0">
+  <a href="https://github.com/EDY075/WAR_ROOM/releases/tag/v1.1.0"><img src="https://img.shields.io/badge/Release-v1.1.0-171717?style=for-the-badge&logo=github&logoColor=white" alt="Release v1.1.0"></a>
   <img src="https://img.shields.io/badge/17-CTI%20Dossiers-c9a84c?style=for-the-badge" alt="17 CTI dossiers">
   <img src="https://img.shields.io/badge/Static-HTML%20%2B%20CSS%20%2B%20JavaScript-171717?style=for-the-badge" alt="Static web stack">
 </p>

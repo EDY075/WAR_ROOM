@@ -2,7 +2,7 @@
 
 ## v1.1.x status
 
-The CTI Evolution release candidate is complete; publication awaits safe integration of later remote README commits. No additional feature change is scheduled without a new user-approved scope.
+The CTI Evolution release is complete. No additional feature change is scheduled without a new user-approved scope.
 
 ## Future candidates (not committed)
 

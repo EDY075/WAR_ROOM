@@ -10,7 +10,7 @@ Preserve a cinematic, accessible, and performant investigation experience while 
 
 ## Current release
 
-`v1.1.0 — CTI Evolution` is the approved release candidate. Publication is paused while three later `origin/main` README commits are reviewed; the latest public release remains `v1.0.3`. The candidate adds global search, synchronized investigative navigation, CTI explorers, deep links, an operational chronology, accessibility refinements, and release evidence without rewriting the 17-dossier historical corpus.
+`v1.1.0 — CTI Evolution` is public on GitHub Pages and GitHub Releases. It adds global search, synchronized investigative navigation, CTI explorers, deep links, an operational chronology, accessibility refinements, and release evidence without rewriting the 17-dossier historical corpus.
 
 ## Content model
 
