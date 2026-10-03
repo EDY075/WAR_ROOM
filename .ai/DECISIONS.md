@@ -14,4 +14,12 @@
 
 ## Decision protocol
 
+## Experience evolution — 2026-10-03 (authorized scope)
+
+- ADR-010: A single modal dossier workspace has five tabs (Resumo, História, Análise, Mídia, Fontes). Existing cards, map, timeline, search and narrative actions route to this workspace. Lightbox remains a nested media viewer only. Historical EPISODES/STORIES/INTEL_INDEX remain canonical.
+- ADR-011: Keep static delivery. Extract new experience styling/behavior into relative `assets/css/experience.css` and `assets/js/experience.js`; no framework, backend or production dependency. URL hash preserves legacy dossier IDs; query parameters preserve filters, search, order, tab and pilot chapter. Browser history restores context and focus.
+- ADR-012: Editorial order retains episode IDs and corpus sequence. Chronological order uses the first documented year of an interval, then editorial sequence as stable tie-breaker. Complete intervals remain visible; no inferred event date.
+- ADR-013: NotPetya is a six-chapter reading-first pilot. Manual navigation is default; animated propagation has a pause control. Illustrations are labeled reconstructions, diagrams are schematic, archival media retain credits. Narration is offered only if a real file exists. Heavy video loads after explicit choice.
+- ADR-014: Decorative loops stop for reduced effects, OS reduced motion, hidden document and modal reading. Grain is one reusable static small texture. Natural scroll and content-visibility stay intact.
+
 Record a new ADR entry before changing architecture, deployment, dependencies, data model, historical corpus, or visual identity. Small scoped fixes belong in `MEMORY_LOG.md` unless they establish a reusable rule.

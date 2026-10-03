@@ -459,6 +459,7 @@ body.effects-reduced #grain-overlay,body.effects-reduced #ambient-particles,body
 .intel-chip{min-height:44px}
 .loading-content{height:456px;min-height:456px}
 </style>
+<link rel="stylesheet" href="assets/css/experience.css">
 </head>
 <body>
 <a href="#main-content" class="skip-link">Pular para conteúdo</a>
@@ -497,21 +498,12 @@ body.effects-reduced #grain-overlay,body.effects-reduced #ambient-particles,body
 <img id="lb-image" class="lb-image-layer" src="" alt="Galeria de imagens do ataque" width="1280" height="720">
 <img id="lb-image-next" class="lb-image-layer" src="" alt="" width="1280" height="720" aria-hidden="true">
 </div>
+<p id="lb-status" role="status" aria-live="polite"></p>
 <div id="lb-caption" class="lightbox-caption"></div>
 </div>
 <button id="lb-close" aria-label="Fechar visualizador">✕</button>
 <div id="lb-counter" aria-live="polite"></div>
 </div>
-<div class="story-modal" id="story-modal" role="dialog" aria-modal="true" aria-label="História completa">
-<div class="story-overlay" id="story-overlay"></div>
-<div class="story-container">
-<div class="story-header">
-<div><div class="story-header-title" id="st-title"></div>
-<div class="story-header-meta" id="st-meta"></div></div>
-<button class="story-close" id="st-close">✕ Fechar</button>
-</div>
-<div class="story-body" id="st-body"></div>
-</div></div>
 <header class="site-header" id="site-header">
 <nav class="nav-bar" id="nav-bar" aria-label="Navegação principal">
 <div class="nav-logo">WAR <span>ROOM</span></div>
@@ -593,10 +585,10 @@ body.effects-reduced #grain-overlay,body.effects-reduced #ambient-particles,body
       <div class="intel-hotspots-mobile" id="intel-hotspots-mobile" aria-label="Campanhas no mapa"></div>
       <div class="intel-map-legend"><span><b class="legend-dot critical"></b>Impacto crítico</span><span><b class="legend-dot high"></b>Impacto alto</span><span>Clique em um sinal para filtrar o dossiê</span></div>
     </div>
-    <div class="intel-timeline-card"><div class="intel-map-header"><span>Linha do tempo dos dossiês</span><span>1988 → 2025</span></div><div class="intel-global-timeline" id="intel-global-timeline" aria-label="Linha do tempo global interativa"></div></div>
+    <div class="intel-timeline-card"><div class="intel-map-header"><span>Cronologia · início documentado</span><span>1988–2025</span></div><div class="intel-global-timeline" id="intel-global-timeline" aria-label="Linha do tempo global interativa"></div></div>
     <div class="intel-filters" aria-label="Filtros da central de inteligência">
       <label>País<select id="intel-country"><option value="">Todos</option></select></label>
-      <label>Ano<select id="intel-year"><option value="">Todos</option></select></label>
+      <label>Ano inicial<select id="intel-year"><option value="">Todos</option></select></label>
       <label>Categoria<select id="intel-category"><option value="">Todas</option></select></label>
       <label>Impacto<select id="intel-impact"><option value="">Todos</option></select></label>
       <label>Grupo<select id="intel-group"><option value="">Todos</option></select></label>
@@ -619,15 +611,16 @@ body.effects-reduced #grain-overlay,body.effects-reduced #ambient-particles,body
 </aside>
 <section class="episodes-section" id="episodes" aria-label="Cronologia dos ataques">
 <div class="section-header">
-<h2>Cronologia dos ataques</h2>
+<h2>Arquivo de episódios</h2>
 <p>1988 — 2025 • Dezessete episódios</p>
 </div>
+<div class="archive-toolbar"><label for="episode-order">Organizar episódios <select id="episode-order"><option value="editorial">Ordem editorial</option><option value="chronological">Ordem cronológica</option></select></label><p id="order-criterion">Sequência editorial original. A cronologia usa o primeiro ano documentado de cada campanha.</p></div>
 <div class="episodes-list" id="episodes-list"></div></section>
 </main>
 <button class="back-to-top" id="back-to-top" type="button" aria-label="Voltar ao topo">↑ <span>Topo</span></button>
 <footer class="footer" id="footer" role="contentinfo">
 <div class="footer-logo">WAR ROOM</div>
-<p class="footer-credit"><strong>EDY</strong> — <a href="https://instagram.com/edmilson_zn_" target="_blank" rel="noopener" class="footer-link">@edmilson_zn_</a></p>
+<p class="footer-credit"><strong>EDY</strong> — <a href="https://instagram.com/edmilson_zn_" target="_blank" rel="noopener noreferrer" class="footer-link">@edmilson_zn_</a></p>
 <p>Uma produção independente dedicada à educação em cibersegurança. Todos os dados são provenientes de fontes públicas: FBI, CISA, NIST, MITRE, Kaspersky e relatórios jornalísticos.</p>
 <div class="footer-sources">
 <span>FBI Cyber Division</span><span>CISA</span><span>NIST NVD</span>
@@ -637,6 +630,7 @@ body.effects-reduced #grain-overlay,body.effects-reduced #ambient-particles,body
 <div id="sc-player" style="position:fixed;top:0;left:0;width:1px;height:1px;opacity:0;overflow:hidden;pointer-events:none;z-index:-1" aria-hidden="true">
 <iframe id="sc-frame" src="about:blank" allow="autoplay" style="width:480px;height:360px;border:none" title="SoundCloud" sandbox="allow-scripts allow-same-origin allow-presentation allow-popups"></iframe>
 </div>
+<script src="assets/js/experience.js"></script>
 <script>
 "use strict";
 var EPISODES=[
@@ -775,19 +769,19 @@ var INTEL_INDEX=[
 var intelTechnique="";
 var intelExplorerState={type:"",value:""};
 var intelExplorerQueries={mitre:"",group:"",ioc:""};
-function intelUnique(key){return INTEL_INDEX.map(function(item){return item[key];}).filter(function(value,index,list){return list.indexOf(value)===index;}).sort();}
+function intelUnique(key){return INTEL_INDEX.map(function(item){return key==="year"?intelStartYear(item):item[key];}).filter(function(value,index,list){return list.indexOf(value)===index;}).sort();}
 function intelFillSelect(id,key){var select=byId(id);if(!select)return;intelUnique(key).forEach(function(value){var option=document.createElement("option");option.value=value;option.textContent=intelLabel(value);select.appendChild(option);});}
 function intelProfile(id){return INTEL_INDEX.find(function(item){return item.id===id;});}
 function intelValues(key){return INTEL_INDEX.reduce(function(out,item){return out.concat(item[key]||[]);},[]).filter(function(value,index,list){return list.indexOf(value)===index;}).sort();}
 function intelEscape(value){return String(value).replace(/[&<>"']/g,function(char){return {"&":"&amp;","<":"&lt;",">":"&gt;","\"":"&quot;","'":"&#039;"}[char];});}
-function intelMatchesExplorer(item){if(!intelExplorerState.value)return true;if(intelExplorerState.type==="mitre")return item.mitre.indexOf(intelExplorerState.value)>=0;if(intelExplorerState.type==="group")return item.group===intelExplorerState.value;if(intelExplorerState.type==="ioc")return item.iocs.indexOf(intelExplorerState.value)>=0;return true;}
-function intelFiltered(){var fields=[{id:"intel-country",key:"country"},{id:"intel-year",key:"year"},{id:"intel-category",key:"category"},{id:"intel-impact",key:"impact"},{id:"intel-group",key:"group"},{id:"intel-malware",key:"malware"}];return INTEL_INDEX.filter(function(item){return fields.every(function(field){var control=byId(field.id);return !control||!control.value||item[field.key]===control.value;})&&intelMatchesExplorer(item);});}
+function intelMatchesExplorer(item){var query=normalizedSearch(WarRoomExperience.query());if(query){var ep=EPISODES.find(function(e){return e.id===item.id;});if(normalizedSearch([ep.title,ep.subtitle,ep.summary,item.country,item.year,item.category,item.group,item.malware,item.mitre.join(" "),item.iocs.join(" ")].join(" ")).indexOf(query)<0)return false;}if(!intelExplorerState.value)return true;if(intelExplorerState.type==="mitre")return item.mitre.indexOf(intelExplorerState.value)>=0;if(intelExplorerState.type==="group")return item.group===intelExplorerState.value;if(intelExplorerState.type==="ioc")return item.iocs.indexOf(intelExplorerState.value)>=0;return true;}
+function intelFiltered(){var fields=[{id:"intel-country",key:"country"},{id:"intel-year",key:"year"},{id:"intel-category",key:"category"},{id:"intel-impact",key:"impact"},{id:"intel-group",key:"group"},{id:"intel-malware",key:"malware"}];return INTEL_INDEX.filter(function(item){return fields.every(function(field){var control=byId(field.id);return !control||!control.value||(field.key==="year"?intelStartYear(item):item[field.key])===control.value;})&&intelMatchesExplorer(item);});}
 function intelSetCardPointer(card,event){var rect=card.getBoundingClientRect();card.style.setProperty("--ix",(event.clientX-rect.left)+"px");card.style.setProperty("--iy",(event.clientY-rect.top)+"px");}
 function explorerMatchCount(type,value){return INTEL_INDEX.filter(function(item){return type==="mitre"?item.mitre.indexOf(value)>=0:type==="group"?item.group===value:item.iocs.indexOf(value)>=0;}).length;}
 function renderExplorerList(type,values,containerId,countId){var container=byId(containerId),query=normalizedSearch(intelExplorerQueries[type]);if(!container)return;var filtered=values.filter(function(value){return normalizedSearch(value).indexOf(query)>=0;});byId(countId).textContent=intelExplorerState.type===type&&intelExplorerState.value?explorerMatchCount(type,intelExplorerState.value)+"×":filtered.length;container.innerHTML=filtered.length?filtered.map(function(value){var active=intelExplorerState.type===type&&intelExplorerState.value===value;return '<button class="intel-chip" type="button" data-explorer-type="'+type+'" data-explorer-value="'+intelEscape(value)+'" aria-pressed="'+active+'"><span>'+intelEscape(intelLabel(value))+'</span><b>'+explorerMatchCount(type,value)+'</b></button>';}).join(""):'<span class="explorer-empty">Nenhum item encontrado.</span>';}
 function renderIntelExplorers(){renderExplorerList("mitre",intelValues("mitre"),"mitre-explorer","mitre-count");renderExplorerList("group",intelUnique("group"),"group-explorer","group-count");renderExplorerList("ioc",intelValues("iocs"),"ioc-explorer","ioc-count");}
 function sharedSignals(a,b){var signals=[];if(a.group===b.group)signals.push("grupo: "+intelLabel(a.group));if(a.category===b.category)signals.push("categoria: "+intelLabel(a.category));if(a.country===b.country)signals.push("região: "+intelLabel(a.country));a.mitre.filter(function(value){return b.mitre.indexOf(value)>=0;}).forEach(function(value){signals.push("MITRE "+value);});return signals;}
-function renderCampaignRelations(){var flow=byId("relation-flow"),context=byId("relation-context"),active=selectedProfile();if(!flow)return;flow.innerHTML=INTEL_INDEX.map(function(item){var ep=EPISODES.find(function(entry){return entry.id===item.id;}),signals=active&&active.id!==item.id?sharedSignals(active,item):[],state=item.id===selectedIntelId?" selected":active?(signals.length?" related":" unrelated"):"";return '<button type="button" class="relation-node'+state+'" data-relation-id="'+item.id+'" aria-pressed="'+(item.id===selectedIntelId)+'"><strong>'+intelEscape(ep.title)+'</strong><span>'+item.year+' · '+intelEscape(intelLabel(item.group))+'</span></button>';}).join("");flow.querySelectorAll("[data-relation-id]").forEach(function(button){button.addEventListener("click",function(){["intel-country","intel-year","intel-category","intel-impact","intel-group","intel-malware"].forEach(function(id){byId(id).value="";});intelExplorerState={type:"",value:""};intelTechnique="";selectedIntelId=button.dataset.relationId;setHashForDossier(selectedIntelId);renderIntelExplorers();renderIntelligence();renderIntelTimeline();renderCampaignRelations();});});if(!context)return;if(!active){context.textContent="Selecione uma campanha para comparar grupo, categoria, região e técnicas MITRE.";return;}var related=INTEL_INDEX.filter(function(item){return item.id!==active.id&&sharedSignals(active,item).length;});context.innerHTML='<strong>'+intelEscape(EPISODES.find(function(ep){return ep.id===active.id;}).title)+'</strong> · '+related.length+' campanhas com metadados compartilhados. Selecione uma conexão para investigar os sinais em comum.';}
+function renderCampaignRelations(){var flow=byId("relation-flow"),context=byId("relation-context"),active=selectedProfile();if(!flow)return;flow.innerHTML=INTEL_INDEX.map(function(item){var ep=EPISODES.find(function(entry){return entry.id===item.id;}),signals=active&&active.id!==item.id?sharedSignals(active,item):[],state=item.id===selectedIntelId?" selected":active?(signals.length?" related":" unrelated"):"";return '<button type="button" class="relation-node'+state+'" data-relation-id="'+item.id+'" aria-pressed="'+(item.id===selectedIntelId)+'"><strong>'+intelEscape(ep.title)+'</strong><span>'+ep.year+' · '+intelEscape(intelLabel(item.group))+'</span></button>';}).join("");flow.querySelectorAll("[data-relation-id]").forEach(function(button){button.addEventListener("click",function(){WarRoomExperience.relate(button.dataset.relationId);});});if(!context)return;if(!active){context.textContent="Selecione uma campanha para comparar grupo, categoria, região e técnicas MITRE.";return;}var related=INTEL_INDEX.filter(function(item){return item.id!==active.id&&sharedSignals(active,item).length;});context.innerHTML='<strong>'+intelEscape(EPISODES.find(function(ep){return ep.id===active.id;}).title)+'</strong> · '+related.length+' campanhas com metadados compartilhados. Selecione uma conexão para investigar os sinais em comum.';}
 function initIntelligenceCenter(){if(!byId("intelligence"))return;["intel-country","intel-year","intel-category","intel-impact","intel-group","intel-malware"].forEach(function(id){intelFillSelect(id,id.replace("intel-",""));byId(id).addEventListener("change",function(){renderIntelligence();renderIntelTimeline();});});[["mitre-search","mitre"],["group-search","group"],["ioc-search","ioc"]].forEach(function(pair){byId(pair[0]).addEventListener("input",function(){intelExplorerQueries[pair[1]]=this.value;renderIntelExplorers();});});byId("intelligence").addEventListener("click",function(event){var chip=event.target.closest("[data-explorer-type]");if(!chip)return;var type=chip.dataset.explorerType,value=chip.dataset.explorerValue,active=intelExplorerState.type===type&&intelExplorerState.value===value;intelExplorerState=active?{type:"",value:""}:{type:type,value:value};intelTechnique=intelExplorerState.type==="mitre"?intelExplorerState.value:"";renderIntelExplorers();renderIntelligence();renderIntelTimeline();});byId("intel-total").textContent=INTEL_INDEX.length;byId("intel-groups-total").textContent=intelUnique("group").length;byId("intel-reset").addEventListener("click",function(){["intel-country","intel-year","intel-category","intel-impact","intel-group","intel-malware"].forEach(function(id){byId(id).value="";});intelTechnique="";intelExplorerState={type:"",value:""};renderIntelExplorers();renderIntelligence();renderIntelTimeline();renderCampaignRelations();});renderIntelTimeline();renderIntelExplorers();renderIntelligence();renderCampaignRelations();}
 
 // ===== DOM REFS =====
@@ -842,7 +836,7 @@ document.addEventListener("keydown",function(e){
 function initApp(){
   if(appInitialized) return;
   appInitialized=true;
-  renderEpisodes();initIntelligenceCenter();
+  renderEpisodes();initIntelligenceCenter();WarRoomExperience.init();
   if(!prefersReducedMotion){initWaveCanvas();if(!isLowPerf){initGrain();initHeroParticles();initAmbientParticles();initMouseTracking();}}
   initIntersectionObserver();initLightbox();initAudio();initNav();initHeroParallax();initScrollNav();initJourneyProgress();initHamburger();initOperationalLayer();
   updateLoaderProgress();
@@ -852,6 +846,7 @@ var apl = false;
 var anodes = [];
 var ibi = [];
 var ibix = 0;
+var lbRequest=0,lbDossier="",lbTimeout=null;
 var graf = null;
 var wraf = null;
 var mraf = null;
@@ -920,25 +915,19 @@ function renderEpisodes(){
     var hi = ep.previewImage || ((ep.images && ep.images.length) ? ep.images[0] : "");
     var isModern = !!ep.cover;
     var profile=intelProfile(ep.id),previous=index>0?EPISODES[index-1]:null,next=index<EPISODES.length-1?EPISODES[index+1]:null;
-    var bannerClass = isModern ? " dossier-banner-" + ep.cover : " dossier-banner-classic";
-    var bannerCode = isModern ? ep.coverCode : "HISTORICAL DOSSIER";
-    var intelligence = '<section class="detail-section"><h4>Inteligência pública</h4><p><strong>MITRE ATT&CK:</strong> ' + (ep.mitre || "Não confirmado publicamente para este capítulo.") + '</p><p><strong>Grupos envolvidos:</strong> ' + (ep.groups || ep.attribution || "Não divulgado publicamente.") + '</p><p><strong>IOCs públicos:</strong> ' + (ep.iocs || "Não divulgado publicamente.") + '</p></section><section class="detail-section"><h4>Lições aprendidas</h4><p>' + (ep.lessons || ep.defense || "Não divulgado publicamente.") + '</p></section>';
-    var references = ep.references && ep.references.length ? '<section class="detail-section"><h4>Referências</h4><ul class="intel-list">' + ep.references.map(function(ref){return '<li><span class="reference-kind">' + (ref.kind || "Fonte oficial / pública") + '</span><a href="' + ref.href + '" target="_blank" rel="noopener noreferrer">' + ref.title + ' ↗</a></li>';}).join("") + '</ul></section>' : '<section class="detail-section"><h4>Referências</h4><p>Não divulgado publicamente no material de origem deste capítulo.</p></section>';
-    var credits = ep.mediaCredits && ep.mediaCredits.length ? '<section class="detail-section"><h4>Créditos visuais</h4><ul class="intel-list">' + ep.mediaCredits.map(function(item){return '<li><a href="' + item.href + '" target="_blank" rel="noopener noreferrer">' + item.title + ' ↗</a></li>';}).join("") + '</ul></section>' : '';
     return '<article class="episode-entry" id="dossier-' + ep.id + '" data-episode="' + ep.id + '" data-modern="' + isModern + '"><div class="episode-grid"><div class="episode-image-wrap">'
       + (hi ? '<div class="episode-image-blur"></div><img class="episode-image" src="' + hi + '" alt="Imagem de contexto: ' + ep.title + '" width="1600" height="900" loading="lazy" decoding="async" fetchpriority="low">' : '<div class="episode-image-placeholder"><span class="pl-year">' + ep.year + '</span><span class="pl-title">' + ep.title + '</span><span class="pl-ref">Imagem histórica não divulgada</span></div>')
-      + '</div><div class="episode-info"><div class="episode-progress"><div class="episode-progress-copy"><span>Episódio ' + ep.num + ' de ' + EPISODES.length + '</span><span>' + Math.round((index+1)/EPISODES.length*100) + '%</span></div><div class="episode-progress-track" role="progressbar" aria-label="Progresso da cronologia" aria-valuemin="1" aria-valuemax="' + EPISODES.length + '" aria-valuenow="' + (index+1) + '"><span style="transform:scaleX(' + ((index+1)/EPISODES.length) + ')"></span></div></div><div class="episode-kicker"><span class="episode-number">' + ep.num + '</span><span class="episode-year">' + ep.year + '</span><span class="episode-type-badge">' + ep.category + '</span></div><h3 class="episode-title">' + ep.title + '</h3><p class="episode-subtitle">' + ep.subtitle + '</p><p class="episode-summary">' + ep.summary + '</p><div class="episode-ops"><dl class="episode-ops-grid"><div><dt>Ano / região</dt><dd>' + ep.year + ' · ' + ep.region + '</dd></div><div><dt>Categoria</dt><dd>' + ep.category + '</dd></div><div><dt>Ator / grupo</dt><dd>' + ep.attribution + '</dd></div><div><dt>Severidade</dt><dd class="' + intelSeverityClass(profile.impact) + '">' + intelLabel(profile.impact) + '</dd></div></dl><div class="episode-techniques">' + profile.mitre.map(function(value){return '<span>' + value + '</span>';}).join("") + '</div></div><div class="episode-actions"><button type="button" class="episode-btn episode-btn-primary toggle-detail" aria-controls="episode-detail-' + ep.id + '" aria-expanded="false">Abrir dossiê</button>'
-      + (ep.images && ep.images.length ? '<button type="button" class="episode-btn episode-btn-secondary view-gallery">Galeria</button>' : '') + '<button type="button" class="episode-btn episode-btn-secondary view-story">História</button></div><nav class="episode-nav" aria-label="Incidentes adjacentes">' + (previous?'<button type="button" data-episode-nav="' + previous.id + '">← ' + previous.title + '</button>':'<button type="button" disabled>← Início</button>') + (next?'<button type="button" data-episode-nav="' + next.id + '">' + next.title + ' →</button>':'<button type="button" disabled>Fim →</button>') + '</nav></div></div><div class="episode-timeline"><div class="episode-timeline-dot"></div><div class="episode-timeline-line"></div><span class="episode-timeline-label">' + ep.attribution + '</span></div><div class="episode-detail" id="episode-detail-' + ep.id + '"><div class="episode-detail-inner"><div class="dossier-detail-banner' + bannerClass + '"><span>' + ep.region + ' · ' + ep.confidence + '</span><strong>' + bannerCode + '</strong></div><div class="detail-column"><section class="detail-section"><h4>Cronologia</h4><ul>'
-      + ep.timeline.map(function(t){return '<li><span class="tl-date">' + t.date + '</span><span>' + t.event + '</span></li>';}).join("") + '</ul></section>' + (ep.curiosity ? '<section class="detail-section"><h4>Contexto</h4><p>' + ep.curiosity + '</p></section>' : '') + '</div><div class="detail-column"><section class="detail-section"><h4>Impacto</h4><p><strong>Econômico:</strong> ' + ep.economic + '</p><p><strong>Social:</strong> ' + ep.social + '</p><p><strong>Atribuição:</strong> ' + ep.attribution + '</p><p><strong>Alvo:</strong> ' + ep.target + '</p></section><section class="detail-section"><h4>Defesa</h4><p>' + ep.defense + '</p></section><section class="detail-section"><h4>Resposta institucional</h4><p>' + ep.legislation + '</p></section>' + intelligence + references + credits + '</div></div></div></article>';
+      + '</div><div class="episode-info"><div class="episode-progress"><div class="episode-progress-copy"><span>Episódio ' + ep.num + ' de ' + EPISODES.length + '</span><span>' + Math.round((index+1)/EPISODES.length*100) + '%</span></div><div class="episode-progress-track" role="progressbar" aria-label="Progresso da cronologia" aria-valuemin="1" aria-valuemax="' + EPISODES.length + '" aria-valuenow="' + (index+1) + '"><span style="transform:scaleX(' + ((index+1)/EPISODES.length) + ')"></span></div></div><div class="episode-kicker"><span class="episode-number">' + ep.num + '</span><span class="episode-year">' + ep.year + '</span><span class="episode-type-badge">' + ep.category + '</span></div><h3 class="episode-title">' + ep.title + '</h3><p class="episode-subtitle">' + ep.subtitle + '</p><p class="episode-summary">' + ep.summary + '</p><div class="episode-ops"><dl class="episode-ops-grid"><div><dt>Ano / região</dt><dd>' + ep.year + ' · ' + ep.region + '</dd></div><div><dt>Categoria</dt><dd>' + ep.category + '</dd></div><div><dt>Ator / grupo</dt><dd>' + ep.attribution + '</dd></div><div><dt>Severidade</dt><dd class="' + intelSeverityClass(profile.impact) + '">' + intelLabel(profile.impact) + '</dd></div></dl><div class="episode-techniques">' + profile.mitre.map(function(value){return '<span>' + value + '</span>';}).join("") + '</div></div><div class="episode-actions"><button type="button" class="episode-btn episode-btn-primary toggle-detail" aria-haspopup="dialog">Abrir dossiê</button>'
+      + (ep.images && ep.images.length ? '<button type="button" class="episode-btn episode-btn-secondary view-gallery">Galeria</button>' : '') + '<button type="button" class="episode-btn episode-btn-secondary view-story">História</button></div><nav class="episode-nav" aria-label="Incidentes adjacentes">' + (previous?'<button type="button" data-episode-nav="' + previous.id + '">' + previous.title + '</button>':'<button type="button" disabled>Início</button>') + (next?'<button type="button" data-episode-nav="' + next.id + '">' + next.title + '</button>':'<button type="button" disabled>Fim</button>') + '</nav></div></div><div class="episode-timeline"><div class="episode-timeline-dot"></div><div class="episode-timeline-line"></div><span class="episode-timeline-label">' + ep.attribution + '</span></div></article>';
   }).join("");
 
   el.addEventListener("click", function(e){
     var en = e.target.closest(".episode-entry");
     if(!en) return;
     var tb = e.target.closest(".toggle-detail");
-    if(tb){ var dt = en.querySelector(".episode-detail"), op = dt.classList.contains("open"); dt.classList.toggle("open"); tb.textContent = op ? "Ver detalhes" : "Ocultar detalhes"; tb.setAttribute("aria-expanded", op ? "false" : "true"); }
+    if(tb){ openIntelEpisode(en.dataset.episode); }
     var gb = e.target.closest(".view-gallery");
-    if(gb){ openLB(en.dataset.episode, 0); }
+    if(gb){ WarRoomExperience.open(en.dataset.episode,"media"); }
     var sb = e.target.closest(".view-story");
     if(sb){ openStory(en.dataset.episode); }
     var nb = e.target.closest("[data-episode-nav]");
@@ -955,7 +944,7 @@ function initWaveCanvas(){
   if(!wc || prefersReducedMotion) return;
   var ctx = wc.getContext("2d");
   var wScale = isLowPerf ? 0.5 : 0.75;
-  var w = 0, h = 0, t = 0, lastFrame = 0, active = true;
+  var w = 0, h = 0, t = 0, lastFrame = 0, active = true, waveTimer = null;
   var nodes = [[.17,.42],[.27,.31],[.39,.48],[.49,.32],[.58,.46],[.68,.28],[.77,.43],[.86,.58],[.62,.66],[.43,.67]];
   var routes = [[0,1],[1,3],[1,2],[2,4],[3,5],[4,5],[4,6],[5,6],[6,7],[4,8],[8,9],[9,2]];
 
@@ -987,8 +976,9 @@ function initWaveCanvas(){
     ctx.beginPath();ctx.moveTo(from.x,from.y);ctx.quadraticCurveTo(midX,midY,to.x,to.y);ctx.stroke();ctx.restore();
   }
   function draw(now){
-    if(!active || document.hidden){wraf=null;return;}
-    wraf=requestAnimationFrame(draw);
+    if(!active || !effectsAllowed()){wraf=null;return;}
+    wraf=null;
+    waveTimer=setTimeout(function(){waveTimer=null;wraf=requestAnimationFrame(draw);},isLowPerf?66:33);
     if(now-lastFrame<(isLowPerf?66:32)) return;
     lastFrame=now;
     ctx.clearRect(0,0,w,h);t+=.012;
@@ -1005,9 +995,8 @@ function initWaveCanvas(){
        ctx.font="10px JetBrains Mono, monospace";ctx.fillStyle="rgba(88,199,216,.44)";ctx.fillText("GLOBAL THREAT ARCHIVE / 17 DOSSIERS",w*.5-96,h*.82);
      }
   }
-  var heroObserver=new IntersectionObserver(function(entries){active=entries[0].isIntersecting;if(active && !wraf)wraf=requestAnimationFrame(draw);},{threshold:0});heroObserver.observe(document.getElementById("hero"));
-  document.addEventListener("visibilitychange",function(){if(!document.hidden && active && !wraf)wraf=requestAnimationFrame(draw);});
-  wraf=requestAnimationFrame(draw);
+  var heroObserver=new IntersectionObserver(function(entries){active=entries[0].isIntersecting;if(active && effectsAllowed() && !wraf && !waveTimer)wraf=requestAnimationFrame(draw);},{threshold:0});heroObserver.observe(document.getElementById("hero"));
+  registerDecorative(function(){if(active&&!wraf&&!waveTimer)wraf=requestAnimationFrame(draw);},function(){cancelAnimationFrame(wraf);clearTimeout(waveTimer);waveTimer=null;wraf=null;});
 }
 
 // ===== HERO PARTICLES =====
@@ -1015,7 +1004,7 @@ function initHeroParticles(){
   var con = document.getElementById("hero-particles");
   if(!con) return;
   if(isLowPerf){ con.style.display = "none"; return; }
-  var count = Math.min(40, Math.floor(window.innerWidth / 20));
+  var count = Math.min(16, Math.floor(window.innerWidth / 90));
   for(var i = 0; i < count; i++){
     var p = document.createElement("div");
     p.className = "particle";
@@ -1038,7 +1027,7 @@ function initAmbientParticles(){
   var h = can.height = isLowPerf ? Math.floor(window.innerHeight * 0.5) : window.innerHeight;
   var pts = [];
   var count = isLowPerf ? Math.min(15, Math.floor(window.innerWidth / 50)) : Math.min(45, Math.floor(window.innerWidth / 35));
-  var raf = null;
+  var raf = null, ambientTimer = null;
 
   window.addEventListener("resize", function(){
     var scale=isLowPerf ? 0.5 : 1;
@@ -1059,7 +1048,7 @@ function initAmbientParticles(){
   }
 
   function draw(){
-    if(document.hidden){raf=null;return;}
+    if(!effectsAllowed()){raf=null;return;}
     ctx.clearRect(0, 0, w, h);
     var paused = document.body.classList.contains("modal-open");
     var t = Date.now() * 0.0006;
@@ -1076,42 +1065,16 @@ function initAmbientParticles(){
       ctx.fillStyle = paused ? "rgba(0,0,0,0)" : "rgba(201,168,76," + p.alpha + ")";
       ctx.fill();
     }
-    raf = requestAnimationFrame(draw);
+    raf=null;
+    ambientTimer=setTimeout(function(){ambientTimer=null;raf=requestAnimationFrame(draw);},33);
   }
-  draw();
-  document.addEventListener("visibilitychange",function(){if(!document.hidden&&!raf)draw();});
+  registerDecorative(function(){if(!raf&&!ambientTimer)draw();},function(){cancelAnimationFrame(raf);clearTimeout(ambientTimer);ambientTimer=null;raf=null;});
 }
 
 // ===== FILM GRAIN =====
 function initGrain(){
-  if(!gc) return;
-  var ctx = gc.getContext("2d");
-  var scale = isLowPerf ? 0.2 : 0.35;
-  var w = gc.width = Math.floor(window.innerWidth * scale);
-  var h = gc.height = Math.floor(window.innerHeight * scale);
-  var fc = 0;
-
-  window.addEventListener("resize", function(){
-    w = gc.width = Math.floor(window.innerWidth * scale);
-    h = gc.height = Math.floor(window.innerHeight * scale);
-  });
-
-  function draw(){
-    if(document.hidden){graf=null;return;}
-    fc++;
-    var skip = document.body.classList.contains("modal-open") ? 8 : 3;
-    if(fc % skip !== 0){ graf = requestAnimationFrame(draw); return; }
-    var id = ctx.createImageData(w, h);
-    var d = id.data;
-    for(var i = 0; i < d.length; i += 4){
-      var v = Math.random() * 255;
-      d[i] = v; d[i+1] = v; d[i+2] = v; d[i+3] = 22;
-    }
-    ctx.putImageData(id, 0, 0);
-    graf = requestAnimationFrame(draw);
-  }
-  draw();
-  document.addEventListener("visibilitychange",function(){if(!document.hidden&&!graf)draw();});
+  if(!gc)return;gc.width=192;gc.height=192;var ctx=gc.getContext("2d"),data=ctx.createImageData(192,192);
+  for(var i=0;i<data.data.length;i+=4){var v=Math.random()*255;data.data[i]=v;data.data[i+1]=v;data.data[i+2]=v;data.data[i+3]=22;}ctx.putImageData(data,0,0);
 }
 
 // ===== MOUSE TRACKING =====
@@ -1125,10 +1088,12 @@ function initMouseTracking(){
   var settledFrames = 0;
 
   document.addEventListener("mousemove", function(e){
+    if(!effectsAllowed()||window.scrollY>window.innerHeight)return;
     tx = e.clientX; ty = e.clientY;
     mg.style.opacity = "1";
     if(!mraf){
       mraf = requestAnimationFrame(function anim(){
+        if(!effectsAllowed()){mraf=null;return;}
         mfc++;
         var skip = document.body.classList.contains("modal-open") ? 3 : 1;
         if(mfc % skip === 0){
@@ -1155,43 +1120,8 @@ function initMouseTracking(){
 
 // ===== INTERSECTION OBSERVER =====
 function initIntersectionObserver(){
-  var obs = new IntersectionObserver(function(entries){
-    entries.forEach(function(e){
-      if(e.isIntersecting){
-        e.target.style.opacity = "1";
-        e.target.style.transform = "translateY(0)";
-        var iw = e.target.querySelector(".episode-image-wrap");
-        var inf = e.target.querySelector(".episode-info");
-        var tl = e.target.querySelector(".episode-timeline");
-        var idx = Array.prototype.indexOf.call(e.target.parentNode.children, e.target);
-        var baseDelay = 100 + Math.min(idx, 11) * 40;
-        if(iw){ setTimeout(function(){ iw.classList.add("visible"); }, baseDelay); }
-        if(inf){ setTimeout(function(){ inf.classList.add("visible"); }, baseDelay + 150); }
-        if(tl){ setTimeout(function(){ tl.classList.add("visible"); }, baseDelay + 300); }
-        obs.unobserve(e.target);
-      }
-    });
-  }, { threshold: 0.12, rootMargin: "0px 0px -40px 0px" });
-
-  $$(".episode-entry").forEach(function(el){
-    el.style.opacity = "0";
-    el.style.transform = "translateY(25px)";
-    el.style.transition = "opacity 0.9s cubic-bezier(0.16,1,0.3,1), transform 0.9s cubic-bezier(0.16,1,0.3,1)";
-    obs.observe(el);
-  });
-
-  // Intro
-  var it = byId("intro-title");
-  var ip1 = byId("intro-p1");
-  var ip2 = byId("intro-p2");
-  var ip3 = byId("intro-p3");
-  var iobs = new IntersectionObserver(function(entries){
-    entries.forEach(function(e){
-      if(e.isIntersecting){ e.target.classList.add("visible"); iobs.unobserve(e.target); }
-    });
-  }, { threshold: 0.3 });
-
-  [it, ip1, ip2, ip3].forEach(function(e){ if(e) iobs.observe(e); });
+  var observer=new IntersectionObserver(function(entries){entries.forEach(function(entry){if(entry.isIntersecting){entry.target.classList.add("visible");observer.unobserve(entry.target);}});},{threshold:0});
+  $$(".episode-entry,.episode-image-wrap,.episode-info,.episode-timeline,#intro-title,#intro-p1,#intro-p2,#intro-p3").forEach(function(element){observer.observe(element);});
 }
 
 // ===== LIGHTBOX =====
@@ -1202,7 +1132,7 @@ function initLightbox(){
 
   document.addEventListener("keydown", function(e){
     if(!lb.classList.contains("active")) return;
-    if(e.key === "Escape") closeLB();
+    if(e.key === "Escape"){e.stopImmediatePropagation();closeLB();}
     if(e.key === "ArrowLeft") prevLB();
     if(e.key === "ArrowRight") nextLB();
     // Focus trap
@@ -1216,7 +1146,7 @@ function initLightbox(){
   });
 
   lb.addEventListener("click", function(e){ if(e.target === lb) closeLB(); });
-  
+
   // Touch swipe for lightbox
   var lbStartX = 0;
   lb.addEventListener("touchstart", function(e){
@@ -1241,56 +1171,38 @@ function openLB(epId, idx){
   var ep = EPISODES.find(function(e){ return e.id === epId; });
   if(!ep || !ep.images || ep.images.length === 0) return;
   ibi = ep.images;
+  lbDossier=epId;
   ibix = idx;
   lb._returnFocus=document.activeElement;
   lb.inert=false;
   lb.setAttribute("aria-hidden","false");
   showLB();
   lb.classList.add("active");
+  if(byId("intel-drawer").classList.contains("open"))byId("intel-drawer").inert=true;
   document.body.classList.add("modal-open");
   document.body.style.overflow = "hidden";
   setTimeout(function(){ lbcl.focus(); }, 100);
 }
 
 function showLB(){
-  if(ibi.length === 0) return;
-  var img = ibi[ibix];
-  var ep = EPISODES.find(function(e){ return e.images && e.images.indexOf(img) >= 0; });
-  var cap = (ep && ep.captions && ep.captions[ibix]) ? ep.captions[ibix] : "";
-  lbc.textContent = cap;
-  lbct.textContent = (ibix + 1) + " / " + ibi.length;
-
-  // Crossfade: preload next image, then fade current out and next in
-  var preloader = new Image();
-  preloader.onload = function(){
-    lbni.src = img;
-    lbni.alt = cap || "Imagem do ataque";
-    // Fade current out / next in
-    lbi.style.opacity = "0";
-    lbni.style.opacity = "1";
-    // After transition, swap layers
-    clearTimeout(lbi._xf);
-    lbi._xf = setTimeout(function(){
-      lbi.src = lbni.src;
-      lbi.alt = lbni.alt;
-      lbi.style.opacity = "1";
-      lbni.style.opacity = "0";
-      lbni.src = "";
-    }, 520);
-  };
-  preloader.src = img;
+  if(!ibi.length)return;var request=++lbRequest,img=ibi[ibix],ep=EPISODES.find(function(e){return e.id===lbDossier;}),cap=(ep&&ep.captions&&ep.captions[ibix])||"Arquivo visual";if(lbDossier==="notpetya"&&ibix===0)cap="Família Petya · autor desconhecido / Commons, domínio público. A ficha descreve Petya original (captura de 2021); contexto, não prova do NotPetya de 2017.";
+  clearTimeout(lbTimeout);lbc.textContent=cap;lbct.textContent=(ibix+1)+" / "+ibi.length;lbi.hidden=true;lbi.removeAttribute("src");lbni.hidden=true;byId("lb-status").textContent="Carregando arquivo visual...";
+  var preloader=new Image();function failed(){if(request!==lbRequest)return;clearTimeout(lbTimeout);byId("lb-status").textContent="Imagem indisponível. Você pode seguir para outra imagem ou consultar a fonte na aba Fontes.";}
+  preloader.onload=function(){if(request!==lbRequest)return;clearTimeout(lbTimeout);lbi.src=img;lbi.alt=cap;lbi.hidden=false;lbi.style.opacity="1";byId("lb-status").textContent="";};preloader.onerror=failed;lbTimeout=setTimeout(failed,12000);preloader.src=img;
 }
 
 function closeLB(){
+  ++lbRequest;clearTimeout(lbTimeout);
+  var dossierOpen=byId("intel-drawer").classList.contains("open");if(dossierOpen)byId("intel-drawer").inert=false;
   lb.classList.remove("active");
-  document.body.classList.remove("modal-open");
+  if(!dossierOpen)document.body.classList.remove("modal-open");
   document.body.style.overflow = "";
   clearTimeout(lbi._xf);
   lbi.style.opacity = "1";
-  lbi.src = "";
+  lbi.removeAttribute("src");
   lbi.alt = "";
   lbni.style.opacity = "0";
-  lbni.src = "";
+  lbni.removeAttribute("src");
   lbc.textContent = "";
   lbct.textContent = "";
   lb.setAttribute("aria-hidden","true");
@@ -1301,49 +1213,8 @@ function closeLB(){
 function prevLB(){ if(ibi.length === 0) return; ibix = (ibix - 1 + ibi.length) % ibi.length; showLB(); }
 function nextLB(){ if(ibi.length === 0) return; ibix = (ibix + 1) % ibi.length; showLB(); }
 
-// ===== STORY MODAL =====
-var stMod = byId("story-modal");
-var stOver = byId("story-overlay");
-var stClose = byId("st-close");
-var stTitle = byId("st-title");
-var stMeta = byId("st-meta");
-var stBody = byId("st-body");
-
-function closeStory(){
-  stMod.classList.remove("active");
-  document.body.classList.remove("modal-open");
-  document.body.style.overflow = "";
-  stMod.setAttribute("aria-hidden","true");
-  stMod.inert=true;
-  if(stMod._returnFocus&&stMod._returnFocus.focus)stMod._returnFocus.focus();
-}
-
-stOver.addEventListener("click", closeStory);
-stClose.addEventListener("click", closeStory);
-document.addEventListener("keydown", function(e){
-  if(e.key === "Escape" && stMod.classList.contains("active")){ closeStory(); }
-  if(e.key === "Tab" && stMod.classList.contains("active")){
-    var focusable=stMod.querySelectorAll('button,a[href],[tabindex]:not([tabindex="-1"])');
-    if(focusable.length){var first=focusable[0],last=focusable[focusable.length-1];if(e.shiftKey&&document.activeElement===first){e.preventDefault();last.focus();}else if(!e.shiftKey&&document.activeElement===last){e.preventDefault();first.focus();}}
-  }
-});
-
-// Standardized story header for all 17 dossiers; existing narrative HTML remains unchanged.
-function openStory(id){
-  var ep = EPISODES.find(function(e){return e.id === id});
-  if(!ep) return;
-  var txt = STORIES[id] || "<p>História completa não divulgada no material de origem.</p>";
-  stTitle.textContent = ep.num + ". " + ep.title;
-  stMeta.textContent = ep.year + " · " + ep.category + " · " + ep.attribution;
-  stBody.innerHTML = '<div class="dossier-story-hero episode-story-hero' + (ep.cover ? ' dossier-story-hero-' + ep.cover : '') + '"' + (ep.previewImage ? ' style="--story-image:url(' + ep.previewImage + ')"' : '') + '><span>' + ep.region + '</span><strong>' + (ep.cover ? ep.coverCode : "HISTORICAL DOSSIER") + '</strong></div>' + txt;
-  stMod._returnFocus=document.activeElement;
-  stMod.inert=false;
-  stMod.setAttribute("aria-hidden","false");
-  stMod.classList.add("active");
-  document.body.classList.add("modal-open");
-  document.body.style.overflow = "hidden";
-  stClose.focus();
-}
+// Story entry points share the dossier workspace.
+function openStory(id){WarRoomExperience.open(id,"story");}
 
 // ===== AUDIO =====
 // YouTube player vars
@@ -1387,7 +1258,7 @@ function initAudio(){
         if(!act){ act = new (window.AudioContext || window.webkitAudioContext)(); }
         if(act.state === "suspended"){ act.resume(); }
       } catch(e){}
-      
+
       var mode = this.dataset.mode;
       if(apl){
         stopAudio();
@@ -1422,16 +1293,16 @@ function startAudio(){
   try {
     if(!act){ act = new (window.AudioContext || window.webkitAudioContext)(); }
     if(act.state === "suspended"){ act.resume(); }
-    
+
     apl = true;
     saveAudioPlaying(true);
-    
+
     if(soundMode === "ambient"){
       startAmbient();
     } else {
       startSoundtrack();
     }
-    
+
     updateAudioUI();
   } catch(e){ console.warn("[Audio] Error:", e); }
 }
@@ -1598,7 +1469,7 @@ function initSCWidget(){
       if(scWidget._fading) return; // crossfade in progress
       scWidget.getPosition(function(pos){
         scWidget.getDuration(function(dur){
-          // End-of-track: pos within 2s of end → seamless restart (1s crossfade)
+          // End-of-track: pos within 2s of end seamless restart (1s crossfade)
           if(pos > 0 && dur > 0 && dur - pos <= 2000){
             fadeOut(function(){
               scWidget.seekTo(0);
@@ -1691,10 +1562,10 @@ function startAmbient(){
   var ns = act.createBufferSource(); ns.buffer = buf; ns.loop = true;
   var ng = act.createGain(); ng.gain.value = 0.12; ns.connect(ng); ng.connect(mg);
   var pg = act.createGain(); pg.gain.value = 0.15; pg.connect(mg);
-  
+
   ambNodes = [o1, o2, o3, ns, mg, hg, pg];
   o1.start(); o2.start(); o3.start(); ns.start();
-  
+
   // Radar pulse
   (function pulse(){
     if(!apl || soundMode !== "ambient") return;
@@ -1718,26 +1589,19 @@ function stopAmbient(){
 }
 
 // ===== NAVIGATION =====
-function focusIntelligenceCenter(){
-  var intelligence = document.getElementById("intelligence");
-  if(!intelligence) return;
-  intelligence.setAttribute("tabindex", "-1");
-  try { intelligence.focus({preventScroll:true}); } catch(error) { intelligence.focus(); }
-  if(window.history && window.history.replaceState){ window.history.replaceState(null, "", "#intelligence"); }
-  intelligence.scrollIntoView({behavior: prefersReducedMotion ? "auto" : "smooth", block:"start"});
-}
+function focusIntelligenceCenter(){WarRoomExperience.navigate("#intelligence");}
 
 function initNav(){
   nl.forEach(function(link){
     link.addEventListener("click", function(){
       var target = document.getElementById(this.dataset.target);
-      if(target) target.scrollIntoView({behavior: prefersReducedMotion ? "auto" : "smooth", block:"start"});
+      if(target) WarRoomExperience.navigate(this.dataset.target);
     });
   });
   hcta.addEventListener("click", focusIntelligenceCenter);
   if(continueExploring) continueExploring.addEventListener("click", function(){
     var episodes = document.getElementById("episodes");
-    if(episodes) episodes.scrollIntoView({behavior: prefersReducedMotion ? "auto" : "smooth", block:"start"});
+    if(episodes) WarRoomExperience.navigate("episodes");
   });
 }
 
@@ -1757,13 +1621,7 @@ function initScrollNav(){
     if(e) obs.observe(e);
   });
 
-  var lastScroll = 0;
-  var nb = byId("nav-bar");
-  window.addEventListener("scroll", function(){
-    var cs = window.pageYOffset;
-    nb.style.transform = cs > lastScroll && cs > 200 ? "translateY(-100%)" : "translateY(0)";
-    lastScroll = cs;
-  }, { passive: true });
+
 }
 
 function initJourneyProgress(){
@@ -1789,18 +1647,8 @@ function initJourneyProgress(){
 }
 
 function initHeroParallax(){
-  var hbg = byId("hero-parallax-bg");
-  var hs = byId("hero");
-  var hc = hs ? hs.querySelector(".hero-content") : null;
-  window.addEventListener("scroll", function(){
-    var sy = window.pageYOffset;
-    var hh = hs ? hs.offsetHeight : window.innerHeight;
-    if(sy <= hh){
-      var p = sy / hh;
-      if(hbg) hbg.style.setProperty("--hero-scroll-y",(p * 40) + "px");
-      if(hc){ hc.style.opacity = 1 - p * 1.5; hc.style.setProperty("--hero-content-scroll-y",(p * 60) + "px"); }
-    }
-  }, { passive: true });
+  var hbg=byId("hero-parallax-bg"),hs=byId("hero"),hc=hs?hs.querySelector(".hero-content"):null,ticking=false;
+  window.addEventListener("scroll",function(){if(ticking||isMobile||!effectsAllowed())return;ticking=true;requestAnimationFrame(function(){ticking=false;if(!effectsAllowed())return;var sy=window.scrollY,hh=hs?hs.offsetHeight:window.innerHeight;if(sy<=hh){var p=sy/hh;if(hbg)hbg.style.setProperty("--hero-scroll-y",(p*20)+"px");if(hc)hc.style.setProperty("--hero-content-scroll-y",(p*20)+"px");}});},{passive:true});
 }
 
 // ===== HAMBURGER =====
@@ -1818,7 +1666,7 @@ function initHamburger(){
       hb.setAttribute("aria-expanded", "false");
       var t = this.dataset.target;
       var e = document.getElementById(t);
-      if(e) e.scrollIntoView({ behavior: "smooth", block: "start" });
+
     });
   });
 }
@@ -1839,7 +1687,6 @@ function updateLoaderProgress(){
 function intelSeverityClass(value){return value==="Critico"?"impact-critico":"impact-alto";}
 function intelLabel(value){var labels={"Critico":"Crítico","Ira":"Irã","Ucrania":"Ucrânia","Estonia":"Estônia","Grupos pro-Russia":"Grupos pró-Rússia","Atribuicao publica contestada":"Atribuição pública contestada","Exploracao oportunista":"Exploração oportunista","Guerra Hibrida":"Guerra híbrida","Pre-posicionamento":"Pré-posicionamento","Financiamento Estatal":"Financiamento estatal"};return labels[value]||value;}
 function selectedProfile(){return selectedIntelId?intelProfile(selectedIntelId):null;}
-function setHashForDossier(id){if(window.history&&window.history.replaceState)window.history.replaceState(null,"","#dossier-"+id);}
 
 function renderIntelligence(){
   var results=intelFiltered(),container=byId("intel-results"),hotspots=byId("intel-hotspots"),mobileHotspots=byId("intel-hotspots-mobile");
@@ -1848,16 +1695,15 @@ function renderIntelligence(){
   byId("intel-result-count").textContent=results.length+" "+(results.length===1?"dossiê":"dossiês")+explorerLabel;
   container.innerHTML=results.length?results.map(function(item){
     var episode=EPISODES.find(function(ep){return ep.id===item.id;}),selected=item.id===selectedIntelId;
-    return '<button type="button" class="intel-card'+(selected?' selected':'')+'" data-intel-episode="'+item.id+'" aria-pressed="'+selected+'"><div class="intel-card-top"><span>'+intelEscape(item.year)+' • '+intelEscape(intelLabel(item.country))+'</span><span class="'+intelSeverityClass(item.impact)+'">'+intelEscape(intelLabel(item.impact))+'</span></div><h3>'+intelEscape(episode.title)+'</h3><div class="intel-card-meta"><span><b>Categoria</b>'+intelEscape(intelLabel(item.category))+'</span><span><b>Ator / grupo</b>'+intelEscape(intelLabel(item.group))+'</span><span><b>Malware</b>'+intelEscape(item.malware)+'</span><span><b>MITRE ATT&CK</b>'+item.mitre.join(" · ")+'</span></div><div class="intel-card-footer"><span>Dossiê completo</span><span class="intel-card-action">Investigar →</span></div></button>';
+    return '<button type="button" class="intel-card'+(selected?' selected':'')+'" data-intel-episode="'+item.id+'" aria-pressed="'+selected+'"><div class="intel-card-top"><span>'+intelEscape(episode.year)+' • '+intelEscape(intelLabel(item.country))+'</span><span class="'+intelSeverityClass(item.impact)+'">'+intelEscape(intelLabel(item.impact))+'</span></div><h3>'+intelEscape(episode.title)+'</h3><div class="intel-card-meta"><span><b>Categoria</b>'+intelEscape(intelLabel(item.category))+'</span><span><b>Ator / grupo</b>'+intelEscape(intelLabel(item.group))+'</span><span><b>Malware</b>'+intelEscape(item.malware)+'</span><span><b>MITRE ATT&CK</b>'+item.mitre.join(" · ")+'</span></div><div class="intel-card-footer"><span>Dossiê completo</span><span class="intel-card-action">Investigar</span></div></button>';
   }).join(""):'<div class="intel-empty">Nenhum dossiê corresponde aos filtros atuais.</div>';
   hotspots.innerHTML=INTEL_INDEX.map(function(item){
     var episode=EPISODES.find(function(ep){return ep.id===item.id;}),hidden=results.indexOf(item)<0,selected=item.id===selectedIntelId;
     return '<button type="button" class="intel-hotspot '+(item.impact==="Critico"?"":"high")+(hidden?' hidden':'')+(selected?' selected':'')+'" style="left:'+item.x+'%;top:'+item.y+'%" data-intel-hotspot="'+item.id+'" aria-label="Selecionar '+intelEscape(episode.title)+'" aria-pressed="'+selected+'"'+(hidden?' disabled aria-hidden="true"':'')+'></button>';
   }).join("");
-  if(mobileHotspots)mobileHotspots.innerHTML=INTEL_INDEX.map(function(item){var episode=EPISODES.find(function(ep){return ep.id===item.id;}),hidden=results.indexOf(item)<0,selected=item.id===selectedIntelId;return hidden?"":'<button type="button" class="mobile-hotspot" data-intel-hotspot-mobile="'+item.id+'" aria-pressed="'+selected+'"><b>'+item.year+' · '+intelEscape(intelLabel(item.country))+'</b>'+intelEscape(episode.title)+'</button>';}).join("");
+  if(mobileHotspots)mobileHotspots.innerHTML=INTEL_INDEX.map(function(item){var episode=EPISODES.find(function(ep){return ep.id===item.id;}),hidden=results.indexOf(item)<0,selected=item.id===selectedIntelId;return hidden?"":'<button type="button" class="mobile-hotspot" data-intel-hotspot-mobile="'+item.id+'" aria-pressed="'+selected+'"><b>'+episode.year+' · '+intelEscape(intelLabel(item.country))+'</b>'+intelEscape(episode.title)+'</button>';}).join("");
   container.querySelectorAll(".intel-card").forEach(function(card){
-    var pointerFrame=null,lastEvent=null;
-    card.addEventListener("pointermove",function(event){lastEvent=event;if(pointerFrame)return;pointerFrame=requestAnimationFrame(function(){intelSetCardPointer(card,lastEvent);pointerFrame=null;});});
+
     card.addEventListener("click",function(){selectIntelDossier(card.dataset.intelEpisode,true);});
   });
   hotspots.querySelectorAll(".intel-hotspot:not(:disabled)").forEach(function(hotspot){
@@ -1872,52 +1718,36 @@ function renderIntelligence(){
 
 function renderIntelTimeline(){
   var timeline=byId("intel-global-timeline");if(!timeline)return;
-  var years=intelUnique("year").sort(function(a,b){return Number(a)-Number(b);});
-  timeline.innerHTML=years.map(function(year){var items=INTEL_INDEX.filter(function(item){return item.year===year;}),selected=items.some(function(item){return item.id===selectedIntelId;});return '<button class="intel-year-node'+(selected?' selected':'')+'" type="button" data-intel-year="'+year+'" aria-pressed="'+selected+'" style="--intel-year-height:'+(18+items.length*12)+'px"><span>'+year+'</span><strong>'+items.length+'</strong></button>';}).join("");
-  timeline.querySelectorAll(".intel-year-node").forEach(function(node){node.addEventListener("click",function(){byId("intel-year").value=node.dataset.intelYear;intelTechnique="";var matches=INTEL_INDEX.filter(function(item){return item.year===node.dataset.intelYear;});if(matches.length===1)selectedIntelId=matches[0].id;renderIntelligence();renderIntelTimeline();});});
+  var years=intelUnique("year").sort(function(a,b){return parseInt(a,10)-parseInt(b,10);});
+  timeline.innerHTML=years.map(function(year){var items=intelFiltered().filter(function(item){return intelStartYear(item)===year;}),selected=items.some(function(item){return item.id===selectedIntelId;});return '<button class="intel-year-node'+(selected?' selected':'')+'" type="button" data-intel-year="'+year+'"'+(!items.length?' disabled':'')+' aria-pressed="'+selected+'" style="--intel-year-height:'+(18+items.length*12)+'px"><span>'+year+'</span><strong>'+items.length+'</strong></button>';}).join("");
+  timeline.querySelectorAll(".intel-year-node").forEach(function(node){node.addEventListener("click",function(){byId("intel-year").value=node.dataset.intelYear;intelTechnique="";var matches=intelFiltered();if(matches.length===1)selectedIntelId=matches[0].id;renderCampaignRelations();renderIntelligence();renderIntelTimeline();});});
 }
 
 function showIntelTooltip(id){
   var item=intelProfile(id),episode=EPISODES.find(function(ep){return ep.id===id;}),tip=byId("intel-tooltip");if(!item||!episode||!tip)return;
-  tip.innerHTML='<strong>'+intelEscape(episode.title)+'</strong><span><b>'+intelEscape(intelLabel(item.country))+' · '+item.year+'</b></span><span>'+intelEscape(intelLabel(item.group))+' · '+intelEscape(intelLabel(item.category))+' · '+intelEscape(intelLabel(item.impact))+'</span>';
+  tip.innerHTML='<strong>'+intelEscape(episode.title)+'</strong><span><b>'+intelEscape(intelLabel(item.country))+' · '+episode.year+'</b></span><span>'+intelEscape(intelLabel(item.group))+' · '+intelEscape(intelLabel(item.category))+' · '+intelEscape(intelLabel(item.impact))+'</span>';
   tip.style.left=Math.min(74,Math.max(4,item.x))+"%";tip.style.top=Math.min(82,Math.max(12,item.y))+"%";tip.hidden=false;
 }
 function hideIntelTooltip(){var tip=byId("intel-tooltip");if(tip)tip.hidden=true;}
 
-function drawerMarkup(id){
-  var item=intelProfile(id),ep=EPISODES.find(function(entry){return entry.id===id;}),index=EPISODES.indexOf(ep),previous=EPISODES[(index-1+EPISODES.length)%EPISODES.length],next=EPISODES[(index+1)%EPISODES.length];
-  if(!item||!ep)return "";
-  return '<div class="drawer-classification"><span>DOSSIÊ '+intelEscape(ep.num)+'</span><span class="'+intelSeverityClass(item.impact)+'">'+intelEscape(intelLabel(item.impact))+'</span></div><p class="drawer-summary">'+intelEscape(ep.summary)+'</p><dl class="drawer-grid"><div><dt>Ano / região</dt><dd>'+item.year+' · '+intelEscape(intelLabel(item.country))+'</dd></div><div><dt>Categoria</dt><dd>'+intelEscape(intelLabel(item.category))+'</dd></div><div><dt>Ator / grupo</dt><dd>'+intelEscape(intelLabel(item.group))+'</dd></div><div><dt>Malware</dt><dd>'+intelEscape(item.malware)+'</dd></div></dl><div class="drawer-techniques">'+item.mitre.map(function(value){return '<span>'+value+'</span>';}).join("")+'</div><button type="button" class="drawer-action" data-open-dossier="'+id+'">Abrir cronologia completa</button><div class="drawer-nav"><button type="button" data-select-dossier="'+previous.id+'">← '+intelEscape(previous.title)+'</button><button type="button" data-select-dossier="'+next.id+'">'+intelEscape(next.title)+' →</button></div>';
-}
+function openIntelDrawer(id){WarRoomExperience.open(id,"summary");}
 
-function openIntelDrawer(id){
-  var drawer=byId("intel-drawer"),body=byId("drawer-body"),ep=EPISODES.find(function(entry){return entry.id===id;});if(!drawer||!body||!ep)return;
-  operationalFocus=document.activeElement;byId("drawer-title").textContent=ep.title;body.innerHTML=drawerMarkup(id);drawer.inert=false;drawer.setAttribute("aria-hidden","false");drawer.classList.add("open");
-  body.querySelector("[data-open-dossier]").addEventListener("click",function(){openIntelEpisode(id);});
-  body.querySelectorAll("[data-select-dossier]").forEach(function(button){button.addEventListener("click",function(){selectIntelDossier(button.dataset.selectDossier,true);});});
-  byId("drawer-close").focus();
-}
-function closeIntelDrawer(restore){var drawer=byId("intel-drawer");if(!drawer)return;drawer.classList.remove("open");drawer.setAttribute("aria-hidden","true");drawer.inert=true;if(restore&&operationalFocus&&operationalFocus.focus)operationalFocus.focus();}
+function closeIntelDrawer(restore){WarRoomExperience.close(restore);}
 
-function selectIntelDossier(id,openPanel){
-  if(!intelProfile(id))return;selectedIntelId=id;setHashForDossier(id);renderIntelligence();renderIntelTimeline();renderCampaignRelations();if(openPanel)openIntelDrawer(id);
-}
+function selectIntelDossier(id,openPanel){if(!intelProfile(id))return;if(openPanel){WarRoomExperience.open(id,"summary");return;}WarRoomExperience.save();selectedIntelId=id;renderIntelligence();renderIntelTimeline();renderCampaignRelations();WarRoomExperience.commit(false);}
 
-function openIntelEpisode(id,instant){
-  var entry=byId("dossier-"+id);if(!entry)return;selectedIntelId=id;setHashForDossier(id);renderIntelligence();renderIntelTimeline();renderCampaignRelations();closeIntelDrawer(false);document.querySelectorAll(".episode-entry").forEach(function(item){item.style.contentVisibility="visible";});
-  requestAnimationFrame(function(){entry.scrollIntoView({behavior:(instant||prefersReducedMotion||document.body.classList.contains("effects-reduced"))?"auto":"smooth",block:"start"});setTimeout(function(){var detail=entry.querySelector(".episode-detail"),toggle=entry.querySelector(".toggle-detail");if(detail&&toggle&&!detail.classList.contains("open"))toggle.click();if(toggle)toggle.focus({preventScroll:true});},prefersReducedMotion?0:320);});
-}
+function openIntelEpisode(id,instant){WarRoomExperience.open(id,"summary");}
 
 function normalizedSearch(value){return String(value||"").normalize("NFD").replace(/[\u0300-\u036f]/g,"").toLowerCase().trim();}
-function searchMatches(query){var needle=normalizedSearch(query);if(!needle)return INTEL_INDEX.slice(0,8);return INTEL_INDEX.filter(function(item){var ep=EPISODES.find(function(entry){return entry.id===item.id;}),hay=[ep.title,ep.subtitle,ep.summary,ep.attribution,item.country,item.year,item.category,item.group,item.malware,item.mitre.join(" "),item.iocs.join(" ")].join(" ");return normalizedSearch(hay).indexOf(needle)>=0;}).slice(0,10);}
-function renderSearchResults(query){var results=byId("search-results");if(!results)return;var matches=searchMatches(query);results.innerHTML=matches.length?matches.map(function(item){var ep=EPISODES.find(function(entry){return entry.id===item.id;});return '<button type="button" class="search-result" role="option" data-search-dossier="'+item.id+'"><span class="search-result-num">'+ep.num+'</span><span><strong>'+intelEscape(ep.title)+'</strong><small>'+intelEscape(intelLabel(item.country))+' · '+intelEscape(intelLabel(item.group))+' · '+intelEscape(item.malware)+'</small></span><span class="search-result-year">'+item.year+'</span></button>';}).join(""):'<div class="search-empty">Nenhum dossiê encontrado.</div>';results.querySelectorAll("[data-search-dossier]").forEach(function(button){button.addEventListener("click",function(){closeGlobalSearch(false);selectIntelDossier(button.dataset.searchDossier,true);});});}
+function searchMatches(query){var needle=normalizedSearch(query);if(!needle)return intelFiltered().slice(0,8);return intelFiltered().filter(function(item){var ep=EPISODES.find(function(entry){return entry.id===item.id;}),hay=[ep.title,ep.subtitle,ep.summary,ep.attribution,ep.year,item.country,item.year,item.category,item.group,item.malware,item.mitre.join(" "),item.iocs.join(" ")].join(" ");return normalizedSearch(hay).indexOf(needle)>=0;}).slice(0,10);}
+function renderSearchResults(query){var results=byId("search-results");if(!results)return;var matches=searchMatches(query);results.innerHTML=matches.length?matches.map(function(item){var ep=EPISODES.find(function(entry){return entry.id===item.id;});return '<button type="button" class="search-result" role="option" data-search-dossier="'+item.id+'"><span class="search-result-num">'+ep.num+'</span><span><strong>'+intelEscape(ep.title)+'</strong><small>'+intelEscape(intelLabel(item.country))+' · '+intelEscape(intelLabel(item.group))+' · '+intelEscape(item.malware)+'</small></span><span class="search-result-year">'+ep.year+'</span></button>';}).join(""):'<div class="search-empty">Nenhum dossiê encontrado.</div>';results.querySelectorAll("[data-search-dossier]").forEach(function(button){button.addEventListener("click",function(){closeGlobalSearch(false);selectIntelDossier(button.dataset.searchDossier,true);});});}
 function setSearchBackgroundInert(value){[document.querySelector("header"),document.querySelector("main"),document.querySelector("footer"),byId("back-to-top")].forEach(function(element){if(element)element.inert=value;});}
-function openGlobalSearch(){var dialog=byId("global-search"),input=byId("search-input");if(!dialog||!input)return;operationalFocus=document.activeElement;dialog.hidden=false;setSearchBackgroundInert(true);document.body.classList.add("modal-open");input.value="";renderSearchResults("");requestAnimationFrame(function(){input.focus();});}
-function closeGlobalSearch(restore){var dialog=byId("global-search");if(!dialog||dialog.hidden)return;dialog.hidden=true;setSearchBackgroundInert(false);document.body.classList.remove("modal-open");if(restore!==false&&operationalFocus&&operationalFocus.focus)operationalFocus.focus();}
+function openGlobalSearch(){var dialog=byId("global-search"),input=byId("search-input");if(!dialog||!input)return;operationalFocus=document.activeElement;dialog.hidden=false;byId("intel-drawer").inert=true;setSearchBackgroundInert(true);document.body.classList.add("modal-open");input.value=WarRoomExperience.query();renderSearchResults(input.value);requestAnimationFrame(function(){input.focus();});}
+function closeGlobalSearch(restore){var dialog=byId("global-search");if(!dialog||dialog.hidden)return;dialog.hidden=true;setSearchBackgroundInert(byId("intel-drawer").classList.contains("open"));if(!byId("intel-drawer").classList.contains("open"))document.body.classList.remove("modal-open");byId("intel-drawer").inert=false;if(restore!==false&&operationalFocus&&operationalFocus.focus)operationalFocus.focus();}
 
 function initOperationalLayer(){
   var searchOpen=byId("search-open"),searchInput=byId("search-input"),effects=byId("effects-toggle"),drawer=byId("intel-drawer"),topButton=byId("back-to-top"),experienceToggle=byId("experience-toggle"),experiencePopover=byId("experience-popover"),experienceClose=byId("experience-close");
-  [lb,stMod,no,drawer].forEach(function(element){if(element){element.inert=true;element.setAttribute("aria-hidden","true");}});
+  [lb,no,drawer].forEach(function(element){if(element){element.inert=true;element.setAttribute("aria-hidden","true");}});
   [document.querySelector("header"),document.querySelector("main"),document.querySelector("footer"),topButton].forEach(function(element){if(element)element.inert=true;});
   requestAnimationFrame(function(){if(le)le.focus();});
   var isMac=/Mac|iPhone|iPad|iPod/i.test((navigator.userAgentData&&navigator.userAgentData.platform)||navigator.platform||navigator.userAgent);byId("search-shortcut-key").textContent=isMac?"⌘K":"Ctrl+K";
@@ -1950,7 +1780,8 @@ function initOperationalLayer(){
 
 initApp();
 introTimer=setTimeout(function(){enterWarRoom(prefersReducedMotion||isLowPerf);},prefersReducedMotion ? 120 : isLowPerf ? 650 : 1800);
-var initialDossierHash=window.location.hash;if(initialDossierHash.indexOf("#dossier-")===0){var initialDossierId=initialDossierHash.slice(9);if(intelProfile(initialDossierId)){enterWarRoom(true);setTimeout(function(){openIntelEpisode(initialDossierId,true);},220);}}
+if(window.location.hash.indexOf("#dossier-")===0){enterWarRoom(true);}
+WarRoomExperience.restore(history.state);
 console.log("[WAR ROOM 3.0] Cinematic intro initialized. " + EPISODES.length + " episodes.");
 
 </script>
