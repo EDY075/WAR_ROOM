@@ -2,7 +2,7 @@
 
 <p align="center">
   <a href="https://edy075.github.io/WAR_ROOM/"><img src="https://img.shields.io/badge/Open%20on-GitHub%20Pages-c9a84c?style=for-the-badge&logo=githubpages&logoColor=white" alt="Abrir site no GitHub Pages"></a>
-  <a href="https://github.com/EDY075/WAR_ROOM/releases/tag/v1.1.0"><img src="https://img.shields.io/badge/Release-v1.1.0-171717?style=for-the-badge&logo=github&logoColor=white" alt="Release v1.1.0"></a>
+  <a href="https://github.com/EDY075/WAR_ROOM/releases/tag/v1.1.0"><img src="https://img.shields.io/badge/Tag%20anterior-v1.1.0-171717?style=for-the-badge&logo=github&logoColor=white" alt="Tag anterior v1.1.0"></a>
   <img src="https://img.shields.io/badge/17-CTI%20Dossiers-c9a84c?style=for-the-badge" alt="17 CTI dossiers">
   <img src="https://img.shields.io/badge/Static-HTML%20%2B%20CSS%20%2B%20JavaScript-171717?style=for-the-badge" alt="Static web stack">
 </p>
@@ -17,7 +17,24 @@ Criado por [Edmilson Gomes](https://github.com/EDY075) · [LinkedIn](https://lin
 
 Explore a experiência completa em [edy075.github.io/WAR_ROOM](https://edy075.github.io/WAR_ROOM/).
 
-## Screenshots
+## Edição documental · outubro de 2026
+
+Os **17 dossiês** têm seis capítulos cada: Abertura, Origem, Propagação, Impacto, Resposta e Fontes. Um único espaço com abas reúne resumo, história, análise, mídia e referências, preservando busca, filtros, mapa, cronologia e contexto no histórico do navegador.
+
+A [biblioteca de narrações](https://edy075.github.io/WAR_ROOM/assets/media/narrations/) oferece **17 episódios completos e 102 áudios de capítulo**, cerca de **42 minutos**, com síntese autorizada baseada na voz do autor. Áudio é opcional e carregado por escolha; cada caso mantém leitura completa e referências. A gravação pessoal de referência não integra o repositório.
+
+Cartografia local, capas creditadas, reconstituições identificadas e controles de efeitos reduzidos compõem a experiência. NotPetya também possui capa, carrossel de cinco páginas, storyboard e teasers verticais reais em [assets/media/notpetya](assets/media/notpetya/). O teaser narrado anterior usa voz sintética padrão; as novas narrações prolongadas usam a referência aprovada do autor.
+
+![Mapa documental atual](assets/screenshots/experience/map-desktop.png)
+
+<p align="center">
+  <img src="assets/screenshots/narration/notpetya-desktop.png" alt="Narração prolongada no dossiê NotPetya" width="69%">
+  <img src="assets/screenshots/narration/notpetya-mobile.png" alt="Dossiê narrado no celular" width="27%">
+</p>
+
+Validação da edição: quatro verificadores originais, integridade dos 17 registros, navegação e 102 capítulos em desktop/mobile, galeria, teclado/foco, efeitos reduzidos e decodificação real dos 119 MP3s. Método e limitações em [EXPERIENCE_VALIDATION.md](docs/EXPERIENCE_VALIDATION.md) e [NARRATION_PRODUCTION.md](docs/NARRATION_PRODUCTION.md). Os números Lighthouse da v1.1.0 abaixo são históricos.
+
+## Screenshots · versão anterior v1.1.0
 
 <p align="center">
   <img src="assets/screenshots/cti-hero.png" alt="Hero final do WAR ROOM v1.1.0" width="100%">
@@ -46,7 +63,7 @@ Explore a experiência completa em [edy075.github.io/WAR_ROOM](https://edy075.gi
 - Filtros combináveis por país, ano, categoria, impacto, grupo e malware.
 - Exploradores selecionáveis de técnicas MITRE ATT&CK, grupos APT e IOCs, com contador de correspondências.
 - Relações entre campanhas derivadas exclusivamente de metadados documentados, sem inferir causalidade.
-- Drawer de dossiê com anterior/próximo e deep links por hash.
+- Espaço de dossiê com cinco abas, anterior/próximo e links diretos por caso, aba e capítulo.
 - Cronologia aprimorada com progresso, contexto operacional, técnicas MITRE e navegação entre incidentes.
 - Galeria multimídia, mapas regionais, referências e créditos visuais.
 - Narrativa cinematográfica preservada em uma interface mais compacta e investigativa.
@@ -87,9 +104,9 @@ Os quatro verificadores do projeto validam os 17 dossiês, assets locais, memór
 
 O WAR ROOM é uma aplicação estática e não requer instalação de dependências.
 
-### Opção 1 — Abrir diretamente (recomendado)
+### Opção 1 — Abrir diretamente
 
-Basta abrir o arquivo `index.html` em qualquer navegador moderno.
+O arquivo `index.html` permite leitura em navegadores modernos. Para catálogos, mapas e narrações carregados sob demanda, use HTTP (servidor local ou GitHub Pages), pois a abertura pelo sistema de arquivos pode bloquear essas requisições.
 
 - ✅ Google Chrome
 - ✅ Microsoft Edge
@@ -97,7 +114,7 @@ Basta abrir o arquivo `index.html` em qualquer navegador moderno.
 - ✅ Brave
 - ✅ Opera
 
-### Opção 2 — Servidor local (opcional)
+### Opção 2 — Servidor local (recomendado)
 
 Caso prefira executar através de um servidor HTTP local, use:
 

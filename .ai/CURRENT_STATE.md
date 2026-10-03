@@ -2,12 +2,12 @@
 
 | Field | State |
 | --- | --- |
-| Public release | `v1.1.0 — CTI Evolution`, unchanged |
-| Current work | Documentary experience, cartography, campaign and authorized prolonged personal-voice narration across all 17 cases, ready for local branch review |
+| Public release | Previous tag: `v1.1.0 — CTI Evolution`; documentary edition publication authorized |
+| Current work | Documentary experience, cartography, campaign and authorized prolonged personal-voice narration across all 17 cases, approved for GitHub, Pages and portfolio publication |
 | Branch | `codex/war-room-experience` |
 | Last sprint | 2026-10-03 · approved personal voice, prolonged narration and clarity treatment for all 17 cases |
-| Last commit | Resolve with `git log -1 --oneline`; no merge, push, tag or deployment |
-| Public Pages | https://edy075.github.io/WAR_ROOM/ (still prior release) |
+| Last commit | Resolve with `git log -1 --oneline`; publication in progress; resolve deployed revision through GitHub Pages build |
+| Public Pages | https://edy075.github.io/WAR_ROOM/ (publication authorized) |
 | Local preview | http://127.0.0.1:4173/WAR_ROOM/?tab=story#dossier-notpetya |
 
 ## Current product state
@@ -36,6 +36,6 @@
 
 - Personal voice (2026-10-03): the user approved the local sample and authorized prolonged versions for all 17 cases. Delivered 17 full MP3s / 102 chapter MP3s (42:13.53 total full narration), scripts, references, VTT and a lazy library. Restrained EQ/dynamics improve clarity; finished-file loudness measures −16.78 to −16.21 LUFS, max true peak −1.88 dBTP. Original personal audio/reference/raw WAVs remain local and out of Git. Details and actual QA limits: [NARRATION_PRODUCTION.md](../docs/NARRATION_PRODUCTION.md).
 
-- No merge, push, publication, release change or deployment. Stop the temporary local preview when review finishes.
+- The owner explicitly authorized publication to GitHub, GitHub Pages and the existing portfolio on 2026-10-03. Preserve the prior v1.1.0 tag; publish the documentary edition from main after validation. Personal reference/raw audio remains excluded.
 - Classic remote gallery sources can fail independently; reading/references retain an alternative. A legacy Petya screenshot receives a visible qualification while original records stay preserved.
 - Both teasers have readable text; narrated version adds synthetic Portuguese voice, with no external music. Regenerating speech needs local VoiceStudio and installed OmniVoice; playback requires only delivered static files. The older teaser uses a standard synthetic voice; the new prolonged audio uses the approved reference. No saved personal voice profile/preferences were modified.

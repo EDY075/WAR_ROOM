@@ -106,3 +106,7 @@ This is the chronological project memory. `CURRENT_STATE.md` is the fast snapsho
 - Publication security excluded raw browser/Lighthouse artifacts, local paths, temporary profiles, logs, credentials, and environment files.
 - Final validation: four project tests, diff check, desktop/mobile Chrome, zero project console errors, and Lighthouse 100/100/100/100 desktop plus 96/100/100/100 mobile.
 - Three later README commits from `origin/main` were reviewed, explicitly confirmed, preserved during a manual README integration, and retained in the published history.
+
+## Publication preparation · 2026-10-03
+
+The owner authorized GitHub, Pages and portfolio publication. Reviewed authenticated targets and existing deployed runtime. Public README now describes the documentary edition and qualifies old Lighthouse evidence. Four original verifiers and canonical-data check are rerun before publication; deployment outcome will be recorded after checking the real URLs.

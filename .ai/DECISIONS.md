@@ -27,3 +27,7 @@
 - ADR-018: After the user approved their reference-based voice sample and explicitly authorized prolonged versions for all seventeen cases, produce six chapter narrations plus a full MP3 per case. Keep original personal recordings/reference and raw production WAVs in ignored local storage; only authorized finished narrations, transcripts and timing files enter the review branch. Use the existing documented chapter prose, preserve canonical historical arrays, and improve clarity with restrained EQ/dynamics and measured loudness. Explicit playback loads only the selected file; chapter/case/tab/close/hidden transitions pause media. No TTS service is required at runtime and no personal VoiceStudio profile/preferences are modified.
 
 Record a new ADR entry before changing architecture, deployment, dependencies, data model, historical corpus, or visual identity. Small scoped fixes belong in `MEMORY_LOG.md` unless they establish a reusable rule.
+
+## Publication preparation · 2026-10-03
+
+Publication scope on 2026-10-03: the owner authorized GitHub/main, existing root GitHub Pages and the existing portfolio Worker. Keep historical v1.1.0 tag intact, retain static /WAR_ROOM/ paths and publish only approved final media. Preserve the dirty portfolio checkout by implementing in an isolated Git worktree based on remote main, carrying forward the already published runtime before adding this case.
