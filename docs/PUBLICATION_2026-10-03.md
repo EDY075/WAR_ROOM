@@ -5,7 +5,7 @@ O proprietário autorizou explicitamente atualizar GitHub, GitHub Pages e seu po
 - WAR ROOM: https://github.com/EDY075/WAR_ROOM · runtime publicado `58ee3e476351a3adbbbc3ae108c99ba1277f8d84`, main; branch `codex/war-room-experience` preservada. Fast-forward, sem reescrever histórico. A tag v1.1.0 permanece como referência histórica.
 - GitHub Pages: https://edy075.github.io/WAR_ROOM/ · [build concluído](https://github.com/EDY075/WAR_ROOM/actions/runs/37146988319). Fonte existente main/root e arquitetura estática mantidas.
 - Narrações: https://edy075.github.io/WAR_ROOM/assets/media/narrations/ · 17 episódios completos, 102 capítulos, 42:13.53 no total dos completos. Somente mídia final autorizada; original pessoal, referência, WAVs, logs e ZIP local permanecem fora do Git.
-- Portfólio: https://edy-gomes-portfolio.edy-scanurl-family-worker.workers.dev/work/war-room · Worker existente `edy-gomes-portfolio`, versão `5a5bc460-a0b5-4bb6-a58d-a13eb80211dc`, runtime `EDY075/EDY-Portfolio@1206ee0`. Integração preparada em `codex/portfolio-war-room-release`, preservando o checkout original com 276 hashes inalterados e os commits remotos de README/vídeo. Repositório do portfólio também atualizado por fast-forward.
+- Portfólio: https://edy-gomes-portfolio.edy-scanurl-family-worker.workers.dev/work/war-room · Worker existente `edy-gomes-portfolio`, versão `7f40d6c8-619f-470f-b6f7-f089745dc59d`, runtime `EDY075/EDY-Portfolio@dac04fc`. Integração preparada em `codex/portfolio-war-room-release`, preservando o checkout original com 276 hashes inalterados e os commits remotos de README/vídeo. Repositório do portfólio também atualizado por fast-forward.
 
 ## Conferência desta publicação
 
@@ -17,3 +17,5 @@ O proprietário autorizou explicitamente atualizar GitHub, GitHub Pages e seu po
 - Chrome DevTools MCP não estava disponível; usado Edge headless real com Playwright. Não há nova medição Lighthouse, campo ou teste em aparelho físico. A comparação CDP local pré-publicação segue qualificada em [EXPERIENCE_VALIDATION.md](EXPERIENCE_VALIDATION.md).
 
 Os vídeos curtos NotPetya continuam usando a voz sintética padrão anterior. As narrações prolongadas dos 17 casos usam a referência pessoal autorizada. Fontes remotas antigas podem falhar; leitura e referências continuam disponíveis. Os commits de documentação posteriores não alteram o runtime acima.
+
+A revisão final incluiu o novo case no mapa de transições do portfólio: capa, chegada ao topo e navegação com efeitos completos foram verificadas em desktop/mobile. O Worker final acima substitui o primeiro deploy `5a5bc460-a0b5-4bb6-a58d-a13eb80211dc`; demais assets/rotas permanecem iguais. A última publicação de documentação WAR ROOM foi construída com sucesso no [run 37147705499](https://github.com/EDY075/WAR_ROOM/actions/runs/37147705499), em 9738482. Revisões posteriores deste relatório não mudam o runtime.

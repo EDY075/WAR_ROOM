@@ -6,7 +6,7 @@ This is the chronological project memory. `CURRENT_STATE.md` is the fast snapsho
 
 - Owner explicitly authorized GitHub, Pages and portfolio publication. WAR ROOM runtime 58ee3e4 published by fast-forward, existing Pages build 37146988319 successful; historical tag retained. Final media only, personal reference/raw files excluded.
 - Public verification passed: 102 chapters × desktop/mobile, all 119 browser audio decodes and playback/lifecycle/error controls, 23 served-file SHA-256 matches against Git blobs including all 17 full MP3s. Four original/data/diff gates passed.
-- Existing portfolio Worker published at version 5a5bc460-a0b5-4bb6-a58d-a13eb80211dc. New twelfth case, responsive screenshots, three public links and 3D index. Original dirty checkout preserved: 276 runtime files, zero hash differences. Remote README/video commits preserved. Lint/type/build/dry-run and 12-gallery public desktop/390/320 validation pass; noindex/private exclusions retained.
+- Existing portfolio Worker published at version 7f40d6c8-619f-470f-b6f7-f089745dc59d. New twelfth case, responsive screenshots, three public links and 3D index. Original dirty checkout preserved: 276 runtime files, zero hash differences. Remote README/video commits preserved. Lint/type/build/dry-run and 12-gallery public desktop/390/320 validation pass; noindex/private exclusions retained.
 - No fresh Lighthouse or physical-device claim; browser fallback and QA limits recorded in [PUBLICATION_2026-10-03.md](../docs/PUBLICATION_2026-10-03.md). Earlier no-publication notes below describe the former scope.
 
 ## Sprint — Approved prolonged personal voice, all cases (2026-10-03)

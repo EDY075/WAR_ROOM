@@ -26,7 +26,7 @@
 
 ## Publication · 2026-10-03
 
-GitHub Pages runtime `58ee3e4`, successful build `37146988319`. Existing portfolio Worker version `5a5bc460-a0b5-4bb6-a58d-a13eb80211dc`; new public case links to WAR ROOM and all 17 narrations. Public browser tests and served-file hashes passed; full evidence and limits: [PUBLICATION_2026-10-03.md](../docs/PUBLICATION_2026-10-03.md).
+GitHub Pages runtime `58ee3e4`, successful build `37146988319`. Existing portfolio Worker version `7f40d6c8-619f-470f-b6f7-f089745dc59d`; new public case links to WAR ROOM and all 17 narrations. Public browser tests and served-file hashes passed; full evidence and limits: [PUBLICATION_2026-10-03.md](../docs/PUBLICATION_2026-10-03.md).
 
 ## Validation and evidence
 
