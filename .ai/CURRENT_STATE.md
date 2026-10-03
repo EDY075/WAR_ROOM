@@ -6,7 +6,7 @@
 | Current work | All 17 documentaries/narrations preserved; full-viewport interactive entrance, galaxy and reload/preloader evolution |
 | Branch | Public `main`; `codex/war-room-experience` preserved |
 | Last sprint | 2026-10-03 · full-viewport hero, interactive investigation points, illustrated moving galaxy and reload-to-hero |
-| Last commit | Resolve with `git log -1 --oneline`; galaxy entrance runtime `648ef97`; documentation revisions resolve with git log |
+| Last commit | Resolve with `git log -1 --oneline`; galaxy entrance runtime `1db8095` (32s movement); documentation revisions resolve with git log |
 | Public Pages | https://edy075.github.io/WAR_ROOM/ (documentary edition live) |
 | Local preview | http://127.0.0.1:4173/WAR_ROOM/?tab=story#dossier-notpetya |
 
@@ -14,7 +14,7 @@
 
 - Latest entrance: at least 100svh, responsive original galaxy (illustration identified as AI), CSS transform-only ambience behind the page (32s linear sweep, adjusted from 48s easing at owner request), floating network art with four stable interactive controls, title/button feedback and bounded native-cursor sparks. Manual pause, OS/user reduced effects, hidden document and modal reading stop motion; offscreen network pauses. Mobile remains complete with natural content height. No shader or global Canvas renderer.
 - Preloader: brief skippable 850ms opening on navigation/reload, fonts deadline 700ms in parallel, no required media download. Reduced motion skips the minimum/fade. Explicit reload clears context and returns to hero; fresh direct links and back/forward preserve context. Initial dialog restore follows loader exit; visibility changes immediately on opening to preserve focus with reduced motion.
-- Current new three-run comparison against `4531865`: renderer task median /1.5s 29.903 → 60.352ms desktop, 41.214 → 64.595ms mobile emulation. Movement costs more than the previous static entrance; zero idle JS callbacks, zero forced episode rendering and zero decorative callbacks during reading/reduced samples remain. One additional responsive image, 159KB desktop /47KB mobile. Current method, screenshots and limits: [GALAXY_ENTRANCE_VALIDATION.md](../docs/GALAXY_ENTRANCE_VALIDATION.md). Previous percentages are historical.
+- Three-run comparison of the original 48s galaxy against `4531865` (not rerun for the subsequent 32s duration adjustment): renderer task median /1.5s 29.903 → 60.352ms desktop, 41.214 → 64.595ms mobile emulation. Movement costs more than the previous static entrance; zero idle JS callbacks, zero forced episode rendering and zero decorative callbacks during reading/reduced samples remain. One additional responsive image, 159KB desktop /47KB mobile. Current method, screenshots and limits: [GALAXY_ENTRANCE_VALIDATION.md](../docs/GALAXY_ENTRANCE_VALIDATION.md). Previous percentages are historical.
 - Existing HD launch ZIP at `assets/media/war-room-launch-2026/` remains the prior vector entrance edition; unchanged bytes/texts. No audio regeneration or social posting in this iteration. GitHub/LinkedIn/confirmed Instagram credits remain.
 
 - All 17 canonical EPISODES, STORIES and INTEL_INDEX records are unchanged. Fingerprints at `aeaa524` are protected by `tests/verify-experience-data.mjs`.
@@ -31,7 +31,7 @@
 
 ## Publication · 2026-10-03
 
-Galaxy published and verified: runtime `648ef97`, Pages `37155681649`; portfolio cover runtime `66d5d15`, Worker `acb96424-b85d-4cc0-ae6f-77c64130ea13`. Full public suites/media bytes/playback passed, responsive cover hashes match, original portfolio 276 hashes unchanged. Exact evidence recorded in [GALAXY_ENTRANCE_VALIDATION.md](../docs/GALAXY_ENTRANCE_VALIDATION.md).
+Galaxy published and verified: initial runtime `648ef97`, Pages `37155681649`; final speed adjustment runtime `1db8095`, Pages `37156496540`; portfolio cover runtime `66d5d15`, Worker `acb96424-b85d-4cc0-ae6f-77c64130ea13`. Full public suites/media bytes/playback passed, responsive cover hashes match, original portfolio 276 hashes unchanged. Exact evidence recorded in [GALAXY_ENTRANCE_VALIDATION.md](../docs/GALAXY_ENTRANCE_VALIDATION.md).
 
 Previous static entrance publication (historical):
 

@@ -45,3 +45,5 @@ Capa do portfólio sincronizada no worktree de release: runtime `66d5d15`, Worke
 
 
 Ajuste solicitado após a conferência visual: travessia da galáxia reduzida de 48s ease-in-out para 32s linear, 1,5× a velocidade de percurso e início sem desaceleração de easing. Amplitude permanece igual. Verificados movimento real por amostras de transform, pausa e efeitos reduzidos desktop/mobile; quatro gates originais, integridade canônica e diff check. Sem novas alegações de CPU/GPU para esse ajuste.
+
+Ajuste de velocidade publicado: runtime `1db8095`, [Pages build 37156496540 aprovado](https://github.com/EDY075/WAR_ROOM/actions/runs/37156496540). Conferência pública desktop/mobile confirma CSS idêntico ao local, 32s linear, transformação em movimento e interrupção por pausa/efeitos reduzidos. A capa do portfólio continua fiel: duração mudou, imagem/layout não.
