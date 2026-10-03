@@ -6,7 +6,7 @@
 | Current work | All 17 documentaries/narrations preserved; full-viewport interactive entrance, galaxy and reload/preloader evolution |
 | Branch | Public `main`; `codex/war-room-experience` preserved |
 | Last sprint | 2026-10-03 · full-viewport hero, interactive investigation points, illustrated moving galaxy and reload-to-hero |
-| Last commit | Resolve with `git log -1 --oneline`; galaxy entrance runtime resolves with git log; prior static runtime `a9272bf` is historical |
+| Last commit | Resolve with `git log -1 --oneline`; galaxy entrance runtime `648ef97`; documentation revisions resolve with git log |
 | Public Pages | https://edy075.github.io/WAR_ROOM/ (documentary edition live) |
 | Local preview | http://127.0.0.1:4173/WAR_ROOM/?tab=story#dossier-notpetya |
 
@@ -31,7 +31,7 @@
 
 ## Publication · 2026-10-03
 
-Galaxy iteration: validation/publication status and exact revision are recorded in [GALAXY_ENTRANCE_VALIDATION.md](../docs/GALAXY_ENTRANCE_VALIDATION.md).
+Galaxy published and verified: runtime `648ef97`, Pages `37155681649`; portfolio cover runtime `66d5d15`, Worker `acb96424-b85d-4cc0-ae6f-77c64130ea13`. Full public suites/media bytes/playback passed, responsive cover hashes match, original portfolio 276 hashes unchanged. Exact evidence recorded in [GALAXY_ENTRANCE_VALIDATION.md](../docs/GALAXY_ENTRANCE_VALIDATION.md).
 
 Previous static entrance publication (historical):
 

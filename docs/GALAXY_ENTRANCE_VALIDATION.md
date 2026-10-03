@@ -37,4 +37,8 @@ Essas medidas não são Lighthouse, Core Web Vitals de campo, bateria, memória 
 
 ## Publicação
 
-Branch `codex/war-room-experience` preservada; publicação autorizada pelo proprietário. Registrar commit/build exatos após conferir o endereço público. Portfólio só é atualizado no worktree de release, preservando o checkout original do usuário.
+Branch `codex/war-room-experience` preservada; publicação autorizada pelo proprietário. Runtime WAR ROOM `648ef976859393fb0077d3a972b555f240d6c9d8`, [Pages build 37155681649 aprovado](https://github.com/EDY075/WAR_ROOM/actions/runs/37155681649). As suites completas de entrada/experiência/documentários e os bytes/playback passaram também no endereço público: cinco viewports, 17 dossiês, 102 capítulos, foco, reload e histórico, galáxia desktop/mobile/original, runtime e ZIP anterior intacto.
+
+Capa do portfólio sincronizada no worktree de release: runtime `66d5d15`, Worker `acb96424-b85d-4cc0-ae6f-77c64130ea13`. Lint/tipagem/build/dry-run e QA local/public desktop/mobile passaram; capa real decodificada em 1440/390/320/2560 com hashes das três variantes iguais. `--keep-vars` preservou as variáveis do Worker. Original do usuário: 276 hashes, zero diferenças. Demais cases e dependências não foram alterados. Ambas as branches codex ficam preservadas, main avançada sem force push. Revisões posteriores de docs/testes não alteram os runtimes indicados.
+
+[WAR ROOM público](https://edy075.github.io/WAR_ROOM/) · [Case no portfólio](https://edy-gomes-portfolio.edy-scanurl-family-worker.workers.dev/work/war-room).

@@ -1,5 +1,7 @@
 # Entrada e divulgação · 03/10/2026
 
+Este relatório documenta a entrada estática anterior. A iteração galáctica posterior tem suas próprias medições atuais em [GALAXY_ENTRANCE_VALIDATION.md](GALAXY_ENTRANCE_VALIDATION.md); não reutilize os percentuais abaixo como desempenho da versão animada.
+
 ## Escopo entregue
 
 Nova hero preto/dourado/off-white, tipografia legível, rede editorial de pontos/órbitas em SVG, ações diretas para mapa e episódios, faíscas pequenas no mouse e preloader baseado na inicialização real. O mapa tem mais espaço na largura do desktop. Os créditos contêm GitHub EDY075, LinkedIn edmilsongomes21 e Instagram edmilson_zn_, confirmado pelo proprietário.
