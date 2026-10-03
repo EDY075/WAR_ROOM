@@ -20,7 +20,7 @@ Capturas em `assets/screenshots/entrance/`; `preloader-actual-desktop.png` regis
 
 ## Desempenho atual
 
-Comparação nova contra HEAD `4531865`, coletada nesta iteração. `tests/measure-experience.cjs`, três execuções sequenciais por viewport, Edge headless local, 2,6s de estabilização e janela de 1,5s; nenhum outro job de navegador/exportação concorrente. Evidências brutas locais ignoradas: `audit/hero-interaction-before-4531865.json` / `audit/galaxy-entrance-final.json`.
+Comparação da entrada galáctica inicial com movimento de 48s contra HEAD `4531865`, coletada nesta iteração. O ajuste posterior para 32s não foi medido novamente: os números abaixo pertencem à configuração de 48s. `tests/measure-experience.cjs`, três execuções sequenciais por viewport, Edge headless local, 2,6s de estabilização e janela de 1,5s; nenhum outro job de navegador/exportação concorrente. Evidências brutas locais ignoradas: `audit/hero-interaction-before-4531865.json` / `audit/galaxy-entrance-final.json`.
 
 | Mediana | Entrada estática anterior | Galáxia/rede em movimento |
 | --- | ---: | ---: |
@@ -42,3 +42,6 @@ Branch `codex/war-room-experience` preservada; publicação autorizada pelo prop
 Capa do portfólio sincronizada no worktree de release: runtime `66d5d15`, Worker `acb96424-b85d-4cc0-ae6f-77c64130ea13`. Lint/tipagem/build/dry-run e QA local/public desktop/mobile passaram; capa real decodificada em 1440/390/320/2560 com hashes das três variantes iguais. `--keep-vars` preservou as variáveis do Worker. Original do usuário: 276 hashes, zero diferenças. Demais cases e dependências não foram alterados. Ambas as branches codex ficam preservadas, main avançada sem force push. Revisões posteriores de docs/testes não alteram os runtimes indicados.
 
 [WAR ROOM público](https://edy075.github.io/WAR_ROOM/) · [Case no portfólio](https://edy-gomes-portfolio.edy-scanurl-family-worker.workers.dev/work/war-room).
+
+
+Ajuste solicitado após a conferência visual: travessia da galáxia reduzida de 48s ease-in-out para 32s linear, 1,5× a velocidade de percurso e início sem desaceleração de easing. Amplitude permanece igual. Verificados movimento real por amostras de transform, pausa e efeitos reduzidos desktop/mobile; quatro gates originais, integridade canônica e diff check. Sem novas alegações de CPU/GPU para esse ajuste.
