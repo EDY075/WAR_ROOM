@@ -28,6 +28,7 @@ Os arquivos brutos da medição ficam em `audit/hero-before-be43e1e.json`, `audi
 - `tests/verify-experience.cjs`: desktop/mobile, 17 dossiês, abas, teclado, foco, Escape, histórico, busca, filtros, corrida/falha de galeria, efeitos reduzidos e vídeo real. As falhas/corridas remotas usam fixtures determinísticas.
 - `tests/verify-documentaries.cjs`: 102 capítulos em desktop/mobile, imagens locais, mapas, fontes, links diretos, histórico e renderização sob demanda.
 - Quatro verificadores originais, integridade canônica e `git diff --check` executados na entrega. Capturas revisadas em `assets/screenshots/entrance/`.
+- `tests/verify-release-files.cjs`: comparação dos bytes dos 16 PNGs/mestres e ZIP, fontes de entrada, prévia de download, link direto e reprodução real de capítulo/episódio com pausa em mudança de aba e Escape, em desktop/mobile. A barra do preloader recebe verificação de tamanho para evitar o encolhimento pelo layout flex legado.
 
 ## Materiais
 
@@ -41,4 +42,12 @@ A rede da hero é editorial, sem representar relações causais do corpus. Teste
 
 ## Publicação
 
-A publicação desta atualização foi explicitamente solicitada pelo proprietário. Branch de trabalho `codex/war-room-experience` preservada; Pages permanece estático na raiz da branch main, com caminhos relativos sob `/WAR_ROOM/`. O resultado e a revisão servida serão registrados após o deploy.
+A publicação desta atualização foi explicitamente solicitada pelo proprietário. Branch de trabalho `codex/war-room-experience` preservada; main avançada sem force push. Runtime final da entrada: `a9272bf`, [Pages run 37151443101 aprovado](https://github.com/EDY075/WAR_ROOM/actions/runs/37151443101). Pages permanece estático na raiz de main, com caminhos relativos sob `/WAR_ROOM/`.
+
+Conferência no endereço público: suites de entrada, experiência e documentários aprovadas — quatro larguras, 17 dossiês e 102 capítulos em desktop/mobile, navegação, teclado/foco/Escape, histórico, busca/filtros, galeria, efeitos reduzidos e renderização sob demanda. Reprodução real de capítulo e episódio NotPetya passou com pausa/liberação após troca de aba/Escape. Os textos normalizados de HTML/módulos principais e os hashes binários dos 16 PNGs/mestres e ZIP servidos são idênticos aos locais. ZIP: 10.706.517 bytes, SHA-256 `ebcc7f2834eca918bf55122a2c2298827b706150cbbb0ab9d4f0812e3872ae67`. Capturas atuais em `assets/screenshots/entrance/`; preloader capturado com fixture de fontes pendentes.
+
+Preview e download público: [materiais de divulgação](https://edy075.github.io/WAR_ROOM/assets/media/war-room-launch-2026/). As oito peças/mestres não foram alteradas depois da verificação do ZIP.
+
+O portfólio recebeu a captura real da nova entrada em DPR 2, reduzida para WebP 640/1080/1600 com novos nomes para evitar cache antigo. Runtime `01af7f2`, Worker `85c20a35-3a11-4be5-9bf5-5e7f8c3e0b30`; lint/tipagem/build/dry-run, integração pública desktop/mobile, links, galeria/3D, foco/Escape, transição e hashes das três capas aprovados. O checkout original permanece intacto: 276 hashes, zero diferenças. A auditoria adicional npm apontou 12 avisos preexistentes (10 high / 2 moderate); package/lockfile não foram alterados e não houve atualização forçada de dependências. Essa auditoria é uma limitação registrada, não um teste aprovado. Detalhes no `docs/DEPLOYMENT.md` do portfólio.
+
+Revisões seguintes de documentação/capturas/testes não mudam o runtime indicado acima.

@@ -12,12 +12,12 @@ const hash=data=>crypto.createHash('sha256').update(data).digest('hex');
     const context=await browser.newContext();
     const pack='assets/media/war-room-launch-2026/';
     const manifest=JSON.parse(fs.readFileSync(pack+'manifest.json'));
-    for(const file of ['assets/js/entrance.js','assets/css/entrance.css',pack+'war-room-postaveis-hd.zip',...manifest.files.map(e=>pack+e.path)]){
+    for(const file of ['index.html','assets/js/entrance.js','assets/css/entrance.css','assets/js/experience.js','assets/js/documentaries.js','assets/js/narration.js',pack+'war-room-postaveis-hd.zip',...manifest.files.map(e=>pack+e.path)]){
       const response=await context.request.get(base+file);
       assert.equal(response.status(),200,file);
       const local=fs.readFileSync(path.resolve(file));
       // Git normalizes source line endings; compare text logically, binary exactly.
-      if(/\.(js|css)$/.test(file))assert.equal((await response.text()).replaceAll('\r\n','\n'),local.toString().replaceAll('\r\n','\n'));
+      if(/\.(html|js|css)$/.test(file))assert.equal((await response.text()).replaceAll('\r\n','\n'),local.toString().replaceAll('\r\n','\n'));
       else assert.equal(hash(await response.body()),hash(local),file);
     }
     for(const width of [1440,390]){

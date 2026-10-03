@@ -3,10 +3,10 @@
 | Field | State |
 | --- | --- |
 | Public release | Documentary edition published 2026-10-03; previous tag `v1.1.0 — CTI Evolution` preserved |
-| Current work | Documentary experience, cartography, campaign and authorized prolonged personal-voice narration across all 17 cases, published on GitHub, Pages and the portfolio |
+| Current work | All 17 documentaries/narrations preserved; lighter entrance, social credits and HD campaign published; portfolio cover synchronized |
 | Branch | Public `main`; `codex/war-room-experience` preserved |
 | Last sprint | 2026-10-03 · lighter hero/preloader, bounded sparks, confirmed social credits and HD launch package |
-| Last commit | Resolve with `git log -1 --oneline`; runtime `58ee3e4`; documentation revision resolves with git log |
+| Last commit | Resolve with `git log -1 --oneline`; entrance runtime `a9272bf`; documentation revisions resolve with git log |
 | Public Pages | https://edy075.github.io/WAR_ROOM/ (documentary edition live) |
 | Local preview | http://127.0.0.1:4173/WAR_ROOM/?tab=story#dossier-notpetya |
 
@@ -29,7 +29,7 @@
 
 ## Publication · 2026-10-03
 
-GitHub Pages runtime `58ee3e4`, successful build `37146988319`. Existing portfolio Worker version `7f40d6c8-619f-470f-b6f7-f089745dc59d`; new public case links to WAR ROOM and all 17 narrations. Public browser tests and served-file hashes passed; full evidence and limits: [PUBLICATION_2026-10-03.md](../docs/PUBLICATION_2026-10-03.md).
+Latest entrance runtime `a9272bf`, successful Pages build `37151443101`. Portfolio cover runtime `01af7f2`, existing Worker version `85c20a35-3a11-4be5-9bf5-5e7f8c3e0b30`. Public entrance/experience/documentary checks passed, as did direct chapter/full audio playback, all 16 promotional image/master hashes, ZIP/source hashes and portfolio navigation/cover hashes. Both codex branches are preserved; main advanced without force push. The original portfolio checkout still has zero differences across the 276-file saved snapshot. The portfolio's additional npm audit has 12 existing dependency advisories; package/lockfile unchanged, remediation belongs to a separately validated dependency update. Full evidence and limits: [ENTRANCE_VALIDATION.md](../docs/ENTRANCE_VALIDATION.md) and [PUBLICATION_2026-10-03.md](../docs/PUBLICATION_2026-10-03.md).
 
 ## Validation and evidence
 

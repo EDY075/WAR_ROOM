@@ -1,5 +1,9 @@
 # Publicação · 03/10/2026
 
+## Atualização posterior · entrada e divulgação HD
+
+Por nova solicitação explícita do proprietário, a hero/preloader foi refinada, a luz do mouse substituída por faíscas limitadas, os três perfis adicionados aos créditos e um ZIP HD de divulgação publicado. Runtime `a9272bf`, [Pages run 37151443101](https://github.com/EDY075/WAR_ROOM/actions/runs/37151443101) aprovado. [Preview/ZIP/textos](https://edy075.github.io/WAR_ROOM/assets/media/war-room-launch-2026/). A capa real no portfólio também foi atualizada: runtime `01af7f2`, Worker `85c20a35-3a11-4be5-9bf5-5e7f8c3e0b30`. Toda a validação atual, comparação de processamento e limites estão em [ENTRANCE_VALIDATION.md](ENTRANCE_VALIDATION.md). Os registros abaixo descrevem a primeira publicação documental e não devem ser tratados como a versão atual da hero.
+
 O proprietário autorizou explicitamente atualizar GitHub, GitHub Pages e seu portfólio, substituindo o escopo anterior de revisão local.
 
 - WAR ROOM: https://github.com/EDY075/WAR_ROOM · runtime publicado `58ee3e476351a3adbbbc3ae108c99ba1277f8d84`, main; branch `codex/war-room-experience` preservada. Fast-forward, sem reescrever histórico. A tag v1.1.0 permanece como referência histórica.
