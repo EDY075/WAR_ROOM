@@ -2,6 +2,17 @@
 
 Todas as mudanças relevantes do WAR ROOM são registradas neste arquivo.
 
+## Em revisão — Experience / NotPetya — 2026-10-03
+
+- Dossiê integrado com abas, busca/filtros/mapa/timeline sincronizados, contexto no histórico e links de capítulos.
+- Ordem editorial e cronológica explícitas, tipografia/controles maiores, navegação persistente e composição mobile.
+- Loops interrompidos por preferências/visibilidade/leitura; grain estático, renderização sob demanda preservada e galeria resistente a falhas e respostas atrasadas.
+- Piloto NotPetya em seis capítulos, fontes primárias, mapa com pausa, arquivo creditado e reconstituição identificada.
+- Padrão documental estendido aos 17 casos: 102 capítulos com aberturas e leitura específicas, fontes, história integral e análise preservadas.
+- Cartografia Natural Earth local, zoom acessível, contexto regional explícito, controle mobile e pausa fora da área de leitura; 11 novas reconstituições em WebP com créditos e prompts.
+- Capa, carrossel de cinco páginas, storyboard, teaser vertical de 36 s sem áudio e versão de 42 s com narração sintética local verificada, MP3 e legendas.
+- 17 dossiês e dados canônicos intactos. [Validação e limites](docs/EXPERIENCE_VALIDATION.md). Branch local `codex/war-room-experience`; sem publicação.
+
 ## [1.1.0] - 2026-08-23
 
 ### Adicionado

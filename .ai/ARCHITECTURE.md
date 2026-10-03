@@ -28,6 +28,16 @@ GitHub Pages (main / root)
 
 ## Architectural boundaries
 
+## Experience evolution in review
+
+`index.html` continues to own canonical historical data and the original initialization. New behavior and styling are extracted into relative `assets/js/experience.js` and `assets/css/experience.css`, loaded without a build. The module owns dossier tabs, reading chapters, history snapshots, query context, editorial/chronological ordering and decorative-loop lifecycle. Legacy entry points call this module; the separate story modal and expanded episode details were retired.
+
+The dossier workspace is moved to a body-level dialog before initialization so that the surrounding main/header/footer can be inert without disabling the dialog. Lightbox is a nested viewer with independent Escape and focus restoration. Canonical data fingerprints are protected by `tests/verify-experience-data.mjs`.
+
+`assets/js/documentaries.js` owns the separate editorial overlay for 17 six-chapter documentaries, cover metadata and additional primary references. `assets/js/cartography.js` owns projection, regional anchors, camera state and shared map figures. The selected chapter is rendered into the one dialog; the corpus does not duplicate 102 chapter DOM trees. No historical array is rewritten. The local `world-110m.svg` is one cached image reused across maps, generated offline with `scripts/build-cartography.cjs`. Zoom is explicit; page scroll remains native.
+
+`assets/media/notpetya/materials.html` is the editable source and download preview for campaign pieces; PNGs and the real MP4 are static output. Export/montage scripts are optional development tools and introduce no production dependency. All asset paths stay relative beneath `/WAR_ROOM/`.
+
 - Keep the project browser-native and dependency-light.
 - Do not introduce a backend or API without an explicit architecture decision.
 - Do not duplicate the historical corpus: episode source files and in-page rendered data must remain traceable.

@@ -4,6 +4,10 @@
 
 The CTI Evolution release is complete. No additional feature change is scheduled without a new user-approved scope.
 
+## Experience scope delivered for review — 2026-10-03
+
+The user authorized integrated UI/history/performance work, the NotPetya pilot and promotion media, then explicitly requested the same detailed cinematic standard for every case and a beautiful map. Delivered 17 six-chapter documentaries, real local cartography and artwork on `codex/war-room-experience`, preserving static delivery and the exact historical corpus. See [CURRENT_STATE.md](CURRENT_STATE.md). Review precedes merge/publication. Both silent and synthetic-voice MP4s, actual narration MP3 and captions are produced.
+
 ## Future candidates (not committed)
 
 1. Research review of the five modern dossiers using new primary-source material.

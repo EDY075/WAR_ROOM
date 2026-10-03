@@ -2,6 +2,30 @@
 
 This is the chronological project memory. `CURRENT_STATE.md` is the fast snapshot; `KNOWLEDGE_BASE.md` holds reusable rules.
 
+## Sprint — All-case documentary standard and delivery (2026-10-03)
+
+- The user explicitly extended the pilot standard to every case, requested a more cinematic map, detailed reading and strong performance. Recorded ADR-015/016; preserved exact historical arrays and existing work.
+- Delivered six chapters for all 17 cases, with distinct opening/context, original reading disclosure, chronological evidence, impact/defense and primary references. New case starts at opening; history restores the prior chapter. All 102 chapters were exercised on desktop/mobile with actual local image decode.
+- Replaced schematic continents with local Natural Earth 1:110m cartography, shared SVG, regional context anchors, collision leader lines, zoom/history and mobile rail. Log4j has explicit global scope with no invented geographic origin. SVG does not load on initial hero; chapter motion pauses offscreen, manually, when hidden and with reduced effects.
+- Generated eleven labeled contextual artworks with image_gen, converted to local 1200px WebP (40–90 KiB), and retained credited modern archives. Applied covers to all archive entries and documentary openings. Prompts/credits are recorded.
+- Produced a real synthetic Portuguese narration via installed local VoiceStudio / OmniVoice, verified by local transcription. Rejected the incorrect first engine output, corrected a supported-tag error, and restored prior engine/model preferences. No personal voice profile or model download. Delivered MP3, captions and a 42-second H.264/AAC vertical teaser alongside the silent 36-second version.
+- Source commits: `aaac3a2` (unified experience/pilot), `4e66d81` (all cases/cartography/narrated media). Final CDP medians against `aeaa524`: desktop hero task time 939.8 → 155.3 ms per 1.5 s; mobile emulation 210.9 → 44.6 ms. Callback counts 1,092 → 40 and 362 → 16; reading/reduced samples zero; no forced episode rendering. These final samples supersede the intermediate pilot-only figures below.
+- Four original checks, data fingerprints, experience/documentary browser suites, diff check and media checks passed. Evidence includes 23 desktop/mobile/narrow screenshots, caption loading and playback pause. Sanitized results/method: `docs/EXPERIENCE_VALIDATION.md`.
+- Static Pages paths and public v1.1.0 remain unchanged. Review branch only; no push, merge, tag, release update or deployment. Local preview remains available temporarily for review.
+
+## Sprint — Experience and NotPetya pilot (2026-10-03)
+
+- Read the full continuity chain. Initial `main` at `aeaa524` was clean; created `codex/war-room-experience`. No user edits were overwritten.
+- Consolidated dossiers into five tabs with body-level modal isolation, history/query snapshots and stable focus restoration. Preserved exact EPISODES/STORIES/INTEL_INDEX of all 17 cases. Retired fragmented detail/story presentation.
+- Synchronized query/filters/map/timeline/relations. Chronology uses interval start and editorial tie-breaks, preserving full ranges. Removed artificial reveal delays and disappearing header controls.
+- Removed forced rendering of every episode when opening one case. Gallery handles stale responses, errors and timeouts; nested Escape restores parent focus.
+- Decorative loops stop for effects preferences, OS reduced motion, visibility and modal reading. Grain is static; frame rates are capped; expensive animated layers and hidden loader processing were reduced.
+- Produced six NotPetya chapters with manual controls, a pausable schematic map, primary-source references, a dated/credited archive photo and labeled AI reconstruction. Original story stays integral. Qualified a legacy Petya image based on its source metadata without rewriting the corpus.
+- Created cover, five carousel PNGs, editable HTML, six teaser PNGs, storyboard and a real 36-second silent MP4 via FFmpeg. Heavy video is on demand; no narration availability is implied.
+- Four original checks, data fingerprints, expanded desktop/mobile browser checks and diff check passed. All 17 routes, keyboard/focus/Escape, history/links, search/filters, gallery race/failure, effects and real video were exercised. Captures include desktop/mobile/320px and decoded archive media.
+- Fresh three-run CDP comparison against `aeaa524`: hero callback medians in 1.5 s fell from 1,089 to 82 desktop and 362 to 21 mobile; reading/reduced samples reached zero. Full dossier opening previously forced 17 episodes, now zero. These are local CPU samples, not Lighthouse/field scores.
+- Updated architecture, decisions, design, tooling, workflow and continuity. Local review only; no push, merge, deployment or public release change.
+
 ## Sprint 1 - Cinematic entrance
 
 - Replaced a separate intro with a continuous loader-to-site sequence.

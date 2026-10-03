@@ -2,32 +2,38 @@
 
 | Field | State |
 | --- | --- |
-| Version | `v1.1.0` |
-| Status | Published — CTI Evolution |
-| Last sprint | CTI Evolution release |
-| Last product sprint | v1.0.2 final consistency pass |
-| Last release | [WAR ROOM v1.1.0](https://github.com/EDY075/WAR_ROOM/releases/tag/v1.1.0) |
-| Last commit | v1.1.0 publication record on `main`; resolve with `git log -1 --oneline` |
-| Pages | https://edy075.github.io/WAR_ROOM/ |
+| Public release | `v1.1.0 — CTI Evolution`, unchanged |
+| Current work | Documentary experience across all 17 cases, cinematic cartography and NotPetya campaign, ready for local branch review |
+| Branch | `codex/war-room-experience` |
+| Last sprint | 2026-10-03 · user-expanded scope: 102 chapters, real cartography and local artwork |
+| Last commit | Resolve with `git log -1 --oneline`; no merge, push, tag or deployment |
+| Public Pages | https://edy075.github.io/WAR_ROOM/ (still prior release) |
+| Local preview | http://127.0.0.1:4173/WAR_ROOM/?tab=story#dossier-notpetya |
 
 ## Current product state
 
-- All 17 dossiers render from the static application.
-- The Intelligence Center indexes the same 17 dossiers and provides map, timeline, filters, and MITRE/APT/IOC explorers.
-- The primary CTA focuses and navigates to `#intelligence`.
-- Modern dossier previews and maps are local assets with credits in `assets/images/CREDITS.md`.
-- v1.1.0 adds global search, a compact accessible experience/audio popover, a hybrid narrative/technical prologue, selectable MITRE/APT/IOC explorers, documented-correlation navigation, a shared selected-dossier state, synchronized map/timeline/cards, dossier drawer, operational chronology with previous/next navigation, hash deep links, reduced-effects control, truthful historical labels, and an evidence-backed loader.
-- The historical content and 17-dossier data model remain unchanged.
-- Final refinement Lighthouse evidence: desktop 100/100/100/100 and mobile 96/100/100/100 (Performance/Accessibility/Best Practices/SEO), with 238 KiB and one initial request.
+- All 17 canonical EPISODES, STORIES and INTEL_INDEX records are unchanged. Fingerprints at `aeaa524` are protected by `tests/verify-experience-data.mjs`.
+- One body-level modal workspace exposes Resumo, História, Análise, Mídia and Fontes; cards, archive actions, map, search and relations route into it. Legacy story modal and expanded episode details were retired.
+- Selection, search, filters, map, timeline and relations stay synchronized. History stores context, scroll and stable focus selectors; direct links support dossier, tab, chapter, order, filters, query and explorer signal.
+- Editorial sequence remains original. Chronological ordering and year filtering use the first year of the canonical campaign interval with editorial tie-breaks; complete ranges remain visible.
+- Larger reading text and controls preserve black/gold/off-white identity. Header controls stay available on scroll. No artificial reading stagger or timed dossier opening.
+- Reduced effects/OS reduced motion, hidden document and modal reading stop decorative loops. Grain is a single small static texture. Background rendering is capped; content-visibility remains automatic for every episode.
+- Gallery uses request versions, load/error/timeout states and focus restoration. Stale responses and nested Escape are regression-tested.
+- All 17 cases have six reading-first chapters (102 total), unique opening titles/context, manual progression, primary references, original full story disclosure and preserved analysis. New case selection begins at opening; browser history restores the saved chapter. Direct chapter links work for every case.
+- Central and chapter maps share local Natural Earth 1:110m geography, explicit regional anchors, displaced controls with leader lines, keyboard zoom and a mobile rail. Chapter animation pauses manually, outside the reading viewport, with reduced motion and when hidden. No invented infection routes or live telemetry.
+- Eleven new labeled contextual reconstructions supplement NotPetya artwork and the five existing credited modern archives. Local WebP covers are used in archive entries and chapters; no cover/video loads on initial hero in browser checks. Sources and prompts: [DOCUMENTARY_VISUALS.md](../docs/DOCUMENTARY_VISUALS.md).
+- Cover, five carousel pages, editable HTML, six teaser frames, storyboard and real vertical MP4s (36 s silent / 42 s narrated, H.264, 1080 × 1920, 24 fps) are in `assets/media/notpetya/`. Video/audio load on demand. A real synthetic Portuguese narration MP3 and captions are delivered; local VoiceStudio / installed OmniVoice generation passed transcription validation, and existing voice settings were restored.
 
-## Known bugs and pending work
+## Validation and evidence
 
-- No release-blocking functional bugs are known after the four automated verification scripts passed.
-- The mobile map exposes an accessible 48px horizontal hotspot rail instead of overlapping geographic targets.
-- Duplicate legacy function declarations covered by regression tests were removed.
-- The pre-migration local source remains intentionally preserved outside the release workflow.
-- Future work is intentionally deferred to [ROADMAP_AI.md](ROADMAP_AI.md).
+- Four original verification scripts pass, plus canonical-data, experience and documentary desktop/mobile browser checks.
+- Browser scenarios cover all 17 routes and all 102 chapters at both viewports, image decode, map zoom/history, chapter links beyond the pilot, keyboard/tabs/focus/Escape, search/filters/history, gallery race/failure, reduced effects and real video playback/pause.
+- Screenshots: `assets/screenshots/experience/`; actual archive image decoded separately, narrow 320px checked. Race tests deliberately use network fixtures; they do not prove external-source availability.
+- A fresh three-run Chromium Edge/CDP comparison against `aeaa524` measures the completed corpus/map iteration. Reading/reduced samples reach zero callbacks, and dossier opening forces zero episode entries. Current medians, method and limits: [EXPERIENCE_VALIDATION.md](../docs/EXPERIENCE_VALIDATION.md). Earlier pilot-only samples in the memory log are intermediate historical measurements.
+- Prior v1.1.0 Lighthouse scores are historical release evidence, not measurements of this branch. No new Lighthouse, field INP or lab mobile hardware claim is made.
 
-## Frozen scope
+## Limits and follow-up
 
-The historical corpus and deployment model remain frozen until a new explicitly approved scope.
+- No merge, push, publication, release change or deployment. Stop the temporary local preview when review finishes.
+- Classic remote gallery sources can fail independently; reading/references retain an alternative. A legacy Petya screenshot receives a visible qualification while original records stay preserved.
+- Both teasers have readable text; narrated version adds synthetic Portuguese voice, with no external music. Regenerating speech needs local VoiceStudio and installed OmniVoice; playback requires only delivered static files. No personal voice profile was used.

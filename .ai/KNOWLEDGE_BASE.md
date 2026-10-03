@@ -24,6 +24,18 @@
 
 ## CTI interface and performance
 
+- Treat editorial geography as context with a stated role (origin, affected region or attribution); never let a dot silently imply all three. Real cartography can be a shared cached SVG instead of a heavy GIS dependency. Use leader lines for displaced controls and a mobile case rail.
+- A common documentary shell does not require duplicating the canonical corpus or mounting every chapter. Keep case-specific text/credits in a presentation overlay and render only the selected case/chapter. Preserve original narrative separately when it contains dramatic language or differently scoped estimates.
+- Lazy local WebP imagery prevents remote-source failures from breaking the opening. Verify actual image decode for all cases and assert that their artwork/video is absent from initial hero requests.
+- A compatible speech request's model field may not switch the local application's active engine. Discover the native engine selection, preserve/restore existing choices, validate supported voice tags and transcribe generated speech before using it. An HTTP success and a decodable WAV do not prove the spoken facts are correct.
+
+- A modal inside an inert main element is also inert. Mount the modal at body level before disabling the background. Verify actual focus, not only ARIA attributes.
+- Image preloader callbacks need a selection/version token and failure/timeout paths. Closing a viewer invalidates in-flight callbacks. A nested viewer's Escape must not also close its parent dossier.
+- CSS hiding does not terminate JavaScript loops. Stop requestAnimationFrame and timer scheduling explicitly; retain guarded restart hooks for preference/visibility changes. Hidden loader animations should end with `display:none`.
+- Snapshot scroll, filters, search, explorer, order, selected dossier, tab, chapter and stable focus selector before pushing history. After rerendering, restore focus by a stable selector, not only a detached element reference.
+- Campaign chronology derives from the first year of the canonical episode interval, not a representative metadata year. Keep full intervals visible, and use editorial sequence to break ties.
+- Do not infer an image's event identity from its filename. The legacy Petya screenshot metadata describes a different context; keep the source and add a visible qualification.
+
 - A static historical corpus must label its verified coverage separately from the current edition year; simulated live status erodes analytical credibility.
 - A lazy `<img>` can still be fetched eagerly when the same URL is placed in inline `background-image`. Defer both representations until the image is actually needed.
 - Map, timeline, filters, cards, search, and deep links should derive from one selected-dossier state so that every investigative path stays synchronized.
