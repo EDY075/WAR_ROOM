@@ -28,7 +28,9 @@ GitHub Pages (main / root)
 
 ## Architectural boundaries
 
-`assets/js/entrance.js` owns a 160 × 160 pointer-spark canvas and hero visibility observer; existing `effectsAllowed/registerDecorative` owns shared lifecycle. At most 24 sparks live for up to 520 ms; no animation loop runs when idle. `assets/css/entrance.css` owns the revised entrance/credits and static inline network styling. Retired Canvas scene/ambient-particle/parallax functions are deleted from index.html. The loader waits for actual local readiness and optional fonts with a 700 ms ceiling, never a minimum presentation time. Promotional export tools are development-only and add no production dependency.
+`assets/js/entrance.js` owns four stable topic selectors, manual ambient pause, a 160×160 pointer-spark canvas and the hero visibility observer. Shared `effectsAllowed/registerDecorative` manages reduced/hidden/modal lifecycle. At most 24 sparks live for up to 520ms; no JS animation loop runs idle. `assets/css/entrance.css` owns responsive galaxy/background surfaces, full-viewport entrance, HTML-layer transforms and feedback. SVG internals stay static. Source WebPs and illustration credit/prompt are local; original PNG is delivery-only. No production dependency/build is introduced.
+
+The loader has a brief 850ms skippable opening, with a parallel 700ms fonts deadline and no heavy-media gate. Initial route restore follows exit to preserve dialog focus. Navigation Timing `reload` resets that entry route/state; ordinary direct links/back-forward retain router behavior. Legacy child reveal observers are retired: immediate visibility classes plus existing content-visibility/lazy assets keep natural reading and deferred corpus rendering. Promotional export tools stay development-only.
 
 ## Experience evolution in review
 

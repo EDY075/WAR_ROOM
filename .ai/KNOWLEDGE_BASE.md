@@ -62,3 +62,12 @@
 ## Publication integrity
 
 On Windows compare served text against Git blobs, not CRLF-converted working-tree bytes. Preserve dirty sibling projects in their original checkout; a release worktree can carry forward the already published runtime and later scoped integration without resetting owner files. Validate the actual public URLs and media, not only deployment command success.
+
+
+## Animated entrance and reload
+
+- Moving a decorative layer must not move its click targets. Separate animated artwork from stable 48px HTML controls; pause artwork on hover/focus.
+- Zero JS rAF loops does not imply zero rendering cost: CSS transforms still trigger styles/intersections. Measure new ambient artwork against the actual immediately previous runtime and report regressions honestly.
+- Removing delayed reveal observers must preserve content-visibility:auto and lazy assets; a visible class need not force all episodes to render.
+- Detect explicit reload with Navigation Timing before router init. Reset only that history entry; do not force the top on normal popstate or fresh direct links.
+- A reduced-motion rule can turn a zero-second visibility transition into a tiny nonzero transition and prevent immediate dialog focus. Do not transition visibility on dialog opening; restore the initial route after a preloader exits and recheck focus once after rendering, without stealing an existing dialog focus.

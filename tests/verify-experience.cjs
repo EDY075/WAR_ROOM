@@ -14,7 +14,7 @@ const fs = require('node:fs');
       // Deterministic remote image behavior: local fixture pixels, then real network separately.
       await page.route('https://upload.wikimedia.org/**',async route=>{await route.fulfill({contentType:'image/png',body:Buffer.from('iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8/x8AAwMCAO+aXioAAAAASUVORK5CYII=','base64')});});
       await page.goto(base+'?tab=story#dossier-notpetya');
-      await page.waitForTimeout(700);
+      await page.locator('#loading-screen').waitFor({state:'hidden'});
       assert.equal(await page.locator('#intel-drawer [role=tab]').count(),5,'Unified dossier must expose five tabs');
       assert.equal(await page.locator('.episode-entry').count(),17);
       assert.equal(await page.locator('.episode-entry[style*="content-visibility: visible"]').count(),0,'Opening must not force corpus rendering');
@@ -26,7 +26,7 @@ const fs = require('node:fs');
       assert.equal(await page.locator('#tab-analysis').getAttribute('aria-selected'),'true');
       assert.equal(await page.locator('#tab-analysis').evaluate(e=>e===document.activeElement),true);
       await page.goBack();assert.equal(await page.locator('#tab-story').getAttribute('aria-selected'),'true');
-      await page.getByRole('button',{name:'Origem',exact:true}).click();
+      await page.locator('.pilot-chapters').getByRole('button',{name:'Origem',exact:true}).click();
       assert.match(page.url(),/chapter=origin/);
       await page.getByRole('button',{name:'Próximo capítulo',exact:true}).click();
       assert.equal(await page.locator('.pilot-map').count(),1);

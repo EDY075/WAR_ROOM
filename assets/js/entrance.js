@@ -1,9 +1,39 @@
-/* Hero enhancement only; native cursor, no backdrop renderer or idle JS loop. */
+/* Composited ambience and on-demand pointer sparks; no idle JS renderer. */
 window.WarRoomEntrance = (function () {
   function init() {
     var hero = document.getElementById('hero');
     var canvas = document.getElementById('cursor-sparks');
     if (!hero || !canvas) return;
+    var topics = {
+      origin: ['Origem', 'Onde a história começa. Investigue o contexto, os primeiros sinais e as atribuições documentadas de cada caso.'],
+      techniques: ['Técnicas', 'Como o ataque funciona. Compare vetores de entrada, malwares e técnicas MITRE ATT&CK na análise dos dossiês.'],
+      response: ['Resposta', 'Como se enfrentou a crise. Leia sobre contenção, recuperação e investigação nos capítulos de resposta.'],
+      impact: ['Impacto', 'O que mudou fora das telas. Explore consequências humanas, operacionais e econômicas, com as respectivas fontes.']
+    };
+    var buttons = hero.querySelectorAll('[data-topic]'), panel = document.getElementById('network-topic-panel');
+    buttons.forEach(function (button) {
+      button.addEventListener('click', function () {
+        var topic = topics[button.dataset.topic];
+        buttons.forEach(function (item) { item.setAttribute('aria-pressed', String(item === button)); });
+        panel.querySelector('h2').textContent = topic[0];
+        panel.querySelector('p').textContent = topic[1];
+      });
+    });
+    hero.querySelector('.hero-brand').addEventListener('click', function (event) {
+      event.preventDefault(); WarRoomExperience.navigate('#hero');
+    });
+    var pause = document.getElementById('entrance-pause');
+    function syncMotionControl() {
+      var allowed = effectsAllowed();
+      pause.disabled = !allowed;
+      pause.textContent = allowed ? (document.body.classList.contains('entrance-motion-paused') ? 'Retomar movimento' : 'Pausar movimento') : 'Movimento pausado';
+    }
+    pause.addEventListener('click', function () {
+      var paused = document.body.classList.toggle('entrance-motion-paused');
+      pause.setAttribute('aria-pressed', String(paused));
+      pause.textContent = paused ? 'Retomar movimento' : 'Pausar movimento';
+      if (paused) stop();
+    });
     var visible = true, frame = null, sparks = [], lastEmission = 0, lastFrame = 0;
     var pointer = { x: 0, y: 0 }, fine = matchMedia('(any-pointer: fine)');
     var ctx = canvas.getContext('2d');
@@ -16,10 +46,11 @@ window.WarRoomEntrance = (function () {
       if (frame !== null) cancelAnimationFrame(frame);
       frame = null; sparks.length = 0; ctx.clearRect(0, 0, size, size);
       canvas.hidden = true;
+      syncMotionControl();
     }
     function draw(now) {
       frame = null;
-      if (!visible || !effectsAllowed() || !fine.matches) { stop(); return; }
+      if (!visible || !effectsAllowed() || !fine.matches || document.body.classList.contains('entrance-motion-paused')) { stop(); return; }
       if (now - lastFrame < 32) { frame = requestAnimationFrame(draw); return; }
       lastFrame = now;
       ctx.clearRect(0, 0, size, size);
@@ -35,7 +66,7 @@ window.WarRoomEntrance = (function () {
       if (sparks.length) frame = requestAnimationFrame(draw); else stop();
     }
     hero.addEventListener('pointermove', function (event) {
-      if (event.pointerType !== 'mouse' || !fine.matches || !visible || !effectsAllowed()) return;
+      if (event.pointerType !== 'mouse' || !fine.matches || !visible || !effectsAllowed() || document.body.classList.contains('entrance-motion-paused')) return;
       var now = performance.now();
       if (now - lastEmission < 32) return;
       lastEmission = now; pointer.x = event.clientX; pointer.y = event.clientY;
@@ -55,7 +86,7 @@ window.WarRoomEntrance = (function () {
       if (!visible) stop();
     }, { threshold: 0 });
     observer.observe(hero);
-    registerDecorative(function () {}, stop);
+    registerDecorative(syncMotionControl, stop);
     fine.addEventListener('change', stop);
   }
   return { init: init };

@@ -3,17 +3,19 @@
 | Field | State |
 | --- | --- |
 | Public release | Documentary edition published 2026-10-03; previous tag `v1.1.0 — CTI Evolution` preserved |
-| Current work | All 17 documentaries/narrations preserved; lighter entrance, social credits and HD campaign published; portfolio cover synchronized |
+| Current work | All 17 documentaries/narrations preserved; full-viewport interactive entrance, galaxy and reload/preloader evolution |
 | Branch | Public `main`; `codex/war-room-experience` preserved |
-| Last sprint | 2026-10-03 · lighter hero/preloader, bounded sparks, confirmed social credits and HD launch package |
-| Last commit | Resolve with `git log -1 --oneline`; entrance runtime `a9272bf`; documentation revisions resolve with git log |
+| Last sprint | 2026-10-03 · full-viewport hero, interactive investigation points, illustrated moving galaxy and reload-to-hero |
+| Last commit | Resolve with `git log -1 --oneline`; galaxy entrance runtime resolves with git log; prior static runtime `a9272bf` is historical |
 | Public Pages | https://edy075.github.io/WAR_ROOM/ (documentary edition live) |
 | Local preview | http://127.0.0.1:4173/WAR_ROOM/?tab=story#dossier-notpetya |
 
 ## Current product state
 
-- Latest entrance: static editorial SVG network, clearer text/actions, no mouse glow/background particles/parallax, bounded pointer sparks with no idle JS loop. Real initialization preloader has no forced minimum delay. Map shell expands to 1320px. GitHub/LinkedIn/confirmed Instagram credits are present. Eight upload pieces, eight 2× PNG masters, editable HTML, copy/links and ZIP: `assets/media/war-room-launch-2026/`.
-- Current fresh comparison against `be43e1e`: median renderer task time during 1.5 s idle is 250.894 → 42.907 ms desktop and 71.526 → 48.066 ms mobile emulation. Zero idle hero JS callbacks; animated SVG candidate was rejected after measured painting regression. Method/limits: [ENTRANCE_VALIDATION.md](../docs/ENTRANCE_VALIDATION.md). These are local CDP measurements, not Lighthouse/field scores.
+- Latest entrance: at least 100svh, responsive original galaxy (illustration identified as AI), CSS transform-only ambience behind the page, floating network art with four stable interactive controls, title/button feedback and bounded native-cursor sparks. Manual pause, OS/user reduced effects, hidden document and modal reading stop motion; offscreen network pauses. Mobile remains complete with natural content height. No shader or global Canvas renderer.
+- Preloader: brief skippable 850ms opening on navigation/reload, fonts deadline 700ms in parallel, no required media download. Reduced motion skips the minimum/fade. Explicit reload clears context and returns to hero; fresh direct links and back/forward preserve context. Initial dialog restore follows loader exit; visibility changes immediately on opening to preserve focus with reduced motion.
+- Current new three-run comparison against `4531865`: renderer task median /1.5s 29.903 → 60.352ms desktop, 41.214 → 64.595ms mobile emulation. Movement costs more than the previous static entrance; zero idle JS callbacks, zero forced episode rendering and zero decorative callbacks during reading/reduced samples remain. One additional responsive image, 159KB desktop /47KB mobile. Current method, screenshots and limits: [GALAXY_ENTRANCE_VALIDATION.md](../docs/GALAXY_ENTRANCE_VALIDATION.md). Previous percentages are historical.
+- Existing HD launch ZIP at `assets/media/war-room-launch-2026/` remains the prior vector entrance edition; unchanged bytes/texts. No audio regeneration or social posting in this iteration. GitHub/LinkedIn/confirmed Instagram credits remain.
 
 - All 17 canonical EPISODES, STORIES and INTEL_INDEX records are unchanged. Fingerprints at `aeaa524` are protected by `tests/verify-experience-data.mjs`.
 - One body-level modal workspace exposes Resumo, História, Análise, Mídia and Fontes; cards, archive actions, map, search and relations route into it. Legacy story modal and expanded episode details were retired.
@@ -28,6 +30,10 @@
 - Cover, five carousel pages, editable HTML, six teaser frames, storyboard and real vertical MP4s (36 s silent / 42 s narrated, H.264, 1080 × 1920, 24 fps) are in `assets/media/notpetya/`. Video/audio load on demand. A real synthetic Portuguese narration MP3 and captions are delivered; local VoiceStudio / installed OmniVoice generation passed transcription validation, and existing voice settings were restored.
 
 ## Publication · 2026-10-03
+
+Galaxy iteration: validation/publication status and exact revision are recorded in [GALAXY_ENTRANCE_VALIDATION.md](../docs/GALAXY_ENTRANCE_VALIDATION.md).
+
+Previous static entrance publication (historical):
 
 Latest entrance runtime `a9272bf`, successful Pages build `37151443101`. Portfolio cover runtime `01af7f2`, existing Worker version `85c20a35-3a11-4be5-9bf5-5e7f8c3e0b30`. Public entrance/experience/documentary checks passed, as did direct chapter/full audio playback, all 16 promotional image/master hashes, ZIP/source hashes and portfolio navigation/cover hashes. Both codex branches are preserved; main advanced without force push. The original portfolio checkout still has zero differences across the 276-file saved snapshot. The portfolio's additional npm audit has 12 existing dependency advisories; package/lockfile unchanged, remediation belongs to a separately validated dependency update. Full evidence and limits: [ENTRANCE_VALIDATION.md](../docs/ENTRANCE_VALIDATION.md) and [PUBLICATION_2026-10-03.md](../docs/PUBLICATION_2026-10-03.md).
 

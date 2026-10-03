@@ -12,7 +12,7 @@ const hash=data=>crypto.createHash('sha256').update(data).digest('hex');
     const context=await browser.newContext();
     const pack='assets/media/war-room-launch-2026/';
     const manifest=JSON.parse(fs.readFileSync(pack+'manifest.json'));
-    for(const file of ['index.html','assets/js/entrance.js','assets/css/entrance.css','assets/js/experience.js','assets/js/documentaries.js','assets/js/narration.js',pack+'war-room-postaveis-hd.zip',...manifest.files.map(e=>pack+e.path)]){
+    for(const file of ['index.html','assets/js/entrance.js','assets/css/entrance.css','assets/js/experience.js','assets/js/documentaries.js','assets/js/narration.js','assets/images/entrance/galaxy.webp','assets/images/entrance/galaxy-mobile.webp','assets/images/entrance/galaxy-master.png',pack+'war-room-postaveis-hd.zip',...manifest.files.map(e=>pack+e.path)]){
       const response=await context.request.get(base+file);
       assert.equal(response.status(),200,file);
       const local=fs.readFileSync(path.resolve(file));

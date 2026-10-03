@@ -123,3 +123,8 @@ This is the chronological project memory. `CURRENT_STATE.md` is the fast snapsho
 ## Publication preparation · 2026-10-03
 
 The owner authorized GitHub, Pages and portfolio publication. Reviewed authenticated targets and existing deployed runtime. Public README now describes the documentary edition and qualifies old Lighthouse evidence. Four original verifiers and canonical-data check are rerun before publication; deployment outcome will be recorded after checking the real URLs.
+
+
+## Galáxia e entrada imersiva · 2026-10-03
+
+Owner expanded the entrance scope: full first viewport, interactive network/title/actions, visible preloader, reload-to-hero and a moving galaxy behind the site. ADR-022/023 supersede prior static/no-minimum decisions under explicit owner authorization. Responsive original AI illustration delivered with master/prompt/visible credit; animated HTML wrappers keep SVG internals and click targets stable. Brief skip controls and navigation-type detection preserve fresh dossier links/back-forward while reload resets context. Reduced-motion direct-link focus regression was found by new tests and repaired with immediate dialog visibility and a guarded one-frame focus recheck. Child reveal observers retired without forcing episode rendering. Five viewport QA plus all 17 dossiers/102 chapters/media smoke and original gates; current CPU comparison transparently records a higher cost than the previous static entrance, with zero idle JS/decorative reading callbacks. Evidence/publication: [GALAXY_ENTRANCE_VALIDATION.md](../docs/GALAXY_ENTRANCE_VALIDATION.md). Prior promotional ZIP/audio stay intact.

@@ -1,0 +1,154 @@
+{
+  "date": "2026-10-03",
+  "baselineRevision": "4531865489cf627c1a3d5d848ea5b6e8d2dccb8a",
+  "method": "Edge headless/CDP, 3 sequential runs per viewport, 2600ms settling +1500ms sampling; no concurrent browser or media jobs",
+  "limits": "Local renderer measurements; mobile emulation, no field CWV/GPU/battery claims",
+  "before": [
+    {
+      "mobile": false,
+      "run": 1,
+      "domCharacters": 306846,
+      "initialResources": 7,
+      "frameCallbacks1500ms": 0,
+      "taskDuration1500ms": 52.467,
+      "longTasks": 2,
+      "forcedEpisodesWhenOpen": 0,
+      "callbacksReading400ms": 0,
+      "callbacksReduced400ms": 0
+    },
+    {
+      "mobile": false,
+      "run": 2,
+      "domCharacters": 306846,
+      "initialResources": 7,
+      "frameCallbacks1500ms": 0,
+      "taskDuration1500ms": 22.674,
+      "longTasks": 1,
+      "forcedEpisodesWhenOpen": 0,
+      "callbacksReading400ms": 0,
+      "callbacksReduced400ms": 0
+    },
+    {
+      "mobile": false,
+      "run": 3,
+      "domCharacters": 306846,
+      "initialResources": 7,
+      "frameCallbacks1500ms": 0,
+      "taskDuration1500ms": 29.903,
+      "longTasks": 2,
+      "forcedEpisodesWhenOpen": 0,
+      "callbacksReading400ms": 0,
+      "callbacksReduced400ms": 0
+    },
+    {
+      "mobile": true,
+      "run": 1,
+      "domCharacters": 306821,
+      "initialResources": 7,
+      "frameCallbacks1500ms": 0,
+      "taskDuration1500ms": 41.214,
+      "longTasks": 2,
+      "forcedEpisodesWhenOpen": 0,
+      "callbacksReading400ms": 0,
+      "callbacksReduced400ms": 0
+    },
+    {
+      "mobile": true,
+      "run": 2,
+      "domCharacters": 306821,
+      "initialResources": 7,
+      "frameCallbacks1500ms": 0,
+      "taskDuration1500ms": 42.053,
+      "longTasks": 2,
+      "forcedEpisodesWhenOpen": 0,
+      "callbacksReading400ms": 0,
+      "callbacksReduced400ms": 0
+    },
+    {
+      "mobile": true,
+      "run": 3,
+      "domCharacters": 306821,
+      "initialResources": 7,
+      "frameCallbacks1500ms": 0,
+      "taskDuration1500ms": 26.049,
+      "longTasks": 2,
+      "forcedEpisodesWhenOpen": 0,
+      "callbacksReading400ms": 0,
+      "callbacksReduced400ms": 0
+    }
+  ],
+  "after": [
+    {
+      "mobile": false,
+      "run": 1,
+      "domCharacters": 309731,
+      "initialResources": 8,
+      "frameCallbacks1500ms": 0,
+      "taskDuration1500ms": 70.43900000000001,
+      "longTasks": 2,
+      "forcedEpisodesWhenOpen": 0,
+      "callbacksReading400ms": 0,
+      "callbacksReduced400ms": 0
+    },
+    {
+      "mobile": false,
+      "run": 2,
+      "domCharacters": 309731,
+      "initialResources": 8,
+      "frameCallbacks1500ms": 0,
+      "taskDuration1500ms": 60.352000000000004,
+      "longTasks": 1,
+      "forcedEpisodesWhenOpen": 0,
+      "callbacksReading400ms": 0,
+      "callbacksReduced400ms": 0
+    },
+    {
+      "mobile": false,
+      "run": 3,
+      "domCharacters": 309731,
+      "initialResources": 8,
+      "frameCallbacks1500ms": 0,
+      "taskDuration1500ms": 60.031,
+      "longTasks": 1,
+      "forcedEpisodesWhenOpen": 0,
+      "callbacksReading400ms": 0,
+      "callbacksReduced400ms": 0
+    },
+    {
+      "mobile": true,
+      "run": 1,
+      "domCharacters": 309706,
+      "initialResources": 8,
+      "frameCallbacks1500ms": 0,
+      "taskDuration1500ms": 63.975,
+      "longTasks": 1,
+      "forcedEpisodesWhenOpen": 0,
+      "callbacksReading400ms": 0,
+      "callbacksReduced400ms": 0
+    },
+    {
+      "mobile": true,
+      "run": 2,
+      "domCharacters": 309706,
+      "initialResources": 8,
+      "frameCallbacks1500ms": 0,
+      "taskDuration1500ms": 64.595,
+      "longTasks": 1,
+      "forcedEpisodesWhenOpen": 0,
+      "callbacksReading400ms": 0,
+      "callbacksReduced400ms": 0
+    },
+    {
+      "mobile": true,
+      "run": 3,
+      "domCharacters": 309706,
+      "initialResources": 8,
+      "frameCallbacks1500ms": 0,
+      "taskDuration1500ms": 64.839,
+      "longTasks": 1,
+      "forcedEpisodesWhenOpen": 0,
+      "callbacksReading400ms": 0,
+      "callbacksReduced400ms": 0
+    }
+  ]
+}

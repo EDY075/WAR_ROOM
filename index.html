@@ -463,6 +463,10 @@ body.effects-reduced #grain-overlay,body.effects-reduced #ambient-particles,body
 <link rel="stylesheet" href="assets/css/entrance.css">
 </head>
 <body>
+<picture class="space-background" aria-hidden="true">
+<source media="(max-width: 900px)" srcset="assets/images/entrance/galaxy-mobile.webp">
+<img src="assets/images/entrance/galaxy.webp" width="1672" height="940" alt="" decoding="async" fetchpriority="low">
+</picture>
 <a href="#main-content" class="skip-link">Pular para conteúdo</a>
 <div id="loading-screen" role="dialog" aria-modal="true" aria-labelledby="loader-title" aria-describedby="load-status">
 <div class="loading-content">
@@ -537,12 +541,13 @@ body.effects-reduced #grain-overlay,body.effects-reduced #ambient-particles,body
 <div class="hero-layout">
 <div class="hero-content">
 <div class="hero-eyebrow">Cyber Threat Intelligence / Arquivo histórico</div>
-<h1 class="hero-title">WAR <span class="accent">ROOM</span></h1>
+<h1 class="hero-title"><a class="hero-brand" href="#hero" aria-label="WAR ROOM — início"><span>WAR</span> <span class="accent">ROOM</span></a></h1>
 <p class="hero-lead">O impacto é real.<br>A investigação começa aqui.</p>
 <p class="hero-sub">Explore 17 dossiês sobre incidentes e conflitos cibernéticos. Conecte origens, técnicas e consequências em 102 capítulos, com fontes públicas e episódios narrados.</p>
 <div class="hero-actions"><button id="hero-cta">Investigar no mapa</button><button class="continue-exploring" id="continue-exploring">Explorar os episódios</button></div>
 </div>
 <figure class="hero-network">
+<div class="network-stage"><div class="network-art"><div class="network-motion">
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 460" aria-hidden="true" focusable="false">
 <g class="network-links">
 <path d="M260 230L112 166"/>
@@ -596,8 +601,15 @@ body.effects-reduced #grain-overlay,body.effects-reduced #ambient-particles,body
 <circle class="network-node" cx="335" cy="207" r="2.8"/>
 <circle class="network-node" cx="218" cy="308" r="2.8"/>
 <g class="network-label"><text x="61" y="139">ORIGEM</text><text x="375" y="112">TÉCNICAS</text><text x="353" y="382">IMPACTO</text><text x="128" y="387">RESPOSTA</text></g>
-</svg>
-<figcaption><span>Conexões para investigar</span><span>Esquema visual editorial</span></figcaption>
+</svg></div>
+<div class="network-topics" role="group" aria-label="Eixos da investigação">
+<button type="button" class="network-topic topic-origin" data-topic="origin" aria-pressed="true" aria-controls="network-topic-panel"><span>Origem</span></button>
+<button type="button" class="network-topic topic-techniques" data-topic="techniques" aria-pressed="false" aria-controls="network-topic-panel"><span>Técnicas</span></button>
+<button type="button" class="network-topic topic-response" data-topic="response" aria-pressed="false" aria-controls="network-topic-panel"><span>Resposta</span></button>
+<button type="button" class="network-topic topic-impact" data-topic="impact" aria-pressed="false" aria-controls="network-topic-panel"><span>Impacto</span></button>
+</div></div></div>
+<div class="network-topic-panel" id="network-topic-panel" aria-live="polite" aria-atomic="true"><h2>Origem</h2><p>Onde a história começa. Investigue o contexto, os primeiros sinais e as atribuições documentadas de cada caso.</p></div>
+<figcaption><span>Selecione um ponto para investigar.<small>Esquema editorial · fundo galáctico ilustrativo gerado com IA.</small></span><button id="entrance-pause" type="button" aria-pressed="false">Pausar movimento</button></figcaption>
 </figure>
 </div>
 <div class="hero-status-grid" aria-label="Status da base de inteligência">
@@ -871,15 +883,28 @@ var no = byId("nav-overlay");
 [document.querySelector("header"),document.querySelector("main"),document.querySelector("footer"),byId("back-to-top")].forEach(function(element){if(element)element.inert=true;});
 var appInitialized=false;
 var introTimer=null;
+var initialRouteRestored=false;
+// An explicit reload starts a new reading session; history traversal and fresh links retain their routes.
+var navigationEntry=performance.getEntriesByType("navigation")[0];
+if(navigationEntry&&navigationEntry.type==="reload"){
+  history.scrollRestoration="manual";
+  history.replaceState(null,"",window.location.pathname);
+  window.scrollTo({top:0,behavior:"instant"});
+}
+var initialRouteState=history.state;
 function enterWarRoom(skip){
-  if(!ls || ls.classList.contains("hidden")) return;
+  if(!ls || ls.classList.contains("hidden") || ls.getAttribute("aria-hidden")==="true") return;
   if(introTimer){clearTimeout(introTimer);introTimer=null;}
   if(skip) document.body.classList.add("intro-skipped");
   document.body.classList.add("intro-revealing","intro-ready");
   [document.querySelector("header"),document.querySelector("main"),document.querySelector("footer"),byId("back-to-top")].forEach(function(element){if(element)element.inert=false;});
-  ls.setAttribute("aria-hidden","true");
-  setTimeout(function(){ls.classList.add("hidden");ls.inert=true;document.body.classList.remove("intro-revealing");},180);
   if(ls.contains(document.activeElement))hcta.focus({preventScroll:true});
+  ls.inert=true;
+  ls.setAttribute("aria-hidden","true");
+  setTimeout(function(){
+    ls.classList.add("hidden");ls.inert=true;document.body.classList.remove("intro-revealing");
+    if(!initialRouteRestored){initialRouteRestored=true;WarRoomExperience.restore(initialRouteState);}
+  },prefersReducedMotion?0:180);
 }
 le.addEventListener("click",enterWarRoom);
 if(lskip) lskip.addEventListener("click",function(){enterWarRoom(true);});
@@ -895,7 +920,7 @@ function initApp(){
   renderEpisodes();initIntelligenceCenter();WarRoomExperience.init();
   if(!prefersReducedMotion&&!isLowPerf)initGrain();
   WarRoomEntrance.init();
-  initIntersectionObserver();initLightbox();initAudio();initNav();initScrollNav();initJourneyProgress();initHamburger();initOperationalLayer();
+  initReadingVisibility();initLightbox();initAudio();initNav();initScrollNav();initJourneyProgress();initHamburger();initOperationalLayer();
   updateLoaderProgress();
 }
 var act = null;
@@ -1000,10 +1025,10 @@ function initGrain(){
   for(var i=0;i<data.data.length;i+=4){var v=Math.random()*255;data.data[i]=v;data.data[i+1]=v;data.data[i+2]=v;data.data[i+3]=22;}ctx.putImageData(data,0,0);
 }
 
-// ===== INTERSECTION OBSERVER =====
-function initIntersectionObserver(){
-  var observer=new IntersectionObserver(function(entries){entries.forEach(function(entry){if(entry.isIntersecting){entry.target.classList.add("visible");observer.unobserve(entry.target);}});},{threshold:0});
-  $$(".episode-entry,.episode-image-wrap,.episode-info,.episode-timeline,#intro-title,#intro-p1,#intro-p2,#intro-p3").forEach(function(element){observer.observe(element);});
+// ===== IMMEDIATE READING VISIBILITY =====
+function initReadingVisibility(){
+  // CSS content-visibility/lazy images already defer rendering. No per-child reveal observers.
+  $$(".episode-entry,.episode-image-wrap,.episode-info,.episode-timeline,#intro-title,#intro-p1,#intro-p2,#intro-p3").forEach(function(element){element.classList.add("visible");});
 }
 
 // ===== LIGHTBOX =====
@@ -1558,7 +1583,13 @@ function updateLoaderProgress(){
   setProgress(35,"Estrutura da aplicação verificada.");
   setProgress(72,EPISODES.length+" dossiês indexados. Sincronizando interface...");
   var fonts=document.fonts&&document.fonts.ready?document.fonts.ready:Promise.resolve();
-  Promise.race([fonts.catch(function(){}),new Promise(function(resolve){introTimer=setTimeout(resolve,700);})]).then(function(){setProgress(100,"17 dossiês disponíveis. A leitura está pronta.");enterWarRoom(true);});
+  var openingStarted=performance.now();
+  Promise.race([fonts.catch(function(){}),new Promise(function(resolve){setTimeout(resolve,700);})]).then(function(){
+    setProgress(100,"17 dossiês disponíveis. A leitura está pronta.");
+    // Brief, skippable opening requested by the owner; no media download gates entry.
+    if(ls.getAttribute("aria-hidden")==="true")return;
+    introTimer=setTimeout(function(){enterWarRoom(false);},prefersReducedMotion?0:Math.max(0,850-(performance.now()-openingStarted)));
+  });
 }
 
 function intelSeverityClass(value){return value==="Critico"?"impact-critico":"impact-alto";}
@@ -1657,8 +1688,6 @@ function initOperationalLayer(){
 }
 
 initApp();
-if(window.location.hash.indexOf("#dossier-")===0){enterWarRoom(true);}
-WarRoomExperience.restore(history.state);
 console.log("[WAR ROOM 3.0] Cinematic intro initialized. " + EPISODES.length + " episodes.");
 
 </script>
