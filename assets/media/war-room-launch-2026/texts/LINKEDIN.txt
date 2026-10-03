@@ -1,0 +1,17 @@
+Atualizei o WAR ROOM para aproximar a entrada visual da experiência de investigação.
+
+O projeto reúne 17 dossiês históricos, de 1988 a 2025, em 102 capítulos. Nesta versão, a hero ocupa a primeira tela inteira e apresenta uma galáxia em movimento, com pausa e efeitos reduzidos. Os pontos de Origem, Técnicas, Resposta e Impacto respondem a clique e teclado e explicam os eixos do arquivo.
+
+Também refinei a abertura: o preloader é breve e pulável, e recarregar o site leva à hero. Links diretos e o histórico preservam a navegação entre os casos. Busca, filtros, mapa e cronologia continuam sincronizados com o dossiê selecionado.
+
+Cada caso tem Abertura, Origem, Propagação, Impacto, Resposta e Fontes. Resumo, História, Análise, Mídia e Fontes ficam no mesmo espaço. Há 17 episódios completos e 102 áudios de capítulo com síntese autorizada baseada na minha voz; todo o conteúdo pode ser lido sem áudio.
+
+Mantive a arquitetura estática do GitHub Pages e o carregamento sob demanda de mídia. A galáxia é uma ilustração gerada com IA, identificada no site. Mapas situam o contexto geográfico; as fontes históricas sustentam a leitura de cada incidente.
+
+A atualização foi verificada em desktop e mobile emulado, incluindo teclado, foco, Escape, busca, filtros, histórico e galeria. A ambientação animada tem custo maior que a entrada estática anterior; pausa e modo reduzido permanecem disponíveis.
+
+Explore o WAR ROOM: https://edy075.github.io/WAR_ROOM/
+Código: https://github.com/EDY075/WAR_ROOM
+Case no portfólio: https://edy-gomes-portfolio.edy-scanurl-family-worker.workers.dev/work/war-room
+
+#Cybersecurity #ThreatIntelligence #FrontendDevelopment

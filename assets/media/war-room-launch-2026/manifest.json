@@ -1,119 +1,177 @@
 {
+  "edition": "galaxy-2026-10-03",
   "link": "https://edy075.github.io/WAR_ROOM/",
-  "generated": "2026-10-03T20:07:24.535Z",
+  "generated": "2026-10-03T22:18:13.540Z",
   "colorSpace": "sRGB",
+  "sourceRuntime": "1db8095",
   "files": [
     {
       "path": "instagram/feed-1.png",
       "width": 1080,
       "height": 1350,
-      "bytes": 329645,
-      "sha256": "7dae2c0ef9e5ed7af575154a074b4445c05d638c931f21b546c5bcf819d53ad0"
+      "bytes": 1418967,
+      "sha256": "2accf1fd950823abf135ddb40f0e5e3b3709e2c43218ed0c0d5d397096c00bec"
     },
     {
       "path": "masters/instagram/feed-1.png",
       "width": 2160,
       "height": 2700,
-      "bytes": 946468,
-      "sha256": "097a413f19dc1967dfb97977c52bb687e95133c9fb089ff1238cfadfbb8649ff"
+      "bytes": 3352765,
+      "sha256": "7070907ade13b06af89e8b5f6e8acf6f3d391b8b991328888a62925057602e88"
     },
     {
       "path": "instagram/feed-2.png",
       "width": 1080,
       "height": 1350,
-      "bytes": 374135,
-      "sha256": "86753b3b6ecff2878dd9dcdc02c8ba3a2f6495c1cccd641de1182857b237d338"
+      "bytes": 1391623,
+      "sha256": "a97bd37391994528374c3ba710381ff35d41a366742ab5169e8dd76eb1741899"
     },
     {
       "path": "masters/instagram/feed-2.png",
       "width": 2160,
       "height": 2700,
-      "bytes": 953494,
-      "sha256": "a5e6c95fb506cb8c963f07b243d9d1af712146f14ce1b558d7a4933016ed925d"
+      "bytes": 3167644,
+      "sha256": "5a8bb2fd3926df5ac2ce9008a181f2f1c0d7256676c33c4cda62f0652d8ded66"
     },
     {
       "path": "instagram/feed-3.png",
       "width": 1080,
       "height": 1350,
-      "bytes": 513815,
-      "sha256": "b72ea7a422ee299fe3dcc86a789d6b609cf5744271893fb58915ff634d828636"
+      "bytes": 1089409,
+      "sha256": "d747dd62fbc7270268786b276f9df3ee89b4a327172919a6b7216dbcca9b5473"
     },
     {
       "path": "masters/instagram/feed-3.png",
       "width": 2160,
       "height": 2700,
-      "bytes": 1460581,
-      "sha256": "2443ba3eac0d3bb1b169f64cb9586954bf89115fd11a549afc8944e7743ef723"
+      "bytes": 2579300,
+      "sha256": "81d768e4031159749d7bed51cea995211f64134c7fd2f93ce007acda41107820"
     },
     {
       "path": "instagram/feed-4.png",
       "width": 1080,
       "height": 1350,
-      "bytes": 337992,
-      "sha256": "6763403c6f614add502493d65a89fc0ca54de238358d16c66e0b1bc8d7a3a11d"
+      "bytes": 1156529,
+      "sha256": "327e26192ad2a01658393fb4a2fa145fba500ea95fd098625461f96abafaf9b5"
     },
     {
       "path": "masters/instagram/feed-4.png",
       "width": 2160,
       "height": 2700,
-      "bytes": 979456,
-      "sha256": "6f5e09b779098426b02718b3947db16caea57a340a8c4045ed4de0c4021f703f"
+      "bytes": 2608506,
+      "sha256": "6530c9bd6ae21ad9af12b334532131a9d9404dcbf67b1cc92326d11bc6390126"
     },
     {
       "path": "instagram/feed-5.png",
       "width": 1080,
       "height": 1350,
-      "bytes": 309204,
-      "sha256": "e2784fbf49598b23daa9629730f7c71fd4fe590918ebd0c8a326df4c4ad959e3"
+      "bytes": 1283051,
+      "sha256": "2b392a132098c7374643c56465c8deb7a661dc676fafecacdc1305205b8f118e"
     },
     {
       "path": "masters/instagram/feed-5.png",
       "width": 2160,
       "height": 2700,
-      "bytes": 854924,
-      "sha256": "4a306b1f647f391fcedc159d88c412d65274b02346f7a578a75cf15ac2e8e9b4"
+      "bytes": 2950262,
+      "sha256": "4d7f5eb738a8b7bce24024e7af336ff46f19185745a5ebfac7a994f3cd2769e1"
     },
     {
       "path": "instagram/story-1.png",
       "width": 1080,
       "height": 1920,
-      "bytes": 362168,
-      "sha256": "acbb249dfaed5370fa55204191600273e1281a20d323f1ff0f7c765c56b0ece1"
+      "bytes": 1785431,
+      "sha256": "13b4e78dea9cf250876be40b58417089f7da03808efa1497bad10b590c6451e5"
     },
     {
       "path": "masters/instagram/story-1.png",
       "width": 2160,
       "height": 3840,
-      "bytes": 1096604,
-      "sha256": "46a20067222de659464fd1f90e2ada015b37444a3f30586643ba58dd08fcf3d2"
+      "bytes": 4164210,
+      "sha256": "a8384d55b856f192ada1544577a72de6e91c329221ec7a639c59e0f326996777"
     },
     {
       "path": "instagram/story-2.png",
       "width": 1080,
       "height": 1920,
-      "bytes": 386746,
-      "sha256": "6059c564ae71505faf7fc2ffe947adbed8a08266387c018afb32f2478ec3116f"
+      "bytes": 1799309,
+      "sha256": "a22e902c2992d926bc074585daae0000d25ee6e3492a8b3b2898a5f5c62a70a2"
     },
     {
       "path": "masters/instagram/story-2.png",
       "width": 2160,
       "height": 3840,
-      "bytes": 1137439,
-      "sha256": "68bb5e9726a4f4afa71c3cad4a8ac9416ef391fe93468924020c677dca5f423d"
+      "bytes": 4077792,
+      "sha256": "b0ff981376df7c377417418fca32fe6159ca6004eac545a69fd6857fd83bb11b"
+    },
+    {
+      "path": "instagram/story-3.png",
+      "width": 1080,
+      "height": 1920,
+      "bytes": 1405418,
+      "sha256": "173c1447314fafb24ed4b78952cdafc924f902eaef8926ebf65c252b78327ae4"
+    },
+    {
+      "path": "masters/instagram/story-3.png",
+      "width": 2160,
+      "height": 3840,
+      "bytes": 3388153,
+      "sha256": "1d094f9d2b794da99b803c9a33fd5c704c73928227ef2488ef2549381b0af318"
+    },
+    {
+      "path": "instagram/story-4.png",
+      "width": 1080,
+      "height": 1920,
+      "bytes": 1451245,
+      "sha256": "9377d2fda93fab86f5ad3499bbb4d26511271a3bf65b4bd6ff7cb637a797f8df"
+    },
+    {
+      "path": "masters/instagram/story-4.png",
+      "width": 2160,
+      "height": 3840,
+      "bytes": 3314182,
+      "sha256": "6735b50e23f1d33897a97abd2b6cfea7d54c699671546c110364e2c946a3731b"
+    },
+    {
+      "path": "instagram/story-5.png",
+      "width": 1080,
+      "height": 1920,
+      "bytes": 1315494,
+      "sha256": "92d10deadb5676ff3d45548fe7ce86e9ccddbfbb278cec12e1027ec50d73a4ba"
+    },
+    {
+      "path": "masters/instagram/story-5.png",
+      "width": 2160,
+      "height": 3840,
+      "bytes": 2996020,
+      "sha256": "4aee877fcd354b15a0a9d036964c72f2593c2c6b8b60731a09e666c647d5f983"
     },
     {
       "path": "linkedin/post-1200x627.png",
       "width": 1200,
       "height": 627,
-      "bytes": 236409,
-      "sha256": "fa7a8868d27444e889f88772b801230030879a3dac9cb57aa9d8ef92acbb6df7"
+      "bytes": 777615,
+      "sha256": "c9fd87d54f816319d5e2ce640e0616dec34f8689a502ca1c78d8a5eed4ef551d"
     },
     {
       "path": "masters/linkedin/post-1200x627.png",
       "width": 2400,
       "height": 1254,
-      "bytes": 620334,
-      "sha256": "7c0b42628d8026eeb49a1f03658575c2f720d17e14cc6766e6c06c17ff9faf18"
+      "bytes": 2021123,
+      "sha256": "638f03eed69eb709090dd46929a3cf6309c59e45e126adf23c900d263f4243c7"
+    },
+    {
+      "path": "linkedin/post-1080x1350.png",
+      "width": 1080,
+      "height": 1350,
+      "bytes": 1418965,
+      "sha256": "6539d328719678b83c63a4f751240d1a0f560bab46d2b1ed3c578d6524777697"
+    },
+    {
+      "path": "masters/linkedin/post-1080x1350.png",
+      "width": 2160,
+      "height": 2700,
+      "bytes": 3352765,
+      "sha256": "85c891f378795adfea833e43b6ae5807efa9fba93c5f095f8ff6e14bc9a1a3be"
     }
   ]
 }

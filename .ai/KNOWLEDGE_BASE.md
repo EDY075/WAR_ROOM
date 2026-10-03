@@ -71,3 +71,7 @@ On Windows compare served text against Git blobs, not CRLF-converted working-tre
 - Removing delayed reveal observers must preserve content-visibility:auto and lazy assets; a visible class need not force all episodes to render.
 - Detect explicit reload with Navigation Timing before router init. Reset only that history entry; do not force the top on normal popstate or fresh direct links.
 - A reduced-motion rule can turn a zero-second visibility transition into a tiny nonzero transition and prevent immediate dialog focus. Do not transition visibility on dialog opening; restore the initial route after a preloader exits and recheck focus once after rendering, without stealing an existing dialog focus.
+
+## Social export integrity
+
+Render editable layouts at DPR2, then downsample upload PNGs from the rendered master; do not upscale thumbnails and label them HD. Wait for local images to decode. Verify content/footer bounds and story safe zones before export, then inspect the contact sheet and full-size samples. Keep text captions separate from the publication guide. Build ZIPs from an explicit reviewed allowlist and verify each entry's bytes, CRC and image manifest hashes. Compare the public ZIP hash after deployment; successful push alone does not prove Pages contains the new download.

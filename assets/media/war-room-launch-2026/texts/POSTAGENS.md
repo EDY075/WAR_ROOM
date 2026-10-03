@@ -1,78 +1,105 @@
-# WAR ROOM · textos para publicação
+# WAR ROOM · legendas da edição galáctica
 
-Link do projeto: https://edy075.github.io/WAR_ROOM/
-Portfólio: https://edy-gomes-portfolio.edy-scanurl-family-worker.workers.dev/work/war-room
-GitHub: https://github.com/EDY075/WAR_ROOM
+Projeto: https://edy075.github.io/WAR_ROOM/
 
-## Instagram · feed / carrossel
+## Instagram · carrossel de cinco páginas
 
-Um ataque termina na manchete. A investigação continua nos detalhes.
+O WAR ROOM ganhou uma nova entrada. Veja como ficou a investigação dos 17 casos.
 
-Atualizei o WAR ROOM, meu arquivo documental sobre incidentes e conflitos cibernéticos. São 17 dossiês e 102 capítulos para explorar origem, propagação, impacto, resposta e fontes.
+Atualizei a hero para ocupar a primeira tela inteira, com uma galáxia em movimento e pontos clicáveis de Origem, Técnicas, Resposta e Impacto. Dá para pausar a ambientação ou usar efeitos reduzidos.
 
-Você pode navegar pelo mapa, buscar um caso e aprofundar a leitura no mesmo dossiê. Também preparei episódios narrados com síntese autorizada baseada na minha voz. O áudio é opcional: todo o conteúdo continua disponível para leitura.
+A navegação continua conectando busca, filtros, mapa e cronologia. Cada dossiê reúne Resumo, História, Análise, Mídia e Fontes, com seis capítulos e referências para aprofundar a leitura.
 
-A nova entrada mantém a identidade preto e dourado, com conexões visuais mais claras e efeitos mais leves.
+Também estão disponíveis 17 episódios completos e 102 áudios de capítulo, com síntese autorizada baseada na minha voz. O áudio é opcional e só carrega quando você escolher.
+
+A abertura é breve e pode ser pulada. Ao recarregar, você volta à hero; os links diretos continuam levando ao caso e ao capítulo escolhido.
 
 Explore o projeto: https://edy075.github.io/WAR_ROOM/
 
-Qual caso você investigaria primeiro?
+#Cybersecurity #ThreatIntelligence #BlueTeam #DesenvolvimentoWeb
 
-#Cybersecurity #ThreatIntelligence #BlueTeam #Portfolio
+Anexe `instagram/feed-1.png` a `feed-5.png`, nessa ordem, em um único carrossel. A legenda está pronta para copiar em `INSTAGRAM.txt`. O URL escrito na imagem/legenda não é clicável no Instagram; adicione o projeto à bio antes de usar “link na bio”.
 
-Arquivos: instagram/feed-1.png até feed-5.png, nessa ordem. O endereço na legenda não vira link clicável no Instagram; se usar “link na bio”, primeiro adicione o endereço do projeto à sua bio.
+## Instagram · cinco stories
 
-## Instagram · story 1
-
-Meu arquivo documental de cybersecurity ganhou uma nova entrada.
-17 dossiês. 102 capítulos. Episódios narrados.
-
-Sticker de link: https://edy075.github.io/WAR_ROOM/
-Texto do sticker: Explorar WAR ROOM
+STORY 1 — Nova entrada
 Arquivo: instagram/story-1.png
 
-## Instagram · story 2
+O WAR ROOM está de cara nova: primeira tela inteira, galáxia ao fundo e 17 dossiês para investigar.
 
-Entre pelo mapa. Escolha um caso. Aprofunde nas fontes.
+Texto do sticker: Explorar WAR ROOM
+Link do sticker: https://edy075.github.io/WAR_ROOM/
 
-Sticker de link: https://edy075.github.io/WAR_ROOM/
-Texto do sticker: Abrir a investigação
+STORY 2 — Pontos interativos
 Arquivo: instagram/story-2.png
 
-Posicione o sticker na área inferior livre, acima da interface do aplicativo; não cubra o endereço nem os créditos.
+Origem, Técnicas, Resposta e Impacto agora têm explicações clicáveis. A galáxia pode ser pausada.
 
-## LinkedIn · publicação com imagem
+Texto do sticker: Conhecer a nova hero
+Link do sticker: https://edy075.github.io/WAR_ROOM/
 
-Como transformar uma coleção de incidentes cibernéticos em uma experiência que também ajude a investigar?
+STORY 3 — Mapa e investigação
+Arquivo: instagram/story-3.png
 
-Essa foi a pergunta por trás da evolução do WAR ROOM, um projeto do meu portfólio que reúne 17 dossiês históricos, de 1988 a 2025, com análise, contexto operacional e referências públicas.
+Escolha seu próximo caso com mapa, busca e filtros sincronizados. Aprofunde nas fontes.
 
-Cada caso tem seis capítulos: Abertura, Origem, Propagação, Impacto, Resposta e Fontes. Resumo, História, Análise, Mídia e Fontes ficam no mesmo espaço, com busca, filtros, mapa e cronologia conectados.
+Texto do sticker: Investigar no mapa
+Link do sticker: https://edy075.github.io/WAR_ROOM/#intelligence
 
-Nesta atualização, refinei a entrada visual e o preloader, removi processamento contínuo dispensável e mantive o movimento em pequenas interações. O site continua estático, adaptado ao celular e com controles de efeitos reduzidos.
+STORY 4 — Leitura e áudio
+Arquivo: instagram/story-4.png
 
-Também estão disponíveis 17 episódios completos e 102 áudios de capítulo, com síntese autorizada baseada na minha voz. Áudio é uma escolha; a experiência de leitura permanece completa.
+102 capítulos e narração opcional com síntese autorizada baseada na minha voz. Comece pelo NotPetya.
+
+Texto do sticker: Abrir o NotPetya
+Link do sticker: https://edy075.github.io/WAR_ROOM/?tab=story&chapter=opening#dossier-notpetya
+
+STORY 5 — Abertura e acesso
+Arquivo: instagram/story-5.png
+
+Preloader breve e pulável, retorno à hero ao recarregar e conteúdo completo no celular ou desktop.
+
+Texto do sticker: Abrir WAR ROOM
+Link do sticker: https://edy075.github.io/WAR_ROOM/
+
+Use o sticker de link de cada story. Área reservada: y=1640–1760 em 1080×1920; prefira o centro horizontal. Preserve o endereço e os créditos. Os cinco PNGs são estáticos: a composição descreve movimento/interatividade, mas a imagem não anima nem responde a toque.
+
+## LinkedIn · publicação
+
+Atualizei o WAR ROOM para aproximar a entrada visual da experiência de investigação.
+
+O projeto reúne 17 dossiês históricos, de 1988 a 2025, em 102 capítulos. Nesta versão, a hero ocupa a primeira tela inteira e apresenta uma galáxia em movimento, com pausa e efeitos reduzidos. Os pontos de Origem, Técnicas, Resposta e Impacto respondem a clique e teclado e explicam os eixos do arquivo.
+
+Também refinei a abertura: o preloader é breve e pulável, e recarregar o site leva à hero. Links diretos e o histórico preservam a navegação entre os casos. Busca, filtros, mapa e cronologia continuam sincronizados com o dossiê selecionado.
+
+Cada caso tem Abertura, Origem, Propagação, Impacto, Resposta e Fontes. Resumo, História, Análise, Mídia e Fontes ficam no mesmo espaço. Há 17 episódios completos e 102 áudios de capítulo com síntese autorizada baseada na minha voz; todo o conteúdo pode ser lido sem áudio.
+
+Mantive a arquitetura estática do GitHub Pages e o carregamento sob demanda de mídia. A galáxia é uma ilustração gerada com IA, identificada no site. Mapas situam o contexto geográfico; as fontes históricas sustentam a leitura de cada incidente.
+
+A atualização foi verificada em desktop e mobile emulado, incluindo teclado, foco, Escape, busca, filtros, histórico e galeria. A ambientação animada tem custo maior que a entrada estática anterior; pausa e modo reduzido permanecem disponíveis.
 
 Explore o WAR ROOM: https://edy075.github.io/WAR_ROOM/
 Código: https://github.com/EDY075/WAR_ROOM
 Case no portfólio: https://edy-gomes-portfolio.edy-scanurl-family-worker.workers.dev/work/war-room
 
-Qual recurso você considera mais útil para estudar uma campanha: mapa, narrativa histórica ou análise técnica?
-
 #Cybersecurity #ThreatIntelligence #FrontendDevelopment
 
-Imagem: linkedin/post-1200x627.png. Alternativa: use as cinco imagens do carrossel do Instagram como publicação com múltiplas imagens; o formato vertical também é legível no feed.
+Anexe `linkedin/post-1200x627.png` ou a alternativa vertical `linkedin/post-1080x1350.png`. As cinco páginas do carrossel também podem ser anexadas em ordem como múltiplas imagens. `LINKEDIN.txt` contém somente a legenda, para copiar.
 
 ## Textos alternativos
 
-- Feed 1: WAR ROOM em preto, dourado e off-white, com rede editorial de pontos e órbitas. Arquivo com 17 dossiês, 102 capítulos e cerca de 42 minutos de narração.
-- Feed 2: Os seis capítulos de cada dossiê: Abertura, Origem, Propagação, Impacto, Resposta e Fontes. Explica o papel de cada capítulo.
-- Feed 3: Captura real do mapa de campanhas do WAR ROOM, com localização regional e controles de investigação. Atribuições e relações devem ser consultadas nas fontes.
-- Feed 4: Episódios narrados com síntese autorizada baseada na voz de Edmilson Gomes. Ilustração editorial de áudio, com leitura independente de som.
-- Feed 5: Convite para explorar os 17 dossiês em edy075.github.io/WAR_ROOM/. Projeto de Edmilson Gomes.
-- Story 1: WAR ROOM, arquivo documental de cybersecurity com 17 dossiês, 102 capítulos e episódios narrados. Link para o projeto.
-- Story 2: Rede editorial de conexões e convite para explorar o mapa, escolher um caso e aprofundar nas fontes. Link para o WAR ROOM.
-- LinkedIn: WAR ROOM, experiência documental interativa de Cyber Threat Intelligence de Edmilson Gomes. 17 dossiês, 102 capítulos e cerca de 42 minutos de narração.
+- Carrossel 1: nova hero real do WAR ROOM com galáxia ilustrativa, 17 dossiês, 102 capítulos e cerca de 42 minutos de narração.
+- Carrossel 2: pontos interativos Origem, Técnicas, Resposta e Impacto, explicação de Técnicas e pausa da galáxia.
+- Carrossel 3: captura real do mapa e pontos de seleção; busca, filtros e cronologia acompanham o dossiê. Geografia de contexto, sem representar rotas comprovadas.
+- Carrossel 4: abertura real do NotPetya, referência do capítulo e player de áudio opcional; síntese autorizada baseada na voz do autor.
+- Carrossel 5: seis capítulos, cinco abas, abertura pulável e link para explorar o WAR ROOM.
+- Story 1: nova hero de primeira tela inteira com galáxia e rede, 17 casos e 102 capítulos.
+- Story 2: captura da rede interativa com explicação de Técnicas, pausa e efeitos reduzidos.
+- Story 3: mapa real do arquivo com pontos, busca, filtros e cronologia conectados.
+- Story 4: abertura do NotPetya e player real de capítulo; narração opcional com síntese autorizada.
+- Story 5: preloader real, controles para entrar ou pular, retorno à hero ao recarregar e link do projeto.
+- LinkedIn horizontal: apresentação da atualização com hero real, galáxia, rede interativa, 17 dossiês, 102 capítulos e cerca de 42 minutos de narração.
+- LinkedIn vertical: nova hero real e resumo do corpus, com o endereço público do WAR ROOM.
 
 ## Perfis do autor
 
@@ -80,4 +107,4 @@ Imagem: linkedin/post-1200x627.png. Alternativa: use as cinco imagens do carross
 - LinkedIn: https://www.linkedin.com/in/edmilsongomes21/
 - Instagram: https://www.instagram.com/edmilson_zn_/
 
-Materiais preparados para revisão e postagem manual. Nenhuma publicação em rede social foi efetuada.
+Textos revisados para evitar números inventados, promessas de desempenho e excesso de chamadas para ação. Nenhuma postagem automática em rede social foi realizada.

@@ -12,12 +12,12 @@ const hash=data=>crypto.createHash('sha256').update(data).digest('hex');
     const context=await browser.newContext();
     const pack='assets/media/war-room-launch-2026/';
     const manifest=JSON.parse(fs.readFileSync(pack+'manifest.json'));
-    for(const file of ['index.html','assets/js/entrance.js','assets/css/entrance.css','assets/css/experience.css','assets/js/experience.js','assets/js/documentaries.js','assets/js/narration.js','assets/images/entrance/galaxy.webp','assets/images/entrance/galaxy-mobile.webp','assets/images/entrance/galaxy-master.png',pack+'war-room-postaveis-hd.zip',...manifest.files.map(e=>pack+e.path)]){
+    for(const file of ['index.html','assets/js/entrance.js','assets/css/entrance.css','assets/css/experience.css','assets/js/experience.js','assets/js/documentaries.js','assets/js/narration.js','assets/images/entrance/galaxy.webp','assets/images/entrance/galaxy-mobile.webp','assets/images/entrance/galaxy-master.png',pack+'war-room-postaveis-hd.zip',...['index.html','README.md','manifest.json','source/poster.html','texts/POSTAGENS.md','texts/INSTAGRAM.txt','texts/LINKEDIN.txt','texts/STORIES.txt'].map(f=>pack+f),...manifest.files.map(e=>pack+e.path)]){
       const response=await context.request.get(base+file);
       assert.equal(response.status(),200,file);
       const local=fs.readFileSync(path.resolve(file));
       // Git normalizes source line endings; compare text logically, binary exactly.
-      if(/\.(html|js|css)$/.test(file))assert.equal((await response.text()).replaceAll('\r\n','\n'),local.toString().replaceAll('\r\n','\n'));
+      if(/\.(html|js|css|md|txt|json)$/.test(file))assert.equal((await response.text()).replaceAll('\r\n','\n'),local.toString().replaceAll('\r\n','\n'));
       else assert.equal(hash(await response.body()),hash(local),file);
     }
     for(const width of [1440,390]){
@@ -40,10 +40,16 @@ const hash=data=>crypto.createHash('sha256').update(data).digest('hex');
       assert(await page.evaluate(()=>oldAudio.paused));
       assert.deepEqual(errors,[]);
       await page.goto(base+pack);await page.locator('.grid img').first().evaluate(img=>img.decode());
+      assert.equal(await page.locator('.grid img').count(),10);
+      assert.equal(await page.locator('.linkedin img').count(),2);
+      assert(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth));
+      await page.keyboard.press('Tab');
+      assert.equal(await page.evaluate(()=>document.activeElement.textContent),'Baixar pacote ZIP HD');
       assert.equal(await page.getByRole('link',{name:'Baixar pacote ZIP HD'}).getAttribute('href'),'war-room-postaveis-hd.zip');
+      assert.deepEqual(errors,[]);
       await page.close();
     }
     await context.close();
-    console.log('PASS: deployed entrance sources, all 16 PNG/master hashes, ZIP hash/download preview, direct dossier, real chapter/full playback and Escape desktop/mobile at '+base);
+    console.log('PASS: deployed entrance sources, all 24 PNG/master hashes, ZIP hash/download preview, direct dossier, real chapter/full playback and Escape desktop/mobile at '+base);
   }finally{await browser.close();}
 })().catch(e=>{console.error(e);process.exitCode=1;});

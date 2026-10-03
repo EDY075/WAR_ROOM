@@ -1,0 +1,13 @@
+O WAR ROOM ganhou uma nova entrada. Veja como ficou a investigação dos 17 casos.
+
+Atualizei a hero para ocupar a primeira tela inteira, com uma galáxia em movimento e pontos clicáveis de Origem, Técnicas, Resposta e Impacto. Dá para pausar a ambientação ou usar efeitos reduzidos.
+
+A navegação continua conectando busca, filtros, mapa e cronologia. Cada dossiê reúne Resumo, História, Análise, Mídia e Fontes, com seis capítulos e referências para aprofundar a leitura.
+
+Também estão disponíveis 17 episódios completos e 102 áudios de capítulo, com síntese autorizada baseada na minha voz. O áudio é opcional e só carrega quando você escolher.
+
+A abertura é breve e pode ser pulada. Ao recarregar, você volta à hero; os links diretos continuam levando ao caso e ao capítulo escolhido.
+
+Explore o projeto: https://edy075.github.io/WAR_ROOM/
+
+#Cybersecurity #ThreatIntelligence #BlueTeam #DesenvolvimentoWeb

@@ -1,0 +1,39 @@
+STORY 1 — Nova entrada
+Arquivo: instagram/story-1.png
+
+O WAR ROOM está de cara nova: primeira tela inteira, galáxia ao fundo e 17 dossiês para investigar.
+
+Texto do sticker: Explorar WAR ROOM
+Link do sticker: https://edy075.github.io/WAR_ROOM/
+
+STORY 2 — Pontos interativos
+Arquivo: instagram/story-2.png
+
+Origem, Técnicas, Resposta e Impacto agora têm explicações clicáveis. A galáxia pode ser pausada.
+
+Texto do sticker: Conhecer a nova hero
+Link do sticker: https://edy075.github.io/WAR_ROOM/
+
+STORY 3 — Mapa e investigação
+Arquivo: instagram/story-3.png
+
+Escolha seu próximo caso com mapa, busca e filtros sincronizados. Aprofunde nas fontes.
+
+Texto do sticker: Investigar no mapa
+Link do sticker: https://edy075.github.io/WAR_ROOM/#intelligence
+
+STORY 4 — Leitura e áudio
+Arquivo: instagram/story-4.png
+
+102 capítulos e narração opcional com síntese autorizada baseada na minha voz. Comece pelo NotPetya.
+
+Texto do sticker: Abrir o NotPetya
+Link do sticker: https://edy075.github.io/WAR_ROOM/?tab=story&chapter=opening#dossier-notpetya
+
+STORY 5 — Abertura e acesso
+Arquivo: instagram/story-5.png
+
+Preloader breve e pulável, retorno à hero ao recarregar e conteúdo completo no celular ou desktop.
+
+Texto do sticker: Abrir WAR ROOM
+Link do sticker: https://edy075.github.io/WAR_ROOM/
