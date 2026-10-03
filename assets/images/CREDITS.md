@@ -1,12 +1,34 @@
 # Créditos visuais
 
+## Tratamento documental dos 17 casos — outubro de 2026
+
+Os 11 arquivos em `documentaries/` foram gerados pela ferramenta integrada `image_gen`, convertidos para WebP local de 1200 pixels de largura, entre aproximadamente 40 e 90 KiB. Cada cena é uma reconstituição ilustrativa, sem alegação de representar uma instalação, pessoa, vítima ou momento real do incidente. Essa indicação aparece nas aberturas, nos capítulos e na aba Mídia. Prompts completos e processo: [DOCUMENTARY_VISUALS.md](../../docs/DOCUMENTARY_VISUALS.md).
+
+| Caso | Reconstituição local |
+| --- | --- |
+| Morris Worm | `documentaries/unix-1988.webp` · laboratório universitário |
+| Melissa | `documentaries/email-1999.webp` · estação de escritório |
+| ILOVEYOU | `documentaries/manila-2000.webp` · internet café |
+| Estônia | `documentaries/tallinn-2007.webp` · contexto urbano |
+| Stuxnet | `documentaries/industrial-controls.webp` · controle industrial |
+| Sony Pictures | `documentaries/hollywood-2014.webp` · escritório de produção |
+| WannaCry | `documentaries/hospital-2017.webp` · administração hospitalar |
+| SolarWinds | `documentaries/software-supply.webp` · cadeia de software |
+| Colonial Pipeline | `documentaries/pipeline-context.webp` · infraestrutura |
+| Log4j | `documentaries/logging-context.webp` · dependências de software |
+| MGM Resorts | `documentaries/hospitality-context.webp` · hotelaria |
+
+NotPetya conserva a reconstituição e o arquivo creditados abaixo. As cinco aberturas modernas usam os arquivos locais já creditados na tabela, com ressalva explícita de contexto. As galerias legadas continuam disponíveis com seus créditos; novas reconstituições não substituem registros históricos no corpus.
+
+`maps/world-110m.svg`: cartografia derivada dos dados [Natural Earth 1:110m](https://github.com/nvkelso/natural-earth-vector/tree/master/geojson), [domínio público](https://www.naturalearthdata.com/about/terms-of-use/). Natural Earth: Tom Patterson, Nathaniel Vaughn Kelso e colaboradores. Projeção equiretangular; geração offline reproduzível em `scripts/build-cartography.cjs`. Não representa telemetria ou rotas de ataque. Âncoras de contexto e deslocamentos dos controles são identificados. Fonte, hash e método no documento de produção visual.
+
 ## Piloto NotPetya — outubro de 2026, ainda em revisão
 
 - `notpetya/port-reconstruction.webp`: reconstituição ilustrativa gerada pela ferramenta integrada `image_gen` para WAR ROOM. Derivado WebP 1440 × 960, com cerca de 104 KiB. Não é fotografia de arquivo nem prova do incidente. Identificação visível no piloto e nas peças. Prompt e produção em [storyboard](../../docs/NOTPETYA_STORYBOARD.md).
 - `notpetya/edith-maersk-2013.jpeg`: Maersk Line, fotografia de 16/03/2013, [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:A_birds-eye_view_of_Edith_Maersk_in_the_Port_of_Rotterdam.jpeg), [CC BY-SA 2.0](https://creativecommons.org/licenses/by-sa/2.0/). Arquivo original sem edição; exibição redimensionada por CSS. Contexto portuário anterior ao ataque de 2017; não representa registro de sua interrupção. O MP4 e o carrossel não usam essa fotografia.
 - A [imagem legada da família Petya](https://commons.wikimedia.org/wiki/File:2017_Petya_cyberattack_screenshot.png) permanece referenciada. A ficha do Commons descreve Petya original e captura de 2021, autor desconhecido, domínio público. A interface acrescenta a ressalva; o piloto não apresenta a imagem como evidência de NotPetya em 2017.
-- Diagramas: autoria editorial WAR ROOM, esquemas conceituais sem alegação de trajetórias reais. Documentos off-white: resumos editoriais com referência, não fac-símiles.
-- Capa, carrossel e teaser: composições editoriais WAR ROOM com imagem reconstituída identificada e fontes primárias. Sem música/narração. Arquivos e fontes editáveis em `assets/media/notpetya/`; roteiro em [NOTPETYA_STORYBOARD.md](../../docs/NOTPETYA_STORYBOARD.md).
+- Cartografia de contexto: Natural Earth, domínio público, sem alegação de trajetórias reais. Documentos off-white: resumos editoriais com referência, não fac-símiles.
+- Capa, carrossel e teasers: composições editoriais WAR ROOM com imagem reconstituída identificada e fontes primárias. Versão sem áudio de 36 s e versão narrada de 42 s; voz sintética local VoiceStudio / OmniVoice, sem perfil pessoal ou música externa. MP3 real e legendas VTT incluídos. Arquivos e fontes editáveis em `assets/media/notpetya/`; produção e roteiro em [NOTPETYA_STORYBOARD.md](../../docs/NOTPETYA_STORYBOARD.md).
 
 As imagens locais dos dossiês modernos preservam os créditos que já eram exibidos no WAR ROOM. Elas são utilizadas como contexto editorial; não representam eventos não documentados.
 

@@ -577,13 +577,13 @@ body.effects-reduced #grain-overlay,body.effects-reduced #ambient-particles,body
     <div class="intel-map-card">
       <div class="intel-map-header"><span>Mapa mundial de campanhas documentadas</span><span class="intel-map-status"><i></i> BASE ESTÁTICA CURADA</span></div>
       <div class="intel-map" id="intel-map" role="region" aria-label="Mapa mundial interativo dos ataques">
-        <svg viewBox="0 0 1000 430" aria-hidden="true" focusable="false"><path d="M78 109l93-52 104 23 13 61-63 48-94-11-54-69zm170 115l77 21 28 70-37 82-58-51-9-122zm112-118l67-47 139 14 59 54-27 68-125 21-81-44zm185 122l81 15 40 72-24 75-69-6-31-78zm128-112l78-42 116 29 68 66-47 57-116-4-78-62zm-5 150l89 5 63 56-11 77-88 8-54-70zm181 13l65 16 39 42-29 45-64-17-26-47z"/></svg>
-        <div class="intel-map-grid" aria-hidden="true"></div>
-        <div id="intel-hotspots" class="intel-hotspots"></div>
+        <div id="map-camera" class="map-camera"><img class="world-cartography" data-map-src="assets/images/maps/world-110m.svg" loading="lazy" decoding="async" width="1000" height="430" alt="Cartografia mundial Natural Earth, projeção equiretangular"><div id="map-leaders"></div><div id="intel-hotspots" class="intel-hotspots"></div></div>
+        <div class="map-toolbar" aria-label="Ampliação do mapa"><button type="button" id="map-zoom-in" data-map-zoom="0.5" aria-label="Ampliar mapa">+</button><button type="button" id="map-zoom-out" data-map-zoom="-0.5" aria-label="Reduzir mapa">−</button><button type="button" data-map-zoom="reset">Visão mundial</button><span id="map-zoom-status" role="status">Visão mundial</span></div>
         <div class="intel-tooltip" id="intel-tooltip" role="status" aria-live="polite" hidden></div>
       </div>
       <div class="intel-hotspots-mobile" id="intel-hotspots-mobile" aria-label="Campanhas no mapa"></div>
-      <div class="intel-map-legend"><span><b class="legend-dot critical"></b>Impacto crítico</span><span><b class="legend-dot high"></b>Impacto alto</span><span>Clique em um sinal para filtrar o dossiê</span></div>
+      <div class="intel-map-legend"><span><b class="legend-dot critical"></b>Impacto crítico</span><span><b class="legend-dot high"></b>Impacto alto</span><span>Sinais abrem o dossiê · posições regionais de contexto</span></div>
+      <p class="map-context-note">Natural Earth · domínio público. Sinais deslocados usam linhas de referência. Contexto de origem, alvo ou atribuição conforme cada caso; sem rotas de ataque ou telemetria ao vivo.</p>
     </div>
     <div class="intel-timeline-card"><div class="intel-map-header"><span>Cronologia · início documentado</span><span>1988–2025</span></div><div class="intel-global-timeline" id="intel-global-timeline" aria-label="Linha do tempo global interativa"></div></div>
     <div class="intel-filters" aria-label="Filtros da central de inteligência">
@@ -630,6 +630,8 @@ body.effects-reduced #grain-overlay,body.effects-reduced #ambient-particles,body
 <div id="sc-player" style="position:fixed;top:0;left:0;width:1px;height:1px;opacity:0;overflow:hidden;pointer-events:none;z-index:-1" aria-hidden="true">
 <iframe id="sc-frame" src="about:blank" allow="autoplay" style="width:480px;height:360px;border:none" title="SoundCloud" sandbox="allow-scripts allow-same-origin allow-presentation allow-popups"></iframe>
 </div>
+<script src="assets/js/cartography.js"></script>
+<script src="assets/js/documentaries.js"></script>
 <script src="assets/js/experience.js"></script>
 <script>
 "use strict";
@@ -912,12 +914,13 @@ EPISODES.forEach(function(ep){
 // Standardized renderer: cards, details and references share one editorial frame.
 function renderEpisodes(){
   el.innerHTML = EPISODES.map(function(ep,index){
-    var hi = ep.previewImage || ((ep.images && ep.images.length) ? ep.images[0] : "");
+    var documentaryArt = WarRoomDocumentaries.cover(ep.id);
+    var hi = documentaryArt.src;
     var isModern = !!ep.cover;
     var profile=intelProfile(ep.id),previous=index>0?EPISODES[index-1]:null,next=index<EPISODES.length-1?EPISODES[index+1]:null;
     return '<article class="episode-entry" id="dossier-' + ep.id + '" data-episode="' + ep.id + '" data-modern="' + isModern + '"><div class="episode-grid"><div class="episode-image-wrap">'
       + (hi ? '<div class="episode-image-blur"></div><img class="episode-image" src="' + hi + '" alt="Imagem de contexto: ' + ep.title + '" width="1600" height="900" loading="lazy" decoding="async" fetchpriority="low">' : '<div class="episode-image-placeholder"><span class="pl-year">' + ep.year + '</span><span class="pl-title">' + ep.title + '</span><span class="pl-ref">Imagem histórica não divulgada</span></div>')
-      + '</div><div class="episode-info"><div class="episode-progress"><div class="episode-progress-copy"><span>Episódio ' + ep.num + ' de ' + EPISODES.length + '</span><span>' + Math.round((index+1)/EPISODES.length*100) + '%</span></div><div class="episode-progress-track" role="progressbar" aria-label="Progresso da cronologia" aria-valuemin="1" aria-valuemax="' + EPISODES.length + '" aria-valuenow="' + (index+1) + '"><span style="transform:scaleX(' + ((index+1)/EPISODES.length) + ')"></span></div></div><div class="episode-kicker"><span class="episode-number">' + ep.num + '</span><span class="episode-year">' + ep.year + '</span><span class="episode-type-badge">' + ep.category + '</span></div><h3 class="episode-title">' + ep.title + '</h3><p class="episode-subtitle">' + ep.subtitle + '</p><p class="episode-summary">' + ep.summary + '</p><div class="episode-ops"><dl class="episode-ops-grid"><div><dt>Ano / região</dt><dd>' + ep.year + ' · ' + ep.region + '</dd></div><div><dt>Categoria</dt><dd>' + ep.category + '</dd></div><div><dt>Ator / grupo</dt><dd>' + ep.attribution + '</dd></div><div><dt>Severidade</dt><dd class="' + intelSeverityClass(profile.impact) + '">' + intelLabel(profile.impact) + '</dd></div></dl><div class="episode-techniques">' + profile.mitre.map(function(value){return '<span>' + value + '</span>';}).join("") + '</div></div><div class="episode-actions"><button type="button" class="episode-btn episode-btn-primary toggle-detail" aria-haspopup="dialog">Abrir dossiê</button>'
+      + '<p class="episode-art-credit">' + intelEscape(documentaryArt.caption) + '</p></div><div class="episode-info"><div class="episode-progress"><div class="episode-progress-copy"><span>Episódio ' + ep.num + ' de ' + EPISODES.length + '</span><span>' + Math.round((index+1)/EPISODES.length*100) + '%</span></div><div class="episode-progress-track" role="progressbar" aria-label="Progresso da cronologia" aria-valuemin="1" aria-valuemax="' + EPISODES.length + '" aria-valuenow="' + (index+1) + '"><span style="transform:scaleX(' + ((index+1)/EPISODES.length) + ')"></span></div></div><div class="episode-kicker"><span class="episode-number">' + ep.num + '</span><span class="episode-year">' + ep.year + '</span><span class="episode-type-badge">' + ep.category + '</span></div><h3 class="episode-title">' + ep.title + '</h3><p class="episode-subtitle">' + ep.subtitle + '</p><p class="episode-summary">' + ep.summary + '</p><div class="episode-ops"><dl class="episode-ops-grid"><div><dt>Ano / região</dt><dd>' + ep.year + ' · ' + ep.region + '</dd></div><div><dt>Categoria</dt><dd>' + ep.category + '</dd></div><div><dt>Ator / grupo</dt><dd>' + ep.attribution + '</dd></div><div><dt>Severidade</dt><dd class="' + intelSeverityClass(profile.impact) + '">' + intelLabel(profile.impact) + '</dd></div></dl><div class="episode-techniques">' + profile.mitre.map(function(value){return '<span>' + value + '</span>';}).join("") + '</div></div><div class="episode-actions"><button type="button" class="episode-btn episode-btn-primary toggle-detail" aria-haspopup="dialog">Abrir dossiê</button>'
       + (ep.images && ep.images.length ? '<button type="button" class="episode-btn episode-btn-secondary view-gallery">Galeria</button>' : '') + '<button type="button" class="episode-btn episode-btn-secondary view-story">História</button></div><nav class="episode-nav" aria-label="Incidentes adjacentes">' + (previous?'<button type="button" data-episode-nav="' + previous.id + '">' + previous.title + '</button>':'<button type="button" disabled>Início</button>') + (next?'<button type="button" data-episode-nav="' + next.id + '">' + next.title + '</button>':'<button type="button" disabled>Fim</button>') + '</nav></div></div><div class="episode-timeline"><div class="episode-timeline-dot"></div><div class="episode-timeline-line"></div><span class="episode-timeline-label">' + ep.attribution + '</span></div></article>';
   }).join("");
 
@@ -943,7 +946,7 @@ function renderEpisodes(){
 function initWaveCanvas(){
   if(!wc || prefersReducedMotion) return;
   var ctx = wc.getContext("2d");
-  var wScale = isLowPerf ? 0.5 : 0.75;
+  var wScale = isLowPerf ? 0.4 : 0.6;
   var w = 0, h = 0, t = 0, lastFrame = 0, active = true, waveTimer = null;
   var nodes = [[.17,.42],[.27,.31],[.39,.48],[.49,.32],[.58,.46],[.68,.28],[.77,.43],[.86,.58],[.62,.66],[.43,.67]];
   var routes = [[0,1],[1,3],[1,2],[2,4],[3,5],[4,5],[4,6],[5,6],[6,7],[4,8],[8,9],[9,2]];
@@ -978,8 +981,8 @@ function initWaveCanvas(){
   function draw(now){
     if(!active || !effectsAllowed()){wraf=null;return;}
     wraf=null;
-    waveTimer=setTimeout(function(){waveTimer=null;wraf=requestAnimationFrame(draw);},isLowPerf?66:33);
-    if(now-lastFrame<(isLowPerf?66:32)) return;
+    waveTimer=setTimeout(function(){waveTimer=null;wraf=requestAnimationFrame(draw);},isLowPerf?90:60);
+    if(now-lastFrame<(isLowPerf?90:60)) return;
     lastFrame=now;
     ctx.clearRect(0,0,w,h);t+=.012;
     if(!document.body.classList.contains("modal-open")){
@@ -1066,7 +1069,7 @@ function initAmbientParticles(){
       ctx.fill();
     }
     raf=null;
-    ambientTimer=setTimeout(function(){ambientTimer=null;raf=requestAnimationFrame(draw);},33);
+    ambientTimer=setTimeout(function(){ambientTimer=null;raf=requestAnimationFrame(draw);},80);
   }
   registerDecorative(function(){if(!raf&&!ambientTimer)draw();},function(){cancelAnimationFrame(raf);clearTimeout(ambientTimer);ambientTimer=null;raf=null;});
 }
@@ -1698,9 +1701,10 @@ function renderIntelligence(){
     return '<button type="button" class="intel-card'+(selected?' selected':'')+'" data-intel-episode="'+item.id+'" aria-pressed="'+selected+'"><div class="intel-card-top"><span>'+intelEscape(episode.year)+' • '+intelEscape(intelLabel(item.country))+'</span><span class="'+intelSeverityClass(item.impact)+'">'+intelEscape(intelLabel(item.impact))+'</span></div><h3>'+intelEscape(episode.title)+'</h3><div class="intel-card-meta"><span><b>Categoria</b>'+intelEscape(intelLabel(item.category))+'</span><span><b>Ator / grupo</b>'+intelEscape(intelLabel(item.group))+'</span><span><b>Malware</b>'+intelEscape(item.malware)+'</span><span><b>MITRE ATT&CK</b>'+item.mitre.join(" · ")+'</span></div><div class="intel-card-footer"><span>Dossiê completo</span><span class="intel-card-action">Investigar</span></div></button>';
   }).join(""):'<div class="intel-empty">Nenhum dossiê corresponde aos filtros atuais.</div>';
   hotspots.innerHTML=INTEL_INDEX.map(function(item){
-    var episode=EPISODES.find(function(ep){return ep.id===item.id;}),hidden=results.indexOf(item)<0,selected=item.id===selectedIntelId;
-    return '<button type="button" class="intel-hotspot '+(item.impact==="Critico"?"":"high")+(hidden?' hidden':'')+(selected?' selected':'')+'" style="left:'+item.x+'%;top:'+item.y+'%" data-intel-hotspot="'+item.id+'" aria-label="Selecionar '+intelEscape(episode.title)+'" aria-pressed="'+selected+'"'+(hidden?' disabled aria-hidden="true"':'')+'></button>';
+    var episode=EPISODES.find(function(ep){return ep.id===item.id;}),hidden=results.indexOf(item)<0,selected=item.id===selectedIntelId,position=WarRoomCartography.point(item.id,true);
+    return '<button type="button" class="intel-hotspot '+(item.impact==="Critico"?"":"high")+(hidden?' hidden':'')+(selected?' selected':'')+(position.global?' global-scope':'')+'" style="left:'+(position.x/10).toFixed(2)+'%;top:'+(position.y/4.3).toFixed(2)+'%" data-intel-hotspot="'+item.id+'" aria-label="Selecionar '+intelEscape(episode.title)+'" aria-pressed="'+selected+'"'+(hidden?' disabled aria-hidden="true"':'')+'>'+(position.global?'Log4j · global':'')+'</button>';
   }).join("");
+  WarRoomCartography.sync(results);
   if(mobileHotspots)mobileHotspots.innerHTML=INTEL_INDEX.map(function(item){var episode=EPISODES.find(function(ep){return ep.id===item.id;}),hidden=results.indexOf(item)<0,selected=item.id===selectedIntelId;return hidden?"":'<button type="button" class="mobile-hotspot" data-intel-hotspot-mobile="'+item.id+'" aria-pressed="'+selected+'"><b>'+episode.year+' · '+intelEscape(intelLabel(item.country))+'</b>'+intelEscape(episode.title)+'</button>';}).join("");
   container.querySelectorAll(".intel-card").forEach(function(card){
 
@@ -1725,8 +1729,8 @@ function renderIntelTimeline(){
 
 function showIntelTooltip(id){
   var item=intelProfile(id),episode=EPISODES.find(function(ep){return ep.id===id;}),tip=byId("intel-tooltip");if(!item||!episode||!tip)return;
-  tip.innerHTML='<strong>'+intelEscape(episode.title)+'</strong><span><b>'+intelEscape(intelLabel(item.country))+' · '+episode.year+'</b></span><span>'+intelEscape(intelLabel(item.group))+' · '+intelEscape(intelLabel(item.category))+' · '+intelEscape(intelLabel(item.impact))+'</span>';
-  tip.style.left=Math.min(74,Math.max(4,item.x))+"%";tip.style.top=Math.min(82,Math.max(12,item.y))+"%";tip.hidden=false;
+  tip.innerHTML='<strong>'+intelEscape(episode.title)+'</strong><span><b>'+intelEscape(intelLabel(item.country))+' · '+episode.year+'</b></span><span>'+intelEscape(WarRoomCartography.point(id).label)+'</span><span>'+intelEscape(intelLabel(item.group))+' · '+intelEscape(intelLabel(item.category))+' · '+intelEscape(intelLabel(item.impact))+'</span>';
+  tip.style.left="1rem";tip.style.top="1rem";tip.hidden=false;
 }
 function hideIntelTooltip(){var tip=byId("intel-tooltip");if(tip)tip.hidden=true;}
 

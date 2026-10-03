@@ -11,4 +11,6 @@ const expected={EPISODES:'7cde1d877d598afdb7c21e0f679b74693d0dad05cf8115d04274df
 for(const [name,hash] of Object.entries(expected))assert.equal(createHash('sha256').update(JSON.stringify(context[name])).digest('hex'),hash,`${name}: historical corpus must remain unchanged`);
 assert.equal(context.EPISODES.length,17);
 new vm.Script(readFileSync('assets/js/experience.js','utf8'));
+new vm.Script(readFileSync('assets/js/cartography.js','utf8'));
+new vm.Script(readFileSync('assets/js/documentaries.js','utf8'));
 console.log('Experience: all 17 canonical dossiers, narratives, references and intelligence metadata unchanged; extracted JS parses.');

@@ -12,6 +12,14 @@ const {mkdirSync}=require('node:fs');
       await page.screenshot({path:'assets/screenshots/experience/hero-'+suffix+'.png'});
       await page.locator('#hero-cta').click();await page.waitForTimeout(150);
       await page.screenshot({path:'assets/screenshots/experience/intelligence-'+suffix+'.png'});
+      await page.locator('#map-camera img').evaluate(image=>image.decode());
+      await page.locator('.intel-map-card').screenshot({path:'assets/screenshots/experience/map-'+suffix+'.png'});
+      for(const id of ['morris-worm','stuxnet','solarwinds','mgm','volt-typhoon']){
+        await page.goto(base+'?tab=story#dossier-'+id);
+        await page.locator('.pilot-scene .dossier-figure img').evaluate(image=>image.decode());
+        await page.waitForTimeout(200);
+        await page.screenshot({path:'assets/screenshots/experience/'+id+'-'+suffix+'.png'});
+      }
       await page.goto(base+'?tab=story&chapter=spread#dossier-notpetya');await page.waitForTimeout(500);
       await page.getByRole('button',{name:'Pausar animação'}).click();
       await page.screenshot({path:'assets/screenshots/experience/propagation-'+suffix+'.png'});

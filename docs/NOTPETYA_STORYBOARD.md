@@ -8,7 +8,8 @@ Material para revisão na branch `codex/war-room-experience`, 3 de outubro de 20
 - Destino para divulgação após aprovação: [dossiê NotPetya](https://edy075.github.io/WAR_ROOM/?tab=story#dossier-notpetya). A versão pública atual ainda não contém esta evolução.
 - [Materiais editáveis e downloads](../assets/media/notpetya/materials.html).
 - [Capa](../assets/media/notpetya/cover.png), carrossel [1](../assets/media/notpetya/carousel-1.png), [2](../assets/media/notpetya/carousel-2.png), [3](../assets/media/notpetya/carousel-3.png), [4](../assets/media/notpetya/carousel-4.png), [5](../assets/media/notpetya/carousel-5.png).
-- [Teaser vertical MP4](../assets/media/notpetya/teaser-vertical.mp4): 1080 × 1920, 24 fps, 36 segundos, sem áudio. Texto completo incorporado. Nenhum arquivo de narração foi produzido.
+- [Teaser narrado MP4](../assets/media/notpetya/teaser-narrated.mp4): 1080 × 1920, 24 fps, 42 segundos, voz sintética em português. [Narração MP3](../assets/media/notpetya/narration.mp3), [legendas VTT](../assets/media/notpetya/teaser-narrated.vtt) e [pedido de síntese reproduzível](../assets/media/notpetya/narration-request.json).
+- [Versão sem áudio](../assets/media/notpetya/teaser-vertical.mp4): 1080 × 1920, 24 fps, 36 segundos. Texto completo incorporado nas duas versões.
 
 ## Storyboard interativo
 
@@ -16,14 +17,14 @@ Material para revisão na branch `codex/war-room-experience`, 3 de outubro de 20
 | --- | --- | --- | --- |
 | Abertura | 27/06/2017; ataque iniciado na Ucrânia e alcance internacional | Porto reconstituído, identificação visível | Avanço manual e referência Microsoft |
 | Origem | Processo de atualização M.E.Doc iniciando infecções observadas | Documento em off-white, explicitamente resumo editorial | Voltar/avançar; fonte original |
-| Propagação | Credenciais, PsExec, WMI, SMB; observações em outros 64 países | Mapa esquemático e rotas conceituais; sem alegar rotas ou tempos reais | Pausar/retomar animação; permanece estático em efeitos reduzidos |
+| Propagação | Credenciais, PsExec, WMI, SMB; observações em outros 64 países | Natural Earth: contexto ucraniano de origem, sem delimitar alcance global ou alegar rotas e tempos reais | Pausar/retomar animação; estático em efeitos reduzidos, pausa fora da leitura |
 | Impacto | Quase US$ 1 bi entre três vítimas citadas no DOJ, não total mundial | Fotografia de arquivo do Edith Maersk em Rotterdam, 2013 | Referência DOJ; data, autor e licença visíveis |
 | Resposta | Recuperação e lições do corpus; atribuição britânica em 2018; acusação nos EUA em 2020 | Resumo editorial de documento, sem imitar evidência original | Fontes específicas; termos de atribuição preservados |
 | Fontes | Evidência técnica, atribuição pública e acusação judicial são categorias diferentes | Referências abertas e créditos | Fontes completas, história original integral em disclosure nativo |
 
 O piloto não tem avanço automático. A leitura independe de áudio e vídeo. A história original do projeto fica integralmente acessível na aba História, e a Análise preserva os campos originais. A mídia pesada só entra após escolha explícita na aba Mídia.
 
-## Roteiro do teaser vertical — 36 segundos
+## Roteiro do teaser vertical — versão sem áudio de 36 segundos
 
 | Tempo | Tela / direção de montagem | Texto / narração sugerida (não produzida) |
 | --- | --- | --- |
@@ -34,7 +35,19 @@ O piloto não tem avanço automático. A leitura independe de áudio e vídeo. A
 | 24–30 s | Documento off-white e datas de atribuição | “Reconstruir. Investigar. Atribuir. Cada afirmação tem uma fonte.” |
 | 30–36 s | Porto e chamada; endereço legível | “NotPetya no WAR ROOM. Leia os seis capítulos. Volte à evidência.” |
 
-Montagem real usa seis planos de 6,5 s, sobrepostos por dissoluções de 0,6 s (duração final de 36 s). Sem música ou narração; nenhum direito de áudio externo foi presumido. Para adicionar voz, a dependência específica é um arquivo de narração aprovado (WAV/MP3), produzido por locução ou serviço TTS disponível. FFmpeg já está disponível e pode sincronizá-lo.
+Essa montagem usa seis planos de 6,5 s, sobrepostos por dissoluções de 0,6 s. A versão narrada usa os mesmos planos com entradas em 0, 5,5, 10,2, 18,1, 27,3 e 32,6 s, duração final de 42 s e tempo de leitura do link ao final. Narração entra com atraso de 150 ms; não foi acelerada. Não há música externa.
+
+## Narração produzida e verificada
+
+VoiceStudio 0.5.6 local, motor OmniVoice já instalado, voz sintética padrão, português, seed 1729, 32 passos, instruções suportadas `male, middle-aged, low pitch`. Não foi usado um perfil pessoal de voz. O WAV gerado tem 37,45 s, mono, PCM 16-bit a 24 kHz; entrega MP3 a 128 kbit/s com normalização de loudness. Transcrição local com Faster-Whisper confirmou data, país, 64 países, quase um bilhão entre três vítimas, nome do episódio e seis capítulos. Grafias dos nomes foram normalizadas nas legendas a partir do roteiro.
+
+A primeira tentativa pelo motor ativo MOSS não passou na conferência da fala e não foi incluída. O pedido compatível não selecionava sozinho o motor; foi necessário escolher explicitamente OmniVoice pela API nativa. Uma instrução não suportada foi corrigida antes da geração válida. A escolha anterior de motor/modelo foi restaurada e confirmada. Nenhum modelo foi baixado nem perfil existente alterado. O frontend só usa arquivos estáticos reais; não depende do VoiceStudio.
+
+Texto falado:
+
+> Vinte e sete de junho de dois mil e dezessete. Uma atualização. Uma ruptura. Na Ucrânia, o canal de atualização do M.E.Doc abriu caminho para infecções. O movimento lateral atravessou redes. A Microsoft observou infecções em outros sessenta e quatro países. Saúde, logística e indústria. Quase um bilhão de dólares entre três vítimas citadas pelo Departamento de Justiça dos Estados Unidos. Reconstruir. Investigar. Atribuir. Cada afirmação tem uma fonte. NotPetya, no WAR ROOM. Leia os seis capítulos. Volte à evidência.
+
+Reprodução: exportar frames com `scripts/export-pilot-materials.cjs`; montar versão sem áudio com `scripts/assemble-pilot.ps1` e narrada com `scripts/assemble-narrated-pilot.ps1`. Uma nova síntese requer VoiceStudio local com OmniVoice instalado, seleção explícita de motor e validação de fala. Os arquivos entregues já estão prontos.
 
 ## Fontes verificadas nesta implementação
 

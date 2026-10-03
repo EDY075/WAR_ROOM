@@ -74,3 +74,65 @@ body.motion-paused .hero-particles *,body.motion-paused .hero-fog,body.motion-pa
 @media(prefers-reduced-motion:reduce){.pilot-route{animation:none}.intel-drawer{transition:none}}
 @media(max-width:768px){.nav-logo{font-size:.9rem;letter-spacing:.12rem;white-space:nowrap}.nav-utility-btn,.experience-toggle{font-size:.75rem;padding:.3rem .35rem}.drawer-header>div{min-width:0}}
 @media(max-width:360px){.nav-logo{font-size:.8rem;letter-spacing:.06rem}.nav-controls{gap:.1rem}.nav-utility-btn,.experience-toggle{font-size:.7rem}.search-icon{display:none}}
+
+/* Documentary corpus and geographic context. No scroll interception. */
+.intel-map-card{border-color:#61563c;background:#101510;border-radius:0}
+.intel-map{aspect-ratio:1000/430;min-height:0;background:#101510}
+.map-camera{position:absolute;inset:0;transform-origin:50% 50%;transition:transform .3s ease}
+.world-cartography{display:block;width:100%;height:100%;object-fit:fill}
+.intel-map .world-cartography{position:absolute;inset:0}
+.intel-map .map-leaders{opacity:1}
+.intel-map .map-leaders path{fill:none;stroke:#d9bc79;stroke-opacity:.45;stroke-width:.8}
+.intel-map .map-leaders circle{fill:#dcc07b}
+.intel-hotspot,.intel-hotspot.high{width:44px;height:44px;background:transparent;border:0;box-shadow:none;filter:none}
+.intel-hotspot::before{content:'';position:absolute;inset:18px;background:#c5b17b;border:1px solid #f3e6c5;border-radius:50%;box-shadow:0 0 0 5px #c5b17b18}
+.intel-hotspot.high::before{background:#969f93;border-color:#c8d2c3}
+.intel-hotspot.selected::before{inset:16px;background:#f2d083;box-shadow:0 0 0 9px #ddc27a24}
+.intel-hotspot::after{display:none}
+.intel-hotspot:hover,.intel-hotspot:focus-visible{transform:translate(-50%,-50%);background:#d1b77916;outline:1px solid #d1b779;outline-offset:-4px}
+.intel-hotspot.hidden{display:none}
+.map-toolbar{position:absolute;bottom:1rem;left:1rem;display:flex;align-items:center;gap:.45rem;background:#101510ed;padding:.35rem;border:1px solid #5e5438}
+.map-toolbar button{min-width:44px;min-height:44px;background:transparent;border:1px solid #574b32;color:#e7d1a0;font:.8rem var(--font-ui);padding:.4rem .65rem;cursor:pointer}
+.map-toolbar button:disabled{opacity:.4;cursor:default}
+.map-toolbar span{font:.72rem var(--font-mono);color:#bcb4a1;margin:0 .4rem}
+.intel-hotspots-mobile{display:flex;gap:.5rem;overflow-x:auto;padding:.8rem;border-top:1px solid #464431;scroll-snap-type:x proximity}
+.mobile-hotspot{flex:0 0 auto;min-width:170px;min-height:58px;background:#191d16;color:#e6dfcd;border:1px solid #454833;padding:.65rem;text-align:left;font:.83rem/1.5 var(--font-ui);scroll-snap-align:start;cursor:pointer}
+.mobile-hotspot b{display:block;font:.72rem/1.5 var(--font-mono);color:#bdae80}
+.mobile-hotspot[aria-pressed=true]{border-color:#d6b86f;background:#2a2719}
+.map-context-note{font:.78rem/1.6 var(--font-ui);color:#b5b19f;padding:.3rem 1.25rem 1rem}
+.legend-dot.high{background:#969f93;box-shadow:none}.legend-dot.critical{box-shadow:none}
+.intel-tooltip{z-index:5;max-width:min(360px,85%);pointer-events:none;background:#101510f5;border-color:#72613f;font-size:.82rem}
+.pilot-map{position:relative;aspect-ratio:1000/430;overflow:hidden}
+.dossier-figure .pilot-map img{height:100%;max-height:none;border:0;object-fit:fill}
+.map-overlay{position:absolute;inset:0;width:100%;height:100%}
+.map-beacon{fill:#d5b97414;stroke:#e5c780;stroke-width:1.8}
+.map-center{fill:#f2d69a;stroke:#101510;stroke-width:2}
+.map-case-label{position:absolute;left:.8rem;bottom:.8rem;background:#101510e8;padding:.4rem .65rem;color:#e4c989;font:.85rem var(--font-mono);max-width:90%}
+.chapter-evidence{margin-top:1.8rem;padding:1.3rem 0;border-top:1px solid #3e3a2e;max-width:85ch}
+.chapter-evidence h4:first-child{margin-top:0}
+.chapter-impact{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
+.chapter-impact div{padding:1rem;background:#191b15;border:1px solid #393b2c}
+.chapter-impact dt{font:.76rem var(--font-mono);color:#b8aa83;margin-bottom:.5rem}
+.chapter-impact dd{font:1.1rem/1.6 var(--font-ui);color:#e2dbc9}
+.chapter-timeline{list-style:none;padding:0!important;margin:0;display:grid;gap:.2rem}
+.chapter-timeline li{display:grid;grid-template-columns:130px 1fr;gap:1rem;border-bottom:1px solid #36372c;padding:.8rem 0;margin:0}
+.chapter-timeline strong{color:#d8bf80;font:.85rem/1.7 var(--font-mono)}
+.chapter-timeline p{margin:0!important}
+.pilot-document small{display:block;line-height:1.6;margin-top:1rem}
+.pilot-document a{display:block;color:#635020;font:.88rem/1.7 var(--font-ui);margin:1rem 0}
+.chapter-source-folio{border-top:3px solid #d6b675;padding:1.25rem;background:#1b1d15}
+.chapter-source-folio small{color:#d6bc7c;font:.78rem var(--font-mono)}
+.chapter-source-folio h3{font-size:1.5rem}
+.pilot-original{margin-top:2rem;padding-top:1.3rem;border-top:1px solid #454033;max-width:85ch}
+.pilot-original summary{min-height:44px;color:#d8bf80;cursor:pointer;font:1rem/1.6 var(--font-ui);padding:.5rem 0}
+.pilot-original p:first-of-type{margin-top:1rem}
+.dossier-gallery{margin-top:1.5rem}
+.pilot-map.paused-by-visibility .pilot-route{animation-play-state:paused}
+@media(max-width:768px){.intel-map{aspect-ratio:1000/430;min-height:180px}.map-toolbar{bottom:.45rem;left:.45rem;padding:.2rem;gap:.25rem}.map-toolbar span{display:none}.map-toolbar button{font-size:.7rem;padding:.3rem}.map-context-note{padding:.5rem .8rem 1rem}.map-camera .intel-hotspots{display:none}.pilot-scene>.dossier-figure{order:-1}.pilot-scene>.dossier-figure>img{max-height:200px;object-fit:cover}.pilot-meta{font-size:.73rem}.chapter-impact{grid-template-columns:1fr}.chapter-timeline li{grid-template-columns:1fr;gap:.35rem}.pilot-scene h3{font-size:2rem}.chapter-evidence{margin-top:1.25rem}.pilot-controls{margin-top:.8rem}}
+@media(prefers-reduced-motion:reduce){.map-camera{transition:none}}
+body.effects-reduced .map-camera{transition:none}
+.episode-image-blur{display:none}
+.episode-art-credit{position:absolute;bottom:0;left:0;right:0;padding:.8rem 1rem;background:#10110ff0;font:.76rem/1.6 var(--font-ui);color:#c7bdab;z-index:2}
+.intel-hotspot.global-scope{width:140px;border:1px solid #6a5c3a;border-radius:0;background:#141a13;color:#deca96;font:.8rem var(--font-ui)}
+.intel-hotspot.global-scope::before{display:none}
+.scope-outline{fill:none;stroke:#d9bc7a;stroke-width:1.5}
