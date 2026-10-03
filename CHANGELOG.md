@@ -1,5 +1,11 @@
 # Changelog
 
+## Em revisão — narração prolongada autorizada (2026-10-03)
+
+- Voz aprovada pelo autor nos 17 episódios completos e 102 capítulos, com tratamento de clareza/volume, roteiros, referências e VTT.
+- Players por escolha em História/Mídia e biblioteca com download; áudio pausa ao mudar de contexto, mantendo leitura e efeitos reduzidos.
+- Branch `codex/war-room-experience`; sem publicação ou alteração da release v1.1.0. Detalhes: [NARRATION_PRODUCTION.md](docs/NARRATION_PRODUCTION.md).
+
 Todas as mudanças relevantes do WAR ROOM são registradas neste arquivo.
 
 ## Em revisão — Experience / NotPetya — 2026-10-03

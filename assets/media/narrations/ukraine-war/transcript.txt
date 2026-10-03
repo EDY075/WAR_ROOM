@@ -1,0 +1,20 @@
+Russia x Ucrania
+Voz do autor · síntese autorizada
+
+Russia x Ucrania. Abertura. A infraestrutura digital entrou na linha de frente. Entre 2022 e 2024, o catálogo acompanha a pressão sobre energia, telecomunicações e serviços públicos ucranianos. A narrativa reúne episódios documentados, sem tratar o intervalo inteiro como um ataque contínuo nem transformar todas as reivindicações em fatos confirmados.
+Referência: https://cip.gov.ua/en/news/poperedzhena-masshtabna-kiberataka-na-energetichnii-sektor-ukrayini
+
+Origem. Um precedente que atravessou fronteiras. NotPetya permanece um precedente de dano internacional. A invasão em larga escala ampliou a relevância da defesa digital dos serviços civis. O capítulo mantém separados o contexto militar, os incidentes técnicos e os anúncios públicos de autoria.
+Referência: https://cip.gov.ua/en/news/poperedzhena-masshtabna-kiberataka-na-energetichnii-sektor-ukrayini
+
+Propagação. Campanhas não são um incidente único. Em abril de 2022, CERT-UA anunciou ter impedido uma tentativa contra o setor de energia. O mapa situa a infraestrutura ucraniana; não simula deslocamento de ataques. Wipers, DDoS e espionagem têm mecanismos e evidências distintos.
+Referência: https://cip.gov.ua/en/news/poperedzhena-masshtabna-kiberataka-na-energetichnii-sektor-ukrayini
+
+Impacto. A continuidade civil está em jogo. Energia e comunicação afetam diretamente a vida civil. O dossiê não fornece um total financeiro consolidado. A fotografia mostra contexto físico do conflito e é creditada como tal; não documenta uma interrupção causada pelo episódio cibernético descrito.
+Referência: https://cip.gov.ua/en/news/poperedzhena-masshtabna-kiberataka-na-energetichnii-sektor-ukrayini
+
+Resposta. Resiliência se constrói antes da crise. Segmentação entre TI e OT, recuperação testada e cooperação entre CERTs compõem a leitura operacional. A narrativa separa reivindicações de grupos das avaliações técnicas. O acesso às fontes permite acompanhar quais afirmações foram documentadas por cada organização.
+Referência: https://cip.gov.ua/en/news/poperedzhena-masshtabna-kiberataka-na-energetichnii-sektor-ukrayini
+
+Fontes. Volte às fontes. Este capítulo reúne a base documental da narrativa. Consulte os documentos no contexto de sua data, autoria e escopo. A história original do projeto continua integral abaixo, com sua linguagem de abertura dramática; ela permanece separada da nova leitura documental. A referência deste capítulo é CERT-UA: ataque ao setor de energia impedido. Consulte a aba Fontes para verificar autoria, datas, atribuição e escopo. Você pode reler a História e consultar a cronologia completa na aba Análise.
+Referência: https://cip.gov.ua/en/news/poperedzhena-masshtabna-kiberataka-na-energetichnii-sektor-ukrayini

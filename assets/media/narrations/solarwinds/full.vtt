@@ -1,0 +1,34 @@
+WEBVTT
+
+00:00:00.000 --> 00:00:21.440
+SolarWinds. Abertura. A confiança entrou pela atualização. Divulgado em 2020, o caso SolarWinds mostrou o risco de um componente confiável levar código malicioso ao ambiente. Não bastava procurar uma entrada externa óbvia: a atualização de uma ferramenta de monitoramento fazia parte da rotina autorizada.
+
+00:00:22.160 --> 00:00:36.000
+Origem. O fornecedor estava dentro da superfície de risco. O software Orion estava no centro da investigação da cadeia de fornecimento. O advisory da CISA descreve a campanha e caminhos de comprometimento.
+
+00:00:36.220 --> 00:00:42.820
+A assinatura e a origem esperada de um pacote não garantem que sua cadeia de produção permaneceu íntegra.
+
+00:00:43.540 --> 00:01:01.130
+Propagação. Receber o software não significa o mesmo impacto. Distribuição de uma atualização comprometida e atividade posterior em um alvo precisam ser distinguidas. O mapa dá contexto a alvos governamentais nos EUA, sem limitar a campanha a esse país.
+
+00:01:01.350 --> 00:01:05.440
+A cronologia acompanha descoberta, divulgação e resposta.
+
+00:01:06.160 --> 00:01:22.000
+Impacto. O trabalho de descobrir o alcance. A apuração exigiu avaliar acessos, contas e persistência. O número de organizações que receberam um componente não pode ser tratado automaticamente como o número de vítimas de todas as etapas.
+
+00:01:22.220 --> 00:01:26.190
+Os valores do catálogo são preservados em seu registro histórico.
+
+00:01:26.910 --> 00:01:40.790
+Resposta. A defesa acompanha toda a cadeia. A resposta vai além de retirar um pacote: é preciso verificar o ambiente e sua confiança. O dossiê relaciona segurança de fornecedores e transparência de componentes.
+
+00:01:41.010 --> 00:01:48.270
+O advisory funciona como registro da investigação, com separação entre escopo observado e exposição potencial.
+
+00:01:48.990 --> 00:02:08.510
+Fontes. Volte às fontes. Este capítulo reúne a base documental da narrativa. Consulte os documentos no contexto de sua data, autoria e escopo. A história original do projeto continua integral abaixo, com sua linguagem de abertura dramática; ela permanece separada da nova leitura documental.
+
+00:02:08.730 --> 00:02:26.660
+A referência deste capítulo é CISA · AA20-352A · publicação oficial de 17/12/2020. Consulte a aba Fontes para verificar autoria, datas, atribuição e escopo. Você pode reler a História e consultar a cronologia completa na aba Análise.

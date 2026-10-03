@@ -2,6 +2,16 @@
 
 This is the chronological project memory. `CURRENT_STATE.md` is the fast snapshot; `KNOWLEDGE_BASE.md` holds reusable rules.
 
+## Sprint — Approved prolonged personal voice, all cases (2026-10-03)
+
+- User listened to/approved the reference-based sample, authorized prolonged versions for all 17 cases and requested less muffled, more professional sound. Delivered 17 full MP3s plus 102 chapter MP3s, 42:13.53 of complete narration, scripts/references and VTT. Original recording/reference/raw WAVs remain ignored and local; no publication or saved personal profile change.
+- Production uses installed OmniVoice offline, CUDA FP16 transformer/CPU codec, 16 steps and deterministic bounded chunks. The measured hybrid benchmark rendered 16.93 seconds in 5.063 seconds with about 1.44 GiB peak allocated GPU memory; that is a production-method benchmark, not site performance. CPU int8 was only a rejected alternative benchmark. No game/user process was stopped or model downloaded.
+- Restrained EQ/dynamics plus two-pass loudness treatment. Actual 119 finished MP3 measurements: −16.78 to −16.21 LUFS, max true peak −1.88 dBTP. Dates/siglas receive speech-only support; CVE-2021-44228 was clarified and rechecked. Canonical arrays remain unchanged.
+- Lazy native players in História/Mídia, separate responsive library, explicit play/download, source teardown on context change, media exclusivity/visibility pause and stale-callback guards. No audio/catalog transfer on cold hero and no new animation/scroll loop. Errors preserve reading and have recovery controls.
+- All 119 files decoded in Edge and probed with FFprobe; desktop/mobile playback/library/keyboard/race/error/reduced tests pass. General experience/documentary suites and four original/data/diff checks pass. Installed Parakeet TDT v3 independently transcribed all 102 final chapters. Earlier Whisper repeats/overshooting timestamps were rechecked on six bounded clips; they are not passed off as a completed 17-case full-file Whisper audit. Automated content checks do not certify identity or replace human listening.
+- Fresh serial CDP medians against aeaa524 after production/ASR ended: desktop task time 922.655 → 136.256 ms/1.5 s, mobile emulation 216.256 → 32.370 ms. About 85% reduction in this hero slice; reading/reduced callbacks zero and zero forced episode entries. Older 4e66d81 metrics are qualified as historical. No new Lighthouse/field claim.
+- Real new screenshots in assets/screenshots/narration/; local ZIP contains the 17 complete MP3s and their transcripts/VTT, excluding personal references. The older short NotPetya videos retain the standard synthetic voice and are labeled separately; no new prolonged videos for all 17 are claimed. Production/limits: [NARRATION_PRODUCTION.md](../docs/NARRATION_PRODUCTION.md); validation: [EXPERIENCE_VALIDATION.md](../docs/EXPERIENCE_VALIDATION.md). Branch review only; no push, merge, tag or deployment.
+
 ## Sprint — Personal voice listening preview (2026-10-03)
 
 - User requested their own voice and supplied a 49.30-second OGG/Opus recording. Preserved the original and extracted a complete-sentence 10.25-second reference with a matching transcript. Prepared a short NotPetya opening, separate from product media and private in ignored `audit/`.

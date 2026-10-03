@@ -22,6 +22,13 @@
 
 - `.ai/` is the single official AI context for WAR ROOM. Root documentation points here; this directory links between canonical documents rather than repeating procedures.
 
+## Narration delivery
+
+- Production cache keys include the authorized reference, model, seed and spoken text. A single-case rerender must preserve the other catalog entries; replace the catalog atomically.
+- Final MP3 loudness/peaks must be measured after encoding; mastering targets/input stats do not prove the delivered file level. Use restrained clarity EQ for phone references, and retain the original privately.
+- Whisper can repeat text in pauses and produce timestamps beyond file duration. Keep raw evidence and independently recheck bounded chapters with previous-text conditioning disabled or another installed recognizer; never turn a token similarity score into an accuracy/identity certificate.
+- Chromium may retain `currentSrc` as a historical URL after `load()` empties the media. Verify removed source nodes, paused state, `readyState=HAVE_NOTHING` and `networkState=NETWORK_EMPTY`, rather than asserting the remembered URL disappears.
+
 ## CTI interface and performance
 
 - Personal voice previews use a complete reference excerpt paired with its actual transcript. Keep original recordings/reference material outside Git and deployed assets. Automatic ASR validates spoken content, not identity similarity; obtain listening feedback before applying a narrator across the corpus. A timed-out in-process GPU generation can retain its lease until it drains: do not immediately retry on the same device. An isolated offline CPU run using installed weights can produce a short preview without changing application preferences.

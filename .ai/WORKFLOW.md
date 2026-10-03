@@ -29,7 +29,9 @@ For experience changes also run `node tests/verify-cti-evolution.mjs`, `node tes
 
 The experience preview uses the parent directory to exercise the Pages prefix: serve the directory containing WAR_ROOM, then open `http://127.0.0.1:4173/WAR_ROOM/`. For review-only delivery, keep the preview available for the user and document that it is a temporary local server; stop it when review finishes. Do not push, merge, tag or publish without new scope.
 
-Also run `node tests/verify-documentaries.cjs` with Playwright for all 102 chapters at desktop/mobile viewports, local image decode, real cartography, map zoom/history, per-case sources, chapter deep links and reduced animation. Run `tests/measure-experience.cjs` baseline/current sequentially, without other browser jobs competing for CPU; do not reuse intermediate pilot-only numbers after corpus/map changes. See the validation report for the reproducible method.
+Also run `node tests/verify-documentaries.cjs` with Playwright for all 102 chapters at desktop/mobile viewports, local image decode, real cartography, map zoom/history, per-case sources, chapter deep links and reduced animation. For narration changes run `node tests/verify-narrations.cjs` (all 119 actual audio browser decodes, desktop/mobile library/playback/lifecycle/error checks), final-file measurements with `scripts/measure-narration-audio.py`, and local installed ASR review. Detailed ASR/measurement records remain ignored; sanitize results in the production report.
+
+Run `tests/measure-experience.cjs` baseline/current sequentially, without other browser jobs competing for CPU; do not reuse intermediate pilot-only numbers after corpus/map changes. See the validation report for the reproducible method.
 
 ```powershell
 node tests/verify-final-consistency.mjs

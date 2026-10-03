@@ -1,0 +1,37 @@
+WEBVTT
+
+00:00:00.000 --> 00:00:09.510
+WannaCry. Abertura. A indisponibilidade chegou ao atendimento. Em maio de 2017, WannaCry atingiu organizações em diversos países.
+
+00:00:09.730 --> 00:00:22.890
+O contexto do NHS torna o problema concreto: indisponibilidade de sistemas pode interferir no trabalho de quem precisa prestar um serviço, mesmo quando o ataque se manifesta primeiro em uma tela.
+
+00:00:23.610 --> 00:00:37.200
+Origem. Uma correção disponível, uma exposição persistente. O incidente explorou a exposição de sistemas Windows. O catálogo registra EternalBlue e o intervalo entre a correção da Microsoft e a campanha.
+
+00:00:37.420 --> 00:00:46.490
+Entender esse intervalo ajuda a separar descoberta de vulnerabilidade, disponibilidade de correção e aplicação efetiva nos ambientes.
+
+00:00:47.210 --> 00:01:00.660
+Propagação. O worm não espera um novo clique. A propagação como worm ampliou o alcance sem depender de uma nova abertura de anexo em cada máquina. O mapa usa o Reino Unido como recorte do impacto em saúde.
+
+00:01:00.880 --> 00:01:05.820
+É contexto de um episódio global, sem simular a velocidade nem as rotas reais.
+
+00:01:06.540 --> 00:01:19.720
+Impacto. A recuperação tem consequências humanas. A interrupção se traduz em filas de recuperação, remanejamento de trabalho e risco à continuidade. Os totais históricos variam conforme a fonte.
+
+00:01:19.940 --> 00:01:27.460
+A análise mantém os valores originais do projeto e evita usar uma fotografia de hospital como prova do incidente.
+
+00:01:28.180 --> 00:01:41.900
+Resposta. Corrigir é parte da continuidade. Inventário, correções, segmentação e recuperação testada fazem parte da defesa. A análise contemporânea da Mandiant documenta o comportamento do ransomware.
+
+00:01:42.120 --> 00:01:49.790
+A leitura coloca a correção dentro de um processo de operação, sem sugerir que um único controle resolve toda a continuidade.
+
+00:01:50.510 --> 00:02:10.030
+Fontes. Volte às fontes. Este capítulo reúne a base documental da narrativa. Consulte os documentos no contexto de sua data, autoria e escopo. A história original do projeto continua integral abaixo, com sua linguagem de abertura dramática; ela permanece separada da nova leitura documental.
+
+00:02:10.250 --> 00:02:26.610
+A referência deste capítulo é Mandiant / Google · análise de WannaCry · maio de 2017. Consulte a aba Fontes para verificar autoria, datas, atribuição e escopo. Você pode reler a História e consultar a cronologia completa na aba Análise.

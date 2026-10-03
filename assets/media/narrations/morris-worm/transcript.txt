@@ -1,0 +1,20 @@
+Morris Worm
+Voz do autor · síntese autorizada
+
+Morris Worm. Abertura. A primeira grande interrupção. Em novembro de 1988, um worm atingiu sistemas Unix de universidades e centros de pesquisa. Antes da Web, a comunidade da internet já precisava lidar com um problema coletivo: o funcionamento de uma máquina dependia da segurança das outras.
+Referência: https://www.fbi.gov/history/cases-and-criminals/morris-worm
+
+Origem. Uma rede construída sobre confiança. Robert Tappan Morris desenvolveu o programa enquanto estudava em Cornell. O registro do FBI descreve sua execução inicial por um computador do MIT. A narrativa acompanha o ambiente acadêmico da época sem transformar a intenção declarada em justificativa para o acesso não autorizado.
+Referência: https://www.fbi.gov/history/cases-and-criminals/morris-worm
+
+Propagação. O código encontra outras máquinas. O worm combinou diferentes formas de acesso a sistemas Unix. Cópias adicionais consumiam recursos e dificultavam o trabalho dos administradores. A região marcada no mapa representa o contexto acadêmico dos EUA; não pretende localizar cada host afetado.
+Referência: https://www.fbi.gov/history/cases-and-criminals/morris-worm
+
+Impacto. Disponibilidade também é segurança. O dano central foi a perda de disponibilidade. O FBI descreve e-mails atrasados, instituições desconectadas e esforço de limpeza. Estimativas de custo variam; os números do catálogo original ficam visíveis como registro do projeto, separados da retrospectiva oficial.
+Referência: https://www.fbi.gov/history/cases-and-criminals/morris-worm
+
+Resposta. A resposta passa a ter uma organização. O episódio contribuiu para a criação de uma resposta organizada a emergências computacionais. A investigação também levou à primeira condenação sob o CFAA de 1986. A lição operacional liga correção técnica, cooperação entre administradores e responsabilidade pelo acesso a sistemas.
+Referência: https://www.fbi.gov/history/cases-and-criminals/morris-worm
+
+Fontes. Volte às fontes. Este capítulo reúne a base documental da narrativa. Consulte os documentos no contexto de sua data, autoria e escopo. A história original do projeto continua integral abaixo, com sua linguagem de abertura dramática; ela permanece separada da nova leitura documental. A referência deste capítulo é FBI · investigação e retrospectiva do Morris Worm. Consulte a aba Fontes para verificar autoria, datas, atribuição e escopo. Você pode reler a História e consultar a cronologia completa na aba Análise.
+Referência: https://www.fbi.gov/history/cases-and-criminals/morris-worm

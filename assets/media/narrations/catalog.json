@@ -1,0 +1,924 @@
+{
+  "language": "pt-BR",
+  "narrator": "Voz do autor · síntese autorizada",
+  "cases": [
+    {
+      "id": "morris-worm",
+      "title": "Morris Worm",
+      "year": 1988,
+      "chapters": [
+        {
+          "id": "opening",
+          "name": "Abertura",
+          "src": "assets/media/narrations/morris-worm/opening.mp3",
+          "duration": 20.4,
+          "bytes": 327596
+        },
+        {
+          "id": "origin",
+          "name": "Origem",
+          "src": "assets/media/narrations/morris-worm/origin.mp3",
+          "duration": 22.16,
+          "bytes": 356012
+        },
+        {
+          "id": "spread",
+          "name": "Propagação",
+          "src": "assets/media/narrations/morris-worm/spread.mp3",
+          "duration": 21.26,
+          "bytes": 341420
+        },
+        {
+          "id": "impact",
+          "name": "Impacto",
+          "src": "assets/media/narrations/morris-worm/impact.mp3",
+          "duration": 21.62,
+          "bytes": 347180
+        },
+        {
+          "id": "response",
+          "name": "Resposta",
+          "src": "assets/media/narrations/morris-worm/response.mp3",
+          "duration": 23.61,
+          "bytes": 379052
+        },
+        {
+          "id": "sources",
+          "name": "Fontes",
+          "src": "assets/media/narrations/morris-worm/sources.mp3",
+          "duration": 35.64,
+          "bytes": 571436
+        }
+      ],
+      "src": "assets/media/narrations/morris-worm/full.mp3",
+      "duration": 147.69,
+      "bytes": 2364332,
+      "captions": "assets/media/narrations/morris-worm/full.vtt",
+      "transcript": "assets/media/narrations/morris-worm/transcript.txt"
+    },
+    {
+      "id": "melissa",
+      "title": "Melissa",
+      "year": 1999,
+      "chapters": [
+        {
+          "id": "opening",
+          "name": "Abertura",
+          "src": "assets/media/narrations/melissa/opening.mp3",
+          "duration": 19.22,
+          "bytes": 308780
+        },
+        {
+          "id": "origin",
+          "name": "Origem",
+          "src": "assets/media/narrations/melissa/origin.mp3",
+          "duration": 18.87,
+          "bytes": 303404
+        },
+        {
+          "id": "spread",
+          "name": "Propagação",
+          "src": "assets/media/narrations/melissa/spread.mp3",
+          "duration": 20.27,
+          "bytes": 325676
+        },
+        {
+          "id": "impact",
+          "name": "Impacto",
+          "src": "assets/media/narrations/melissa/impact.mp3",
+          "duration": 19.3,
+          "bytes": 310316
+        },
+        {
+          "id": "response",
+          "name": "Resposta",
+          "src": "assets/media/narrations/melissa/response.mp3",
+          "duration": 20.9,
+          "bytes": 335660
+        },
+        {
+          "id": "sources",
+          "name": "Fontes",
+          "src": "assets/media/narrations/melissa/sources.mp3",
+          "duration": 36.16,
+          "bytes": 579884
+        }
+      ],
+      "src": "assets/media/narrations/melissa/full.mp3",
+      "duration": 137.72,
+      "bytes": 2204972,
+      "captions": "assets/media/narrations/melissa/full.vtt",
+      "transcript": "assets/media/narrations/melissa/transcript.txt"
+    },
+    {
+      "id": "iloveyou",
+      "title": "ILOVEYOU",
+      "year": 2000,
+      "chapters": [
+        {
+          "id": "opening",
+          "name": "Abertura",
+          "src": "assets/media/narrations/iloveyou/opening.mp3",
+          "duration": 21.02,
+          "bytes": 337580
+        },
+        {
+          "id": "origin",
+          "name": "Origem",
+          "src": "assets/media/narrations/iloveyou/origin.mp3",
+          "duration": 21.64,
+          "bytes": 347564
+        },
+        {
+          "id": "spread",
+          "name": "Propagação",
+          "src": "assets/media/narrations/iloveyou/spread.mp3",
+          "duration": 20.86,
+          "bytes": 335276
+        },
+        {
+          "id": "impact",
+          "name": "Impacto",
+          "src": "assets/media/narrations/iloveyou/impact.mp3",
+          "duration": 21.57,
+          "bytes": 346412
+        },
+        {
+          "id": "response",
+          "name": "Resposta",
+          "src": "assets/media/narrations/iloveyou/response.mp3",
+          "duration": 20.48,
+          "bytes": 329132
+        },
+        {
+          "id": "sources",
+          "name": "Fontes",
+          "src": "assets/media/narrations/iloveyou/sources.mp3",
+          "duration": 36.6,
+          "bytes": 586796
+        }
+      ],
+      "src": "assets/media/narrations/iloveyou/full.mp3",
+      "duration": 145.17,
+      "bytes": 2324012,
+      "captions": "assets/media/narrations/iloveyou/full.vtt",
+      "transcript": "assets/media/narrations/iloveyou/transcript.txt"
+    },
+    {
+      "id": "estonia",
+      "title": "Ataques a Estonia",
+      "year": 2007,
+      "chapters": [
+        {
+          "id": "opening",
+          "name": "Abertura",
+          "src": "assets/media/narrations/estonia/opening.mp3",
+          "duration": 23.59,
+          "bytes": 378668
+        },
+        {
+          "id": "origin",
+          "name": "Origem",
+          "src": "assets/media/narrations/estonia/origin.mp3",
+          "duration": 22.11,
+          "bytes": 355244
+        },
+        {
+          "id": "spread",
+          "name": "Propagação",
+          "src": "assets/media/narrations/estonia/spread.mp3",
+          "duration": 20.3,
+          "bytes": 326060
+        },
+        {
+          "id": "impact",
+          "name": "Impacto",
+          "src": "assets/media/narrations/estonia/impact.mp3",
+          "duration": 22.23,
+          "bytes": 357164
+        },
+        {
+          "id": "response",
+          "name": "Resposta",
+          "src": "assets/media/narrations/estonia/response.mp3",
+          "duration": 21.06,
+          "bytes": 338348
+        },
+        {
+          "id": "sources",
+          "name": "Fontes",
+          "src": "assets/media/narrations/estonia/sources.mp3",
+          "duration": 38.97,
+          "bytes": 624812
+        }
+      ],
+      "src": "assets/media/narrations/estonia/full.mp3",
+      "duration": 151.26,
+      "bytes": 2421548,
+      "captions": "assets/media/narrations/estonia/full.vtt",
+      "transcript": "assets/media/narrations/estonia/transcript.txt"
+    },
+    {
+      "id": "stuxnet",
+      "title": "Stuxnet",
+      "year": 2010,
+      "chapters": [
+        {
+          "id": "opening",
+          "name": "Abertura",
+          "src": "assets/media/narrations/stuxnet/opening.mp3",
+          "duration": 22.54,
+          "bytes": 362156
+        },
+        {
+          "id": "origin",
+          "name": "Origem",
+          "src": "assets/media/narrations/stuxnet/origin.mp3",
+          "duration": 20.34,
+          "bytes": 326828
+        },
+        {
+          "id": "spread",
+          "name": "Propagação",
+          "src": "assets/media/narrations/stuxnet/spread.mp3",
+          "duration": 23.08,
+          "bytes": 370604
+        },
+        {
+          "id": "impact",
+          "name": "Impacto",
+          "src": "assets/media/narrations/stuxnet/impact.mp3",
+          "duration": 22.36,
+          "bytes": 359084
+        },
+        {
+          "id": "response",
+          "name": "Resposta",
+          "src": "assets/media/narrations/stuxnet/response.mp3",
+          "duration": 20.87,
+          "bytes": 335276
+        },
+        {
+          "id": "sources",
+          "name": "Fontes",
+          "src": "assets/media/narrations/stuxnet/sources.mp3",
+          "duration": 37.28,
+          "bytes": 597932
+        }
+      ],
+      "src": "assets/media/narrations/stuxnet/full.mp3",
+      "duration": 149.47,
+      "bytes": 2392748,
+      "captions": "assets/media/narrations/stuxnet/full.vtt",
+      "transcript": "assets/media/narrations/stuxnet/transcript.txt"
+    },
+    {
+      "id": "sony",
+      "title": "Sony Pictures",
+      "year": 2014,
+      "chapters": [
+        {
+          "id": "opening",
+          "name": "Abertura",
+          "src": "assets/media/narrations/sony/opening.mp3",
+          "duration": 23.52,
+          "bytes": 377516
+        },
+        {
+          "id": "origin",
+          "name": "Origem",
+          "src": "assets/media/narrations/sony/origin.mp3",
+          "duration": 22.03,
+          "bytes": 353708
+        },
+        {
+          "id": "spread",
+          "name": "Propagação",
+          "src": "assets/media/narrations/sony/spread.mp3",
+          "duration": 20.93,
+          "bytes": 336428
+        },
+        {
+          "id": "impact",
+          "name": "Impacto",
+          "src": "assets/media/narrations/sony/impact.mp3",
+          "duration": 21.28,
+          "bytes": 341804
+        },
+        {
+          "id": "response",
+          "name": "Resposta",
+          "src": "assets/media/narrations/sony/response.mp3",
+          "duration": 22.58,
+          "bytes": 362540
+        },
+        {
+          "id": "sources",
+          "name": "Fontes",
+          "src": "assets/media/narrations/sony/sources.mp3",
+          "duration": 36.46,
+          "bytes": 584876
+        }
+      ],
+      "src": "assets/media/narrations/sony/full.mp3",
+      "duration": 149.8,
+      "bytes": 2398124,
+      "captions": "assets/media/narrations/sony/full.vtt",
+      "transcript": "assets/media/narrations/sony/transcript.txt"
+    },
+    {
+      "id": "wannacry",
+      "title": "WannaCry",
+      "year": 2017,
+      "chapters": [
+        {
+          "id": "opening",
+          "name": "Abertura",
+          "src": "assets/media/narrations/wannacry/opening.mp3",
+          "duration": 23.11,
+          "bytes": 370988
+        },
+        {
+          "id": "origin",
+          "name": "Origem",
+          "src": "assets/media/narrations/wannacry/origin.mp3",
+          "duration": 23.1,
+          "bytes": 370988
+        },
+        {
+          "id": "spread",
+          "name": "Propagação",
+          "src": "assets/media/narrations/wannacry/spread.mp3",
+          "duration": 18.83,
+          "bytes": 302636
+        },
+        {
+          "id": "impact",
+          "name": "Impacto",
+          "src": "assets/media/narrations/wannacry/impact.mp3",
+          "duration": 21.14,
+          "bytes": 339500
+        },
+        {
+          "id": "response",
+          "name": "Resposta",
+          "src": "assets/media/narrations/wannacry/response.mp3",
+          "duration": 21.83,
+          "bytes": 350636
+        },
+        {
+          "id": "sources",
+          "name": "Fontes",
+          "src": "assets/media/narrations/wannacry/sources.mp3",
+          "duration": 36.32,
+          "bytes": 582572
+        }
+      ],
+      "src": "assets/media/narrations/wannacry/full.mp3",
+      "duration": 147.33,
+      "bytes": 2358572,
+      "captions": "assets/media/narrations/wannacry/full.vtt",
+      "transcript": "assets/media/narrations/wannacry/transcript.txt"
+    },
+    {
+      "id": "notpetya",
+      "title": "NotPetya",
+      "year": 2017,
+      "chapters": [
+        {
+          "id": "opening",
+          "name": "Abertura",
+          "src": "assets/media/narrations/notpetya/opening.mp3",
+          "duration": 21.09,
+          "bytes": 338732
+        },
+        {
+          "id": "origin",
+          "name": "Origem",
+          "src": "assets/media/narrations/notpetya/origin.mp3",
+          "duration": 22.84,
+          "bytes": 366764
+        },
+        {
+          "id": "spread",
+          "name": "Propagação",
+          "src": "assets/media/narrations/notpetya/spread.mp3",
+          "duration": 30.24,
+          "bytes": 485036
+        },
+        {
+          "id": "impact",
+          "name": "Impacto",
+          "src": "assets/media/narrations/notpetya/impact.mp3",
+          "duration": 24.11,
+          "bytes": 387116
+        },
+        {
+          "id": "response",
+          "name": "Resposta",
+          "src": "assets/media/narrations/notpetya/response.mp3",
+          "duration": 34.56,
+          "bytes": 554156
+        },
+        {
+          "id": "sources",
+          "name": "Fontes",
+          "src": "assets/media/narrations/notpetya/sources.mp3",
+          "duration": 41.68,
+          "bytes": 668204
+        }
+      ],
+      "src": "assets/media/narrations/notpetya/full.mp3",
+      "duration": 177.52,
+      "bytes": 2841644,
+      "captions": "assets/media/narrations/notpetya/full.vtt",
+      "transcript": "assets/media/narrations/notpetya/transcript.txt"
+    },
+    {
+      "id": "solarwinds",
+      "title": "SolarWinds",
+      "year": 2020,
+      "chapters": [
+        {
+          "id": "opening",
+          "name": "Abertura",
+          "src": "assets/media/narrations/solarwinds/opening.mp3",
+          "duration": 21.66,
+          "bytes": 347948
+        },
+        {
+          "id": "origin",
+          "name": "Origem",
+          "src": "assets/media/narrations/solarwinds/origin.mp3",
+          "duration": 20.88,
+          "bytes": 335276
+        },
+        {
+          "id": "spread",
+          "name": "Propagação",
+          "src": "assets/media/narrations/solarwinds/spread.mp3",
+          "duration": 22.12,
+          "bytes": 355244
+        },
+        {
+          "id": "impact",
+          "name": "Impacto",
+          "src": "assets/media/narrations/solarwinds/impact.mp3",
+          "duration": 20.25,
+          "bytes": 325292
+        },
+        {
+          "id": "response",
+          "name": "Resposta",
+          "src": "assets/media/narrations/solarwinds/response.mp3",
+          "duration": 21.58,
+          "bytes": 346796
+        },
+        {
+          "id": "sources",
+          "name": "Fontes",
+          "src": "assets/media/narrations/solarwinds/sources.mp3",
+          "duration": 37.89,
+          "bytes": 607532
+        }
+      ],
+      "src": "assets/media/narrations/solarwinds/full.mp3",
+      "duration": 147.38,
+      "bytes": 2359340,
+      "captions": "assets/media/narrations/solarwinds/full.vtt",
+      "transcript": "assets/media/narrations/solarwinds/transcript.txt"
+    },
+    {
+      "id": "colonial",
+      "title": "Colonial Pipeline",
+      "year": 2021,
+      "chapters": [
+        {
+          "id": "opening",
+          "name": "Abertura",
+          "src": "assets/media/narrations/colonial/opening.mp3",
+          "duration": 24.47,
+          "bytes": 392876
+        },
+        {
+          "id": "origin",
+          "name": "Origem",
+          "src": "assets/media/narrations/colonial/origin.mp3",
+          "duration": 22.68,
+          "bytes": 364076
+        },
+        {
+          "id": "spread",
+          "name": "Propagação",
+          "src": "assets/media/narrations/colonial/spread.mp3",
+          "duration": 22.89,
+          "bytes": 367532
+        },
+        {
+          "id": "impact",
+          "name": "Impacto",
+          "src": "assets/media/narrations/colonial/impact.mp3",
+          "duration": 21.17,
+          "bytes": 340268
+        },
+        {
+          "id": "response",
+          "name": "Resposta",
+          "src": "assets/media/narrations/colonial/response.mp3",
+          "duration": 22.93,
+          "bytes": 368300
+        },
+        {
+          "id": "sources",
+          "name": "Fontes",
+          "src": "assets/media/narrations/colonial/sources.mp3",
+          "duration": 36.4,
+          "bytes": 583724
+        }
+      ],
+      "src": "assets/media/narrations/colonial/full.mp3",
+      "duration": 153.54,
+      "bytes": 2458028,
+      "captions": "assets/media/narrations/colonial/full.vtt",
+      "transcript": "assets/media/narrations/colonial/transcript.txt"
+    },
+    {
+      "id": "log4j",
+      "title": "Log4j / Log4Shell",
+      "year": 2021,
+      "chapters": [
+        {
+          "id": "opening",
+          "name": "Abertura",
+          "src": "assets/media/narrations/log4j/opening.mp3",
+          "duration": 23.63,
+          "bytes": 379436
+        },
+        {
+          "id": "origin",
+          "name": "Origem",
+          "src": "assets/media/narrations/log4j/origin.mp3",
+          "duration": 25.77,
+          "bytes": 413612
+        },
+        {
+          "id": "spread",
+          "name": "Propagação",
+          "src": "assets/media/narrations/log4j/spread.mp3",
+          "duration": 21.62,
+          "bytes": 347180
+        },
+        {
+          "id": "impact",
+          "name": "Impacto",
+          "src": "assets/media/narrations/log4j/impact.mp3",
+          "duration": 19.99,
+          "bytes": 321068
+        },
+        {
+          "id": "response",
+          "name": "Resposta",
+          "src": "assets/media/narrations/log4j/response.mp3",
+          "duration": 23.9,
+          "bytes": 383660
+        },
+        {
+          "id": "sources",
+          "name": "Fontes",
+          "src": "assets/media/narrations/log4j/sources.mp3",
+          "duration": 39.8,
+          "bytes": 638252
+        }
+      ],
+      "src": "assets/media/narrations/log4j/full.mp3",
+      "duration": 157.71,
+      "bytes": 2524844,
+      "captions": "assets/media/narrations/log4j/full.vtt",
+      "transcript": "assets/media/narrations/log4j/transcript.txt"
+    },
+    {
+      "id": "mgm",
+      "title": "MGM Resorts",
+      "year": 2023,
+      "chapters": [
+        {
+          "id": "opening",
+          "name": "Abertura",
+          "src": "assets/media/narrations/mgm/opening.mp3",
+          "duration": 23.63,
+          "bytes": 379436
+        },
+        {
+          "id": "origin",
+          "name": "Origem",
+          "src": "assets/media/narrations/mgm/origin.mp3",
+          "duration": 21.48,
+          "bytes": 344876
+        },
+        {
+          "id": "spread",
+          "name": "Propagação",
+          "src": "assets/media/narrations/mgm/spread.mp3",
+          "duration": 20.23,
+          "bytes": 324908
+        },
+        {
+          "id": "impact",
+          "name": "Impacto",
+          "src": "assets/media/narrations/mgm/impact.mp3",
+          "duration": 19.31,
+          "bytes": 310316
+        },
+        {
+          "id": "response",
+          "name": "Resposta",
+          "src": "assets/media/narrations/mgm/response.mp3",
+          "duration": 21.82,
+          "bytes": 350636
+        },
+        {
+          "id": "sources",
+          "name": "Fontes",
+          "src": "assets/media/narrations/mgm/sources.mp3",
+          "duration": 36.96,
+          "bytes": 592556
+        }
+      ],
+      "src": "assets/media/narrations/mgm/full.mp3",
+      "duration": 146.43,
+      "bytes": 2344364,
+      "captions": "assets/media/narrations/mgm/full.vtt",
+      "transcript": "assets/media/narrations/mgm/transcript.txt"
+    },
+    {
+      "id": "ukraine-war",
+      "title": "Russia x Ucrania",
+      "year": "2022-2024",
+      "chapters": [
+        {
+          "id": "opening",
+          "name": "Abertura",
+          "src": "assets/media/narrations/ukraine-war/opening.mp3",
+          "duration": 25.96,
+          "bytes": 416684
+        },
+        {
+          "id": "origin",
+          "name": "Origem",
+          "src": "assets/media/narrations/ukraine-war/origin.mp3",
+          "duration": 19.89,
+          "bytes": 319532
+        },
+        {
+          "id": "spread",
+          "name": "Propagação",
+          "src": "assets/media/narrations/ukraine-war/spread.mp3",
+          "duration": 19.74,
+          "bytes": 317228
+        },
+        {
+          "id": "impact",
+          "name": "Impacto",
+          "src": "assets/media/narrations/ukraine-war/impact.mp3",
+          "duration": 20.34,
+          "bytes": 326828
+        },
+        {
+          "id": "response",
+          "name": "Resposta",
+          "src": "assets/media/narrations/ukraine-war/response.mp3",
+          "duration": 24.86,
+          "bytes": 399020
+        },
+        {
+          "id": "sources",
+          "name": "Fontes",
+          "src": "assets/media/narrations/ukraine-war/sources.mp3",
+          "duration": 35.04,
+          "bytes": 561836
+        }
+      ],
+      "src": "assets/media/narrations/ukraine-war/full.mp3",
+      "duration": 148.83,
+      "bytes": 2382764,
+      "captions": "assets/media/narrations/ukraine-war/full.vtt",
+      "transcript": "assets/media/narrations/ukraine-war/transcript.txt"
+    },
+    {
+      "id": "volt-typhoon",
+      "title": "Volt Typhoon",
+      "year": "2021-2024",
+      "chapters": [
+        {
+          "id": "opening",
+          "name": "Abertura",
+          "src": "assets/media/narrations/volt-typhoon/opening.mp3",
+          "duration": 24.48,
+          "bytes": 392876
+        },
+        {
+          "id": "origin",
+          "name": "Origem",
+          "src": "assets/media/narrations/volt-typhoon/origin.mp3",
+          "duration": 21.33,
+          "bytes": 342572
+        },
+        {
+          "id": "spread",
+          "name": "Propagação",
+          "src": "assets/media/narrations/volt-typhoon/spread.mp3",
+          "duration": 21.1,
+          "bytes": 339116
+        },
+        {
+          "id": "impact",
+          "name": "Impacto",
+          "src": "assets/media/narrations/volt-typhoon/impact.mp3",
+          "duration": 18.78,
+          "bytes": 301868
+        },
+        {
+          "id": "response",
+          "name": "Resposta",
+          "src": "assets/media/narrations/volt-typhoon/response.mp3",
+          "duration": 20.6,
+          "bytes": 331052
+        },
+        {
+          "id": "sources",
+          "name": "Fontes",
+          "src": "assets/media/narrations/volt-typhoon/sources.mp3",
+          "duration": 34.08,
+          "bytes": 546476
+        }
+      ],
+      "src": "assets/media/narrations/volt-typhoon/full.mp3",
+      "duration": 143.37,
+      "bytes": 2295212,
+      "captions": "assets/media/narrations/volt-typhoon/full.vtt",
+      "transcript": "assets/media/narrations/volt-typhoon/transcript.txt"
+    },
+    {
+      "id": "salt-typhoon",
+      "title": "Salt Typhoon",
+      "year": "2021-2025",
+      "chapters": [
+        {
+          "id": "opening",
+          "name": "Abertura",
+          "src": "assets/media/narrations/salt-typhoon/opening.mp3",
+          "duration": 21.21,
+          "bytes": 340652
+        },
+        {
+          "id": "origin",
+          "name": "Origem",
+          "src": "assets/media/narrations/salt-typhoon/origin.mp3",
+          "duration": 19.61,
+          "bytes": 315308
+        },
+        {
+          "id": "spread",
+          "name": "Propagação",
+          "src": "assets/media/narrations/salt-typhoon/spread.mp3",
+          "duration": 20.78,
+          "bytes": 333740
+        },
+        {
+          "id": "impact",
+          "name": "Impacto",
+          "src": "assets/media/narrations/salt-typhoon/impact.mp3",
+          "duration": 17.38,
+          "bytes": 279596
+        },
+        {
+          "id": "response",
+          "name": "Resposta",
+          "src": "assets/media/narrations/salt-typhoon/response.mp3",
+          "duration": 22.32,
+          "bytes": 358316
+        },
+        {
+          "id": "sources",
+          "name": "Fontes",
+          "src": "assets/media/narrations/salt-typhoon/sources.mp3",
+          "duration": 34.08,
+          "bytes": 546476
+        }
+      ],
+      "src": "assets/media/narrations/salt-typhoon/full.mp3",
+      "duration": 138.38,
+      "bytes": 2215340,
+      "captions": "assets/media/narrations/salt-typhoon/full.vtt",
+      "transcript": "assets/media/narrations/salt-typhoon/transcript.txt"
+    },
+    {
+      "id": "lazarus-modern",
+      "title": "Lazarus Group",
+      "year": "2022-2024",
+      "chapters": [
+        {
+          "id": "opening",
+          "name": "Abertura",
+          "src": "assets/media/narrations/lazarus-modern/opening.mp3",
+          "duration": 24.18,
+          "bytes": 388268
+        },
+        {
+          "id": "origin",
+          "name": "Origem",
+          "src": "assets/media/narrations/lazarus-modern/origin.mp3",
+          "duration": 19.46,
+          "bytes": 312620
+        },
+        {
+          "id": "spread",
+          "name": "Propagação",
+          "src": "assets/media/narrations/lazarus-modern/spread.mp3",
+          "duration": 19.34,
+          "bytes": 310700
+        },
+        {
+          "id": "impact",
+          "name": "Impacto",
+          "src": "assets/media/narrations/lazarus-modern/impact.mp3",
+          "duration": 19.47,
+          "bytes": 313004
+        },
+        {
+          "id": "response",
+          "name": "Resposta",
+          "src": "assets/media/narrations/lazarus-modern/response.mp3",
+          "duration": 21.26,
+          "bytes": 341420
+        },
+        {
+          "id": "sources",
+          "name": "Fontes",
+          "src": "assets/media/narrations/lazarus-modern/sources.mp3",
+          "duration": 34.55,
+          "bytes": 554156
+        }
+      ],
+      "src": "assets/media/narrations/lazarus-modern/full.mp3",
+      "duration": 141.26,
+      "bytes": 2261420,
+      "captions": "assets/media/narrations/lazarus-modern/full.vtt",
+      "transcript": "assets/media/narrations/lazarus-modern/transcript.txt"
+    },
+    {
+      "id": "israel-iran",
+      "title": "Israel x Ira",
+      "year": "2023-2025",
+      "chapters": [
+        {
+          "id": "opening",
+          "name": "Abertura",
+          "src": "assets/media/narrations/israel-iran/opening.mp3",
+          "duration": 28.62,
+          "bytes": 459308
+        },
+        {
+          "id": "origin",
+          "name": "Origem",
+          "src": "assets/media/narrations/israel-iran/origin.mp3",
+          "duration": 19.94,
+          "bytes": 320300
+        },
+        {
+          "id": "spread",
+          "name": "Propagação",
+          "src": "assets/media/narrations/israel-iran/spread.mp3",
+          "duration": 19.34,
+          "bytes": 310700
+        },
+        {
+          "id": "impact",
+          "name": "Impacto",
+          "src": "assets/media/narrations/israel-iran/impact.mp3",
+          "duration": 19.34,
+          "bytes": 310700
+        },
+        {
+          "id": "response",
+          "name": "Resposta",
+          "src": "assets/media/narrations/israel-iran/response.mp3",
+          "duration": 24.43,
+          "bytes": 392108
+        },
+        {
+          "id": "sources",
+          "name": "Fontes",
+          "src": "assets/media/narrations/israel-iran/sources.mp3",
+          "duration": 36.0,
+          "bytes": 577196
+        }
+      ],
+      "src": "assets/media/narrations/israel-iran/full.mp3",
+      "duration": 150.67,
+      "bytes": 2411948,
+      "captions": "assets/media/narrations/israel-iran/full.vtt",
+      "transcript": "assets/media/narrations/israel-iran/transcript.txt"
+    }
+  ]
+}

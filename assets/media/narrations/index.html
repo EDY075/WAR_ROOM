@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="pt-BR">
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>WAR ROOM — Os casos narrados</title>
+<style>
+:root{color-scheme:dark;--paper:#eee9df;--gold:#d2b477;--muted:#beb7a9}*{box-sizing:border-box}body{margin:0;background:#10110e;color:var(--paper);font:17px/1.65 system-ui,sans-serif}main{max-width:1120px;margin:auto;padding:56px 24px}a{color:var(--gold)}.kicker{font:12px/1.5 monospace;letter-spacing:.12em;color:var(--gold)}h1{font:clamp(38px,6vw,68px)/1.1 Georgia,serif;margin:22px 0}header p{max-width:760px;color:var(--muted)}.intro-actions{display:flex;gap:24px;flex-wrap:wrap;margin-bottom:36px}a,button{min-height:44px}a:focus-visible,button:focus-visible,summary:focus-visible{outline:2px solid var(--gold);outline-offset:5px}.library{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px}article{border-top:1px solid #756440;padding:24px 0}h2{font:30px/1.2 Georgia,serif;margin:0 0 12px}article p{color:var(--muted);margin:0 0 16px}button{font:inherit;font-size:15px;background:#211f16;border:1px solid #77643d;color:#ead39b;padding:10px 16px;cursor:pointer}button:hover{border-color:#dfc181}.actions{display:flex;gap:16px;align-items:center;flex-wrap:wrap}.actions a{display:inline-flex;align-items:center;font-size:15px}details{margin-top:16px}summary{cursor:pointer;color:#d8c49a;padding:8px 0}.chapters{display:grid;gap:8px;margin-top:12px}.chapters button{text-align:left}.player:empty{display:none}audio{display:block;width:100%;margin:20px 0 8px}.status{font-size:14px}.status:empty{display:none}footer{margin-top:48px;border-top:1px solid #756440;padding-top:24px;color:var(--muted);font-size:15px}@media(max-width:700px){main{padding:32px 20px}.library{grid-template-columns:1fr}.actions{gap:12px}h2{font-size:28px}}
+</style>
+<main>
+<header><p class="kicker">WAR ROOM · ARQUIVO DOCUMENTAL</p><h1>Os casos narrados.</h1><p>Versões prolongadas dos 17 dossiês, organizadas em seis capítulos. Narração baseada na voz do autor, com síntese autorizada e tratamento de clareza e volume.</p><p>Escolha um episódio completo ou um capítulo. O áudio carrega somente quando você decide ouvir. Os roteiros incluem as referências, e cada dossiê conserva sua experiência completa de leitura.</p><nav class="intro-actions"><a href="../../../?tab=story#dossier-notpetya">Abrir o documentário NotPetya</a><a href="../../../#intelligence">Explorar os dossiês</a></nav></header>
+<section class="library" id="library" aria-label="Episódios narrados"><p role="status">Carregando o catálogo…</p></section>
+<footer>Narração baseada na voz do autor, com síntese autorizada. Consulte os roteiros e as referências de cada caso. Imagens, mapas e a leitura completa estão disponíveis nos dossiês.</footer>
+</main>
+<script>
+(function(){
+  var current=null;
+  function esc(value){return String(value).replace(/[&<>"']/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c];});}
+  function time(value){var seconds=Math.floor(value);return Math.floor(seconds/60)+':'+String(seconds%60).padStart(2,'0');}
+  fetch('catalog.json').then(function(response){if(!response.ok)throw new Error('catalog');return response.json();}).then(function(data){
+    document.getElementById('library').innerHTML=data.cases.map(function(item){return '<article data-case="'+esc(item.id)+'"><h2>'+esc(item.title)+'</h2><p>'+esc(item.year||'')+' · '+time(item.duration)+' · seis capítulos</p><div class="actions"><button type="button" data-play="'+esc(item.src)+'">Ouvir episódio completo</button><a href="../../../'+esc(item.src)+'" download>Baixar MP3</a><a href="../../../?tab=story#dossier-'+esc(item.id)+'">Abrir dossiê</a></div><details><summary>Ouvir por capítulo</summary><div class="chapters">'+item.chapters.map(function(chapter){return '<button type="button" data-play="'+esc(chapter.src)+'">'+esc(chapter.name)+' · '+time(chapter.duration)+'</button>';}).join('')+'</div></details><div class="player"></div><p class="status" role="status"></p><div class="actions"><a href="../../../'+esc(item.transcript)+'" target="_blank" rel="noopener noreferrer">Roteiro e referências</a><a href="../../../'+esc(item.captions)+'" download>Texto temporizado (VTT)</a></div></article>';}).join('');
+  }).catch(function(){document.getElementById('library').textContent='Não foi possível carregar o catálogo. Continue pelos dossiês ou tente novamente.';});
+  document.addEventListener('click',function(event){
+    var button=event.target.closest('[data-play]');if(!button)return;
+    if(current){current.pause();current.removeAttribute('src');current.querySelectorAll('source').forEach(function(source){source.remove();});current.load();current.parentElement.innerHTML='';}
+    var card=button.closest('article'),host=card.querySelector('.player'),status=card.querySelector('.status');
+    host.innerHTML='<audio controls preload="none" aria-label="Narração '+esc(card.querySelector('h2').textContent)+'"><source type="audio/mpeg" src="../../../'+esc(button.dataset.play)+'"></audio>';
+    current=host.querySelector('audio');var player=current,mediaFailed=false;
+    function failed(){mediaFailed=true;if(player.isConnected)status.textContent='Áudio indisponível. Use o download ou abra a leitura completa do dossiê.';}
+    player.addEventListener('error',failed);player.querySelector('source').addEventListener('error',failed);
+    player.addEventListener('playing',function(){if(player.isConnected)status.textContent=button.textContent+'. Use os controles para pausar e ajustar o volume.';});
+    player.play().catch(function(){if(player.isConnected&&!mediaFailed&&!player.error)status.textContent='Use o botão de reprodução do player.';});
+  });
+  document.addEventListener('visibilitychange',function(){if(document.hidden&&current)current.pause();});
+})();
+</script>
+</html>

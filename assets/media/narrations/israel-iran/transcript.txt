@@ -1,0 +1,20 @@
+Israel x Ira
+Voz do autor · síntese autorizada
+
+Israel x Ira. Abertura. O conflito alcança sistemas de controle. O recorte 2023–2025 relaciona conflito regional e segurança industrial. A narrativa se ancora no que as agências documentaram sobre PLCs e HMIs Unitronics. Reivindicações de sabotagem e campanhas de influência não são apresentadas automaticamente como resultados técnicos confirmados.
+Referência: https://www.cisa.gov/news-events/cybersecurity-advisories/aa23-335a
+
+Origem. Separar reivindicação e evidência. Atores associados ao IRGC e rastreados como CyberAv3ngers aparecem no advisory conjunto. A origem israelense de uma tecnologia não delimita onde ela é usada. A narrativa separa o contexto regional da localização internacional dos equipamentos.
+Referência: https://www.cisa.gov/news-events/cybersecurity-advisories/aa23-335a
+
+Propagação. Interfaces expostas, alcance internacional. Sistemas expostos e credenciais padrão fazem parte da leitura operacional do advisory. O mapa mostra Israel e Irã como contexto, sem inventar rotas. Cada evento mantém sua data na cronologia e sua ligação às fontes disponíveis.
+Referência: https://www.cisa.gov/news-events/cybersecurity-advisories/aa23-335a
+
+Impacto. O digital tem consequências operacionais. O risco envolve continuidade de água, energia e outros serviços. Não há um total financeiro oficial consolidado no catálogo. A fotografia de um painel é contexto industrial, identificada e creditada, sem alegar que registra o ataque.
+Referência: https://www.cisa.gov/news-events/cybersecurity-advisories/aa23-335a
+
+Resposta. Reduzir exposição, preservar continuidade. A defesa prioriza remover OT da exposição pública, revisar credenciais e preparar resposta conjunta de TI e operação. O advisory reúne mitigação e indicadores. A leitura preserva a distinção entre risco potencial, comprometimento documentado e alegação pública.
+Referência: https://www.cisa.gov/news-events/cybersecurity-advisories/aa23-335a
+
+Fontes. Volte às fontes. Este capítulo reúne a base documental da narrativa. Consulte os documentos no contexto de sua data, autoria e escopo. A história original do projeto continua integral abaixo, com sua linguagem de abertura dramática; ela permanece separada da nova leitura documental. A referência deste capítulo é CISA/INCD: PLCs e infraestrutura. Consulte a aba Fontes para verificar autoria, datas, atribuição e escopo. Você pode reler a História e consultar a cronologia completa na aba Análise.
+Referência: https://www.cisa.gov/news-events/cybersecurity-advisories/aa23-335a

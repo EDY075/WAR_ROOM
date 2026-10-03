@@ -36,6 +36,8 @@ The dossier workspace is moved to a body-level dialog before initialization so t
 
 `assets/js/documentaries.js` owns the separate editorial overlay for 17 six-chapter documentaries, cover metadata and additional primary references. `assets/js/cartography.js` owns projection, regional anchors, camera state and shared map figures. The selected chapter is rendered into the one dialog; the corpus does not duplicate 102 chapter DOM trees. No historical array is rewritten. The local `world-110m.svg` is one cached image reused across maps, generated offline with `scripts/build-cartography.cjs`. Zoom is explicit; page scroll remains native.
 
+`assets/js/narration.js` owns lazy local catalog loading and native audio playback. Story renders only the selected chapter player; Media exposes the full episode. Source teardown/version guards and visibility/media lifecycle prevent overlapping playback or stale callbacks. `assets/media/narrations/` contains authorized finished MP3s, transcripts, VTT, scripts/catalog and a standalone library. Original personal recordings/reference/raw files stay ignored and outside publication. No synthesis API runs in the product.
+
 `assets/media/notpetya/materials.html` is the editable source and download preview for campaign pieces; PNGs and the real MP4 are static output. Export/montage scripts are optional development tools and introduce no production dependency. All asset paths stay relative beneath `/WAR_ROOM/`.
 
 - Keep the project browser-native and dependency-light.

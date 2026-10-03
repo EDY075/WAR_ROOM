@@ -1,0 +1,20 @@
+NotPetya
+Voz do autor · síntese autorizada
+
+NotPetya. Abertura. Quando a rede parou. Uma atualização de software na Ucrânia abriu caminho para um ataque destrutivo. Em poucas horas, a interrupção atravessou redes corporativas e fronteiras. Esta é a história do NotPetya: um incidente que expôs a dependência entre sistemas digitais e operações do mundo físico.
+Referência: https://www.microsoft.com/en-us/security/blog/2017/06/27/new-ransomware-old-techniques-petya-adds-worm-capabilities/
+
+Origem. A confiança como ponto de entrada. A Microsoft identificou o processo de atualização do software contábil M.E.Doc iniciando infecções. O canal usado para manter sistemas funcionando tornou-se um vetor de comprometimento da cadeia de fornecimento. O ponto de partida observado foi a Ucrânia; o alcance não ficou restrito a ela.
+Referência: https://www.microsoft.com/en-us/security/blog/2017/06/27/new-ransomware-old-techniques-petya-adds-worm-capabilities/
+
+Propagação. Uma rede. Muitas fronteiras. A análise da Microsoft descreveu movimento lateral por credenciais, PsExec e WMI, além de exploração de SMB. A empresa observou infecções em outros 64 países. O mapa situa o contexto ucraniano de origem; não delimita o alcance global nem reconstrói rotas individuais ou a velocidade exata de propagação.
+Referência: https://www.microsoft.com/en-us/security/blog/2017/06/27/new-ransomware-old-techniques-petya-adds-worm-capabilities/
+
+Impacto. O dano saiu das telas. Logística, saúde e indústria foram atingidas. Em 2020, o Departamento de Justiça dos EUA relatou quase US$ 1 bilhão de perdas entre três vítimas citadas na acusação: Heritage Valley, TNT Express e uma fabricante farmacêutica. É um recorte documentado; não representa um total mundial consolidado.
+Referência: https://www.justice.gov/archives/opa/pr/six-russian-gru-officers-charged-connection-worldwide-deployment-destructive-malware-and
+
+Resposta. Reconstruir. Investigar. Atribuir. A contenção e a recuperação exigiram restaurar sistemas e limitar a propagação. Segmentação, correções e backups offline fazem parte das lições do dossiê. Em fevereiro de 2018, o Reino Unido atribuiu publicamente o ataque ao governo russo. Em outubro de 2020, o DOJ anunciou acusações contra seis oficiais do GRU. Atribuição governamental e acusação judicial são apresentadas com suas respectivas fontes.
+Referência: https://www.gov.uk/government/news/foreign-office-minister-condemns-russia-for-notpetya-attacks
+
+Fontes. Volte à evidência. A narrativa cruza análise técnica contemporânea, atribuição pública e documentos judiciais posteriores. A história original do projeto permanece abaixo, integral. As imagens reconstituídas e os mapas de contexto são identificados; nenhum deles é apresentado como prova do incidente. A referência deste capítulo é Departamento de Justiça dos Estados Unidos · acusação de oficiais do GRU · 19 de outubro de 2020. Consulte a aba Fontes para verificar autoria, datas, atribuição e escopo. Você pode reler a História e consultar a cronologia completa na aba Análise.
+Referência: https://www.justice.gov/archives/opa/pr/six-russian-gru-officers-charged-connection-worldwide-deployment-destructive-malware-and

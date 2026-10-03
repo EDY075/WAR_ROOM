@@ -1,0 +1,1264 @@
+{
+  "language": "pt-BR",
+  "narrator": "Voz do autor, síntese autorizada a partir de gravação própria",
+  "cases": [
+    {
+      "id": "morris-worm",
+      "title": "Morris Worm",
+      "year": 1988,
+      "confidence": "Registro histórico consolidado",
+      "chapters": [
+        {
+          "id": "opening",
+          "name": "Abertura",
+          "title": "A primeira grande interrupção.",
+          "body": "Em novembro de 1988, um worm atingiu sistemas Unix de universidades e centros de pesquisa. Antes da Web, a comunidade da internet já precisava lidar com um problema coletivo: o funcionamento de uma máquina dependia da segurança das outras.",
+          "source": {
+            "title": "FBI · investigação e retrospectiva do Morris Worm",
+            "href": "https://www.fbi.gov/history/cases-and-criminals/morris-worm"
+          },
+          "script": "Morris Worm. Abertura. A primeira grande interrupção. Em novembro de 1988, um worm atingiu sistemas Unix de universidades e centros de pesquisa. Antes da Web, a comunidade da internet já precisava lidar com um problema coletivo: o funcionamento de uma máquina dependia da segurança das outras."
+        },
+        {
+          "id": "origin",
+          "name": "Origem",
+          "title": "Uma rede construída sobre confiança.",
+          "body": "Robert Tappan Morris desenvolveu o programa enquanto estudava em Cornell. O registro do FBI descreve sua execução inicial por um computador do MIT. A narrativa acompanha o ambiente acadêmico da época sem transformar a intenção declarada em justificativa para o acesso não autorizado.",
+          "source": {
+            "title": "FBI · investigação e retrospectiva do Morris Worm",
+            "href": "https://www.fbi.gov/history/cases-and-criminals/morris-worm"
+          },
+          "script": "Origem. Uma rede construída sobre confiança. Robert Tappan Morris desenvolveu o programa enquanto estudava em Cornell. O registro do FBI descreve sua execução inicial por um computador do MIT. A narrativa acompanha o ambiente acadêmico da época sem transformar a intenção declarada em justificativa para o acesso não autorizado."
+        },
+        {
+          "id": "spread",
+          "name": "Propagação",
+          "title": "O código encontra outras máquinas.",
+          "body": "O worm combinou diferentes formas de acesso a sistemas Unix. Cópias adicionais consumiam recursos e dificultavam o trabalho dos administradores. A região marcada no mapa representa o contexto acadêmico dos EUA; não pretende localizar cada host afetado.",
+          "source": {
+            "title": "FBI · investigação e retrospectiva do Morris Worm",
+            "href": "https://www.fbi.gov/history/cases-and-criminals/morris-worm"
+          },
+          "script": "Propagação. O código encontra outras máquinas. O worm combinou diferentes formas de acesso a sistemas Unix. Cópias adicionais consumiam recursos e dificultavam o trabalho dos administradores. A região marcada no mapa representa o contexto acadêmico dos EUA; não pretende localizar cada host afetado."
+        },
+        {
+          "id": "impact",
+          "name": "Impacto",
+          "title": "Disponibilidade também é segurança.",
+          "body": "O dano central foi a perda de disponibilidade. O FBI descreve e-mails atrasados, instituições desconectadas e esforço de limpeza. Estimativas de custo variam; os números do catálogo original ficam visíveis como registro do projeto, separados da retrospectiva oficial.",
+          "source": {
+            "title": "FBI · investigação e retrospectiva do Morris Worm",
+            "href": "https://www.fbi.gov/history/cases-and-criminals/morris-worm"
+          },
+          "script": "Impacto. Disponibilidade também é segurança. O dano central foi a perda de disponibilidade. O FBI descreve e-mails atrasados, instituições desconectadas e esforço de limpeza. Estimativas de custo variam; os números do catálogo original ficam visíveis como registro do projeto, separados da retrospectiva oficial."
+        },
+        {
+          "id": "response",
+          "name": "Resposta",
+          "title": "A resposta passa a ter uma organização.",
+          "body": "O episódio contribuiu para a criação de uma resposta organizada a emergências computacionais. A investigação também levou à primeira condenação sob o CFAA de 1986. A lição operacional liga correção técnica, cooperação entre administradores e responsabilidade pelo acesso a sistemas.",
+          "source": {
+            "title": "FBI · investigação e retrospectiva do Morris Worm",
+            "href": "https://www.fbi.gov/history/cases-and-criminals/morris-worm"
+          },
+          "script": "Resposta. A resposta passa a ter uma organização. O episódio contribuiu para a criação de uma resposta organizada a emergências computacionais. A investigação também levou à primeira condenação sob o CFAA de 1986. A lição operacional liga correção técnica, cooperação entre administradores e responsabilidade pelo acesso a sistemas."
+        },
+        {
+          "id": "sources",
+          "name": "Fontes",
+          "title": "Volte às fontes.",
+          "body": "Este capítulo reúne a base documental da narrativa. Consulte os documentos no contexto de sua data, autoria e escopo. A história original do projeto continua integral abaixo, com sua linguagem de abertura dramática; ela permanece separada da nova leitura documental.",
+          "source": {
+            "title": "FBI · investigação e retrospectiva do Morris Worm",
+            "href": "https://www.fbi.gov/history/cases-and-criminals/morris-worm"
+          },
+          "script": "Fontes. Volte às fontes. Este capítulo reúne a base documental da narrativa. Consulte os documentos no contexto de sua data, autoria e escopo. A história original do projeto continua integral abaixo, com sua linguagem de abertura dramática; ela permanece separada da nova leitura documental. A referência deste capítulo é FBI · investigação e retrospectiva do Morris Worm. Consulte a aba Fontes para verificar autoria, datas, atribuição e escopo. Você pode reler a História e consultar a cronologia completa na aba Análise."
+        }
+      ]
+    },
+    {
+      "id": "melissa",
+      "title": "Melissa",
+      "year": 1999,
+      "confidence": "Registro histórico consolidado",
+      "chapters": [
+        {
+          "id": "opening",
+          "name": "Abertura",
+          "title": "Uma mensagem aparentemente familiar.",
+          "body": "Em março de 1999, Melissa transformou um documento do Word em uma crise para redes de e-mail. O incidente mostrou como uma rotina de escritório podia ampliar um ataque: receber um arquivo, abrir e confiar no remetente.",
+          "source": {
+            "title": "FBI · The Melissa Virus · retrospectiva de 2019",
+            "href": "https://www.fbi.gov/news/stories/melissa-virus-20th-anniversary-032519"
+          },
+          "script": "Melissa. Abertura. Uma mensagem aparentemente familiar. Em março de 1999, Melissa transformou um documento do Word em uma crise para redes de e-mail. O incidente mostrou como uma rotina de escritório podia ampliar um ataque: receber um arquivo, abrir e confiar no remetente."
+        },
+        {
+          "id": "origin",
+          "name": "Origem",
+          "title": "O documento era o vetor.",
+          "body": "O FBI relata que David Lee Smith publicou um documento em um grupo de notícias usando uma conta da AOL. O conteúdo oferecido atraía o download. O ponto de entrada era a combinação de um arquivo executável por macros com a disposição de abri-lo.",
+          "source": {
+            "title": "FBI · The Melissa Virus · retrospectiva de 2019",
+            "href": "https://www.fbi.gov/news/stories/melissa-virus-20th-anniversary-032519"
+          },
+          "script": "Origem. O documento era o vetor. O FBI relata que David Lee Smith publicou um documento em um grupo de notícias usando uma conta da AOL. O conteúdo oferecido atraía o download. O ponto de entrada era a combinação de um arquivo executável por macros com a disposição de abri-lo."
+        },
+        {
+          "id": "spread",
+          "name": "Propagação",
+          "title": "A agenda vira rede de distribuição.",
+          "body": "A distribuição por e-mail fez os contatos se tornarem parte do mecanismo de propagação. O problema atravessava usuários e organizações. O mapa situa o contexto da investigação nos EUA; não representa um percurso comprovado entre caixas de entrada.",
+          "source": {
+            "title": "FBI · The Melissa Virus · retrospectiva de 2019",
+            "href": "https://www.fbi.gov/news/stories/melissa-virus-20th-anniversary-032519"
+          },
+          "script": "Propagação. A agenda vira rede de distribuição. A distribuição por e-mail fez os contatos se tornarem parte do mecanismo de propagação. O problema atravessava usuários e organizações. O mapa situa o contexto da investigação nos EUA; não representa um percurso comprovado entre caixas de entrada."
+        },
+        {
+          "id": "impact",
+          "name": "Impacto",
+          "title": "O custo de confiar no anexo.",
+          "body": "O FBI estimou US$ 80 milhões para limpeza e reparo dos sistemas atingidos. Esse recorte ajuda a entender que o custo incluía trabalho humano e recuperação de serviços, além das máquinas. Não é uma medida de todos os efeitos indiretos possíveis.",
+          "source": {
+            "title": "FBI · The Melissa Virus · retrospectiva de 2019",
+            "href": "https://www.fbi.gov/news/stories/melissa-virus-20th-anniversary-032519"
+          },
+          "script": "Impacto. O custo de confiar no anexo. O FBI estimou US$ 80 milhões para limpeza e reparo dos sistemas atingidos. Esse recorte ajuda a entender que o custo incluía trabalho humano e recuperação de serviços, além das máquinas. Não é uma medida de todos os efeitos indiretos possíveis."
+        },
+        {
+          "id": "response",
+          "name": "Resposta",
+          "title": "Investigar os rastros, reduzir a exposição.",
+          "body": "A investigação contou com a AOL e autoridades de Nova Jersey. Smith foi preso e posteriormente condenado. Na defesa, anexos, macros e o comportamento do cliente de e-mail passaram a exigir controles explícitos; reconhecer um nome de remetente não bastava.",
+          "source": {
+            "title": "FBI · The Melissa Virus · retrospectiva de 2019",
+            "href": "https://www.fbi.gov/news/stories/melissa-virus-20th-anniversary-032519"
+          },
+          "script": "Resposta. Investigar os rastros, reduzir a exposição. A investigação contou com a AOL e autoridades de Nova Jersey. Smith foi preso e posteriormente condenado. Na defesa, anexos, macros e o comportamento do cliente de e-mail passaram a exigir controles explícitos; reconhecer um nome de remetente não bastava."
+        },
+        {
+          "id": "sources",
+          "name": "Fontes",
+          "title": "Volte às fontes.",
+          "body": "Este capítulo reúne a base documental da narrativa. Consulte os documentos no contexto de sua data, autoria e escopo. A história original do projeto continua integral abaixo, com sua linguagem de abertura dramática; ela permanece separada da nova leitura documental.",
+          "source": {
+            "title": "FBI · The Melissa Virus · retrospectiva de 2019",
+            "href": "https://www.fbi.gov/news/stories/melissa-virus-20th-anniversary-032519"
+          },
+          "script": "Fontes. Volte às fontes. Este capítulo reúne a base documental da narrativa. Consulte os documentos no contexto de sua data, autoria e escopo. A história original do projeto continua integral abaixo, com sua linguagem de abertura dramática; ela permanece separada da nova leitura documental. A referência deste capítulo é FBI · The Melissa Virus · retrospectiva de 2019. Consulte a aba Fontes para verificar autoria, datas, atribuição e escopo. Você pode reler a História e consultar a cronologia completa na aba Análise."
+        }
+      ]
+    },
+    {
+      "id": "iloveyou",
+      "title": "ILOVEYOU",
+      "year": 2000,
+      "confidence": "Registro histórico consolidado",
+      "chapters": [
+        {
+          "id": "opening",
+          "name": "Abertura",
+          "title": "O assunto convidava a abrir.",
+          "body": "Em maio de 2000, uma mensagem com o assunto ILOVEYOU se tornou um incidente internacional. A linguagem pessoal e o anexo aparentemente simples revelaram uma fragilidade: a interface podia sugerir um documento quando o sistema executaria um script.",
+          "source": {
+            "title": "GAO · depoimento sobre ILOVEYOU · 10/05/2000",
+            "href": "https://www.gao.gov/products/t-aimd-00-171"
+          },
+          "script": "ILOVEYOU. Abertura. O assunto convidava a abrir. Em maio de 2000, uma mensagem com o assunto ILOVEYOU se tornou um incidente internacional. A linguagem pessoal e o anexo aparentemente simples revelaram uma fragilidade: a interface podia sugerir um documento quando o sistema executaria um script."
+        },
+        {
+          "id": "origin",
+          "name": "Origem",
+          "title": "Uma extensão escondia o risco.",
+          "body": "O catálogo situa a origem nas Filipinas. O depoimento do GAO, apresentado poucos dias depois, registra o incidente e a necessidade de melhorar a segurança das agências. A narrativa distingue o contexto do anexo da ideia de que toda mensagem enviada por um contato seja confiável.",
+          "source": {
+            "title": "GAO · depoimento sobre ILOVEYOU · 10/05/2000",
+            "href": "https://www.gao.gov/products/t-aimd-00-171"
+          },
+          "script": "Origem. Uma extensão escondia o risco. O catálogo situa a origem nas Filipinas. O depoimento do GAO, apresentado poucos dias depois, registra o incidente e a necessidade de melhorar a segurança das agências. A narrativa distingue o contexto do anexo da ideia de que toda mensagem enviada por um contato seja confiável."
+        },
+        {
+          "id": "spread",
+          "name": "Propagação",
+          "title": "A confiança viaja com a mensagem.",
+          "body": "O worm usou o e-mail para ampliar seu alcance. A visualização marca Manila como contexto de origem, sem inventar conexões individuais. Na cronologia do dossiê, cada evento mantém sua data; na leitura técnica, o foco está no que fazia uma abertura virar novas mensagens.",
+          "source": {
+            "title": "GAO · depoimento sobre ILOVEYOU · 10/05/2000",
+            "href": "https://www.gao.gov/products/t-aimd-00-171"
+          },
+          "script": "Propagação. A confiança viaja com a mensagem. O worm usou o e-mail para ampliar seu alcance. A visualização marca Manila como contexto de origem, sem inventar conexões individuais. Na cronologia do dossiê, cada evento mantém sua data; na leitura técnica, o foco está no que fazia uma abertura virar novas mensagens."
+        },
+        {
+          "id": "impact",
+          "name": "Impacto",
+          "title": "Um incidente em muitas organizações.",
+          "body": "Interrupção, limpeza e recuperação atravessaram diferentes organizações. As estimativas históricas do projeto são mantidas no catálogo, com seu caráter de estimativa. O documento contemporâneo do GAO oferece um ponto de consulta sobre o problema de segurança governamental.",
+          "source": {
+            "title": "GAO · depoimento sobre ILOVEYOU · 10/05/2000",
+            "href": "https://www.gao.gov/products/t-aimd-00-171"
+          },
+          "script": "Impacto. Um incidente em muitas organizações. Interrupção, limpeza e recuperação atravessaram diferentes organizações. As estimativas históricas do projeto são mantidas no catálogo, com seu caráter de estimativa. O documento contemporâneo do GAO oferece um ponto de consulta sobre o problema de segurança governamental."
+        },
+        {
+          "id": "response",
+          "name": "Resposta",
+          "title": "Segurança precisa de prática contínua.",
+          "body": "A resposta envolve controle de scripts, tratamento de anexos e programas de segurança que sobrevivam à crise. A lição permanece concreta: não depender só de atenção individual quando o desenho dos sistemas e das rotinas permite executar conteúdo recebido.",
+          "source": {
+            "title": "GAO · depoimento sobre ILOVEYOU · 10/05/2000",
+            "href": "https://www.gao.gov/products/t-aimd-00-171"
+          },
+          "script": "Resposta. Segurança precisa de prática contínua. A resposta envolve controle de scripts, tratamento de anexos e programas de segurança que sobrevivam à crise. A lição permanece concreta: não depender só de atenção individual quando o desenho dos sistemas e das rotinas permite executar conteúdo recebido."
+        },
+        {
+          "id": "sources",
+          "name": "Fontes",
+          "title": "Volte às fontes.",
+          "body": "Este capítulo reúne a base documental da narrativa. Consulte os documentos no contexto de sua data, autoria e escopo. A história original do projeto continua integral abaixo, com sua linguagem de abertura dramática; ela permanece separada da nova leitura documental.",
+          "source": {
+            "title": "GAO · depoimento sobre ILOVEYOU · 10/05/2000",
+            "href": "https://www.gao.gov/products/t-aimd-00-171"
+          },
+          "script": "Fontes. Volte às fontes. Este capítulo reúne a base documental da narrativa. Consulte os documentos no contexto de sua data, autoria e escopo. A história original do projeto continua integral abaixo, com sua linguagem de abertura dramática; ela permanece separada da nova leitura documental. A referência deste capítulo é GAO · depoimento sobre ILOVEYOU · 10/05/2000. Consulte a aba Fontes para verificar autoria, datas, atribuição e escopo. Você pode reler a História e consultar a cronologia completa na aba Análise."
+        }
+      ]
+    },
+    {
+      "id": "estonia",
+      "title": "Ataques a Estonia",
+      "year": 2007,
+      "confidence": "Atribuição debatida publicamente",
+      "chapters": [
+        {
+          "id": "opening",
+          "name": "Abertura",
+          "title": "Quando os serviços deixaram de responder.",
+          "body": "Na primavera de 2007, serviços estonianos enfrentaram uma campanha de ataques. Um país com forte adoção de serviços digitais se tornou um caso de estudo sobre disponibilidade: manter bancos, comunicação e governo acessíveis era uma questão de continuidade nacional.",
+          "source": {
+            "title": "Rain Ottis / CCDCOE · análise dos ataques de 2007",
+            "href": "https://ccdcoe.org/library/publications/analysis-of-the-2007-cyber-attacks-against-estonia-from-the-information-warfare-perspective/"
+          },
+          "script": "Ataques a Estonia. Abertura. Quando os serviços deixaram de responder. Na primavera de 2007, serviços estonianos enfrentaram uma campanha de ataques. Um país com forte adoção de serviços digitais se tornou um caso de estudo sobre disponibilidade: manter bancos, comunicação e governo acessíveis era uma questão de continuidade nacional."
+        },
+        {
+          "id": "origin",
+          "name": "Origem",
+          "title": "Um conflito político, uma superfície digital.",
+          "body": "A campanha ocorreu no contexto da transferência de um monumento soviético em Tallinn. A análise de Rain Ottis discute o ambiente político e os limites das evidências disponíveis. Relação temporal, motivação política e atribuição de autoria são perguntas diferentes.",
+          "source": {
+            "title": "Rain Ottis / CCDCOE · análise dos ataques de 2007",
+            "href": "https://ccdcoe.org/library/publications/analysis-of-the-2007-cyber-attacks-against-estonia-from-the-information-warfare-perspective/"
+          },
+          "script": "Origem. Um conflito político, uma superfície digital. A campanha ocorreu no contexto da transferência de um monumento soviético em Tallinn. A análise de Rain Ottis discute o ambiente político e os limites das evidências disponíveis. Relação temporal, motivação política e atribuição de autoria são perguntas diferentes."
+        },
+        {
+          "id": "spread",
+          "name": "Propagação",
+          "title": "Pressão distribuída contra a disponibilidade.",
+          "body": "Os ataques incluíram negação de serviço distribuída contra sites, e-mail, bancos e DNS. A análise descreve mudanças de alvo e intensidade durante a campanha. O mapa marca a Estônia como região afetada; não identifica a origem de cada pacote.",
+          "source": {
+            "title": "Rain Ottis / CCDCOE · análise dos ataques de 2007",
+            "href": "https://ccdcoe.org/library/publications/analysis-of-the-2007-cyber-attacks-against-estonia-from-the-information-warfare-perspective/"
+          },
+          "script": "Propagação. Pressão distribuída contra a disponibilidade. Os ataques incluíram negação de serviço distribuída contra sites, e-mail, bancos e DNS. A análise descreve mudanças de alvo e intensidade durante a campanha. O mapa marca a Estônia como região afetada; não identifica a origem de cada pacote."
+        },
+        {
+          "id": "impact",
+          "name": "Impacto",
+          "title": "A dependência de uma sociedade conectada.",
+          "body": "A consequência documentada inclui degradação ou perda temporária de serviços. O caso permite observar como indisponibilidade técnica afeta atividades cotidianas. Os valores do catálogo são estimativas históricas, enquanto a pesquisa vinculada discute fatos e limites de investigação.",
+          "source": {
+            "title": "Rain Ottis / CCDCOE · análise dos ataques de 2007",
+            "href": "https://ccdcoe.org/library/publications/analysis-of-the-2007-cyber-attacks-against-estonia-from-the-information-warfare-perspective/"
+          },
+          "script": "Impacto. A dependência de uma sociedade conectada. A consequência documentada inclui degradação ou perda temporária de serviços. O caso permite observar como indisponibilidade técnica afeta atividades cotidianas. Os valores do catálogo são estimativas históricas, enquanto a pesquisa vinculada discute fatos e limites de investigação."
+        },
+        {
+          "id": "response",
+          "name": "Resposta",
+          "title": "Defender exige cooperação.",
+          "body": "A resposta combinou mitigação técnica e coordenação entre organizações. A leitura defensiva enfatiza capacidade de filtrar tráfego, compartilhar informação e manter serviços críticos. A autoria não é resolvida pela aparência do mapa nem por uma reivindicação política.",
+          "source": {
+            "title": "Rain Ottis / CCDCOE · análise dos ataques de 2007",
+            "href": "https://ccdcoe.org/library/publications/analysis-of-the-2007-cyber-attacks-against-estonia-from-the-information-warfare-perspective/"
+          },
+          "script": "Resposta. Defender exige cooperação. A resposta combinou mitigação técnica e coordenação entre organizações. A leitura defensiva enfatiza capacidade de filtrar tráfego, compartilhar informação e manter serviços críticos. A autoria não é resolvida pela aparência do mapa nem por uma reivindicação política."
+        },
+        {
+          "id": "sources",
+          "name": "Fontes",
+          "title": "Volte às fontes.",
+          "body": "Este capítulo reúne a base documental da narrativa. Consulte os documentos no contexto de sua data, autoria e escopo. A história original do projeto continua integral abaixo, com sua linguagem de abertura dramática; ela permanece separada da nova leitura documental.",
+          "source": {
+            "title": "Rain Ottis / CCDCOE · análise dos ataques de 2007",
+            "href": "https://ccdcoe.org/library/publications/analysis-of-the-2007-cyber-attacks-against-estonia-from-the-information-warfare-perspective/"
+          },
+          "script": "Fontes. Volte às fontes. Este capítulo reúne a base documental da narrativa. Consulte os documentos no contexto de sua data, autoria e escopo. A história original do projeto continua integral abaixo, com sua linguagem de abertura dramática; ela permanece separada da nova leitura documental. A referência deste capítulo é Rain Ottis / CCDCOE · análise dos ataques de 2007. Consulte a aba Fontes para verificar autoria, datas, atribuição e escopo. Você pode reler a História e consultar a cronologia completa na aba Análise."
+        }
+      ]
+    },
+    {
+      "id": "stuxnet",
+      "title": "Stuxnet",
+      "year": 2010,
+      "confidence": "Atribuição debatida publicamente",
+      "chapters": [
+        {
+          "id": "opening",
+          "name": "Abertura",
+          "title": "O software encontra o processo físico.",
+          "body": "Stuxnet levou o debate sobre malware para sistemas de controle industrial. O caso articula duas perguntas: o que acontece no computador e o que esse computador comanda? A narrativa acompanha essa passagem sem apresentar a reconstituição visual como registro de Natanz.",
+          "source": {
+            "title": "ICS-CERT / CISA · Primary Stuxnet Advisory · ICSA-10-272-01",
+            "href": "https://www.cisa.gov/uscert/ics/advisories/ICSA-10-272-01"
+          },
+          "script": "Stuxnet. Abertura. O software encontra o processo físico. Stuxnet levou o debate sobre malware para sistemas de controle industrial. O caso articula duas perguntas: o que acontece no computador e o que esse computador comanda? A narrativa acompanha essa passagem sem apresentar a reconstituição visual como registro de Natanz."
+        },
+        {
+          "id": "origin",
+          "name": "Origem",
+          "title": "Um ambiente industrial como alvo.",
+          "body": "O advisory do ICS-CERT descreve malware que visava software de controle Siemens. O catálogo preserva o contexto iraniano e as atribuições debatidas. A análise técnica de um componente não equivale a uma confirmação pública de todos os autores e objetivos.",
+          "source": {
+            "title": "ICS-CERT / CISA · Primary Stuxnet Advisory · ICSA-10-272-01",
+            "href": "https://www.cisa.gov/uscert/ics/advisories/ICSA-10-272-01"
+          },
+          "script": "Origem. Um ambiente industrial como alvo. O advisory do ICS-CERT descreve malware que visava software de controle Siemens. O catálogo preserva o contexto iraniano e as atribuições debatidas. A análise técnica de um componente não equivale a uma confirmação pública de todos os autores e objetivos."
+        },
+        {
+          "id": "spread",
+          "name": "Propagação",
+          "title": "Da infecção à lógica de controle.",
+          "body": "É preciso separar os meios de espalhamento do código e a atuação sobre um processo industrial específico. O mapa oferece contexto regional. Os marcos da cronologia e o documento técnico mostram por que máquinas infectadas e equipamentos efetivamente afetados não são medidas equivalentes.",
+          "source": {
+            "title": "ICS-CERT / CISA · Primary Stuxnet Advisory · ICSA-10-272-01",
+            "href": "https://www.cisa.gov/uscert/ics/advisories/ICSA-10-272-01"
+          },
+          "script": "Propagação. Da infecção à lógica de controle. É preciso separar os meios de espalhamento do código e a atuação sobre um processo industrial específico. O mapa oferece contexto regional. Os marcos da cronologia e o documento técnico mostram por que máquinas infectadas e equipamentos efetivamente afetados não são medidas equivalentes."
+        },
+        {
+          "id": "impact",
+          "name": "Impacto",
+          "title": "Integridade é mais que um arquivo intacto.",
+          "body": "Em um sistema industrial, integridade inclui comando, observação e confiança nos sinais. Os números históricos do catálogo são apresentados à parte. O significado operacional do caso está na possibilidade de o comportamento físico divergir daquilo que uma interface sugere.",
+          "source": {
+            "title": "ICS-CERT / CISA · Primary Stuxnet Advisory · ICSA-10-272-01",
+            "href": "https://www.cisa.gov/uscert/ics/advisories/ICSA-10-272-01"
+          },
+          "script": "Impacto. Integridade é mais que um arquivo intacto. Em um sistema industrial, integridade inclui comando, observação e confiança nos sinais. Os números históricos do catálogo são apresentados à parte. O significado operacional do caso está na possibilidade de o comportamento físico divergir daquilo que uma interface sugere."
+        },
+        {
+          "id": "response",
+          "name": "Resposta",
+          "title": "Recuperar a confiança no processo.",
+          "body": "A recuperação requer validar estações, lógica de controle e o próprio processo. A defesa do dossiê destaca segmentação e controle de acesso. O advisory histórico serve à compreensão do incidente; as recomendações de operação atuais devem seguir os responsáveis pelo ambiente.",
+          "source": {
+            "title": "ICS-CERT / CISA · Primary Stuxnet Advisory · ICSA-10-272-01",
+            "href": "https://www.cisa.gov/uscert/ics/advisories/ICSA-10-272-01"
+          },
+          "script": "Resposta. Recuperar a confiança no processo. A recuperação requer validar estações, lógica de controle e o próprio processo. A defesa do dossiê destaca segmentação e controle de acesso. O advisory histórico serve à compreensão do incidente; as recomendações de operação atuais devem seguir os responsáveis pelo ambiente."
+        },
+        {
+          "id": "sources",
+          "name": "Fontes",
+          "title": "Volte às fontes.",
+          "body": "Este capítulo reúne a base documental da narrativa. Consulte os documentos no contexto de sua data, autoria e escopo. A história original do projeto continua integral abaixo, com sua linguagem de abertura dramática; ela permanece separada da nova leitura documental.",
+          "source": {
+            "title": "ICS-CERT / CISA · Primary Stuxnet Advisory · ICSA-10-272-01",
+            "href": "https://www.cisa.gov/uscert/ics/advisories/ICSA-10-272-01"
+          },
+          "script": "Fontes. Volte às fontes. Este capítulo reúne a base documental da narrativa. Consulte os documentos no contexto de sua data, autoria e escopo. A história original do projeto continua integral abaixo, com sua linguagem de abertura dramática; ela permanece separada da nova leitura documental. A referência deste capítulo é ICS-CERT / CISA · Primary Stuxnet Advisory · ICSA-10-272-01. Consulte a aba Fontes para verificar autoria, datas, atribuição e escopo. Você pode reler a História e consultar a cronologia completa na aba Análise."
+        }
+      ]
+    },
+    {
+      "id": "sony",
+      "title": "Sony Pictures",
+      "year": 2014,
+      "confidence": "Atribuição pública",
+      "chapters": [
+        {
+          "id": "opening",
+          "name": "Abertura",
+          "title": "A produção encontrou uma tela de crise.",
+          "body": "Em 2014, o ataque à Sony Pictures atingiu sistemas e expôs informação corporativa. O episódio aproximou segurança digital, trabalho cotidiano e pressão pública. A narrativa situa o estúdio e seus funcionários como contexto humano, sem reconstruir diálogos não documentados.",
+          "source": {
+            "title": "FBI · Update on Sony Investigation · dezembro de 2014",
+            "href": "https://www.fbi.gov/news/press-releases/update-on-sony-investigation"
+          },
+          "script": "Sony Pictures. Abertura. A produção encontrou uma tela de crise. Em 2014, o ataque à Sony Pictures atingiu sistemas e expôs informação corporativa. O episódio aproximou segurança digital, trabalho cotidiano e pressão pública. A narrativa situa o estúdio e seus funcionários como contexto humano, sem reconstruir diálogos não documentados."
+        },
+        {
+          "id": "origin",
+          "name": "Origem",
+          "title": "Dados corporativos viram instrumento de pressão.",
+          "body": "A investigação pública do FBI trata do comprometimento e da destruição de dados. O contexto do filme The Interview faz parte da história do catálogo. Contexto e motivação alegada são apresentados junto da atribuição oficial, com acesso ao documento que a sustenta.",
+          "source": {
+            "title": "FBI · Update on Sony Investigation · dezembro de 2014",
+            "href": "https://www.fbi.gov/news/press-releases/update-on-sony-investigation"
+          },
+          "script": "Origem. Dados corporativos viram instrumento de pressão. A investigação pública do FBI trata do comprometimento e da destruição de dados. O contexto do filme The Interview faz parte da história do catálogo. Contexto e motivação alegada são apresentados junto da atribuição oficial, com acesso ao documento que a sustenta."
+        },
+        {
+          "id": "spread",
+          "name": "Propagação",
+          "title": "Destruição e divulgação caminham juntas.",
+          "body": "O caso combina interrupção interna e divulgação de material obtido dos sistemas. São efeitos diferentes e pedem respostas distintas. O mapa situa a operação do estúdio nos EUA; não representa a localização de atacantes nem a rota de exfiltração.",
+          "source": {
+            "title": "FBI · Update on Sony Investigation · dezembro de 2014",
+            "href": "https://www.fbi.gov/news/press-releases/update-on-sony-investigation"
+          },
+          "script": "Propagação. Destruição e divulgação caminham juntas. O caso combina interrupção interna e divulgação de material obtido dos sistemas. São efeitos diferentes e pedem respostas distintas. O mapa situa a operação do estúdio nos EUA; não representa a localização de atacantes nem a rota de exfiltração."
+        },
+        {
+          "id": "impact",
+          "name": "Impacto",
+          "title": "O impacto alcança pessoas.",
+          "body": "Exposição de dados afeta empregados, relações comerciais e confiança. Restaurar sistemas não recolhe automaticamente o que foi divulgado. As estimativas do catálogo permanecem identificadas como registro histórico, enquanto a investigação é a referência para a atribuição pública.",
+          "source": {
+            "title": "FBI · Update on Sony Investigation · dezembro de 2014",
+            "href": "https://www.fbi.gov/news/press-releases/update-on-sony-investigation"
+          },
+          "script": "Impacto. O impacto alcança pessoas. Exposição de dados afeta empregados, relações comerciais e confiança. Restaurar sistemas não recolhe automaticamente o que foi divulgado. As estimativas do catálogo permanecem identificadas como registro histórico, enquanto a investigação é a referência para a atribuição pública."
+        },
+        {
+          "id": "response",
+          "name": "Resposta",
+          "title": "Conter, recuperar e distinguir atribuições.",
+          "body": "A resposta exige proteger pessoas e comunicação, além de recuperar equipamentos. O dossiê conserva medidas de defesa e efeitos institucionais. A atribuição anunciada pelo FBI é apresentada como avaliação da agência; a imagem editorial não acrescenta evidência à investigação.",
+          "source": {
+            "title": "FBI · Update on Sony Investigation · dezembro de 2014",
+            "href": "https://www.fbi.gov/news/press-releases/update-on-sony-investigation"
+          },
+          "script": "Resposta. Conter, recuperar e distinguir atribuições. A resposta exige proteger pessoas e comunicação, além de recuperar equipamentos. O dossiê conserva medidas de defesa e efeitos institucionais. A atribuição anunciada pelo FBI é apresentada como avaliação da agência; a imagem editorial não acrescenta evidência à investigação."
+        },
+        {
+          "id": "sources",
+          "name": "Fontes",
+          "title": "Volte às fontes.",
+          "body": "Este capítulo reúne a base documental da narrativa. Consulte os documentos no contexto de sua data, autoria e escopo. A história original do projeto continua integral abaixo, com sua linguagem de abertura dramática; ela permanece separada da nova leitura documental.",
+          "source": {
+            "title": "FBI · Update on Sony Investigation · dezembro de 2014",
+            "href": "https://www.fbi.gov/news/press-releases/update-on-sony-investigation"
+          },
+          "script": "Fontes. Volte às fontes. Este capítulo reúne a base documental da narrativa. Consulte os documentos no contexto de sua data, autoria e escopo. A história original do projeto continua integral abaixo, com sua linguagem de abertura dramática; ela permanece separada da nova leitura documental. A referência deste capítulo é FBI · Update on Sony Investigation · dezembro de 2014. Consulte a aba Fontes para verificar autoria, datas, atribuição e escopo. Você pode reler a História e consultar a cronologia completa na aba Análise."
+        }
+      ]
+    },
+    {
+      "id": "wannacry",
+      "title": "WannaCry",
+      "year": 2017,
+      "confidence": "Atribuição pública",
+      "chapters": [
+        {
+          "id": "opening",
+          "name": "Abertura",
+          "title": "A indisponibilidade chegou ao atendimento.",
+          "body": "Em maio de 2017, WannaCry atingiu organizações em diversos países. O contexto do NHS torna o problema concreto: indisponibilidade de sistemas pode interferir no trabalho de quem precisa prestar um serviço, mesmo quando o ataque se manifesta primeiro em uma tela.",
+          "source": {
+            "title": "Mandiant / Google · análise de WannaCry · maio de 2017",
+            "href": "https://cloud.google.com/blog/topics/threat-intelligence/wannacry-malware-profile"
+          },
+          "script": "WannaCry. Abertura. A indisponibilidade chegou ao atendimento. Em maio de 2017, WannaCry atingiu organizações em diversos países. O contexto do NHS torna o problema concreto: indisponibilidade de sistemas pode interferir no trabalho de quem precisa prestar um serviço, mesmo quando o ataque se manifesta primeiro em uma tela."
+        },
+        {
+          "id": "origin",
+          "name": "Origem",
+          "title": "Uma correção disponível, uma exposição persistente.",
+          "body": "O incidente explorou a exposição de sistemas Windows. O catálogo registra EternalBlue e o intervalo entre a correção da Microsoft e a campanha. Entender esse intervalo ajuda a separar descoberta de vulnerabilidade, disponibilidade de correção e aplicação efetiva nos ambientes.",
+          "source": {
+            "title": "Mandiant / Google · análise de WannaCry · maio de 2017",
+            "href": "https://cloud.google.com/blog/topics/threat-intelligence/wannacry-malware-profile"
+          },
+          "script": "Origem. Uma correção disponível, uma exposição persistente. O incidente explorou a exposição de sistemas Windows. O catálogo registra EternalBlue e o intervalo entre a correção da Microsoft e a campanha. Entender esse intervalo ajuda a separar descoberta de vulnerabilidade, disponibilidade de correção e aplicação efetiva nos ambientes."
+        },
+        {
+          "id": "spread",
+          "name": "Propagação",
+          "title": "O worm não espera um novo clique.",
+          "body": "A propagação como worm ampliou o alcance sem depender de uma nova abertura de anexo em cada máquina. O mapa usa o Reino Unido como recorte do impacto em saúde. É contexto de um episódio global, sem simular a velocidade nem as rotas reais.",
+          "source": {
+            "title": "Mandiant / Google · análise de WannaCry · maio de 2017",
+            "href": "https://cloud.google.com/blog/topics/threat-intelligence/wannacry-malware-profile"
+          },
+          "script": "Propagação. O worm não espera um novo clique. A propagação como worm ampliou o alcance sem depender de uma nova abertura de anexo em cada máquina. O mapa usa o Reino Unido como recorte do impacto em saúde. É contexto de um episódio global, sem simular a velocidade nem as rotas reais."
+        },
+        {
+          "id": "impact",
+          "name": "Impacto",
+          "title": "A recuperação tem consequências humanas.",
+          "body": "A interrupção se traduz em filas de recuperação, remanejamento de trabalho e risco à continuidade. Os totais históricos variam conforme a fonte. A análise mantém os valores originais do projeto e evita usar uma fotografia de hospital como prova do incidente.",
+          "source": {
+            "title": "Mandiant / Google · análise de WannaCry · maio de 2017",
+            "href": "https://cloud.google.com/blog/topics/threat-intelligence/wannacry-malware-profile"
+          },
+          "script": "Impacto. A recuperação tem consequências humanas. A interrupção se traduz em filas de recuperação, remanejamento de trabalho e risco à continuidade. Os totais históricos variam conforme a fonte. A análise mantém os valores originais do projeto e evita usar uma fotografia de hospital como prova do incidente."
+        },
+        {
+          "id": "response",
+          "name": "Resposta",
+          "title": "Corrigir é parte da continuidade.",
+          "body": "Inventário, correções, segmentação e recuperação testada fazem parte da defesa. A análise contemporânea da Mandiant documenta o comportamento do ransomware. A leitura coloca a correção dentro de um processo de operação, sem sugerir que um único controle resolve toda a continuidade.",
+          "source": {
+            "title": "Mandiant / Google · análise de WannaCry · maio de 2017",
+            "href": "https://cloud.google.com/blog/topics/threat-intelligence/wannacry-malware-profile"
+          },
+          "script": "Resposta. Corrigir é parte da continuidade. Inventário, correções, segmentação e recuperação testada fazem parte da defesa. A análise contemporânea da Mandiant documenta o comportamento do ransomware. A leitura coloca a correção dentro de um processo de operação, sem sugerir que um único controle resolve toda a continuidade."
+        },
+        {
+          "id": "sources",
+          "name": "Fontes",
+          "title": "Volte às fontes.",
+          "body": "Este capítulo reúne a base documental da narrativa. Consulte os documentos no contexto de sua data, autoria e escopo. A história original do projeto continua integral abaixo, com sua linguagem de abertura dramática; ela permanece separada da nova leitura documental.",
+          "source": {
+            "title": "Mandiant / Google · análise de WannaCry · maio de 2017",
+            "href": "https://cloud.google.com/blog/topics/threat-intelligence/wannacry-malware-profile"
+          },
+          "script": "Fontes. Volte às fontes. Este capítulo reúne a base documental da narrativa. Consulte os documentos no contexto de sua data, autoria e escopo. A história original do projeto continua integral abaixo, com sua linguagem de abertura dramática; ela permanece separada da nova leitura documental. A referência deste capítulo é Mandiant / Google · análise de WannaCry · maio de 2017. Consulte a aba Fontes para verificar autoria, datas, atribuição e escopo. Você pode reler a História e consultar a cronologia completa na aba Análise."
+        }
+      ]
+    },
+    {
+      "id": "notpetya",
+      "title": "NotPetya",
+      "year": 2017,
+      "confidence": "Atribuição pública",
+      "chapters": [
+        {
+          "id": "opening",
+          "name": "Abertura",
+          "title": "Quando a rede parou.",
+          "body": "Uma atualização de software na Ucrânia abriu caminho para um ataque destrutivo. Em poucas horas, a interrupção atravessou redes corporativas e fronteiras. Esta é a história do NotPetya: um incidente que expôs a dependência entre sistemas digitais e operações do mundo físico.",
+          "source": {
+            "title": "Microsoft · análise técnica de NotPetya · 27 de junho de 2017",
+            "href": "https://www.microsoft.com/en-us/security/blog/2017/06/27/new-ransomware-old-techniques-petya-adds-worm-capabilities/"
+          },
+          "script": "NotPetya. Abertura. Quando a rede parou. Uma atualização de software na Ucrânia abriu caminho para um ataque destrutivo. Em poucas horas, a interrupção atravessou redes corporativas e fronteiras. Esta é a história do NotPetya: um incidente que expôs a dependência entre sistemas digitais e operações do mundo físico."
+        },
+        {
+          "id": "origin",
+          "name": "Origem",
+          "title": "A confiança como ponto de entrada.",
+          "body": "A Microsoft identificou o processo de atualização do software contábil M.E.Doc iniciando infecções. O canal usado para manter sistemas funcionando tornou-se um vetor de comprometimento da cadeia de fornecimento. O ponto de partida observado foi a Ucrânia; o alcance não ficou restrito a ela.",
+          "source": {
+            "title": "Microsoft · análise técnica de NotPetya · 27 de junho de 2017",
+            "href": "https://www.microsoft.com/en-us/security/blog/2017/06/27/new-ransomware-old-techniques-petya-adds-worm-capabilities/"
+          },
+          "script": "Origem. A confiança como ponto de entrada. A Microsoft identificou o processo de atualização do software contábil M.E.Doc iniciando infecções. O canal usado para manter sistemas funcionando tornou-se um vetor de comprometimento da cadeia de fornecimento. O ponto de partida observado foi a Ucrânia; o alcance não ficou restrito a ela."
+        },
+        {
+          "id": "spread",
+          "name": "Propagação",
+          "title": "Uma rede. Muitas fronteiras.",
+          "body": "A análise da Microsoft descreveu movimento lateral por credenciais, PsExec e WMI, além de exploração de SMB. A empresa observou infecções em outros 64 países. O mapa situa o contexto ucraniano de origem; não delimita o alcance global nem reconstrói rotas individuais ou a velocidade exata de propagação.",
+          "source": {
+            "title": "Microsoft · análise técnica de NotPetya · 27 de junho de 2017",
+            "href": "https://www.microsoft.com/en-us/security/blog/2017/06/27/new-ransomware-old-techniques-petya-adds-worm-capabilities/"
+          },
+          "script": "Propagação. Uma rede. Muitas fronteiras. A análise da Microsoft descreveu movimento lateral por credenciais, PsExec e WMI, além de exploração de SMB. A empresa observou infecções em outros 64 países. O mapa situa o contexto ucraniano de origem; não delimita o alcance global nem reconstrói rotas individuais ou a velocidade exata de propagação."
+        },
+        {
+          "id": "impact",
+          "name": "Impacto",
+          "title": "O dano saiu das telas.",
+          "body": "Logística, saúde e indústria foram atingidas. Em 2020, o Departamento de Justiça dos EUA relatou quase US$ 1 bilhão de perdas entre três vítimas citadas na acusação: Heritage Valley, TNT Express e uma fabricante farmacêutica. É um recorte documentado; não representa um total mundial consolidado.",
+          "source": {
+            "title": "Departamento de Justiça dos Estados Unidos · acusação de oficiais do GRU · 19 de outubro de 2020",
+            "href": "https://www.justice.gov/archives/opa/pr/six-russian-gru-officers-charged-connection-worldwide-deployment-destructive-malware-and"
+          },
+          "script": "Impacto. O dano saiu das telas. Logística, saúde e indústria foram atingidas. Em 2020, o Departamento de Justiça dos EUA relatou quase US$ 1 bilhão de perdas entre três vítimas citadas na acusação: Heritage Valley, TNT Express e uma fabricante farmacêutica. É um recorte documentado; não representa um total mundial consolidado."
+        },
+        {
+          "id": "response",
+          "name": "Resposta",
+          "title": "Reconstruir. Investigar. Atribuir.",
+          "body": "A contenção e a recuperação exigiram restaurar sistemas e limitar a propagação. Segmentação, correções e backups offline fazem parte das lições do dossiê. Em fevereiro de 2018, o Reino Unido atribuiu publicamente o ataque ao governo russo. Em outubro de 2020, o DOJ anunciou acusações contra seis oficiais do GRU. Atribuição governamental e acusação judicial são apresentadas com suas respectivas fontes.",
+          "source": {
+            "title": "Governo britânico · atribuição pública de NotPetya · 15 de fevereiro de 2018",
+            "href": "https://www.gov.uk/government/news/foreign-office-minister-condemns-russia-for-notpetya-attacks"
+          },
+          "script": "Resposta. Reconstruir. Investigar. Atribuir. A contenção e a recuperação exigiram restaurar sistemas e limitar a propagação. Segmentação, correções e backups offline fazem parte das lições do dossiê. Em fevereiro de 2018, o Reino Unido atribuiu publicamente o ataque ao governo russo. Em outubro de 2020, o DOJ anunciou acusações contra seis oficiais do GRU. Atribuição governamental e acusação judicial são apresentadas com suas respectivas fontes."
+        },
+        {
+          "id": "sources",
+          "name": "Fontes",
+          "title": "Volte à evidência.",
+          "body": "A narrativa cruza análise técnica contemporânea, atribuição pública e documentos judiciais posteriores. A história original do projeto permanece abaixo, integral. As imagens reconstituídas e os mapas de contexto são identificados; nenhum deles é apresentado como prova do incidente.",
+          "source": {
+            "title": "Departamento de Justiça dos Estados Unidos · acusação de oficiais do GRU · 19 de outubro de 2020",
+            "href": "https://www.justice.gov/archives/opa/pr/six-russian-gru-officers-charged-connection-worldwide-deployment-destructive-malware-and"
+          },
+          "script": "Fontes. Volte à evidência. A narrativa cruza análise técnica contemporânea, atribuição pública e documentos judiciais posteriores. A história original do projeto permanece abaixo, integral. As imagens reconstituídas e os mapas de contexto são identificados; nenhum deles é apresentado como prova do incidente. A referência deste capítulo é Departamento de Justiça dos Estados Unidos · acusação de oficiais do GRU · 19 de outubro de 2020. Consulte a aba Fontes para verificar autoria, datas, atribuição e escopo. Você pode reler a História e consultar a cronologia completa na aba Análise."
+        }
+      ]
+    },
+    {
+      "id": "solarwinds",
+      "title": "SolarWinds",
+      "year": 2020,
+      "confidence": "Atribuição pública",
+      "chapters": [
+        {
+          "id": "opening",
+          "name": "Abertura",
+          "title": "A confiança entrou pela atualização.",
+          "body": "Divulgado em 2020, o caso SolarWinds mostrou o risco de um componente confiável levar código malicioso ao ambiente. Não bastava procurar uma entrada externa óbvia: a atualização de uma ferramenta de monitoramento fazia parte da rotina autorizada.",
+          "source": {
+            "title": "CISA · AA20-352A · publicação oficial de 17/12/2020",
+            "href": "https://content.govdelivery.com/accounts/USDHSCISA/bulletins/2b1b32d"
+          },
+          "script": "SolarWinds. Abertura. A confiança entrou pela atualização. Divulgado em 2020, o caso SolarWinds mostrou o risco de um componente confiável levar código malicioso ao ambiente. Não bastava procurar uma entrada externa óbvia: a atualização de uma ferramenta de monitoramento fazia parte da rotina autorizada."
+        },
+        {
+          "id": "origin",
+          "name": "Origem",
+          "title": "O fornecedor estava dentro da superfície de risco.",
+          "body": "O software Orion estava no centro da investigação da cadeia de fornecimento. O advisory da CISA descreve a campanha e caminhos de comprometimento. A assinatura e a origem esperada de um pacote não garantem que sua cadeia de produção permaneceu íntegra.",
+          "source": {
+            "title": "CISA · AA20-352A · publicação oficial de 17/12/2020",
+            "href": "https://content.govdelivery.com/accounts/USDHSCISA/bulletins/2b1b32d"
+          },
+          "script": "Origem. O fornecedor estava dentro da superfície de risco. O software Orion estava no centro da investigação da cadeia de fornecimento. O advisory da CISA descreve a campanha e caminhos de comprometimento. A assinatura e a origem esperada de um pacote não garantem que sua cadeia de produção permaneceu íntegra."
+        },
+        {
+          "id": "spread",
+          "name": "Propagação",
+          "title": "Receber o software não significa o mesmo impacto.",
+          "body": "Distribuição de uma atualização comprometida e atividade posterior em um alvo precisam ser distinguidas. O mapa dá contexto a alvos governamentais nos EUA, sem limitar a campanha a esse país. A cronologia acompanha descoberta, divulgação e resposta.",
+          "source": {
+            "title": "CISA · AA20-352A · publicação oficial de 17/12/2020",
+            "href": "https://content.govdelivery.com/accounts/USDHSCISA/bulletins/2b1b32d"
+          },
+          "script": "Propagação. Receber o software não significa o mesmo impacto. Distribuição de uma atualização comprometida e atividade posterior em um alvo precisam ser distinguidas. O mapa dá contexto a alvos governamentais nos EUA, sem limitar a campanha a esse país. A cronologia acompanha descoberta, divulgação e resposta."
+        },
+        {
+          "id": "impact",
+          "name": "Impacto",
+          "title": "O trabalho de descobrir o alcance.",
+          "body": "A apuração exigiu avaliar acessos, contas e persistência. O número de organizações que receberam um componente não pode ser tratado automaticamente como o número de vítimas de todas as etapas. Os valores do catálogo são preservados em seu registro histórico.",
+          "source": {
+            "title": "CISA · AA20-352A · publicação oficial de 17/12/2020",
+            "href": "https://content.govdelivery.com/accounts/USDHSCISA/bulletins/2b1b32d"
+          },
+          "script": "Impacto. O trabalho de descobrir o alcance. A apuração exigiu avaliar acessos, contas e persistência. O número de organizações que receberam um componente não pode ser tratado automaticamente como o número de vítimas de todas as etapas. Os valores do catálogo são preservados em seu registro histórico."
+        },
+        {
+          "id": "response",
+          "name": "Resposta",
+          "title": "A defesa acompanha toda a cadeia.",
+          "body": "A resposta vai além de retirar um pacote: é preciso verificar o ambiente e sua confiança. O dossiê relaciona segurança de fornecedores e transparência de componentes. O advisory funciona como registro da investigação, com separação entre escopo observado e exposição potencial.",
+          "source": {
+            "title": "CISA · AA20-352A · publicação oficial de 17/12/2020",
+            "href": "https://content.govdelivery.com/accounts/USDHSCISA/bulletins/2b1b32d"
+          },
+          "script": "Resposta. A defesa acompanha toda a cadeia. A resposta vai além de retirar um pacote: é preciso verificar o ambiente e sua confiança. O dossiê relaciona segurança de fornecedores e transparência de componentes. O advisory funciona como registro da investigação, com separação entre escopo observado e exposição potencial."
+        },
+        {
+          "id": "sources",
+          "name": "Fontes",
+          "title": "Volte às fontes.",
+          "body": "Este capítulo reúne a base documental da narrativa. Consulte os documentos no contexto de sua data, autoria e escopo. A história original do projeto continua integral abaixo, com sua linguagem de abertura dramática; ela permanece separada da nova leitura documental.",
+          "source": {
+            "title": "CISA · AA20-352A · publicação oficial de 17/12/2020",
+            "href": "https://content.govdelivery.com/accounts/USDHSCISA/bulletins/2b1b32d"
+          },
+          "script": "Fontes. Volte às fontes. Este capítulo reúne a base documental da narrativa. Consulte os documentos no contexto de sua data, autoria e escopo. A história original do projeto continua integral abaixo, com sua linguagem de abertura dramática; ela permanece separada da nova leitura documental. A referência deste capítulo é CISA · AA20-352A · publicação oficial de 17/12/2020. Consulte a aba Fontes para verificar autoria, datas, atribuição e escopo. Você pode reler a História e consultar a cronologia completa na aba Análise."
+        }
+      ]
+    },
+    {
+      "id": "colonial",
+      "title": "Colonial Pipeline",
+      "year": 2021,
+      "confidence": "Atribuição pública",
+      "chapters": [
+        {
+          "id": "opening",
+          "name": "Abertura",
+          "title": "Uma interrupção digital afeta o abastecimento.",
+          "body": "Em maio de 2021, a Colonial Pipeline interrompeu operações após um incidente de ransomware. A história expõe a relação entre sistemas corporativos e continuidade de infraestrutura. A imagem do oleoduto é contexto reconstituído, sem representar o local do acesso inicial.",
+          "source": {
+            "title": "CISA / FBI · DarkSide Ransomware · AA21-131A · PDF",
+            "href": "https://www.cisa.gov/sites/default/files/publications/AA21-131A_Darkside_Ransomware.pdf"
+          },
+          "script": "Colonial Pipeline. Abertura. Uma interrupção digital afeta o abastecimento. Em maio de 2021, a Colonial Pipeline interrompeu operações após um incidente de ransomware. A história expõe a relação entre sistemas corporativos e continuidade de infraestrutura. A imagem do oleoduto é contexto reconstituído, sem representar o local do acesso inicial."
+        },
+        {
+          "id": "origin",
+          "name": "Origem",
+          "title": "Acesso corporativo e operação física.",
+          "body": "O catálogo registra o acesso por uma VPN sem autenticação multifator. O aviso conjunto da CISA e do FBI descreve DarkSide e medidas de mitigação. O alcance nos sistemas de TI deve ser distinguido de uma alegação de controle direto dos equipamentos operacionais.",
+          "source": {
+            "title": "CISA / FBI · DarkSide Ransomware · AA21-131A · PDF",
+            "href": "https://www.cisa.gov/sites/default/files/publications/AA21-131A_Darkside_Ransomware.pdf"
+          },
+          "script": "Origem. Acesso corporativo e operação física. O catálogo registra o acesso por uma VPN sem autenticação multifator. O aviso conjunto da CISA e do FBI descreve DarkSide e medidas de mitigação. O alcance nos sistemas de TI deve ser distinguido de uma alegação de controle direto dos equipamentos operacionais."
+        },
+        {
+          "id": "spread",
+          "name": "Propagação",
+          "title": "Conter o incidente muda a operação.",
+          "body": "Decisões de contenção podem interromper uma operação física mesmo quando a investigação se concentra em TI. O mapa situa o sudeste dos EUA como contexto. Os eventos do dossiê mostram a sequência do incidente; não são uma simulação do fluxo de combustível.",
+          "source": {
+            "title": "CISA / FBI · DarkSide Ransomware · AA21-131A · PDF",
+            "href": "https://www.cisa.gov/sites/default/files/publications/AA21-131A_Darkside_Ransomware.pdf"
+          },
+          "script": "Propagação. Conter o incidente muda a operação. Decisões de contenção podem interromper uma operação física mesmo quando a investigação se concentra em TI. O mapa situa o sudeste dos EUA como contexto. Os eventos do dossiê mostram a sequência do incidente; não são uma simulação do fluxo de combustível."
+        },
+        {
+          "id": "impact",
+          "name": "Impacto",
+          "title": "A continuidade depende de muitos sistemas.",
+          "body": "O efeito foi sentido no abastecimento e na organização do trabalho de recuperação. Resgate, custo de resposta e impacto indireto são categorias diferentes. O catálogo original fica preservado, acompanhado desta distinção para evitar somar medidas incompatíveis.",
+          "source": {
+            "title": "CISA / FBI · DarkSide Ransomware · AA21-131A · PDF",
+            "href": "https://www.cisa.gov/sites/default/files/publications/AA21-131A_Darkside_Ransomware.pdf"
+          },
+          "script": "Impacto. A continuidade depende de muitos sistemas. O efeito foi sentido no abastecimento e na organização do trabalho de recuperação. Resgate, custo de resposta e impacto indireto são categorias diferentes. O catálogo original fica preservado, acompanhado desta distinção para evitar somar medidas incompatíveis."
+        },
+        {
+          "id": "response",
+          "name": "Resposta",
+          "title": "Identidade, segmentação e recuperação.",
+          "body": "A defesa conecta autenticação, redução de acessos e continuidade testada. O caso pede verificar dependências entre TI e operação antes de uma crise. A resposta institucional permanece no dossiê; o aviso contemporâneo oferece a referência para o tratamento do ransomware.",
+          "source": {
+            "title": "CISA / FBI · DarkSide Ransomware · AA21-131A · PDF",
+            "href": "https://www.cisa.gov/sites/default/files/publications/AA21-131A_Darkside_Ransomware.pdf"
+          },
+          "script": "Resposta. Identidade, segmentação e recuperação. A defesa conecta autenticação, redução de acessos e continuidade testada. O caso pede verificar dependências entre TI e operação antes de uma crise. A resposta institucional permanece no dossiê; o aviso contemporâneo oferece a referência para o tratamento do ransomware."
+        },
+        {
+          "id": "sources",
+          "name": "Fontes",
+          "title": "Volte às fontes.",
+          "body": "Este capítulo reúne a base documental da narrativa. Consulte os documentos no contexto de sua data, autoria e escopo. A história original do projeto continua integral abaixo, com sua linguagem de abertura dramática; ela permanece separada da nova leitura documental.",
+          "source": {
+            "title": "CISA / FBI · DarkSide Ransomware · AA21-131A · PDF",
+            "href": "https://www.cisa.gov/sites/default/files/publications/AA21-131A_Darkside_Ransomware.pdf"
+          },
+          "script": "Fontes. Volte às fontes. Este capítulo reúne a base documental da narrativa. Consulte os documentos no contexto de sua data, autoria e escopo. A história original do projeto continua integral abaixo, com sua linguagem de abertura dramática; ela permanece separada da nova leitura documental. A referência deste capítulo é CISA / FBI · DarkSide Ransomware · AA21-131A · PDF. Consulte a aba Fontes para verificar autoria, datas, atribuição e escopo. Você pode reler a História e consultar a cronologia completa na aba Análise."
+        }
+      ]
+    },
+    {
+      "id": "log4j",
+      "title": "Log4j / Log4Shell",
+      "year": 2021,
+      "confidence": "Registro técnico consolidado",
+      "chapters": [
+        {
+          "id": "opening",
+          "name": "Abertura",
+          "title": "Uma dependência pequena, uma exposição extensa.",
+          "body": "Log4Shell colocou uma biblioteca de logging no centro da resposta de segurança em 2021. O incidente não corresponde a um único atacante ou campanha. É a história de uma vulnerabilidade cujo alcance dependia de onde o componente estava embutido.",
+          "source": {
+            "title": "Apache · Log4j Security · CVE-2021-44228 e advisories",
+            "href": "https://logging.apache.org/security.html"
+          },
+          "script": "Log4j / Log4Shell. Abertura. Uma dependência pequena, uma exposição extensa. Log4Shell colocou uma biblioteca de logging no centro da resposta de segurança em 2021. O incidente não corresponde a um único atacante ou campanha. É a história de uma vulnerabilidade cujo alcance dependia de onde o componente estava embutido."
+        },
+        {
+          "id": "origin",
+          "name": "Origem",
+          "title": "O registro de uma mensagem virou fronteira de confiança.",
+          "body": "O catálogo identifica CVE-2021-44228 no Apache Log4j. Os avisos do projeto Apache são a referência técnica. A narrativa destaca a diferença entre registrar conteúdo recebido e permitir que esse conteúdo provoque uma ação fora da confiança prevista.",
+          "source": {
+            "title": "Apache · Log4j Security · CVE-2021-44228 e advisories",
+            "href": "https://logging.apache.org/security.html"
+          },
+          "script": "Origem. O registro de uma mensagem virou fronteira de confiança. O catálogo identifica CVE-2021-44228 no Apache Log4j. Os avisos do projeto Apache são a referência técnica. A narrativa destaca a diferença entre registrar conteúdo recebido e permitir que esse conteúdo provoque uma ação fora da confiança prevista."
+        },
+        {
+          "id": "spread",
+          "name": "Propagação",
+          "title": "A biblioteca estava além do inventário.",
+          "body": "Dependências diretas, componentes de fornecedores e aplicações antigas tornam o inventário parte do problema. O mapa indica alcance global, sem atribuir uma origem única ao incidente. O mecanismo técnico e as etapas de correção devem ser consultados nos advisories.",
+          "source": {
+            "title": "Apache · Log4j Security · CVE-2021-44228 e advisories",
+            "href": "https://logging.apache.org/security.html"
+          },
+          "script": "Propagação. A biblioteca estava além do inventário. Dependências diretas, componentes de fornecedores e aplicações antigas tornam o inventário parte do problema. O mapa indica alcance global, sem atribuir uma origem única ao incidente. O mecanismo técnico e as etapas de correção devem ser consultados nos advisories."
+        },
+        {
+          "id": "impact",
+          "name": "Impacto",
+          "title": "Exposição não é comprometimento confirmado.",
+          "body": "Um servidor vulnerável, uma tentativa de exploração e uma intrusão confirmada são registros diferentes. Os valores históricos do catálogo são mantidos sem transformá-los em um total oficial. A leitura de impacto precisa conservar essa distinção.",
+          "source": {
+            "title": "Apache · Log4j Security · CVE-2021-44228 e advisories",
+            "href": "https://logging.apache.org/security.html"
+          },
+          "script": "Impacto. Exposição não é comprometimento confirmado. Um servidor vulnerável, uma tentativa de exploração e uma intrusão confirmada são registros diferentes. Os valores históricos do catálogo são mantidos sem transformá-los em um total oficial. A leitura de impacto precisa conservar essa distinção."
+        },
+        {
+          "id": "response",
+          "name": "Resposta",
+          "title": "Localizar, corrigir e verificar.",
+          "body": "A resposta exige localizar dependências, atualizar componentes e conferir o resultado. O dossiê relaciona o tema a SBOM e transparência. Para qualquer ambiente atual, a referência é a orientação vigente do mantenedor, não apenas uma versão de correção citada em 2021.",
+          "source": {
+            "title": "Apache · Log4j Security · CVE-2021-44228 e advisories",
+            "href": "https://logging.apache.org/security.html"
+          },
+          "script": "Resposta. Localizar, corrigir e verificar. A resposta exige localizar dependências, atualizar componentes e conferir o resultado. O dossiê relaciona o tema a SBOM e transparência. Para qualquer ambiente atual, a referência é a orientação vigente do mantenedor, não apenas uma versão de correção citada em 2021."
+        },
+        {
+          "id": "sources",
+          "name": "Fontes",
+          "title": "Volte às fontes.",
+          "body": "Este capítulo reúne a base documental da narrativa. Consulte os documentos no contexto de sua data, autoria e escopo. A história original do projeto continua integral abaixo, com sua linguagem de abertura dramática; ela permanece separada da nova leitura documental.",
+          "source": {
+            "title": "Apache · Log4j Security · CVE-2021-44228 e advisories",
+            "href": "https://logging.apache.org/security.html"
+          },
+          "script": "Fontes. Volte às fontes. Este capítulo reúne a base documental da narrativa. Consulte os documentos no contexto de sua data, autoria e escopo. A história original do projeto continua integral abaixo, com sua linguagem de abertura dramática; ela permanece separada da nova leitura documental. A referência deste capítulo é Apache · Log4j Security · CVE-2021-44228 e advisories. Consulte a aba Fontes para verificar autoria, datas, atribuição e escopo. Você pode reler a História e consultar a cronologia completa na aba Análise."
+        }
+      ]
+    },
+    {
+      "id": "mgm",
+      "title": "MGM Resorts",
+      "year": 2023,
+      "confidence": "Atribuição pública",
+      "chapters": [
+        {
+          "id": "opening",
+          "name": "Abertura",
+          "title": "A hospitalidade encontrou a interrupção.",
+          "body": "Em setembro de 2023, a MGM Resorts identificou um incidente que afetou seus sistemas. Em hotéis e cassinos, a dependência digital envolve reservas, atendimento e operação. A imagem editorial representa esse contexto, sem pretender registrar uma propriedade atingida.",
+          "source": {
+            "title": "MGM Resorts · comunicado e 8-K · 05/10/2023",
+            "href": "https://investors.mgmresorts.com/2023-10-05-MGM-RESORTS-UPDATE-ON-RECENT-CYBERSECURITY-ISSUE"
+          },
+          "script": "MGM Resorts. Abertura. A hospitalidade encontrou a interrupção. Em setembro de 2023, a MGM Resorts identificou um incidente que afetou seus sistemas. Em hotéis e cassinos, a dependência digital envolve reservas, atendimento e operação. A imagem editorial representa esse contexto, sem pretender registrar uma propriedade atingida."
+        },
+        {
+          "id": "origin",
+          "name": "Origem",
+          "title": "A identidade também tem um processo.",
+          "body": "O catálogo relata engenharia social e a atribuição pública a grupos. O comunicado da empresa confirma o incidente, mas não comprova sozinho toda a narrativa do acesso inicial. Esta diferença mantém a história legada e a divulgação corporativa em seus respectivos escopos.",
+          "source": {
+            "title": "MGM Resorts · comunicado e 8-K · 05/10/2023",
+            "href": "https://investors.mgmresorts.com/2023-10-05-MGM-RESORTS-UPDATE-ON-RECENT-CYBERSECURITY-ISSUE"
+          },
+          "script": "Origem. A identidade também tem um processo. O catálogo relata engenharia social e a atribuição pública a grupos. O comunicado da empresa confirma o incidente, mas não comprova sozinho toda a narrativa do acesso inicial. Esta diferença mantém a história legada e a divulgação corporativa em seus respectivos escopos."
+        },
+        {
+          "id": "spread",
+          "name": "Propagação",
+          "title": "A operação revela suas dependências.",
+          "body": "A resposta incluiu a interrupção de sistemas para reduzir risco e investigar. A região marcada é Las Vegas, um contexto importante das operações. Ela não delimita todas as propriedades ou dados afetados, nem mostra o percurso de quem acessou a rede.",
+          "source": {
+            "title": "MGM Resorts · comunicado e 8-K · 05/10/2023",
+            "href": "https://investors.mgmresorts.com/2023-10-05-MGM-RESORTS-UPDATE-ON-RECENT-CYBERSECURITY-ISSUE"
+          },
+          "script": "Propagação. A operação revela suas dependências. A resposta incluiu a interrupção de sistemas para reduzir risco e investigar. A região marcada é Las Vegas, um contexto importante das operações. Ela não delimita todas as propriedades ou dados afetados, nem mostra o percurso de quem acessou a rede."
+        },
+        {
+          "id": "impact",
+          "name": "Impacto",
+          "title": "O número precisa de uma definição.",
+          "body": "A empresa estimou impacto negativo de aproximadamente US$ 100 milhões no Adjusted Property EBITDAR do período, além de despesas pontuais. Não se trata de um total mundial de ransomware. A definição da métrica acompanha a referência corporativa.",
+          "source": {
+            "title": "MGM Resorts · comunicado e 8-K · 05/10/2023",
+            "href": "https://investors.mgmresorts.com/2023-10-05-MGM-RESORTS-UPDATE-ON-RECENT-CYBERSECURITY-ISSUE"
+          },
+          "script": "Impacto. O número precisa de uma definição. A empresa estimou impacto negativo de aproximadamente US$ 100 milhões no Adjusted Property EBITDAR do período, além de despesas pontuais. Não se trata de um total mundial de ransomware. A definição da métrica acompanha a referência corporativa."
+        },
+        {
+          "id": "response",
+          "name": "Resposta",
+          "title": "Recuperar serviços e proteger clientes.",
+          "body": "A recuperação de serviços e a proteção de informação de clientes são tarefas relacionadas. O dossiê conserva medidas contra engenharia social e reforço de identidade. Validar pedidos de acesso exige um processo verificável, sobretudo quando a pressão por atender rápido é alta.",
+          "source": {
+            "title": "MGM Resorts · comunicado e 8-K · 05/10/2023",
+            "href": "https://investors.mgmresorts.com/2023-10-05-MGM-RESORTS-UPDATE-ON-RECENT-CYBERSECURITY-ISSUE"
+          },
+          "script": "Resposta. Recuperar serviços e proteger clientes. A recuperação de serviços e a proteção de informação de clientes são tarefas relacionadas. O dossiê conserva medidas contra engenharia social e reforço de identidade. Validar pedidos de acesso exige um processo verificável, sobretudo quando a pressão por atender rápido é alta."
+        },
+        {
+          "id": "sources",
+          "name": "Fontes",
+          "title": "Volte às fontes.",
+          "body": "Este capítulo reúne a base documental da narrativa. Consulte os documentos no contexto de sua data, autoria e escopo. A história original do projeto continua integral abaixo, com sua linguagem de abertura dramática; ela permanece separada da nova leitura documental.",
+          "source": {
+            "title": "MGM Resorts · comunicado e 8-K · 05/10/2023",
+            "href": "https://investors.mgmresorts.com/2023-10-05-MGM-RESORTS-UPDATE-ON-RECENT-CYBERSECURITY-ISSUE"
+          },
+          "script": "Fontes. Volte às fontes. Este capítulo reúne a base documental da narrativa. Consulte os documentos no contexto de sua data, autoria e escopo. A história original do projeto continua integral abaixo, com sua linguagem de abertura dramática; ela permanece separada da nova leitura documental. A referência deste capítulo é MGM Resorts · comunicado e 8-K · 05/10/2023. Consulte a aba Fontes para verificar autoria, datas, atribuição e escopo. Você pode reler a História e consultar a cronologia completa na aba Análise."
+        }
+      ]
+    },
+    {
+      "id": "ukraine-war",
+      "title": "Russia x Ucrania",
+      "year": "2022-2024",
+      "confidence": "Atribuições públicas",
+      "chapters": [
+        {
+          "id": "opening",
+          "name": "Abertura",
+          "title": "A infraestrutura digital entrou na linha de frente.",
+          "body": "Entre 2022 e 2024, o catálogo acompanha a pressão sobre energia, telecomunicações e serviços públicos ucranianos. A narrativa reúne episódios documentados, sem tratar o intervalo inteiro como um ataque contínuo nem transformar todas as reivindicações em fatos confirmados.",
+          "source": {
+            "title": "CERT-UA: ataque ao setor de energia impedido",
+            "href": "https://cip.gov.ua/en/news/poperedzhena-masshtabna-kiberataka-na-energetichnii-sektor-ukrayini"
+          },
+          "script": "Russia x Ucrania. Abertura. A infraestrutura digital entrou na linha de frente. Entre 2022 e 2024, o catálogo acompanha a pressão sobre energia, telecomunicações e serviços públicos ucranianos. A narrativa reúne episódios documentados, sem tratar o intervalo inteiro como um ataque contínuo nem transformar todas as reivindicações em fatos confirmados."
+        },
+        {
+          "id": "origin",
+          "name": "Origem",
+          "title": "Um precedente que atravessou fronteiras.",
+          "body": "NotPetya permanece um precedente de dano internacional. A invasão em larga escala ampliou a relevância da defesa digital dos serviços civis. O capítulo mantém separados o contexto militar, os incidentes técnicos e os anúncios públicos de autoria.",
+          "source": {
+            "title": "CERT-UA: ataque ao setor de energia impedido",
+            "href": "https://cip.gov.ua/en/news/poperedzhena-masshtabna-kiberataka-na-energetichnii-sektor-ukrayini"
+          },
+          "script": "Origem. Um precedente que atravessou fronteiras. NotPetya permanece um precedente de dano internacional. A invasão em larga escala ampliou a relevância da defesa digital dos serviços civis. O capítulo mantém separados o contexto militar, os incidentes técnicos e os anúncios públicos de autoria."
+        },
+        {
+          "id": "spread",
+          "name": "Propagação",
+          "title": "Campanhas não são um incidente único.",
+          "body": "Em abril de 2022, CERT-UA anunciou ter impedido uma tentativa contra o setor de energia. O mapa situa a infraestrutura ucraniana; não simula deslocamento de ataques. Wipers, DDoS e espionagem têm mecanismos e evidências distintos.",
+          "source": {
+            "title": "CERT-UA: ataque ao setor de energia impedido",
+            "href": "https://cip.gov.ua/en/news/poperedzhena-masshtabna-kiberataka-na-energetichnii-sektor-ukrayini"
+          },
+          "script": "Propagação. Campanhas não são um incidente único. Em abril de 2022, CERT-UA anunciou ter impedido uma tentativa contra o setor de energia. O mapa situa a infraestrutura ucraniana; não simula deslocamento de ataques. Wipers, DDoS e espionagem têm mecanismos e evidências distintos."
+        },
+        {
+          "id": "impact",
+          "name": "Impacto",
+          "title": "A continuidade civil está em jogo.",
+          "body": "Energia e comunicação afetam diretamente a vida civil. O dossiê não fornece um total financeiro consolidado. A fotografia mostra contexto físico do conflito e é creditada como tal; não documenta uma interrupção causada pelo episódio cibernético descrito.",
+          "source": {
+            "title": "CERT-UA: ataque ao setor de energia impedido",
+            "href": "https://cip.gov.ua/en/news/poperedzhena-masshtabna-kiberataka-na-energetichnii-sektor-ukrayini"
+          },
+          "script": "Impacto. A continuidade civil está em jogo. Energia e comunicação afetam diretamente a vida civil. O dossiê não fornece um total financeiro consolidado. A fotografia mostra contexto físico do conflito e é creditada como tal; não documenta uma interrupção causada pelo episódio cibernético descrito."
+        },
+        {
+          "id": "response",
+          "name": "Resposta",
+          "title": "Resiliência se constrói antes da crise.",
+          "body": "Segmentação entre TI e OT, recuperação testada e cooperação entre CERTs compõem a leitura operacional. A narrativa separa reivindicações de grupos das avaliações técnicas. O acesso às fontes permite acompanhar quais afirmações foram documentadas por cada organização.",
+          "source": {
+            "title": "CERT-UA: ataque ao setor de energia impedido",
+            "href": "https://cip.gov.ua/en/news/poperedzhena-masshtabna-kiberataka-na-energetichnii-sektor-ukrayini"
+          },
+          "script": "Resposta. Resiliência se constrói antes da crise. Segmentação entre TI e OT, recuperação testada e cooperação entre CERTs compõem a leitura operacional. A narrativa separa reivindicações de grupos das avaliações técnicas. O acesso às fontes permite acompanhar quais afirmações foram documentadas por cada organização."
+        },
+        {
+          "id": "sources",
+          "name": "Fontes",
+          "title": "Volte às fontes.",
+          "body": "Este capítulo reúne a base documental da narrativa. Consulte os documentos no contexto de sua data, autoria e escopo. A história original do projeto continua integral abaixo, com sua linguagem de abertura dramática; ela permanece separada da nova leitura documental.",
+          "source": {
+            "title": "CERT-UA: ataque ao setor de energia impedido",
+            "href": "https://cip.gov.ua/en/news/poperedzhena-masshtabna-kiberataka-na-energetichnii-sektor-ukrayini"
+          },
+          "script": "Fontes. Volte às fontes. Este capítulo reúne a base documental da narrativa. Consulte os documentos no contexto de sua data, autoria e escopo. A história original do projeto continua integral abaixo, com sua linguagem de abertura dramática; ela permanece separada da nova leitura documental. A referência deste capítulo é CERT-UA: ataque ao setor de energia impedido. Consulte a aba Fontes para verificar autoria, datas, atribuição e escopo. Você pode reler a História e consultar a cronologia completa na aba Análise."
+        }
+      ]
+    },
+    {
+      "id": "volt-typhoon",
+      "title": "Volt Typhoon",
+      "year": "2021-2024",
+      "confidence": "Atribuição pública",
+      "chapters": [
+        {
+          "id": "opening",
+          "name": "Abertura",
+          "title": "O risco permaneceu em silêncio.",
+          "body": "O intervalo 2021–2024 representa a campanha registrada no catálogo, não uma data única de divulgação. Volt Typhoon foi associado publicamente a intrusões em setores críticos dos EUA e de Guam. A história privilegia a permanência discreta e o significado estratégico do acesso.",
+          "source": {
+            "title": "CISA: AA24-038A",
+            "href": "https://www.cisa.gov/news-events/cybersecurity-advisories/aa24-038a"
+          },
+          "script": "Volt Typhoon. Abertura. O risco permaneceu em silêncio. O intervalo 2021–2024 representa a campanha registrada no catálogo, não uma data única de divulgação. Volt Typhoon foi associado publicamente a intrusões em setores críticos dos EUA e de Guam. A história privilegia a permanência discreta e o significado estratégico do acesso."
+        },
+        {
+          "id": "origin",
+          "name": "Origem",
+          "title": "Acesso preparado para uma crise.",
+          "body": "Agências caracterizaram a atividade como pré-posicionamento. Essa avaliação é apresentada com sua referência pública, sem afirmar que uma interrupção futura já ocorreu. O risco está na possibilidade de acesso persistente se tornar capacidade operacional em outra circunstância.",
+          "source": {
+            "title": "CISA: AA24-038A",
+            "href": "https://www.cisa.gov/news-events/cybersecurity-advisories/aa24-038a"
+          },
+          "script": "Origem. Acesso preparado para uma crise. Agências caracterizaram a atividade como pré-posicionamento. Essa avaliação é apresentada com sua referência pública, sem afirmar que uma interrupção futura já ocorreu. O risco está na possibilidade de acesso persistente se tornar capacidade operacional em outra circunstância."
+        },
+        {
+          "id": "spread",
+          "name": "Propagação",
+          "title": "Ferramentas legítimas, comportamento suspeito.",
+          "body": "Credenciais e ferramentas nativas dificultam separar administração legítima de atividade hostil. O mapa mostra Guam como um dos contextos citados, sem limitar a campanha ao território. O advisory reúne comportamentos e indicadores para consulta.",
+          "source": {
+            "title": "CISA: AA24-038A",
+            "href": "https://www.cisa.gov/news-events/cybersecurity-advisories/aa24-038a"
+          },
+          "script": "Propagação. Ferramentas legítimas, comportamento suspeito. Credenciais e ferramentas nativas dificultam separar administração legítima de atividade hostil. O mapa mostra Guam como um dos contextos citados, sem limitar a campanha ao território. O advisory reúne comportamentos e indicadores para consulta."
+        },
+        {
+          "id": "impact",
+          "name": "Impacto",
+          "title": "Persistência também tem impacto.",
+          "body": "Não há no dossiê uma perda financeira consolidada. O impacto discutido é a exposição de serviços essenciais e a incerteza sobre acessos persistentes. A fotografia de antenas é ilustrativa do setor, não de uma instalação comprometida.",
+          "source": {
+            "title": "CISA: AA24-038A",
+            "href": "https://www.cisa.gov/news-events/cybersecurity-advisories/aa24-038a"
+          },
+          "script": "Impacto. Persistência também tem impacto. Não há no dossiê uma perda financeira consolidada. O impacto discutido é a exposição de serviços essenciais e a incerteza sobre acessos persistentes. A fotografia de antenas é ilustrativa do setor, não de uma instalação comprometida."
+        },
+        {
+          "id": "response",
+          "name": "Resposta",
+          "title": "Olhar para o que parece administração.",
+          "body": "A defesa depende de inventário de borda, revisão de privilégio e logs úteis. Procurar apenas um nome de malware não cobre o comportamento descrito. A leitura operacional mantém os indicadores nas fontes oficiais, com contexto de data e investigação.",
+          "source": {
+            "title": "CISA: AA24-038A",
+            "href": "https://www.cisa.gov/news-events/cybersecurity-advisories/aa24-038a"
+          },
+          "script": "Resposta. Olhar para o que parece administração. A defesa depende de inventário de borda, revisão de privilégio e logs úteis. Procurar apenas um nome de malware não cobre o comportamento descrito. A leitura operacional mantém os indicadores nas fontes oficiais, com contexto de data e investigação."
+        },
+        {
+          "id": "sources",
+          "name": "Fontes",
+          "title": "Volte às fontes.",
+          "body": "Este capítulo reúne a base documental da narrativa. Consulte os documentos no contexto de sua data, autoria e escopo. A história original do projeto continua integral abaixo, com sua linguagem de abertura dramática; ela permanece separada da nova leitura documental.",
+          "source": {
+            "title": "CISA: AA24-038A",
+            "href": "https://www.cisa.gov/news-events/cybersecurity-advisories/aa24-038a"
+          },
+          "script": "Fontes. Volte às fontes. Este capítulo reúne a base documental da narrativa. Consulte os documentos no contexto de sua data, autoria e escopo. A história original do projeto continua integral abaixo, com sua linguagem de abertura dramática; ela permanece separada da nova leitura documental. A referência deste capítulo é CISA: AA24-038A. Consulte a aba Fontes para verificar autoria, datas, atribuição e escopo. Você pode reler a História e consultar a cronologia completa na aba Análise."
+        }
+      ]
+    },
+    {
+      "id": "salt-typhoon",
+      "title": "Salt Typhoon",
+      "year": "2021-2025",
+      "confidence": "Atribuição pública",
+      "chapters": [
+        {
+          "id": "opening",
+          "name": "Abertura",
+          "title": "A camada que conecta pode observar.",
+          "body": "O catálogo acompanha Salt Typhoon em um intervalo de 2021 a 2025. A narrativa trata da atividade divulgada contra telecomunicações e infraestrutura de rede. O tempo da campanha e as datas dos avisos públicos permanecem distintos.",
+          "source": {
+            "title": "CISA: AA25-239A",
+            "href": "https://www.cisa.gov/news-events/cybersecurity-advisories/aa25-239a"
+          },
+          "script": "Salt Typhoon. Abertura. A camada que conecta pode observar. O catálogo acompanha Salt Typhoon em um intervalo de 2021 a 2025. A narrativa trata da atividade divulgada contra telecomunicações e infraestrutura de rede. O tempo da campanha e as datas dos avisos públicos permanecem distintos."
+        },
+        {
+          "id": "origin",
+          "name": "Origem",
+          "title": "Uma campanha, diferentes recortes públicos.",
+          "body": "Relatórios oficiais associam a atividade a atores patrocinados pela RPC. Nomes de clusters são rótulos de investigação e não substituem a evidência descrita. A leitura preserva o nome público do caso e os limites das atribuições das agências.",
+          "source": {
+            "title": "CISA: AA25-239A",
+            "href": "https://www.cisa.gov/news-events/cybersecurity-advisories/aa25-239a"
+          },
+          "script": "Origem. Uma campanha, diferentes recortes públicos. Relatórios oficiais associam a atividade a atores patrocinados pela RPC. Nomes de clusters são rótulos de investigação e não substituem a evidência descrita. A leitura preserva o nome público do caso e os limites das atribuições das agências."
+        },
+        {
+          "id": "spread",
+          "name": "Propagação",
+          "title": "Roteadores no centro da persistência.",
+          "body": "O registro enfatiza roteadores, conexões confiáveis e persistência. O mapa usa os EUA como recorte de contexto de telecomunicações, sem representar o alcance internacional completo nem atribuir o tráfego mostrado a uma operadora específica.",
+          "source": {
+            "title": "CISA: AA25-239A",
+            "href": "https://www.cisa.gov/news-events/cybersecurity-advisories/aa25-239a"
+          },
+          "script": "Propagação. Roteadores no centro da persistência. O registro enfatiza roteadores, conexões confiáveis e persistência. O mapa usa os EUA como recorte de contexto de telecomunicações, sem representar o alcance internacional completo nem atribuir o tráfego mostrado a uma operadora específica."
+        },
+        {
+          "id": "impact",
+          "name": "Impacto",
+          "title": "Privacidade e alcance se encontram.",
+          "body": "Acesso à camada de comunicação cria riscos de privacidade e de observação em escala. O dossiê não oferece um valor financeiro consolidado. A fotografia de torre indica o setor; ela não identifica alvos de espionagem.",
+          "source": {
+            "title": "CISA: AA25-239A",
+            "href": "https://www.cisa.gov/news-events/cybersecurity-advisories/aa25-239a"
+          },
+          "script": "Impacto. Privacidade e alcance se encontram. Acesso à camada de comunicação cria riscos de privacidade e de observação em escala. O dossiê não oferece um valor financeiro consolidado. A fotografia de torre indica o setor; ela não identifica alvos de espionagem."
+        },
+        {
+          "id": "response",
+          "name": "Resposta",
+          "title": "A gestão da rede precisa ser verificável.",
+          "body": "Gestão fora de banda, revisão de chaves e observação de configurações compõem a defesa. Avisos de 2024 e 2025 fazem parte da cronologia. A leitura exige confirmar cada comportamento na fonte, evitando concluir comprometimento só por semelhança de um indicador.",
+          "source": {
+            "title": "CISA: AA25-239A",
+            "href": "https://www.cisa.gov/news-events/cybersecurity-advisories/aa25-239a"
+          },
+          "script": "Resposta. A gestão da rede precisa ser verificável. Gestão fora de banda, revisão de chaves e observação de configurações compõem a defesa. Avisos de 2024 e 2025 fazem parte da cronologia. A leitura exige confirmar cada comportamento na fonte, evitando concluir comprometimento só por semelhança de um indicador."
+        },
+        {
+          "id": "sources",
+          "name": "Fontes",
+          "title": "Volte às fontes.",
+          "body": "Este capítulo reúne a base documental da narrativa. Consulte os documentos no contexto de sua data, autoria e escopo. A história original do projeto continua integral abaixo, com sua linguagem de abertura dramática; ela permanece separada da nova leitura documental.",
+          "source": {
+            "title": "CISA: AA25-239A",
+            "href": "https://www.cisa.gov/news-events/cybersecurity-advisories/aa25-239a"
+          },
+          "script": "Fontes. Volte às fontes. Este capítulo reúne a base documental da narrativa. Consulte os documentos no contexto de sua data, autoria e escopo. A história original do projeto continua integral abaixo, com sua linguagem de abertura dramática; ela permanece separada da nova leitura documental. A referência deste capítulo é CISA: AA25-239A. Consulte a aba Fontes para verificar autoria, datas, atribuição e escopo. Você pode reler a História e consultar a cronologia completa na aba Análise."
+        }
+      ]
+    },
+    {
+      "id": "lazarus-modern",
+      "title": "Lazarus Group",
+      "year": "2022-2024",
+      "confidence": "Atribuição pública",
+      "chapters": [
+        {
+          "id": "opening",
+          "name": "Abertura",
+          "title": "A confiança também movimenta ativos.",
+          "body": "O recorte 2022–2024 relaciona operações norte-coreanas, empresas de blockchain e cadeia de software. Lazarus é tratado como um nome guarda-chuva. A narrativa acompanha padrões documentados sem fundir todas as atividades em uma única organização perfeitamente definida.",
+          "source": {
+            "title": "CISA/FBI/Treasury: TraderTraitor",
+            "href": "https://www.cisa.gov/sites/default/files/publications/AA22-108A-TraderTraitor-North_Korea_APT_Targets_Blockchain_Companies.pdf"
+          },
+          "script": "Lazarus Group. Abertura. A confiança também movimenta ativos. O recorte 2022–2024 relaciona operações norte-coreanas, empresas de blockchain e cadeia de software. Lazarus é tratado como um nome guarda-chuva. A narrativa acompanha padrões documentados sem fundir todas as atividades em uma única organização perfeitamente definida."
+        },
+        {
+          "id": "origin",
+          "name": "Origem",
+          "title": "Um nome guarda-chuva, várias operações.",
+          "body": "As agências usam diferentes nomes para clusters. O aviso TraderTraitor ancora o recorte de empresas de blockchain em 2022. A taxonomia ajuda a organizar pesquisa, mas a defesa depende dos comportamentos e dos acessos descritos.",
+          "source": {
+            "title": "CISA/FBI/Treasury: TraderTraitor",
+            "href": "https://www.cisa.gov/sites/default/files/publications/AA22-108A-TraderTraitor-North_Korea_APT_Targets_Blockchain_Companies.pdf"
+          },
+          "script": "Origem. Um nome guarda-chuva, várias operações. As agências usam diferentes nomes para clusters. O aviso TraderTraitor ancora o recorte de empresas de blockchain em 2022. A taxonomia ajuda a organizar pesquisa, mas a defesa depende dos comportamentos e dos acessos descritos."
+        },
+        {
+          "id": "spread",
+          "name": "Propagação",
+          "title": "Pessoas, pacotes e transações.",
+          "body": "A cronologia reúne engenharia social e comprometimento de software confiável, incluindo o caso 3CX em 2023. O mapa marca a Coreia do Norte como contexto de atribuição; os alvos são internacionais. Não é um mapa de saída de fundos.",
+          "source": {
+            "title": "CISA/FBI/Treasury: TraderTraitor",
+            "href": "https://www.cisa.gov/sites/default/files/publications/AA22-108A-TraderTraitor-North_Korea_APT_Targets_Blockchain_Companies.pdf"
+          },
+          "script": "Propagação. Pessoas, pacotes e transações. A cronologia reúne engenharia social e comprometimento de software confiável, incluindo o caso 3CX em 2023. O mapa marca a Coreia do Norte como contexto de atribuição; os alvos são internacionais. Não é um mapa de saída de fundos."
+        },
+        {
+          "id": "impact",
+          "name": "Impacto",
+          "title": "O prejuízo depende da investigação.",
+          "body": "Roubo de ativos, custos de resposta e perda de confiança têm escopos próprios. Os valores variam por investigação, como preservado no catálogo. A fotografia de mineração é contexto do ecossistema e não prova de envolvimento em qualquer incidente.",
+          "source": {
+            "title": "CISA/FBI/Treasury: TraderTraitor",
+            "href": "https://www.cisa.gov/sites/default/files/publications/AA22-108A-TraderTraitor-North_Korea_APT_Targets_Blockchain_Companies.pdf"
+          },
+          "script": "Impacto. O prejuízo depende da investigação. Roubo de ativos, custos de resposta e perda de confiança têm escopos próprios. Os valores variam por investigação, como preservado no catálogo. A fotografia de mineração é contexto do ecossistema e não prova de envolvimento em qualquer incidente."
+        },
+        {
+          "id": "response",
+          "name": "Resposta",
+          "title": "Verificação fora da confiança automática.",
+          "body": "Validar contatos, dependências e transações fora de banda reduz confiança automática. A defesa também exige proteção de chaves e observação de comportamento. Referências e IOCs ficam vinculados às publicações, sem reproduzir infraestrutura ativa de ataque.",
+          "source": {
+            "title": "CISA/FBI/Treasury: TraderTraitor",
+            "href": "https://www.cisa.gov/sites/default/files/publications/AA22-108A-TraderTraitor-North_Korea_APT_Targets_Blockchain_Companies.pdf"
+          },
+          "script": "Resposta. Verificação fora da confiança automática. Validar contatos, dependências e transações fora de banda reduz confiança automática. A defesa também exige proteção de chaves e observação de comportamento. Referências e IOCs ficam vinculados às publicações, sem reproduzir infraestrutura ativa de ataque."
+        },
+        {
+          "id": "sources",
+          "name": "Fontes",
+          "title": "Volte às fontes.",
+          "body": "Este capítulo reúne a base documental da narrativa. Consulte os documentos no contexto de sua data, autoria e escopo. A história original do projeto continua integral abaixo, com sua linguagem de abertura dramática; ela permanece separada da nova leitura documental.",
+          "source": {
+            "title": "CISA/FBI/Treasury: TraderTraitor",
+            "href": "https://www.cisa.gov/sites/default/files/publications/AA22-108A-TraderTraitor-North_Korea_APT_Targets_Blockchain_Companies.pdf"
+          },
+          "script": "Fontes. Volte às fontes. Este capítulo reúne a base documental da narrativa. Consulte os documentos no contexto de sua data, autoria e escopo. A história original do projeto continua integral abaixo, com sua linguagem de abertura dramática; ela permanece separada da nova leitura documental. A referência deste capítulo é CISA/FBI/Treasury: TraderTraitor. Consulte a aba Fontes para verificar autoria, datas, atribuição e escopo. Você pode reler a História e consultar a cronologia completa na aba Análise."
+        }
+      ]
+    },
+    {
+      "id": "israel-iran",
+      "title": "Israel x Ira",
+      "year": "2023-2025",
+      "confidence": "Atribuições públicas",
+      "chapters": [
+        {
+          "id": "opening",
+          "name": "Abertura",
+          "title": "O conflito alcança sistemas de controle.",
+          "body": "O recorte 2023–2025 relaciona conflito regional e segurança industrial. A narrativa se ancora no que as agências documentaram sobre PLCs e HMIs Unitronics. Reivindicações de sabotagem e campanhas de influência não são apresentadas automaticamente como resultados técnicos confirmados.",
+          "source": {
+            "title": "CISA/INCD: PLCs e infraestrutura",
+            "href": "https://www.cisa.gov/news-events/cybersecurity-advisories/aa23-335a"
+          },
+          "script": "Israel x Ira. Abertura. O conflito alcança sistemas de controle. O recorte 2023–2025 relaciona conflito regional e segurança industrial. A narrativa se ancora no que as agências documentaram sobre PLCs e HMIs Unitronics. Reivindicações de sabotagem e campanhas de influência não são apresentadas automaticamente como resultados técnicos confirmados."
+        },
+        {
+          "id": "origin",
+          "name": "Origem",
+          "title": "Separar reivindicação e evidência.",
+          "body": "Atores associados ao IRGC e rastreados como CyberAv3ngers aparecem no advisory conjunto. A origem israelense de uma tecnologia não delimita onde ela é usada. A narrativa separa o contexto regional da localização internacional dos equipamentos.",
+          "source": {
+            "title": "CISA/INCD: PLCs e infraestrutura",
+            "href": "https://www.cisa.gov/news-events/cybersecurity-advisories/aa23-335a"
+          },
+          "script": "Origem. Separar reivindicação e evidência. Atores associados ao IRGC e rastreados como CyberAv3ngers aparecem no advisory conjunto. A origem israelense de uma tecnologia não delimita onde ela é usada. A narrativa separa o contexto regional da localização internacional dos equipamentos."
+        },
+        {
+          "id": "spread",
+          "name": "Propagação",
+          "title": "Interfaces expostas, alcance internacional.",
+          "body": "Sistemas expostos e credenciais padrão fazem parte da leitura operacional do advisory. O mapa mostra Israel e Irã como contexto, sem inventar rotas. Cada evento mantém sua data na cronologia e sua ligação às fontes disponíveis.",
+          "source": {
+            "title": "CISA/INCD: PLCs e infraestrutura",
+            "href": "https://www.cisa.gov/news-events/cybersecurity-advisories/aa23-335a"
+          },
+          "script": "Propagação. Interfaces expostas, alcance internacional. Sistemas expostos e credenciais padrão fazem parte da leitura operacional do advisory. O mapa mostra Israel e Irã como contexto, sem inventar rotas. Cada evento mantém sua data na cronologia e sua ligação às fontes disponíveis."
+        },
+        {
+          "id": "impact",
+          "name": "Impacto",
+          "title": "O digital tem consequências operacionais.",
+          "body": "O risco envolve continuidade de água, energia e outros serviços. Não há um total financeiro oficial consolidado no catálogo. A fotografia de um painel é contexto industrial, identificada e creditada, sem alegar que registra o ataque.",
+          "source": {
+            "title": "CISA/INCD: PLCs e infraestrutura",
+            "href": "https://www.cisa.gov/news-events/cybersecurity-advisories/aa23-335a"
+          },
+          "script": "Impacto. O digital tem consequências operacionais. O risco envolve continuidade de água, energia e outros serviços. Não há um total financeiro oficial consolidado no catálogo. A fotografia de um painel é contexto industrial, identificada e creditada, sem alegar que registra o ataque."
+        },
+        {
+          "id": "response",
+          "name": "Resposta",
+          "title": "Reduzir exposição, preservar continuidade.",
+          "body": "A defesa prioriza remover OT da exposição pública, revisar credenciais e preparar resposta conjunta de TI e operação. O advisory reúne mitigação e indicadores. A leitura preserva a distinção entre risco potencial, comprometimento documentado e alegação pública.",
+          "source": {
+            "title": "CISA/INCD: PLCs e infraestrutura",
+            "href": "https://www.cisa.gov/news-events/cybersecurity-advisories/aa23-335a"
+          },
+          "script": "Resposta. Reduzir exposição, preservar continuidade. A defesa prioriza remover OT da exposição pública, revisar credenciais e preparar resposta conjunta de TI e operação. O advisory reúne mitigação e indicadores. A leitura preserva a distinção entre risco potencial, comprometimento documentado e alegação pública."
+        },
+        {
+          "id": "sources",
+          "name": "Fontes",
+          "title": "Volte às fontes.",
+          "body": "Este capítulo reúne a base documental da narrativa. Consulte os documentos no contexto de sua data, autoria e escopo. A história original do projeto continua integral abaixo, com sua linguagem de abertura dramática; ela permanece separada da nova leitura documental.",
+          "source": {
+            "title": "CISA/INCD: PLCs e infraestrutura",
+            "href": "https://www.cisa.gov/news-events/cybersecurity-advisories/aa23-335a"
+          },
+          "script": "Fontes. Volte às fontes. Este capítulo reúne a base documental da narrativa. Consulte os documentos no contexto de sua data, autoria e escopo. A história original do projeto continua integral abaixo, com sua linguagem de abertura dramática; ela permanece separada da nova leitura documental. A referência deste capítulo é CISA/INCD: PLCs e infraestrutura. Consulte a aba Fontes para verificar autoria, datas, atribuição e escopo. Você pode reler a História e consultar a cronologia completa na aba Análise."
+        }
+      ]
+    }
+  ]
+}

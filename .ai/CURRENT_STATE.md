@@ -3,9 +3,9 @@
 | Field | State |
 | --- | --- |
 | Public release | `v1.1.0 — CTI Evolution`, unchanged |
-| Current work | Documentary experience across all 17 cases, cinematic cartography and NotPetya campaign, ready for local branch review |
+| Current work | Documentary experience, cartography, campaign and authorized prolonged personal-voice narration across all 17 cases, ready for local branch review |
 | Branch | `codex/war-room-experience` |
-| Last sprint | 2026-10-03 · user-expanded scope: 102 chapters, real cartography and local artwork |
+| Last sprint | 2026-10-03 · approved personal voice, prolonged narration and clarity treatment for all 17 cases |
 | Last commit | Resolve with `git log -1 --oneline`; no merge, push, tag or deployment |
 | Public Pages | https://edy075.github.io/WAR_ROOM/ (still prior release) |
 | Local preview | http://127.0.0.1:4173/WAR_ROOM/?tab=story#dossier-notpetya |
@@ -26,16 +26,16 @@
 
 ## Validation and evidence
 
-- Four original verification scripts pass, plus canonical-data, experience and documentary desktop/mobile browser checks.
+- Four original verification scripts pass, plus canonical-data, experience/documentary desktop/mobile browser checks and all 119 audio browser decodes. Narration tests cover playback, no preloading, library, error/retry, keyboard, lifecycle/races and reduced effects.
 - Browser scenarios cover all 17 routes and all 102 chapters at both viewports, image decode, map zoom/history, chapter links beyond the pilot, keyboard/tabs/focus/Escape, search/filters/history, gallery race/failure, reduced effects and real video playback/pause.
-- Screenshots: `assets/screenshots/experience/`; actual archive image decoded separately, narrow 320px checked. Race tests deliberately use network fixtures; they do not prove external-source availability.
-- A fresh three-run Chromium Edge/CDP comparison against `aeaa524` measures the completed corpus/map iteration. Reading/reduced samples reach zero callbacks, and dossier opening forces zero episode entries. Current medians, method and limits: [EXPERIENCE_VALIDATION.md](../docs/EXPERIENCE_VALIDATION.md). Earlier pilot-only samples in the memory log are intermediate historical measurements.
+- Screenshots: `assets/screenshots/experience/` (documentary stage) and `assets/screenshots/narration/` (current audio/library); actual archive image decoded separately, narrow 320px checked. Race tests deliberately use network fixtures; they do not prove external-source availability.
+- The corpus/map iteration at `4e66d81` has its own historical three-run Chromium Edge/CDP comparison against `aeaa524`. A separate current narration-delivery comparison is recorded in the validation report; do not reuse prior source measurements as current. Reading/reduced samples reach zero callbacks, and dossier opening forces zero episode entries. Medians, source revisions, method and limits: [EXPERIENCE_VALIDATION.md](../docs/EXPERIENCE_VALIDATION.md). Earlier pilot-only samples in the memory log are intermediate historical measurements.
 - Prior v1.1.0 Lighthouse scores are historical release evidence, not measurements of this branch. No new Lighthouse, field INP or lab mobile hardware claim is made.
 
 ## Limits and follow-up
 
-- Personal voice review (2026-10-03): the user supplied their own recording. A separate 16.77-second NotPetya voice-clone preview is ready in ignored `audit/` for listening review; see [VOICE_PREVIEW.md](../docs/VOICE_PREVIEW.md). It has not replaced product media or been extended to the other sixteen cases. The corpus/UI remain unchanged. Original personal audio/reference stays local and out of Git.
+- Personal voice (2026-10-03): the user approved the local sample and authorized prolonged versions for all 17 cases. Delivered 17 full MP3s / 102 chapter MP3s (42:13.53 total full narration), scripts, references, VTT and a lazy library. Restrained EQ/dynamics improve clarity; finished-file loudness measures −16.78 to −16.21 LUFS, max true peak −1.88 dBTP. Original personal audio/reference/raw WAVs remain local and out of Git. Details and actual QA limits: [NARRATION_PRODUCTION.md](../docs/NARRATION_PRODUCTION.md).
 
 - No merge, push, publication, release change or deployment. Stop the temporary local preview when review finishes.
 - Classic remote gallery sources can fail independently; reading/references retain an alternative. A legacy Petya screenshot receives a visible qualification while original records stay preserved.
-- Both teasers have readable text; narrated version adds synthetic Portuguese voice, with no external music. Regenerating speech needs local VoiceStudio and installed OmniVoice; playback requires only delivered static files. No personal voice profile was used.
+- Both teasers have readable text; narrated version adds synthetic Portuguese voice, with no external music. Regenerating speech needs local VoiceStudio and installed OmniVoice; playback requires only delivered static files. The older teaser uses a standard synthetic voice; the new prolonged audio uses the approved reference. No saved personal voice profile/preferences were modified.

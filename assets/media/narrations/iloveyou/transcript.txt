@@ -1,0 +1,20 @@
+ILOVEYOU
+Voz do autor · síntese autorizada
+
+ILOVEYOU. Abertura. O assunto convidava a abrir. Em maio de 2000, uma mensagem com o assunto ILOVEYOU se tornou um incidente internacional. A linguagem pessoal e o anexo aparentemente simples revelaram uma fragilidade: a interface podia sugerir um documento quando o sistema executaria um script.
+Referência: https://www.gao.gov/products/t-aimd-00-171
+
+Origem. Uma extensão escondia o risco. O catálogo situa a origem nas Filipinas. O depoimento do GAO, apresentado poucos dias depois, registra o incidente e a necessidade de melhorar a segurança das agências. A narrativa distingue o contexto do anexo da ideia de que toda mensagem enviada por um contato seja confiável.
+Referência: https://www.gao.gov/products/t-aimd-00-171
+
+Propagação. A confiança viaja com a mensagem. O worm usou o e-mail para ampliar seu alcance. A visualização marca Manila como contexto de origem, sem inventar conexões individuais. Na cronologia do dossiê, cada evento mantém sua data; na leitura técnica, o foco está no que fazia uma abertura virar novas mensagens.
+Referência: https://www.gao.gov/products/t-aimd-00-171
+
+Impacto. Um incidente em muitas organizações. Interrupção, limpeza e recuperação atravessaram diferentes organizações. As estimativas históricas do projeto são mantidas no catálogo, com seu caráter de estimativa. O documento contemporâneo do GAO oferece um ponto de consulta sobre o problema de segurança governamental.
+Referência: https://www.gao.gov/products/t-aimd-00-171
+
+Resposta. Segurança precisa de prática contínua. A resposta envolve controle de scripts, tratamento de anexos e programas de segurança que sobrevivam à crise. A lição permanece concreta: não depender só de atenção individual quando o desenho dos sistemas e das rotinas permite executar conteúdo recebido.
+Referência: https://www.gao.gov/products/t-aimd-00-171
+
+Fontes. Volte às fontes. Este capítulo reúne a base documental da narrativa. Consulte os documentos no contexto de sua data, autoria e escopo. A história original do projeto continua integral abaixo, com sua linguagem de abertura dramática; ela permanece separada da nova leitura documental. A referência deste capítulo é GAO · depoimento sobre ILOVEYOU · 10/05/2000. Consulte a aba Fontes para verificar autoria, datas, atribuição e escopo. Você pode reler a História e consultar a cronologia completa na aba Análise.
+Referência: https://www.gao.gov/products/t-aimd-00-171

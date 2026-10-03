@@ -1,6 +1,8 @@
 # WAR ROOM — entrega da evolução para revisão
 
-Data: 3 de outubro de 2026. Branch: `codex/war-room-experience`. Código final medido: `4e66d81`; base pública: `aeaa524`. Sem push, merge, tag, deploy ou atualização da release v1.1.0.
+Data: 3 de outubro de 2026. Branch: `codex/war-room-experience`. Código da etapa documental anterior medido: `4e66d81`; base pública: `aeaa524`. Sem push, merge, tag, deploy ou atualização da release v1.1.0.
+
+O relatório original abaixo corresponde à etapa `4e66d81`. A entrega posterior de voz pessoal prolongada tem validação e medição novas ao final deste documento.
 
 ## Resultado funcional
 
@@ -46,7 +48,7 @@ A galeria é exercitada com primeira resposta atrasada além da segunda e, separ
 
 Vídeos reais são carregados e reproduzidos; fechar ou trocar aba pausa a reprodução. A versão narrada carrega as nove legendas. Preferência do sistema e controle de efeitos são testados; a animação cartográfica fica estática no modo reduzido. Sem erros JavaScript nos cenários executados.
 
-## Comparação de desempenho atual
+## Comparação de desempenho da etapa documental anterior (`4e66d81`)
 
 Três execuções por viewport e versão, sequenciais, no mesmo host, em Chromium Edge headless, sem throttling. Nenhuma síntese, exportação, montagem ou outro job de browser competiu com as medições. `tests/measure-experience.cjs` serve `aeaa524:index.html` por uma rota do browser no mesmo endereço `/WAR_ROOM/`, conservando caminhos relativos. Wikimedia é bloqueada nas duas versões para isolar o processamento decorativo.
 
@@ -62,7 +64,7 @@ O hero é amostrado durante 1,5 s, a partir de 2,6 s após navegação. Tempo é
 
 O tempo de tarefas desse recorte cai aproximadamente 83% no desktop e 79% no mobile emulado. Os ganhos decorrem de parar loops, reduzir resolução/frequência dos canvases ambientais, remover grain repetido e camadas caras, e conservar renderização sob demanda. São resultados locais de um recorte do hero; não são uma promessa de ganho igual em toda interação, hardware ou rede. Zero callbacks decorativos não significa zero processamento de toda a página.
 
-Há quatro pequenas requisições locais iniciais (CSS e três módulos JS), sem framework ou dependência de produção. Imagens documentais, SVG geográfico, áudio e vídeo não são solicitados no hero inicial, verificado em ambos os viewports. Cartografia da central entra quando próxima da área visível ou por navegação explícita; o SVG é reutilizado do cache pelos capítulos. Mídia pesada só é carregada por escolha na aba Mídia.
+Na etapa `4e66d81`, havia quatro pequenas requisições locais iniciais (CSS e três módulos JS), sem framework ou dependência de produção. Imagens documentais, SVG geográfico, áudio e vídeo não são solicitados no hero inicial, verificado em ambos os viewports. Cartografia da central entra quando próxima da área visível ou por navegação explícita; o SVG é reutilizado do cache pelos capítulos. Mídia pesada só é carregada por escolha na aba Mídia.
 
 Não foi executado Lighthouse novo nem medida de INP/Core Web Vitals de campo. As pontuações da release anterior e os números intermediários do piloto não são apresentados como resultados atuais. Amostras brutas ficam em `audit/`, ignorado pelo Git; método e medianas sanitizadas estão aqui.
 
@@ -77,3 +79,27 @@ Não foi executado Lighthouse novo nem medida de INP/Core Web Vitals de campo. A
 - Capturas adicionais: hero, central, Morris, SolarWinds, MGM, Volt Typhoon, propagação, arquivo Maersk e 320px em `assets/screenshots/experience/`.
 
 O preview usa servidor localhost temporário, mantido para revisão. O link público nas peças aponta ao dossiê existente; a evolução só estará pública após publicação separadamente autorizada. Testes são em browser real com emulação mobile e reduced motion; não representam certificação em dispositivo físico ou leitor de tela. Fontes externas legadas podem falhar; novos visuais locais e alternativas de leitura preservam a experiência.
+
+## Validação atual — voz autorizada prolongada nos 17 casos
+
+Após aprovação do usuário: 17 episódios completos, 102 capítulos MP3, 42:13,53 de duração completa somada, roteiros/fontes/VTT e biblioteca. Produção, tratamento e limites: [NARRATION_PRODUCTION.md](NARRATION_PRODUCTION.md). A gravação original e a referência não entram no Git. Os teasers anteriores conservam a voz padrão; estão identificados separadamente do áudio prolongado.
+
+Edge headless, desktop 1440 × 900 e mobile 390 × 844: os 119 arquivos foram decodificados pelo navegador e conferidos com FFprobe. Passaram carregamento somente por escolha, pausa/esvaziamento ao trocar contexto, erros/retry, biblioteca, teclado, efeitos reduzidos, corrida entre seleções e ausência de overflow/erros JS. Passaram também os testes gerais da experiência e dos 102 capítulos, os quatro verificadores originais, fingerprints e diff check. Capturas reais atuais: `assets/screenshots/narration/`.
+
+Parakeet TDT v3 local conferiu todos os 102 capítulos finais. As sinalizações foram revisadas; expansões de siglas explicam duas diferenças de similaridade, e a leitura de CVE-2021-44228 foi melhorada e reconferida. Datas reconhecidas e contagens de negações não deixaram alertas pendentes. Isso é uma conferência automática do conteúdo, com limitações para nomes próprios; não certifica semelhança vocal nem substitui escuta humana integral. Os 119 MP3s finais medem −16,78 a −16,21 LUFS, pico máximo −1,88 dBTP.
+
+### Medição nova da versão com narração
+
+Executada após encerrar síntese/transcrição/medição de áudio e outros jobs de browser. Mesma metodologia CDP descrita acima, base `aeaa524`, três amostras por versão/viewport sequenciais, sem throttling, recursos Wikimedia bloqueados igualmente. Arquivos brutos novos: `audit/before-voice-delivery.json` / `audit/after-voice-delivery.json`. A versão servida inclui `narration.js`, players e biblioteca finais, antes do commit de entrega; as alterações subsequentes são documentação. Ela acrescenta uma requisição JS inicial pequena, totalizando cinco recursos locais; catálogo e MP3 permanecem ausentes do hero frio.
+
+| Mediana | Desktop base | Desktop atual | Mobile emulado base | Mobile emulado atual |
+| --- | ---: | ---: | ---: | ---: |
+| Callbacks hero / 1,5 s | 1.095 | 41 | 363 | 16 |
+| Tarefas hero / 1,5 s | 922,655 ms | 136,256 ms | 216,256 ms | 32,370 ms |
+| Callbacks leitura / 400 ms | 392 | 0 | 200 | 0 |
+| Callbacks efeitos reduzidos / 400 ms | 306 | 0 | 98 | 0 |
+| Episódios forçados visíveis ao abrir | 17 | 0 | 17 | 0 |
+
+Redução de aproximadamente **85%** no tempo de tarefas desse recorte do hero em ambos os viewports, sem solicitar narrações antecipadamente. Medição local, não uma promessa de ganho geral nem Lighthouse/Core Web Vitals. Os valores anteriores de `4e66d81` são históricos dessa outra etapa.
+
+Preview: [biblioteca dos 17 casos](http://127.0.0.1:4173/WAR_ROOM/assets/media/narrations/) · [NotPetya completo](http://127.0.0.1:4173/WAR_ROOM/?tab=media#dossier-notpetya). Capturas: [desktop](../assets/screenshots/narration/notpetya-desktop.png), [mobile](../assets/screenshots/narration/notpetya-mobile.png), [biblioteca desktop](../assets/screenshots/narration/library-desktop.png), [biblioteca mobile](../assets/screenshots/narration/library-mobile.png).

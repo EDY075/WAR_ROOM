@@ -1,0 +1,20 @@
+Lazarus Group
+Voz do autor · síntese autorizada
+
+Lazarus Group. Abertura. A confiança também movimenta ativos. O recorte 2022–2024 relaciona operações norte-coreanas, empresas de blockchain e cadeia de software. Lazarus é tratado como um nome guarda-chuva. A narrativa acompanha padrões documentados sem fundir todas as atividades em uma única organização perfeitamente definida.
+Referência: https://www.cisa.gov/sites/default/files/publications/AA22-108A-TraderTraitor-North_Korea_APT_Targets_Blockchain_Companies.pdf
+
+Origem. Um nome guarda-chuva, várias operações. As agências usam diferentes nomes para clusters. O aviso TraderTraitor ancora o recorte de empresas de blockchain em 2022. A taxonomia ajuda a organizar pesquisa, mas a defesa depende dos comportamentos e dos acessos descritos.
+Referência: https://www.cisa.gov/sites/default/files/publications/AA22-108A-TraderTraitor-North_Korea_APT_Targets_Blockchain_Companies.pdf
+
+Propagação. Pessoas, pacotes e transações. A cronologia reúne engenharia social e comprometimento de software confiável, incluindo o caso 3CX em 2023. O mapa marca a Coreia do Norte como contexto de atribuição; os alvos são internacionais. Não é um mapa de saída de fundos.
+Referência: https://www.cisa.gov/sites/default/files/publications/AA22-108A-TraderTraitor-North_Korea_APT_Targets_Blockchain_Companies.pdf
+
+Impacto. O prejuízo depende da investigação. Roubo de ativos, custos de resposta e perda de confiança têm escopos próprios. Os valores variam por investigação, como preservado no catálogo. A fotografia de mineração é contexto do ecossistema e não prova de envolvimento em qualquer incidente.
+Referência: https://www.cisa.gov/sites/default/files/publications/AA22-108A-TraderTraitor-North_Korea_APT_Targets_Blockchain_Companies.pdf
+
+Resposta. Verificação fora da confiança automática. Validar contatos, dependências e transações fora de banda reduz confiança automática. A defesa também exige proteção de chaves e observação de comportamento. Referências e IOCs ficam vinculados às publicações, sem reproduzir infraestrutura ativa de ataque.
+Referência: https://www.cisa.gov/sites/default/files/publications/AA22-108A-TraderTraitor-North_Korea_APT_Targets_Blockchain_Companies.pdf
+
+Fontes. Volte às fontes. Este capítulo reúne a base documental da narrativa. Consulte os documentos no contexto de sua data, autoria e escopo. A história original do projeto continua integral abaixo, com sua linguagem de abertura dramática; ela permanece separada da nova leitura documental. A referência deste capítulo é CISA/FBI/Treasury: TraderTraitor. Consulte a aba Fontes para verificar autoria, datas, atribuição e escopo. Você pode reler a História e consultar a cronologia completa na aba Análise.
+Referência: https://www.cisa.gov/sites/default/files/publications/AA22-108A-TraderTraitor-North_Korea_APT_Targets_Blockchain_Companies.pdf

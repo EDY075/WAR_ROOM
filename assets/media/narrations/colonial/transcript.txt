@@ -1,0 +1,20 @@
+Colonial Pipeline
+Voz do autor · síntese autorizada
+
+Colonial Pipeline. Abertura. Uma interrupção digital afeta o abastecimento. Em maio de 2021, a Colonial Pipeline interrompeu operações após um incidente de ransomware. A história expõe a relação entre sistemas corporativos e continuidade de infraestrutura. A imagem do oleoduto é contexto reconstituído, sem representar o local do acesso inicial.
+Referência: https://www.cisa.gov/sites/default/files/publications/AA21-131A_Darkside_Ransomware.pdf
+
+Origem. Acesso corporativo e operação física. O catálogo registra o acesso por uma VPN sem autenticação multifator. O aviso conjunto da CISA e do FBI descreve DarkSide e medidas de mitigação. O alcance nos sistemas de TI deve ser distinguido de uma alegação de controle direto dos equipamentos operacionais.
+Referência: https://www.cisa.gov/sites/default/files/publications/AA21-131A_Darkside_Ransomware.pdf
+
+Propagação. Conter o incidente muda a operação. Decisões de contenção podem interromper uma operação física mesmo quando a investigação se concentra em TI. O mapa situa o sudeste dos EUA como contexto. Os eventos do dossiê mostram a sequência do incidente; não são uma simulação do fluxo de combustível.
+Referência: https://www.cisa.gov/sites/default/files/publications/AA21-131A_Darkside_Ransomware.pdf
+
+Impacto. A continuidade depende de muitos sistemas. O efeito foi sentido no abastecimento e na organização do trabalho de recuperação. Resgate, custo de resposta e impacto indireto são categorias diferentes. O catálogo original fica preservado, acompanhado desta distinção para evitar somar medidas incompatíveis.
+Referência: https://www.cisa.gov/sites/default/files/publications/AA21-131A_Darkside_Ransomware.pdf
+
+Resposta. Identidade, segmentação e recuperação. A defesa conecta autenticação, redução de acessos e continuidade testada. O caso pede verificar dependências entre TI e operação antes de uma crise. A resposta institucional permanece no dossiê; o aviso contemporâneo oferece a referência para o tratamento do ransomware.
+Referência: https://www.cisa.gov/sites/default/files/publications/AA21-131A_Darkside_Ransomware.pdf
+
+Fontes. Volte às fontes. Este capítulo reúne a base documental da narrativa. Consulte os documentos no contexto de sua data, autoria e escopo. A história original do projeto continua integral abaixo, com sua linguagem de abertura dramática; ela permanece separada da nova leitura documental. A referência deste capítulo é CISA / FBI · DarkSide Ransomware · AA21-131A · PDF. Consulte a aba Fontes para verificar autoria, datas, atribuição e escopo. Você pode reler a História e consultar a cronologia completa na aba Análise.
+Referência: https://www.cisa.gov/sites/default/files/publications/AA21-131A_Darkside_Ransomware.pdf

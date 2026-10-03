@@ -8,6 +8,8 @@ The CTI Evolution release is complete. No additional feature change is scheduled
 
 The user authorized integrated UI/history/performance work, the NotPetya pilot and promotion media, then explicitly requested the same detailed cinematic standard for every case and a beautiful map. Delivered 17 six-chapter documentaries, real local cartography and artwork on `codex/war-room-experience`, preserving static delivery and the exact historical corpus. See [CURRENT_STATE.md](CURRENT_STATE.md). Review precedes merge/publication. Both silent and synthetic-voice MP4s, actual narration MP3 and captions are produced.
 
+The subsequent approved personal-voice scope adds prolonged audio for all seventeen cases (102 chapters plus full episodes), clarity treatment and lazy library/players. This is delivered for branch review, with private reference files excluded. See [NARRATION_PRODUCTION.md](../docs/NARRATION_PRODUCTION.md).
+
 ## Future candidates (not committed)
 
 1. Research review of the five modern dossiers using new primary-source material.

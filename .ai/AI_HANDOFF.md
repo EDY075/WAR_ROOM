@@ -6,7 +6,7 @@ Read the documents in the order defined by [README.md](README.md). Then run `git
 
 ## Current handoff
 
-The active local review is the 2026-10-03 evolution on `codex/war-room-experience`. The user extended the documentary standard to every case: 17 six-chapter narratives, local real cartography, labeled artwork, plus the NotPetya campaign with narrated/silent video. Read [CURRENT_STATE.md](CURRENT_STATE.md) for tabs/history/motion changes, artifacts and fresh browser/CDP evidence. Public v1.1.0 below remains unchanged. Do not merge or publish without new authorization.
+The active local review is the 2026-10-03 evolution on `codex/war-room-experience`. The user extended the documentary standard to every case: 17 six-chapter narratives, local real cartography, labeled artwork, plus the NotPetya campaign with narrated/silent video. The user then approved their own voice sample and authorized prolonged narration for every case: 17 full episodes, 102 chapter MP3s, clarity treatment and reading/source-linked lazy controls. Production/QA: [NARRATION_PRODUCTION.md](../docs/NARRATION_PRODUCTION.md). Read [CURRENT_STATE.md](CURRENT_STATE.md) for tabs/history/motion changes, artifacts and fresh browser/CDP evidence. Public v1.1.0 below remains unchanged. Do not merge or publish without new authorization.
 
 - Project: WAR ROOM, a static Cyber Threat Intelligence center with cinematic dossier narratives.
 - Version and release: `v1.1.0 — CTI Evolution`, published on GitHub Pages and GitHub Releases.

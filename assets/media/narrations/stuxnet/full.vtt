@@ -1,0 +1,37 @@
+WEBVTT
+
+00:00:00.000 --> 00:00:15.320
+Stuxnet. Abertura. O software encontra o processo físico. Stuxnet levou o debate sobre malware para sistemas de controle industrial. O caso articula duas perguntas: o que acontece no computador e o que esse computador comanda?
+
+00:00:15.540 --> 00:00:22.320
+A narrativa acompanha essa passagem sem apresentar a reconstituição visual como registro de Natanz.
+
+00:00:23.040 --> 00:00:35.920
+Origem. Um ambiente industrial como alvo. O advisory do ICS-CERT descreve malware que visava software de controle Siemens. O catálogo preserva o contexto iraniano e as atribuições debatidas.
+
+00:00:36.140 --> 00:00:43.160
+A análise técnica de um componente não equivale a uma confirmação pública de todos os autores e objetivos.
+
+00:00:43.880 --> 00:00:56.360
+Propagação. Da infecção à lógica de controle. É preciso separar os meios de espalhamento do código e a atuação sobre um processo industrial específico. O mapa oferece contexto regional.
+
+00:00:56.580 --> 00:01:06.740
+Os marcos da cronologia e o documento técnico mostram por que máquinas infectadas e equipamentos efetivamente afetados não são medidas equivalentes.
+
+00:01:07.460 --> 00:01:21.020
+Impacto. Integridade é mais que um arquivo intacto. Em um sistema industrial, integridade inclui comando, observação e confiança nos sinais. Os números históricos do catálogo são apresentados à parte.
+
+00:01:21.240 --> 00:01:29.600
+O significado operacional do caso está na possibilidade de o comportamento físico divergir daquilo que uma interface sugere.
+
+00:01:30.320 --> 00:01:42.610
+Resposta. Recuperar a confiança no processo. A recuperação requer validar estações, lógica de controle e o próprio processo. A defesa do dossiê destaca segmentação e controle de acesso.
+
+00:01:42.830 --> 00:01:50.970
+O advisory histórico serve à compreensão do incidente; as recomendações de operação atuais devem seguir os responsáveis pelo ambiente.
+
+00:01:51.690 --> 00:02:11.210
+Fontes. Volte às fontes. Este capítulo reúne a base documental da narrativa. Consulte os documentos no contexto de sua data, autoria e escopo. A história original do projeto continua integral abaixo, com sua linguagem de abertura dramática; ela permanece separada da nova leitura documental.
+
+00:02:11.430 --> 00:02:28.750
+A referência deste capítulo é ICS-CERT / CISA · Primary Stuxnet Advisory · ICSA-10-272-01. Consulte a aba Fontes para verificar autoria, datas, atribuição e escopo. Você pode reler a História e consultar a cronologia completa na aba Análise.

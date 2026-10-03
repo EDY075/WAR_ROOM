@@ -1,0 +1,31 @@
+WEBVTT
+
+00:00:00.000 --> 00:00:10.480
+Morris Worm. Abertura. A primeira grande interrupção. Em novembro de 1988, um worm atingiu sistemas Unix de universidades e centros de pesquisa.
+
+00:00:10.700 --> 00:00:20.180
+Antes da Web, a comunidade da internet já precisava lidar com um problema coletivo: o funcionamento de uma máquina dependia da segurança das outras.
+
+00:00:20.900 --> 00:00:33.610
+Origem. Uma rede construída sobre confiança. Robert Tappan Morris desenvolveu o programa enquanto estudava em Cornell. O registro do FBI descreve sua execução inicial por um computador do MIT.
+
+00:00:33.830 --> 00:00:42.840
+A narrativa acompanha o ambiente acadêmico da época sem transformar a intenção declarada em justificativa para o acesso não autorizado.
+
+00:00:43.560 --> 00:01:04.600
+Propagação. O código encontra outras máquinas. O worm combinou diferentes formas de acesso a sistemas Unix. Cópias adicionais consumiam recursos e dificultavam o trabalho dos administradores. A região marcada no mapa representa o contexto acadêmico dos EUA; não pretende localizar cada host afetado.
+
+00:01:05.320 --> 00:01:26.720
+Impacto. Disponibilidade também é segurança. O dano central foi a perda de disponibilidade. O FBI descreve e-mails atrasados, instituições desconectadas e esforço de limpeza. Estimativas de custo variam; os números do catálogo original ficam visíveis como registro do projeto, separados da retrospectiva oficial.
+
+00:01:27.440 --> 00:01:42.880
+Resposta. A resposta passa a ter uma organização. O episódio contribuiu para a criação de uma resposta organizada a emergências computacionais. A investigação também levou à primeira condenação sob o CFAA de 1986.
+
+00:01:43.100 --> 00:01:50.830
+A lição operacional liga correção técnica, cooperação entre administradores e responsabilidade pelo acesso a sistemas.
+
+00:01:51.550 --> 00:02:11.070
+Fontes. Volte às fontes. Este capítulo reúne a base documental da narrativa. Consulte os documentos no contexto de sua data, autoria e escopo. A história original do projeto continua integral abaixo, com sua linguagem de abertura dramática; ela permanece separada da nova leitura documental.
+
+00:02:11.290 --> 00:02:26.970
+A referência deste capítulo é FBI · investigação e retrospectiva do Morris Worm. Consulte a aba Fontes para verificar autoria, datas, atribuição e escopo. Você pode reler a História e consultar a cronologia completa na aba Análise.

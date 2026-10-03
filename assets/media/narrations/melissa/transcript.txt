@@ -1,0 +1,20 @@
+Melissa
+Voz do autor · síntese autorizada
+
+Melissa. Abertura. Uma mensagem aparentemente familiar. Em março de 1999, Melissa transformou um documento do Word em uma crise para redes de e-mail. O incidente mostrou como uma rotina de escritório podia ampliar um ataque: receber um arquivo, abrir e confiar no remetente.
+Referência: https://www.fbi.gov/news/stories/melissa-virus-20th-anniversary-032519
+
+Origem. O documento era o vetor. O FBI relata que David Lee Smith publicou um documento em um grupo de notícias usando uma conta da AOL. O conteúdo oferecido atraía o download. O ponto de entrada era a combinação de um arquivo executável por macros com a disposição de abri-lo.
+Referência: https://www.fbi.gov/news/stories/melissa-virus-20th-anniversary-032519
+
+Propagação. A agenda vira rede de distribuição. A distribuição por e-mail fez os contatos se tornarem parte do mecanismo de propagação. O problema atravessava usuários e organizações. O mapa situa o contexto da investigação nos EUA; não representa um percurso comprovado entre caixas de entrada.
+Referência: https://www.fbi.gov/news/stories/melissa-virus-20th-anniversary-032519
+
+Impacto. O custo de confiar no anexo. O FBI estimou US$ 80 milhões para limpeza e reparo dos sistemas atingidos. Esse recorte ajuda a entender que o custo incluía trabalho humano e recuperação de serviços, além das máquinas. Não é uma medida de todos os efeitos indiretos possíveis.
+Referência: https://www.fbi.gov/news/stories/melissa-virus-20th-anniversary-032519
+
+Resposta. Investigar os rastros, reduzir a exposição. A investigação contou com a AOL e autoridades de Nova Jersey. Smith foi preso e posteriormente condenado. Na defesa, anexos, macros e o comportamento do cliente de e-mail passaram a exigir controles explícitos; reconhecer um nome de remetente não bastava.
+Referência: https://www.fbi.gov/news/stories/melissa-virus-20th-anniversary-032519
+
+Fontes. Volte às fontes. Este capítulo reúne a base documental da narrativa. Consulte os documentos no contexto de sua data, autoria e escopo. A história original do projeto continua integral abaixo, com sua linguagem de abertura dramática; ela permanece separada da nova leitura documental. A referência deste capítulo é FBI · The Melissa Virus · retrospectiva de 2019. Consulte a aba Fontes para verificar autoria, datas, atribuição e escopo. Você pode reler a História e consultar a cronologia completa na aba Análise.
+Referência: https://www.fbi.gov/news/stories/melissa-virus-20th-anniversary-032519

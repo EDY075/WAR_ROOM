@@ -23,4 +23,6 @@ The experience layer uses restrained gold, off-white and black reading surfaces,
 
 All 17 documentaries distinguish archive, illustrative AI reconstruction, geographic context and editorial document summaries. Each has a unique opening, consistent six-chapter controls and a complete reading path. Natural Earth cartography replaces schematic continents; regional anchors and displaced controls are explicit. Map animation is purposeful and independently pausable, including offscreen pause; background effects stop during modal reading. Audio/video availability corresponds to real files only; NotPetya offers a synthetic-voice teaser and an independent silent version.
 
+Personal-voice chapter/full players are explicit choices, visually quiet and labeled as authorized synthesis. Native controls preserve pause/volume/seeking. Audio never gates reading or auto-advances chapters; reduced scenery still allows chosen narration. The standalone library uses the same black/gold/off-white typography and responsive control hierarchy.
+
 The design system lives in the CSS and markup inside `index.html`; this file records constraints rather than duplicating implementation.

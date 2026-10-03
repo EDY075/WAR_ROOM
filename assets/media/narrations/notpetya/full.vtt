@@ -1,0 +1,40 @@
+WEBVTT
+
+00:00:00.000 --> 00:00:13.130
+NotPetya. Abertura. Quando a rede parou. Uma atualização de software na Ucrânia abriu caminho para um ataque destrutivo. Em poucas horas, a interrupção atravessou redes corporativas e fronteiras.
+
+00:00:13.350 --> 00:00:20.870
+Esta é a história do NotPetya: um incidente que expôs a dependência entre sistemas digitais e operações do mundo físico.
+
+00:00:21.590 --> 00:00:38.830
+Origem. A confiança como ponto de entrada. A Microsoft identificou o processo de atualização do software contábil M.E.Doc iniciando infecções. O canal usado para manter sistemas funcionando tornou-se um vetor de comprometimento da cadeia de fornecimento.
+
+00:00:39.050 --> 00:00:44.210
+O ponto de partida observado foi a Ucrânia; o alcance não ficou restrito a ela.
+
+00:00:44.930 --> 00:01:05.060
+Propagação. Uma rede. Muitas fronteiras. A análise da Microsoft descreveu movimento lateral por credenciais, PsExec e WMI, além de exploração de SMB. A empresa observou infecções em outros 64 países.
+
+00:01:05.280 --> 00:01:14.950
+O mapa situa o contexto ucraniano de origem; não delimita o alcance global nem reconstrói rotas individuais ou a velocidade exata de propagação.
+
+00:01:15.670 --> 00:01:34.870
+Impacto. O dano saiu das telas. Logística, saúde e indústria foram atingidas. Em 2020, o Departamento de Justiça dos EUA relatou quase US$ 1 bilhão de perdas entre três vítimas citadas na acusação: Heritage Valley, TNT Express e uma fabricante farmacêutica.
+
+00:01:35.090 --> 00:01:39.560
+É um recorte documentado; não representa um total mundial consolidado.
+
+00:01:40.280 --> 00:01:59.980
+Resposta. Reconstruir. Investigar. Atribuir. A contenção e a recuperação exigiram restaurar sistemas e limitar a propagação. Segmentação, correções e backups offline fazem parte das lições do dossiê. Em fevereiro de 2018, o Reino Unido atribuiu publicamente o ataque ao governo russo.
+
+00:02:00.200 --> 00:02:14.620
+Em outubro de 2020, o DOJ anunciou acusações contra seis oficiais do GRU. Atribuição governamental e acusação judicial são apresentadas com suas respectivas fontes.
+
+00:02:15.340 --> 00:02:36.380
+Fontes. Volte à evidência. A narrativa cruza análise técnica contemporânea, atribuição pública e documentos judiciais posteriores. A história original do projeto permanece abaixo, integral. As imagens reconstituídas e os mapas de contexto são identificados; nenhum deles é apresentado como prova do incidente.
+
+00:02:36.600 --> 00:02:51.400
+A referência deste capítulo é Departamento de Justiça dos Estados Unidos · acusação de oficiais do GRU · 19 de outubro de 2020. Consulte a aba Fontes para verificar autoria, datas, atribuição e escopo.
+
+00:02:51.620 --> 00:02:56.800
+Você pode reler a História e consultar a cronologia completa na aba Análise.

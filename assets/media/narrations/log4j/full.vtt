@@ -1,0 +1,34 @@
+WEBVTT
+
+00:00:00.000 --> 00:00:16.920
+Log4j / Log4Shell. Abertura. Uma dependência pequena, uma exposição extensa. Log4Shell colocou uma biblioteca de logging no centro da resposta de segurança em 2021. O incidente não corresponde a um único atacante ou campanha.
+
+00:00:17.140 --> 00:00:23.410
+É a história de uma vulnerabilidade cujo alcance dependia de onde o componente estava embutido.
+
+00:00:24.130 --> 00:00:39.930
+Origem. O registro de uma mensagem virou fronteira de confiança. O catálogo identifica CVE-2021-44228 no Apache Log4j. Os avisos do projeto Apache são a referência técnica.
+
+00:00:40.150 --> 00:00:49.680
+A narrativa destaca a diferença entre registrar conteúdo recebido e permitir que esse conteúdo provoque uma ação fora da confiança prevista.
+
+00:00:50.400 --> 00:01:06.400
+Propagação. A biblioteca estava além do inventário. Dependências diretas, componentes de fornecedores e aplicações antigas tornam o inventário parte do problema. O mapa indica alcance global, sem atribuir uma origem única ao incidente.
+
+00:01:06.620 --> 00:01:11.800
+O mecanismo técnico e as etapas de correção devem ser consultados nos advisories.
+
+00:01:12.520 --> 00:01:32.290
+Impacto. Exposição não é comprometimento confirmado. Um servidor vulnerável, uma tentativa de exploração e uma intrusão confirmada são registros diferentes. Os valores históricos do catálogo são mantidos sem transformá-los em um total oficial. A leitura de impacto precisa conservar essa distinção.
+
+00:01:33.010 --> 00:01:46.910
+Resposta. Localizar, corrigir e verificar. A resposta exige localizar dependências, atualizar componentes e conferir o resultado. O dossiê relaciona o tema a SBOM e transparência.
+
+00:01:47.130 --> 00:01:56.690
+Para qualquer ambiente atual, a referência é a orientação vigente do mantenedor, não apenas uma versão de correção citada em 2021.
+
+00:01:57.410 --> 00:02:16.930
+Fontes. Volte às fontes. Este capítulo reúne a base documental da narrativa. Consulte os documentos no contexto de sua data, autoria e escopo. A história original do projeto continua integral abaixo, com sua linguagem de abertura dramática; ela permanece separada da nova leitura documental.
+
+00:02:17.150 --> 00:02:36.990
+A referência deste capítulo é Apache · Log4j Security · CVE-2021-44228 e advisories. Consulte a aba Fontes para verificar autoria, datas, atribuição e escopo. Você pode reler a História e consultar a cronologia completa na aba Análise.

@@ -136,3 +136,12 @@ body.effects-reduced .map-camera{transition:none}
 .intel-hotspot.global-scope{width:140px;border:1px solid #6a5c3a;border-radius:0;background:#141a13;color:#deca96;font:.8rem var(--font-ui)}
 .intel-hotspot.global-scope::before{display:none}
 .scope-outline{fill:none;stroke:#d9bc7a;stroke-width:1.5}
+.narration-panel{margin:1.5rem 0;padding:1.1rem 0;border-top:1px solid #746344;border-bottom:1px solid #746344}
+.narration-panel h4{margin:0 0 .65rem;font:1.35rem/1.4 var(--font-display);color:#ece7dc}
+.narration-panel h4 span{font:.85rem var(--font-mono);color:#c7ad72;margin-left:.65rem}
+.narration-actions{display:flex;align-items:center;flex-wrap:wrap;gap:.5rem 1.1rem}
+.narration-actions a{display:inline-flex;align-items:center;min-height:44px;color:#d9c18a;font:.9rem/1.5 var(--font-ui)}
+.narration-player audio{display:block;width:100%;margin:1rem 0;min-height:54px;color-scheme:dark}
+.narration-status{font:.88rem/1.5 var(--font-ui);color:#c4baab;margin:.65rem 0 0}
+.narration-status:empty{display:none}
+@media(max-width:768px){.narration-actions{align-items:flex-start}.narration-panel h4{font-size:1.25rem}}
