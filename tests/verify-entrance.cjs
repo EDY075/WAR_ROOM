@@ -57,6 +57,8 @@ const base = process.env.PREVIEW_URL || 'http://127.0.0.1:4173/WAR_ROOM/';
       const started = Date.now();
       await page.goto(base, { waitUntil: 'domcontentloaded' });
       await page.locator('#load-enter').waitFor({ state: 'visible' });
+      const progress = await page.locator('#load-progress').boundingBox();
+      assert(progress.height >= 2 && progress.width > 0, 'Progress stays visible without flex shrink');
       if (action === 'Escape') {
         await page.screenshot({ path: 'assets/screenshots/entrance/preloader-mobile.png' });
         await page.locator('#load-skip').focus();

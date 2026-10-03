@@ -1,7 +1,7 @@
 /* Documentary opening: readable text, clear connections and bounded motion. */
 #loading-screen{background:#0c0d0b;transition:opacity .18s ease,visibility 0s .18s}
 #loading-screen::before,#loading-screen::after{display:none}
-.loading-content{width:min(660px,calc(100% - 48px));text-align:left;padding:34px 0;border-top:1px solid #8b743c;border-bottom:1px solid #35342b}
+.loading-content{display:block;height:auto;min-height:0;width:min(660px,calc(100% - 48px));text-align:left;padding:34px 0;border-top:1px solid #8b743c;border-bottom:1px solid #35342b}
 .loading-kicker{font:12px/1.5 var(--font-mono);letter-spacing:.12em;color:#cbb577;margin-bottom:24px}
 .loading-emblem{font-size:clamp(40px,8vw,78px);letter-spacing:-.045em;line-height:1;opacity:1;animation:none;background:none;-webkit-text-fill-color:#eee9df;color:#eee9df;margin:0 0 20px;filter:none}
 .loading-sub,.loading-status,.loading-bar-container,#load-enter,.load-skip{opacity:1;animation:none;transform:none;filter:none}

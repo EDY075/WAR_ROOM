@@ -21,7 +21,8 @@ const hash=data=>crypto.createHash('sha256').update(data).digest('hex');
       else assert.equal(hash(await response.body()),hash(local),file);
     }
     for(const width of [1440,390]){
-      const page=await context.newPage({viewport:{width,height:900}}),errors=[],requests=[];
+      const page=await context.newPage(),errors=[],requests=[];
+      await page.setViewportSize({width,height:900});
       page.on('pageerror',e=>errors.push(e.message));page.on('request',r=>requests.push(r.url()));
       await page.goto(base+'?tab=story&chapter=opening#dossier-notpetya');
       await page.locator('[data-narration-load]').waitFor();
