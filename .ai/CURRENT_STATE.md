@@ -34,6 +34,8 @@
 
 ## Limits and follow-up
 
+- Personal voice review (2026-10-03): the user supplied their own recording. A separate 16.77-second NotPetya voice-clone preview is ready in ignored `audit/` for listening review; see [VOICE_PREVIEW.md](../docs/VOICE_PREVIEW.md). It has not replaced product media or been extended to the other sixteen cases. The corpus/UI remain unchanged. Original personal audio/reference stays local and out of Git.
+
 - No merge, push, publication, release change or deployment. Stop the temporary local preview when review finishes.
 - Classic remote gallery sources can fail independently; reading/references retain an alternative. A legacy Petya screenshot receives a visible qualification while original records stay preserved.
 - Both teasers have readable text; narrated version adds synthetic Portuguese voice, with no external music. Regenerating speech needs local VoiceStudio and installed OmniVoice; playback requires only delivered static files. No personal voice profile was used.

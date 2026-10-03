@@ -2,6 +2,12 @@
 
 This is the chronological project memory. `CURRENT_STATE.md` is the fast snapshot; `KNOWLEDGE_BASE.md` holds reusable rules.
 
+## Sprint — Personal voice listening preview (2026-10-03)
+
+- User requested their own voice and supplied a 49.30-second OGG/Opus recording. Preserved the original and extracted a complete-sentence 10.25-second reference with a matching transcript. Prepared a short NotPetya opening, separate from product media and private in ignored `audit/`.
+- First long GPU generation exceeded its compute budget under exhausted VRAM; retained its error, avoided an immediate competing retry, and recovered using installed OmniVoice offline in an isolated CPU process. Previous GPU task drained and the model was unloaded; existing engine/model preferences stayed unchanged. No model download, remote speech service or personal profile creation.
+- Delivered 16.77-second mono 24 kHz WAV/MP3 and a local comparison page. Format/probe and installed local ASR check the date/sentence content; the foreign proper name remains a listening-review item. Voice resemblance and delivery require the user's listening review. Foreign-name pronunciation receives an explicit speech spelling adjustment. Desktop/mobile Edge verifies lazy audio, playback, comparison pause and no overflow/errors. Four original checks, canonical hashes and diff check passed. Production details and scope: [VOICE_PREVIEW.md](../docs/VOICE_PREVIEW.md). All seventeen product narratives and the generic pilot remain intact; no merge or publication.
+
 ## Sprint — All-case documentary standard and delivery (2026-10-03)
 
 - The user explicitly extended the pilot standard to every case, requested a more cinematic map, detailed reading and strong performance. Recorded ADR-015/016; preserved exact historical arrays and existing work.

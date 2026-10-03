@@ -24,6 +24,8 @@
 
 ## CTI interface and performance
 
+- Personal voice previews use a complete reference excerpt paired with its actual transcript. Keep original recordings/reference material outside Git and deployed assets. Automatic ASR validates spoken content, not identity similarity; obtain listening feedback before applying a narrator across the corpus. A timed-out in-process GPU generation can retain its lease until it drains: do not immediately retry on the same device. An isolated offline CPU run using installed weights can produce a short preview without changing application preferences.
+
 - Treat editorial geography as context with a stated role (origin, affected region or attribution); never let a dot silently imply all three. Real cartography can be a shared cached SVG instead of a heavy GIS dependency. Use leader lines for displaced controls and a mobile case rail.
 - A common documentary shell does not require duplicating the canonical corpus or mounting every chapter. Keep case-specific text/credits in a presentation overlay and render only the selected case/chapter. Preserve original narrative separately when it contains dramatic language or differently scoped estimates.
 - Lazy local WebP imagery prevents remote-source failures from breaking the opening. Verify actual image decode for all cases and assert that their artwork/video is absent from initial hero requests.
