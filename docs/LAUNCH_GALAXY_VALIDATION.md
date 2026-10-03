@@ -29,4 +29,6 @@ A mudança não modifica o runtime nem apresenta nova medição de desempenho. A
 - SHA-256: `797a2a272c24c6f52b8f9542271ceb28440d00a1aea3b3362a19cd9fa07cf3e5`.
 - Download estável: https://edy075.github.io/WAR_ROOM/assets/media/war-room-launch-2026/war-room-postaveis-hd.zip
 - Preview: https://edy075.github.io/WAR_ROOM/assets/media/war-room-launch-2026/
-- Publicação em Pages: registrar commit/build e confirmação dos bytes públicos após concluir o deploy. Sem postagem automática no Instagram ou LinkedIn.
+- Publicação aprovada e confirmada: commit `06f223122b30960008512465610d07fabbfe69c5`, [Pages build 37158266936](https://github.com/EDY075/WAR_ROOM/actions/runs/37158266936) concluído com sucesso. Push atômico e sem force para main e codex/war-room-experience. Sem postagem automática no Instagram ou LinkedIn.
+- `tests/verify-release-files.cjs` executado no URL público após o build: bytes idênticos das 24 imagens e ZIP, manifesto e textos, fontes do runtime preservadas, preview desktop/mobile sem overflow, Tab no download, link direto, reprodução real de capítulo/episódio sob demanda e pausa com Escape; zero erros JavaScript nos cenários testados. ZIP público confirmado pelo SHA-256 acima.
+- Este registro de confirmação entra em commit de documentação posterior; os arquivos públicos validados são os do build indicado, sem alteração do ZIP ou do runtime.

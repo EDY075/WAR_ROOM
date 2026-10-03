@@ -31,6 +31,8 @@
 
 ## Publication · 2026-10-03
 
+Updated HD ZIP published and byte-verified: assets commit `06f2231`, successful Pages build `37158266936`. All 24 PNG/master hashes, ZIP hash, captions/manifest, desktop/mobile download preview and actual selected narration playback/Escape pass at the public URL. Current package evidence: [LAUNCH_GALAXY_VALIDATION.md](../docs/LAUNCH_GALAXY_VALIDATION.md).
+
 Galaxy published and verified: initial runtime `648ef97`, Pages `37155681649`; final speed adjustment runtime `1db8095`, Pages `37156496540`; portfolio cover runtime `66d5d15`, Worker `acb96424-b85d-4cc0-ae6f-77c64130ea13`. Full public suites/media bytes/playback passed, responsive cover hashes match, original portfolio 276 hashes unchanged. Exact evidence recorded in [GALAXY_ENTRANCE_VALIDATION.md](../docs/GALAXY_ENTRANCE_VALIDATION.md).
 
 Previous static entrance publication (historical):
