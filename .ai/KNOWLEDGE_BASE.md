@@ -52,3 +52,7 @@
 - Relations between campaigns must be derived from exact structured fields already in the corpus and described as correlations, never as invented causality or attribution.
 - On a dense geographic map, replace overlapping mobile hotspots with an accessible horizontal control rail rather than enlarging collisions.
 - A remote webfont can block a local/offline cinematic loader and distort Speed Index; a system-serif fallback removes that dependency while preserving the visual language.
+
+## Publication integrity
+
+On Windows compare served text against Git blobs, not CRLF-converted working-tree bytes. Preserve dirty sibling projects in their original checkout; a release worktree can carry forward the already published runtime and later scoped integration without resetting owner files. Validate the actual public URLs and media, not only deployment command success.

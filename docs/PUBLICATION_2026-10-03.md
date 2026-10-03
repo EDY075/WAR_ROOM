@@ -1,0 +1,19 @@
+# Publicação · 03/10/2026
+
+O proprietário autorizou explicitamente atualizar GitHub, GitHub Pages e seu portfólio, substituindo o escopo anterior de revisão local.
+
+- WAR ROOM: https://github.com/EDY075/WAR_ROOM · runtime publicado `58ee3e476351a3adbbbc3ae108c99ba1277f8d84`, main; branch `codex/war-room-experience` preservada. Fast-forward, sem reescrever histórico. A tag v1.1.0 permanece como referência histórica.
+- GitHub Pages: https://edy075.github.io/WAR_ROOM/ · [build concluído](https://github.com/EDY075/WAR_ROOM/actions/runs/37146988319). Fonte existente main/root e arquitetura estática mantidas.
+- Narrações: https://edy075.github.io/WAR_ROOM/assets/media/narrations/ · 17 episódios completos, 102 capítulos, 42:13.53 no total dos completos. Somente mídia final autorizada; original pessoal, referência, WAVs, logs e ZIP local permanecem fora do Git.
+- Portfólio: https://edy-gomes-portfolio.edy-scanurl-family-worker.workers.dev/work/war-room · Worker existente `edy-gomes-portfolio`, versão `5a5bc460-a0b5-4bb6-a58d-a13eb80211dc`, runtime `EDY075/EDY-Portfolio@1206ee0`. Integração preparada em `codex/portfolio-war-room-release`, preservando o checkout original com 276 hashes inalterados e os commits remotos de README/vídeo. Repositório do portfólio também atualizado por fast-forward.
+
+## Conferência desta publicação
+
+- Quatro verificadores originais, integridade dos 17 registros e diff check passaram. Nenhuma alteração de fatos/atribuições/fontes.
+- Suíte documental executada contra o GitHub Pages público: 102 capítulos em desktop/mobile, mapas, fontes, links diretos, histórico, efeitos reduzidos, sem overflow ou renderização forçada do corpus.
+- Suíte de narração adaptada para o endereço público: decodificação real dos 119 MP3s no browser; biblioteca, áudio por escolha, teclado, pausa/liberação, races, falha/retry e efeitos reduzidos passaram. Probes FFprobe são dos arquivos locais finais. Os testes de falha/ocultação usam as simulações documentadas na produção, não certificam condições físicas.
+- SHA-256 dos arquivos servidos confere com os blobs Git para HTML, módulos principais, catálogo, cartografia e todos os 17 MP3s completos (23 assets). A diferença inicial entre checkout Windows e Pages era apenas CRLF/LF; a comparação foi corrigida para os blobs publicados.
+- Portfólio: lint/tipagem/build/dry-run, capas em cinco formatos, 12 galerias em desktop/390/320 passaram. Pós-deploy: mesmos 12 cases, novo case/3D/links, teclado, Escape/foco, canonical/sitemap, exclusão/noindex dos cases privados e hashes das cinco novas imagens no browser. Capturas públicas e detalhes no README e docs/DEPLOYMENT.md do portfólio.
+- Chrome DevTools MCP não estava disponível; usado Edge headless real com Playwright. Não há nova medição Lighthouse, campo ou teste em aparelho físico. A comparação CDP local pré-publicação segue qualificada em [EXPERIENCE_VALIDATION.md](EXPERIENCE_VALIDATION.md).
+
+Os vídeos curtos NotPetya continuam usando a voz sintética padrão anterior. As narrações prolongadas dos 17 casos usam a referência pessoal autorizada. Fontes remotas antigas podem falhar; leitura e referências continuam disponíveis. Os commits de documentação posteriores não alteram o runtime acima.

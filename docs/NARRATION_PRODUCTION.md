@@ -40,3 +40,7 @@ Conferência de conteúdo concluída: Parakeet TDT v3/Sherpa-ONNX já instalado 
 Ferramentas reproduzíveis: `scripts/export-narration-scripts.cjs`, `scripts/produce-narrations.py`, `scripts/measure-narration-audio.py`, `scripts/validate-narration-parakeet.py`, `scripts/validate-narration-content.py` e `scripts/review-narration-flags.py`. A produção exige os runtimes/modelos já instalados e uma referência autorizada; reprodução no GitHub Pages exige somente os arquivos estáticos. Os caminhos desses modelos/referência são parâmetros locais, sem exposição em assets públicos. Geração `--only` preserva os outros casos do catálogo; cache inclui texto, referência, seed e modelo.
 
 Preview temporário: [biblioteca](http://127.0.0.1:4173/WAR_ROOM/assets/media/narrations/) e [NotPetya completo](http://127.0.0.1:4173/WAR_ROOM/?tab=media#dossier-notpetya). Validação de desempenho atual e resultados finais: [EXPERIENCE_VALIDATION.md](EXPERIENCE_VALIDATION.md).
+
+## Publicação autorizada · 03/10/2026
+
+Os arquivos finais foram publicados após solicitação explícita do proprietário. [Biblioteca pública](https://edy075.github.io/WAR_ROOM/assets/media/narrations/) e [NotPetya completo](https://edy075.github.io/WAR_ROOM/?tab=media#dossier-notpetya). O material pessoal de referência continua privado/local. Conferência do endereço real: [PUBLICATION_2026-10-03.md](PUBLICATION_2026-10-03.md).
