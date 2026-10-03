@@ -13,9 +13,19 @@
 
 WAR ROOM é um centro interativo de Cyber Threat Intelligence que combina narrativa histórica, inteligência de ameaças pública, investigação visual e contexto operacional. A **base histórica 1988–2025, edição 2026**, reúne 17 dossiês — do Morris Worm às campanhas modernas envolvendo Rússia × Ucrânia, Volt Typhoon, Salt Typhoon, Lazarus Group e Israel × Irã.
 
-Criado por [Edmilson Gomes](https://github.com/EDY075) · [LinkedIn](https://linkedin.com/in/edmilson-gomes) para portfólio e pesquisa acadêmica em **Cybersecurity**, **Blue Team**, **Threat Intelligence** e **Incident Response**.
+Criado por [Edmilson Gomes](https://github.com/EDY075) · [LinkedIn](https://www.linkedin.com/in/edmilsongomes21/) · [Instagram](https://www.instagram.com/edmilson_zn_/) para portfólio e pesquisa acadêmica em **Cybersecurity**, **Blue Team**, **Threat Intelligence** e **Incident Response**.
 
 Explore a experiência completa em [edy075.github.io/WAR_ROOM](https://edy075.github.io/WAR_ROOM/).
+
+## Nova entrada e materiais de divulgação
+
+A entrada recebeu nova hierarquia, rede vetorial de conexões, ações diretas para mapa e episódios e um preloader sem espera mínima artificial. Pequenas faíscas substituem a luz que seguia o mouse; o processamento termina após o movimento e respeita efeitos reduzidos. A rede permanece estática, com presença visual no celular e sem loop em repouso.
+
+![Entrada atual no desktop](assets/screenshots/entrance/hero-desktop.png)
+
+[Prévia e download dos materiais](https://edy075.github.io/WAR_ROOM/assets/media/war-room-launch-2026/) · [Pacote ZIP HD](assets/media/war-room-launch-2026/war-room-postaveis-hd.zip) · [Textos para Instagram e LinkedIn](assets/media/war-room-launch-2026/texts/POSTAGENS.md).
+
+São cinco páginas de carrossel, dois stories e uma imagem para LinkedIn, com mestres em resolução dupla, fonte editável e links do projeto. Validação e comparação atual de processamento da hero: [ENTRANCE_VALIDATION.md](docs/ENTRANCE_VALIDATION.md).
 
 ## Edição documental · outubro de 2026
 

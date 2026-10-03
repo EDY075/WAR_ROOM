@@ -28,6 +28,8 @@ GitHub Pages (main / root)
 
 ## Architectural boundaries
 
+`assets/js/entrance.js` owns a 160 × 160 pointer-spark canvas and hero visibility observer; existing `effectsAllowed/registerDecorative` owns shared lifecycle. At most 24 sparks live for up to 520 ms; no animation loop runs when idle. `assets/css/entrance.css` owns the revised entrance/credits and static inline network styling. Retired Canvas scene/ambient-particle/parallax functions are deleted from index.html. The loader waits for actual local readiness and optional fonts with a 700 ms ceiling, never a minimum presentation time. Promotional export tools are development-only and add no production dependency.
+
 ## Experience evolution in review
 
 `index.html` continues to own canonical historical data and the original initialization. New behavior and styling are extracted into relative `assets/js/experience.js` and `assets/css/experience.css`, loaded without a build. The module owns dossier tabs, reading chapters, history snapshots, query context, editorial/chronological ordering and decorative-loop lifecycle. Legacy entry points call this module; the separate story modal and expanded episode details were retired.

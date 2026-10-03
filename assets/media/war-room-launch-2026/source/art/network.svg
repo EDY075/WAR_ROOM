@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 460">
+<style>.network-links{stroke:#9c8547;stroke-width:1;fill:none;opacity:.7}.network-orbits{stroke:#cbb577;stroke-width:1;fill:none;opacity:.36}.network-ring{stroke:#cbb577;fill:#0c0d0b;stroke-width:1.4}.network-node{fill:#dbbf7b}.network-core{fill:#eee9df}.network-label{fill:#c9c0aa;font:11px monospace;letter-spacing:1px}</style><g class="network-links">
+<path d="M260 230L112 166"/>
+<path d="M260 230L413 139"/>
+<path d="M260 230L385 340"/>
+<path d="M260 230L165 354"/>
+<path d="M112 166L45 101"/>
+<path d="M112 166L78 244"/>
+<path d="M112 166L199 88"/>
+<path d="M413 139L306 66"/>
+<path d="M413 139L480 87"/>
+<path d="M413 139L469 228"/>
+<path d="M385 340L469 228"/>
+<path d="M385 340L470 380"/>
+<path d="M385 340L298 410"/>
+<path d="M165 354L298 410"/>
+<path d="M165 354L80 393"/>
+<path d="M260 230L249 151"/>
+<path d="M260 230L335 207"/>
+<path d="M260 230L218 308"/>
+<path d="M112 166L249 151"/>
+<path d="M413 139L335 207"/>
+<path d="M165 354L218 308"/>
+</g>
+<g class="network-orbits network-orbit-motion">
+<ellipse cx="260" cy="230" rx="172" ry="68" transform="rotate(-24 260 230)"/>
+<ellipse cx="260" cy="230" rx="172" ry="68" transform="rotate(42 260 230)"/>
+<ellipse cx="260" cy="230" rx="172" ry="68" transform="rotate(105 260 230)"/>
+<circle class="network-node" cx="99" cy="256" r="3"/><circle class="network-node" cx="381" cy="300" r="3"/>
+</g>
+<circle class="network-ring" cx="260" cy="230" r="14"/>
+<circle class="network-core network-signal" cx="260" cy="230" r="5"/>
+<circle class="network-ring" cx="112" cy="166" r="10"/>
+<circle class="network-core network-signal network-signal-late" cx="112" cy="166" r="3.5"/>
+<circle class="network-ring" cx="413" cy="139" r="10"/>
+<circle class="network-core network-signal" cx="413" cy="139" r="3.5"/>
+<circle class="network-ring" cx="385" cy="340" r="10"/>
+<circle class="network-core network-signal network-signal-late" cx="385" cy="340" r="3.5"/>
+<circle class="network-ring" cx="165" cy="354" r="10"/>
+<circle class="network-core network-signal" cx="165" cy="354" r="3.5"/>
+<circle class="network-node" cx="45" cy="101" r="2.8"/>
+<circle class="network-node" cx="78" cy="244" r="2.8"/>
+<circle class="network-node" cx="199" cy="88" r="2.8"/>
+<circle class="network-node" cx="306" cy="66" r="2.8"/>
+<circle class="network-node" cx="480" cy="87" r="2.8"/>
+<circle class="network-node" cx="469" cy="228" r="2.8"/>
+<circle class="network-node" cx="470" cy="380" r="2.8"/>
+<circle class="network-node" cx="298" cy="410" r="2.8"/>
+<circle class="network-node" cx="80" cy="393" r="2.8"/>
+<circle class="network-node" cx="249" cy="151" r="2.8"/>
+<circle class="network-node" cx="335" cy="207" r="2.8"/>
+<circle class="network-node" cx="218" cy="308" r="2.8"/>
+<g class="network-label"><text x="61" y="139">ORIGEM</text><text x="375" y="112">TÉCNICAS</text><text x="353" y="382">IMPACTO</text><text x="128" y="387">RESPOSTA</text></g>
+</svg>

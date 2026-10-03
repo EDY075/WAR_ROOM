@@ -31,3 +31,11 @@ Record a new ADR entry before changing architecture, deployment, dependencies, d
 ## Publication preparation · 2026-10-03
 
 Publication scope on 2026-10-03: the owner authorized GitHub/main, existing root GitHub Pages and the existing portfolio Worker. Keep historical v1.1.0 tag intact, retain static /WAR_ROOM/ paths and publish only approved final media. Preserve the dirty portfolio checkout by implementing in an isolated Git worktree based on remote main, carrying forward the already published runtime before adding this case.
+
+## Entrada e divulgação · 2026-10-03
+
+- ADR-019: O proprietário pediu uma hero mais clara e leve, rede de pontos mais evidente, preloader melhor e faíscas no lugar da luz que acompanha o mouse. Retirar Canvas de fundo, partículas globais e parallax; a rede editorial passa a SVG local, sem sugerir relações reais ou telemetria. Faíscas em Canvas pequeno, apenas para mouse, limitadas por quantidade/tempo e desligadas quando fora da hero, oculto, leitura modal ou efeitos reduzidos. Manter cursor nativo.
+- ADR-020: O preloader representa apenas inicialização local e fontes, sem mensagens em timer ou duração mínima de espetáculo. Controles disponíveis imediatamente; conteúdo e links diretos permanecem acessíveis. Rede estática mantém presença com efeitos reduzidos.
+- ADR-021: Créditos com GitHub, LinkedIn atual do portfólio e Instagram confirmado pelo proprietário (@edmilson_zn_). Publicação do site autorizada; entregar pacote ZIP de divulgação com PNGs para upload, matrizes de maior resolução, fonte editável e textos/URLs. Não há envio automático às redes.
+
+ADR-019 validation: continuous SVG orbit/pulse animation was rejected after renderer task-time regression on desktop/mobile. Final network is static even in standard mode; interaction sparks remain bounded and fully stoppable. Fresh measurements and the rejected candidate are recorded in ENTRANCE_VALIDATION.md.

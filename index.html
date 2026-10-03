@@ -460,22 +460,23 @@ body.effects-reduced #grain-overlay,body.effects-reduced #ambient-particles,body
 .loading-content{height:456px;min-height:456px}
 </style>
 <link rel="stylesheet" href="assets/css/experience.css">
+<link rel="stylesheet" href="assets/css/entrance.css">
 </head>
 <body>
 <a href="#main-content" class="skip-link">Pular para conteúdo</a>
 <div id="loading-screen" role="dialog" aria-modal="true" aria-labelledby="loader-title" aria-describedby="load-status">
 <div class="loading-content">
+<p class="loading-kicker">ARQUIVO DOCUMENTAL · EDY</p>
 <div class="loading-emblem" id="loader-title">WAR ROOM</div>
-<div class="loading-sub">Cyber Threat Intelligence Archive</div>
+<div class="loading-sub">Histórias que mudaram a segurança digital.</div>
 <div class="loader-telemetry" aria-label="Status da base"><span>17 DOSSIÊS</span><span>1988—2025 · EDIÇÃO 2026</span><span>BASE CURADA</span></div>
 <div class="loading-bar-container" id="load-progress" role="progressbar" aria-label="Progresso de inicialização" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"><div class="loading-bar"></div></div>
 <div class="loading-status" id="load-status" aria-live="polite">Verificando a base local...</div>
-<button id="load-enter">Acessar centro de inteligência</button>
-<button class="load-skip" id="load-skip">Pular inicialização <span aria-hidden="true">→</span></button>
+<button id="load-enter" type="button">Entrar no WAR ROOM</button>
+<button class="load-skip" id="load-skip">Ir direto à leitura</button>
 </div></div>
 <canvas id="grain-overlay" aria-hidden="true"></canvas>
-<canvas id="ambient-particles" aria-hidden="true"></canvas>
-<div id="mouse-glow" aria-hidden="true"></div>
+<canvas id="cursor-sparks" aria-hidden="true" hidden></canvas>
 <div class="nav-overlay" id="nav-overlay" role="dialog" aria-modal="true" aria-label="Navegação móvel">
 <button class="nav-link" data-target="hero">Prólogo</button>
 <button class="nav-link" data-target="intelligence">Inteligência</button>
@@ -532,28 +533,77 @@ body.effects-reduced #grain-overlay,body.effects-reduced #ambient-particles,body
 <div class="journey-progress-copy"><span>Capítulo atual</span><strong id="journey-chapter">Prólogo</strong></div>
 </aside>
 <section class="hero-section" id="hero" aria-label="Apresentação do centro de inteligência">
-<div class="hero-bg">
-<div class="hero-depth-layer" id="hero-parallax-bg"></div>
-<div class="hero-fog"></div>
-<canvas id="wave-canvas" aria-hidden="true"></canvas>
-<div class="hero-particles" id="hero-particles" aria-hidden="true"></div>
-<div class="hero-glow hero-glow-1" aria-hidden="true"></div>
-<div class="hero-glow hero-glow-2" aria-hidden="true"></div>
-<div class="hero-glow hero-glow-3" aria-hidden="true"></div>
-<div class="hero-rupture" id="hero-rupture" aria-hidden="true"></div>
-<div class="hero-vignette" aria-hidden="true"></div></div>
+<div class="hero-bg" aria-hidden="true"></div>
+<div class="hero-layout">
 <div class="hero-content">
 <div class="hero-eyebrow">Cyber Threat Intelligence / Arquivo histórico</div>
 <h1 class="hero-title">WAR <span class="accent">ROOM</span></h1>
-<p class="hero-sub">Centro de inteligência com 17 dossiês históricos sobre incidentes, atores, técnicas e impactos que moldaram a segurança digital.</p>
+<p class="hero-lead">O impacto é real.<br>A investigação começa aqui.</p>
+<p class="hero-sub">Explore 17 dossiês sobre incidentes e conflitos cibernéticos. Conecte origens, técnicas e consequências em 102 capítulos, com fontes públicas e episódios narrados.</p>
+<div class="hero-actions"><button id="hero-cta">Investigar no mapa</button><button class="continue-exploring" id="continue-exploring">Explorar os episódios</button></div>
+</div>
+<figure class="hero-network">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 460" aria-hidden="true" focusable="false">
+<g class="network-links">
+<path d="M260 230L112 166"/>
+<path d="M260 230L413 139"/>
+<path d="M260 230L385 340"/>
+<path d="M260 230L165 354"/>
+<path d="M112 166L45 101"/>
+<path d="M112 166L78 244"/>
+<path d="M112 166L199 88"/>
+<path d="M413 139L306 66"/>
+<path d="M413 139L480 87"/>
+<path d="M413 139L469 228"/>
+<path d="M385 340L469 228"/>
+<path d="M385 340L470 380"/>
+<path d="M385 340L298 410"/>
+<path d="M165 354L298 410"/>
+<path d="M165 354L80 393"/>
+<path d="M260 230L249 151"/>
+<path d="M260 230L335 207"/>
+<path d="M260 230L218 308"/>
+<path d="M112 166L249 151"/>
+<path d="M413 139L335 207"/>
+<path d="M165 354L218 308"/>
+</g>
+<g class="network-orbits network-orbit-motion">
+<ellipse cx="260" cy="230" rx="172" ry="68" transform="rotate(-24 260 230)"/>
+<ellipse cx="260" cy="230" rx="172" ry="68" transform="rotate(42 260 230)"/>
+<ellipse cx="260" cy="230" rx="172" ry="68" transform="rotate(105 260 230)"/>
+<circle class="network-node" cx="99" cy="256" r="3"/><circle class="network-node" cx="381" cy="300" r="3"/>
+</g>
+<circle class="network-ring" cx="260" cy="230" r="14"/>
+<circle class="network-core network-signal" cx="260" cy="230" r="5"/>
+<circle class="network-ring" cx="112" cy="166" r="10"/>
+<circle class="network-core network-signal network-signal-late" cx="112" cy="166" r="3.5"/>
+<circle class="network-ring" cx="413" cy="139" r="10"/>
+<circle class="network-core network-signal" cx="413" cy="139" r="3.5"/>
+<circle class="network-ring" cx="385" cy="340" r="10"/>
+<circle class="network-core network-signal network-signal-late" cx="385" cy="340" r="3.5"/>
+<circle class="network-ring" cx="165" cy="354" r="10"/>
+<circle class="network-core network-signal" cx="165" cy="354" r="3.5"/>
+<circle class="network-node" cx="45" cy="101" r="2.8"/>
+<circle class="network-node" cx="78" cy="244" r="2.8"/>
+<circle class="network-node" cx="199" cy="88" r="2.8"/>
+<circle class="network-node" cx="306" cy="66" r="2.8"/>
+<circle class="network-node" cx="480" cy="87" r="2.8"/>
+<circle class="network-node" cx="469" cy="228" r="2.8"/>
+<circle class="network-node" cx="470" cy="380" r="2.8"/>
+<circle class="network-node" cx="298" cy="410" r="2.8"/>
+<circle class="network-node" cx="80" cy="393" r="2.8"/>
+<circle class="network-node" cx="249" cy="151" r="2.8"/>
+<circle class="network-node" cx="335" cy="207" r="2.8"/>
+<circle class="network-node" cx="218" cy="308" r="2.8"/>
+<g class="network-label"><text x="61" y="139">ORIGEM</text><text x="375" y="112">TÉCNICAS</text><text x="353" y="382">IMPACTO</text><text x="128" y="387">RESPOSTA</text></g>
+</svg>
+<figcaption><span>Conexões para investigar</span><span>Esquema visual editorial</span></figcaption>
+</figure>
+</div>
 <div class="hero-status-grid" aria-label="Status da base de inteligência">
 <div><span>BASE HISTÓRICA</span><strong>1988—2025</strong></div><div><span>DOSSIÊS</span><strong>17</strong></div><div><span>ATORES / GRUPOS</span><strong id="hero-groups">14</strong></div><div><span>CATEGORIAS</span><strong id="hero-categories">12</strong></div><div><span>EDIÇÃO</span><strong>2026</strong></div><div><span>ESTADO</span><strong class="status-safe">VERIFICADA</strong></div>
 </div>
-<div class="hero-actions"><button id="hero-cta">Acessar centro de inteligência</button><button class="continue-exploring" id="continue-exploring">Explorar dossiês <span aria-hidden="true">↓</span></button></div>
-</div>
-<div class="hero-scroll-indicator" aria-hidden="true">
-<span>Rolar para explorar</span>
-<div class="hero-scroll-line"></div></div></section>
+</section>
 <section class="intro-section" id="intro" aria-label="Introdução">
 <div class="intro-content">
 <div class="intro-narrative"><h2 id="intro-title">Existem duas histórias em todo ciberataque</h2>
@@ -620,7 +670,12 @@ body.effects-reduced #grain-overlay,body.effects-reduced #ambient-particles,body
 <button class="back-to-top" id="back-to-top" type="button" aria-label="Voltar ao topo">↑ <span>Topo</span></button>
 <footer class="footer" id="footer" role="contentinfo">
 <div class="footer-logo">WAR ROOM</div>
-<p class="footer-credit"><strong>EDY</strong> — <a href="https://instagram.com/edmilson_zn_" target="_blank" rel="noopener noreferrer" class="footer-link">@edmilson_zn_</a></p>
+<p class="footer-credit">Criação e direção · <strong>Edmilson Gomes</strong></p>
+<nav class="footer-profiles" aria-label="Perfis de Edmilson Gomes">
+<a href="https://github.com/EDY075" target="_blank" rel="noopener noreferrer">GitHub · EDY075</a>
+<a href="https://www.linkedin.com/in/edmilsongomes21/" target="_blank" rel="noopener noreferrer">LinkedIn · Edmilson Gomes</a>
+<a href="https://www.instagram.com/edmilson_zn_/" target="_blank" rel="noopener noreferrer">Instagram · @edmilson_zn_</a>
+</nav>
 <p>Uma produção independente dedicada à educação em cibersegurança. Todos os dados são provenientes de fontes públicas: FBI, CISA, NIST, MITRE, Kaspersky e relatórios jornalísticos.</p>
 <div class="footer-sources">
 <span>FBI Cyber Division</span><span>CISA</span><span>NIST NVD</span>
@@ -634,6 +689,7 @@ body.effects-reduced #grain-overlay,body.effects-reduced #ambient-particles,body
 <script src="assets/js/documentaries.js"></script>
 <script src="assets/js/narration.js"></script>
 <script src="assets/js/experience.js"></script>
+<script src="assets/js/entrance.js"></script>
 <script>
 "use strict";
 var EPISODES=[
@@ -797,8 +853,6 @@ var lskip = byId("load-skip");
 var lst = byId("load-status");
 var el = byId("episodes-list");
 var gc = byId("grain-overlay");
-var wc = byId("wave-canvas");
-var mg = byId("mouse-glow");
 var lb = byId("lightbox");
 var lbi = byId("lb-image");
 var lbc = byId("lb-caption");
@@ -814,34 +868,34 @@ var continueExploring = byId("continue-exploring");
 var nl = $$(".nav-link");
 var hb = byId("hamburger");
 var no = byId("nav-overlay");
-var loadMessages=["Verificando estrutura da aplicação...","Indexando 17 dossiês históricos...","Sincronizando mapa, filtros e cronologia...","Aplicando preferências de acessibilidade...","Base local verificada. Interface pronta."];
-var msgIdx=0;
-var msgInterval=setInterval(function(){msgIdx++;if(msgIdx<loadMessages.length){lst.textContent=loadMessages[msgIdx]}},700);
+[document.querySelector("header"),document.querySelector("main"),document.querySelector("footer"),byId("back-to-top")].forEach(function(element){if(element)element.inert=true;});
 var appInitialized=false;
 var introTimer=null;
 function enterWarRoom(skip){
   if(!ls || ls.classList.contains("hidden")) return;
-  clearInterval(msgInterval);
   if(introTimer){clearTimeout(introTimer);introTimer=null;}
   if(skip) document.body.classList.add("intro-skipped");
   document.body.classList.add("intro-revealing","intro-ready");
   [document.querySelector("header"),document.querySelector("main"),document.querySelector("footer"),byId("back-to-top")].forEach(function(element){if(element)element.inert=false;});
   ls.setAttribute("aria-hidden","true");
-  setTimeout(function(){ls.classList.add("hidden");ls.inert=true;document.body.classList.remove("intro-revealing");},skip?120:650);
+  setTimeout(function(){ls.classList.add("hidden");ls.inert=true;document.body.classList.remove("intro-revealing");},180);
+  if(ls.contains(document.activeElement))hcta.focus({preventScroll:true});
 }
 le.addEventListener("click",enterWarRoom);
 if(lskip) lskip.addEventListener("click",function(){enterWarRoom(true);});
 document.addEventListener("keydown",function(e){
-  if(!ls || ls.classList.contains("hidden")) return;
-  if(e.key==="Enter"){enterWarRoom();}
+  if(!ls || ls.classList.contains("hidden") || ls.getAttribute("aria-hidden")==="true") return;
+  if(e.key==="Tab"){var first=le,last=lskip;if(e.shiftKey&&document.activeElement===first){e.preventDefault();last.focus();}else if(!e.shiftKey&&document.activeElement===last){e.preventDefault();first.focus();}else if(!ls.contains(document.activeElement)){e.preventDefault();(e.shiftKey?last:first).focus();}}
+  if(e.key==="Enter"){e.preventDefault();enterWarRoom();}
   if(e.key==="Escape" || e.key===" "){e.preventDefault();enterWarRoom(true);}
 });
 function initApp(){
   if(appInitialized) return;
   appInitialized=true;
   renderEpisodes();initIntelligenceCenter();WarRoomExperience.init();
-  if(!prefersReducedMotion){initWaveCanvas();if(!isLowPerf){initGrain();initHeroParticles();initAmbientParticles();initMouseTracking();}}
-  initIntersectionObserver();initLightbox();initAudio();initNav();initHeroParallax();initScrollNav();initJourneyProgress();initHamburger();initOperationalLayer();
+  if(!prefersReducedMotion&&!isLowPerf)initGrain();
+  WarRoomEntrance.init();
+  initIntersectionObserver();initLightbox();initAudio();initNav();initScrollNav();initJourneyProgress();initHamburger();initOperationalLayer();
   updateLoaderProgress();
 }
 var act = null;
@@ -850,9 +904,6 @@ var anodes = [];
 var ibi = [];
 var ibix = 0;
 var lbRequest=0,lbDossier="",lbTimeout=null;
-var graf = null;
-var wraf = null;
-var mraf = null;
 
 // Visual-only dossier media: contextual archival images and regional maps with visible credits.
 var DOSSIER_MEDIA = {
@@ -943,183 +994,10 @@ function renderEpisodes(){
   });
 }
 
-// ===== TACTICAL MAP CANVAS (reuses the original hero canvas) =====
-function initWaveCanvas(){
-  if(!wc || prefersReducedMotion) return;
-  var ctx = wc.getContext("2d");
-  var wScale = isLowPerf ? 0.4 : 0.6;
-  var w = 0, h = 0, t = 0, lastFrame = 0, active = true, waveTimer = null;
-  var nodes = [[.17,.42],[.27,.31],[.39,.48],[.49,.32],[.58,.46],[.68,.28],[.77,.43],[.86,.58],[.62,.66],[.43,.67]];
-  var routes = [[0,1],[1,3],[1,2],[2,4],[3,5],[4,5],[4,6],[5,6],[6,7],[4,8],[8,9],[9,2]];
-
-  function resize(){
-    w = wc.width = Math.floor(window.innerWidth * wScale);
-    h = wc.height = Math.floor(window.innerHeight * wScale);
-  }
-  resize();
-  window.addEventListener("resize", resize, {passive:true});
-
-  function point(index){ return {x:nodes[index][0] * w, y:nodes[index][1] * h}; }
-  function drawGrid(cx, cy, rx, ry){
-    ctx.save();
-    ctx.strokeStyle = "rgba(201,168,76,.11)";
-    ctx.lineWidth = .65;
-    for(var i=-2;i<=2;i++){
-      var x = cx + (rx * i / 2);
-      ctx.beginPath();ctx.ellipse(x,cy,Math.max(1,rx * (1-Math.abs(i)*.13)),ry,0,0,Math.PI*2);ctx.stroke();
-    }
-    for(var j=-2;j<=2;j++){
-      var y = cy + (ry * j / 2);
-      ctx.beginPath();ctx.ellipse(cx,y,rx,Math.max(1,ry * (1-Math.abs(j)*.18)),0,0,Math.PI*2);ctx.stroke();
-    }
-    ctx.restore();
-  }
-  function drawRoute(a,b,index){
-    var from=point(a),to=point(b),midX=(from.x+to.x)/2,midY=(from.y+to.y)/2-Math.abs(from.x-to.x)*.12;
-    ctx.save();ctx.setLineDash([3,8]);ctx.lineDashOffset=-(t*20+index*7);ctx.strokeStyle="rgba(201,168,76,.22)";ctx.lineWidth=.75;
-    ctx.beginPath();ctx.moveTo(from.x,from.y);ctx.quadraticCurveTo(midX,midY,to.x,to.y);ctx.stroke();ctx.restore();
-  }
-  function draw(now){
-    if(!active || !effectsAllowed()){wraf=null;return;}
-    wraf=null;
-    waveTimer=setTimeout(function(){waveTimer=null;wraf=requestAnimationFrame(draw);},isLowPerf?90:60);
-    if(now-lastFrame<(isLowPerf?90:60)) return;
-    lastFrame=now;
-    ctx.clearRect(0,0,w,h);t+=.012;
-    if(!document.body.classList.contains("modal-open")){
-      var cx=w*.5,cy=h*.5,rx=w*.39,ry=h*.255;
-      ctx.save();ctx.globalAlpha=.54;drawGrid(cx,cy,rx,ry);ctx.restore();
-      routes.forEach(function(route,index){drawRoute(route[0],route[1],index);});
-      nodes.forEach(function(_,index){
-        var p=point(index),pulse=(Math.sin(t*2.2+index*1.6)+1)/2;
-        ctx.beginPath();ctx.arc(p.x,p.y,2.1+pulse*1.8,0,Math.PI*2);ctx.fillStyle=index===4?"rgba(232,213,160,.92)":"rgba(201,168,76,.66)";ctx.fill();
-         if(index===4 || index===6){ctx.beginPath();ctx.arc(p.x,p.y,7+pulse*9,0,Math.PI*2);ctx.strokeStyle="rgba(201,168,76,"+(.12-pulse*.06)+")";ctx.stroke();}
-       });
-       var radar=point(4),sweep=t*1.45;ctx.save();ctx.translate(radar.x,radar.y);ctx.beginPath();ctx.moveTo(0,0);ctx.arc(0,0,Math.min(w,h)*.105,sweep,sweep+.32);ctx.closePath();ctx.fillStyle="rgba(201,168,76,.045)";ctx.fill();ctx.beginPath();ctx.moveTo(0,0);ctx.lineTo(Math.cos(sweep)*Math.min(w,h)*.105,Math.sin(sweep)*Math.min(w,h)*.105);ctx.strokeStyle="rgba(232,213,160,.3)";ctx.stroke();ctx.restore();
-       ctx.font="10px JetBrains Mono, monospace";ctx.fillStyle="rgba(88,199,216,.44)";ctx.fillText("GLOBAL THREAT ARCHIVE / 17 DOSSIERS",w*.5-96,h*.82);
-     }
-  }
-  var heroObserver=new IntersectionObserver(function(entries){active=entries[0].isIntersecting;if(active && effectsAllowed() && !wraf && !waveTimer)wraf=requestAnimationFrame(draw);},{threshold:0});heroObserver.observe(document.getElementById("hero"));
-  registerDecorative(function(){if(active&&!wraf&&!waveTimer)wraf=requestAnimationFrame(draw);},function(){cancelAnimationFrame(wraf);clearTimeout(waveTimer);waveTimer=null;wraf=null;});
-}
-
-// ===== HERO PARTICLES =====
-function initHeroParticles(){
-  var con = document.getElementById("hero-particles");
-  if(!con) return;
-  if(isLowPerf){ con.style.display = "none"; return; }
-  var count = Math.min(16, Math.floor(window.innerWidth / 90));
-  for(var i = 0; i < count; i++){
-    var p = document.createElement("div");
-    p.className = "particle";
-    p.style.left = Math.random() * 100 + "%";
-    var sz = (1 + Math.random() * 2) + "px";
-    p.style.width = sz; p.style.height = sz;
-    p.style.animationDuration = (25 + Math.random() * 45) + "s";
-    p.style.animationDelay = (Math.random() * 30) + "s";
-    p.style.background = Math.random() > 0.4 ? "rgba(201,168,76,0.5)" : "rgba(74,140,191,0.3)";
-    con.appendChild(p);
-  }
-}
-
-// ===== AMBIENT FLOATING PARTICLES =====
-function initAmbientParticles(){
-  var can = byId("ambient-particles");
-  if(!can) return;
-  var ctx = can.getContext("2d");
-  var w = can.width = isLowPerf ? Math.floor(window.innerWidth * 0.5) : window.innerWidth;
-  var h = can.height = isLowPerf ? Math.floor(window.innerHeight * 0.5) : window.innerHeight;
-  var pts = [];
-  var count = isLowPerf ? Math.min(15, Math.floor(window.innerWidth / 50)) : Math.min(45, Math.floor(window.innerWidth / 35));
-  var raf = null, ambientTimer = null;
-
-  window.addEventListener("resize", function(){
-    var scale=isLowPerf ? 0.5 : 1;
-    w = can.width = Math.floor(window.innerWidth*scale);
-    h = can.height = Math.floor(window.innerHeight*scale);
-  },{passive:true});
-
-  for(var i = 0; i < count; i++){
-    pts.push({
-      x: Math.random() * w,
-      y: Math.random() * h,
-      size: 1.5 + Math.random() * 2.0,
-      speed: 0.18 + Math.random() * 0.35,
-      drift: 0.15 + Math.random() * 0.3,
-      phase: Math.random() * Math.PI * 2,
-      alpha: 0.25 + Math.random() * 0.4
-    });
-  }
-
-  function draw(){
-    if(!effectsAllowed()){raf=null;return;}
-    ctx.clearRect(0, 0, w, h);
-    var paused = document.body.classList.contains("modal-open");
-    var t = Date.now() * 0.0006;
-
-    for(var i = 0; i < pts.length; i++){
-      var p = pts[i];
-      if(!paused){
-        p.y -= p.speed;
-        p.x += Math.sin(t + p.phase) * p.drift * 0.3;
-        if(p.y < -15){ p.y = h + 15; p.x = Math.random() * w; }
-      }
-      ctx.beginPath();
-      ctx.arc(p.x, p.y, p.size, 0, Math.PI * 2);
-      ctx.fillStyle = paused ? "rgba(0,0,0,0)" : "rgba(201,168,76," + p.alpha + ")";
-      ctx.fill();
-    }
-    raf=null;
-    ambientTimer=setTimeout(function(){ambientTimer=null;raf=requestAnimationFrame(draw);},80);
-  }
-  registerDecorative(function(){if(!raf&&!ambientTimer)draw();},function(){cancelAnimationFrame(raf);clearTimeout(ambientTimer);ambientTimer=null;raf=null;});
-}
-
 // ===== FILM GRAIN =====
 function initGrain(){
   if(!gc)return;gc.width=192;gc.height=192;var ctx=gc.getContext("2d"),data=ctx.createImageData(192,192);
   for(var i=0;i<data.data.length;i+=4){var v=Math.random()*255;data.data[i]=v;data.data[i+1]=v;data.data[i+2]=v;data.data[i+3]=22;}ctx.putImageData(data,0,0);
-}
-
-// ===== MOUSE TRACKING =====
-function initMouseTracking(){
-  if(isMobile || prefersReducedMotion){ mg.style.display = "none"; return; }
-  var heroDepth = byId("hero-parallax-bg");
-  var heroContent = document.querySelector(".hero-content");
-  var mx = -999, my = -999;
-  var tx = -999, ty = -999;
-  var mfc = 0;
-  var settledFrames = 0;
-
-  document.addEventListener("mousemove", function(e){
-    if(!effectsAllowed()||window.scrollY>window.innerHeight)return;
-    tx = e.clientX; ty = e.clientY;
-    mg.style.opacity = "1";
-    if(!mraf){
-      mraf = requestAnimationFrame(function anim(){
-        if(!effectsAllowed()){mraf=null;return;}
-        mfc++;
-        var skip = document.body.classList.contains("modal-open") ? 3 : 1;
-        if(mfc % skip === 0){
-          mx += (tx - mx) * 0.15;
-          my += (ty - my) * 0.15;
-          mg.style.transform = "translate(" + (mx - 250) + "px," + (my - 250) + "px)";
-          var px = (mx / window.innerWidth - .5);
-          var py = (my / window.innerHeight - .5);
-          if(heroDepth){heroDepth.style.setProperty("--hero-pointer-x",(px * 14) + "px");heroDepth.style.setProperty("--hero-pointer-y",(py * 10) + "px");}
-          if(heroContent){heroContent.style.setProperty("--hero-content-pointer-x",(px * -8) + "px");heroContent.style.setProperty("--hero-content-pointer-y",(py * -6) + "px");}
-          if(Math.abs(tx-mx)<.15&&Math.abs(ty-my)<.15){settledFrames++;}else{settledFrames=0;}
-        }
-        if(settledFrames>8){mraf=null;return;}
-        mraf = requestAnimationFrame(anim);
-      });
-    }
-  });
-
-  document.addEventListener("mouseleave", function(){
-    mg.style.opacity = "0";
-    if(mraf){ cancelAnimationFrame(mraf); mraf = null; }
-  });
 }
 
 // ===== INTERSECTION OBSERVER =====
@@ -1650,11 +1528,6 @@ function initJourneyProgress(){
   update();
 }
 
-function initHeroParallax(){
-  var hbg=byId("hero-parallax-bg"),hs=byId("hero"),hc=hs?hs.querySelector(".hero-content"):null,ticking=false;
-  window.addEventListener("scroll",function(){if(ticking||isMobile||!effectsAllowed())return;ticking=true;requestAnimationFrame(function(){ticking=false;if(!effectsAllowed())return;var sy=window.scrollY,hh=hs?hs.offsetHeight:window.innerHeight;if(sy<=hh){var p=sy/hh;if(hbg)hbg.style.setProperty("--hero-scroll-y",(p*20)+"px");if(hc)hc.style.setProperty("--hero-content-scroll-y",(p*20)+"px");}});},{passive:true});
-}
-
 // ===== HAMBURGER =====
 function initHamburger(){
   if(!hb) return;
@@ -1683,9 +1556,9 @@ function updateLoaderProgress(){
   var progress=byId("load-progress"),bar=progress&&progress.querySelector(".loading-bar");
   function setProgress(value,message){if(progress)progress.setAttribute("aria-valuenow",String(value));if(bar)bar.style.width=value+"%";if(lst&&message)lst.textContent=message;}
   setProgress(35,"Estrutura da aplicação verificada.");
-  requestAnimationFrame(function(){setProgress(72,EPISODES.length+" dossiês indexados. Sincronizando interface...");});
+  setProgress(72,EPISODES.length+" dossiês indexados. Sincronizando interface...");
   var fonts=document.fonts&&document.fonts.ready?document.fonts.ready:Promise.resolve();
-  fonts.catch(function(){}).then(function(){setProgress(100,"Base local verificada. Interface pronta.");});
+  Promise.race([fonts.catch(function(){}),new Promise(function(resolve){introTimer=setTimeout(resolve,700);})]).then(function(){setProgress(100,"17 dossiês disponíveis. A leitura está pronta.");enterWarRoom(true);});
 }
 
 function intelSeverityClass(value){return value==="Critico"?"impact-critico":"impact-alto";}
@@ -1784,7 +1657,6 @@ function initOperationalLayer(){
 }
 
 initApp();
-introTimer=setTimeout(function(){enterWarRoom(prefersReducedMotion||isLowPerf);},prefersReducedMotion ? 120 : isLowPerf ? 650 : 1800);
 if(window.location.hash.indexOf("#dossier-")===0){enterWarRoom(true);}
 WarRoomExperience.restore(history.state);
 console.log("[WAR ROOM 3.0] Cinematic intro initialized. " + EPISODES.length + " episodes.");

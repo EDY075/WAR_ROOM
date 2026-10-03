@@ -5,12 +5,15 @@
 | Public release | Documentary edition published 2026-10-03; previous tag `v1.1.0 — CTI Evolution` preserved |
 | Current work | Documentary experience, cartography, campaign and authorized prolonged personal-voice narration across all 17 cases, published on GitHub, Pages and the portfolio |
 | Branch | Public `main`; `codex/war-room-experience` preserved |
-| Last sprint | 2026-10-03 · approved personal voice, prolonged narration and clarity treatment for all 17 cases |
+| Last sprint | 2026-10-03 · lighter hero/preloader, bounded sparks, confirmed social credits and HD launch package |
 | Last commit | Resolve with `git log -1 --oneline`; runtime `58ee3e4`; documentation revision resolves with git log |
 | Public Pages | https://edy075.github.io/WAR_ROOM/ (documentary edition live) |
 | Local preview | http://127.0.0.1:4173/WAR_ROOM/?tab=story#dossier-notpetya |
 
 ## Current product state
+
+- Latest entrance: static editorial SVG network, clearer text/actions, no mouse glow/background particles/parallax, bounded pointer sparks with no idle JS loop. Real initialization preloader has no forced minimum delay. Map shell expands to 1320px. GitHub/LinkedIn/confirmed Instagram credits are present. Eight upload pieces, eight 2× PNG masters, editable HTML, copy/links and ZIP: `assets/media/war-room-launch-2026/`.
+- Current fresh comparison against `be43e1e`: median renderer task time during 1.5 s idle is 250.894 → 42.907 ms desktop and 71.526 → 48.066 ms mobile emulation. Zero idle hero JS callbacks; animated SVG candidate was rejected after measured painting regression. Method/limits: [ENTRANCE_VALIDATION.md](../docs/ENTRANCE_VALIDATION.md). These are local CDP measurements, not Lighthouse/field scores.
 
 - All 17 canonical EPISODES, STORIES and INTEL_INDEX records are unchanged. Fingerprints at `aeaa524` are protected by `tests/verify-experience-data.mjs`.
 - One body-level modal workspace exposes Resumo, História, Análise, Mídia and Fontes; cards, archive actions, map, search and relations route into it. Legacy story modal and expanded episode details were retired.

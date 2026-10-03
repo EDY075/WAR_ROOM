@@ -16,7 +16,8 @@ const requiredLocalAssets = [
 const requiredLinks = [
   "https://edy075.github.io/WAR_ROOM/",
   "https://github.com/EDY075",
-  "https://linkedin.com/in/edmilson-gomes",
+  "https://www.linkedin.com/in/edmilsongomes21/",
+  "https://www.instagram.com/edmilson_zn_/",
   "https://attack.mitre.org/",
   "https://www.cisa.gov/",
   "https://www.nsa.gov/",

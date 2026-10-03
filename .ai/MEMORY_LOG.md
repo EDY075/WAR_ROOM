@@ -1,5 +1,9 @@
 # Memory Log
 
+## Sprint · lighter entrance and HD promotion · 2026-10-03
+
+Owner requested an improved actual WAR ROOM hero/preloader, sparks instead of the mouse glow, clearer connected points, better performance, three social profiles and a new website publication with postable ZIP. Instagram confirmed as edmilson_zn_. Added static local vector composition and a bounded pointer spark module; removed full-screen Canvas, global particles and parallax renderers. Loader follows readiness, with a 700 ms font ceiling and keyboard/focus regression coverage. Map shell widened; original 17 records/102 chapters/audio remain intact. Current three-run before/after median idle task time: desktop 250.894 → 42.907 ms; mobile emulation 71.526 → 48.066 ms. A continuously animated SVG candidate regressed and was discarded. Eight social exports + eight 2× masters, editable HTML, captions, alt text and links delivered. Browser entrance/experience/documentary tests pass; publication outcome follows in CURRENT_STATE/ENTRANCE_VALIDATION. No social post sent.
+
 This is the chronological project memory. `CURRENT_STATE.md` is the fast snapshot; `KNOWLEDGE_BASE.md` holds reusable rules.
 
 ## Publication — Documentary edition and portfolio (2026-10-03)

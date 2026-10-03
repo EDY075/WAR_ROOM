@@ -1,5 +1,11 @@
 # Knowledge Base
 
+## Entrance rendering and promotional exports
+
+- Zero JavaScript animation callbacks do not prove lower rendering cost: continuous SVG transform/opacity animation increased measured renderer task time. Compare actual CDP task samples; use static vector identity when animation adds no information.
+- When a preloader Enter handler moves focus to a button, prevent its native default action so the same key does not activate the destination. Test pending-font timeout, trap and focus separately from the normal fast path.
+- Export social composition from local HTML at native/2× dimensions, reject overflow, inspect every piece, include sRGB/hash manifest and editable source. PNG URLs are visual addresses; use platform link controls for clickable access.
+
 ## Product and content
 
 - Historical attribution must distinguish agency evidence, industry naming, and actor claims.
