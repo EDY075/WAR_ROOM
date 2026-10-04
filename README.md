@@ -17,6 +17,10 @@ Criado por [Edmilson Gomes](https://github.com/EDY075) · [LinkedIn](https://www
 
 Explore a experiência completa em [edy075.github.io/WAR_ROOM](https://edy075.github.io/WAR_ROOM/).
 
+## Apresentação em vídeo
+
+https://github.com/user-attachments/assets/4932ef74-2dba-456a-b319-547a2b02a87d
+
 ## Nova entrada e materiais de divulgação
 
 A entrada recebeu nova hierarquia, rede vetorial de conexões, ações diretas para mapa e episódios e um preloader sem espera mínima artificial. Pequenas faíscas substituem a luz que seguia o mouse; o processamento termina após o movimento e respeita efeitos reduzidos. A rede permanece estática, com presença visual no celular e sem loop em repouso.
